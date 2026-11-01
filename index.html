@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BrosWars Studio</title>
+  <meta name="description" content="BrosWars Studio — games and AI tools. Castle WARS, Chatnelo and a free CV builder.">
+  <meta property="og:title" content="BrosWars Studio">
+  <meta property="og:description" content="Games and AI tools, crafted with care.">
+  <meta property="og:image" content="og.jpg">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="emblem.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#000;--surface:rgba(10,12,18,.82);--line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.14);
+      --text:#e9edf4;--muted:#7f8796;--blue:#3d8bff;
+      --display:"Sora","Inter",system-ui,sans-serif;--body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+    /* space wallpaper */
+    .space{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;background:#000}
+    .space .s{position:absolute;border-radius:50%;background:#fff;animation:twinkle ease-in-out infinite}
+    .space .p{position:absolute;width:2px;height:2px;border-radius:50%;background:#5aa9ff;box-shadow:0 0 6px #3d8bff;opacity:0;animation:rise linear infinite}
+    @keyframes twinkle{0%,100%{opacity:.15}50%{opacity:.85}}
+    @keyframes rise{0%{transform:translateY(0);opacity:0}12%{opacity:.9}100%{transform:translateY(-75vh);opacity:0}}
+    header,main,footer{position:relative;z-index:1}
+    header{position:sticky}
+
+    /* nav */
+    header{position:sticky;top:0;z-index:10;background:rgba(0,0,0,.6);backdrop-filter:saturate(140%) blur(16px);border-bottom:1px solid var(--line)}
+    .nav{height:64px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:11px}
+    .brand img{height:26px;width:auto}
+    .wordmark{font:600 13px/1 var(--display);letter-spacing:.32em;text-transform:uppercase}
+    .wordmark span{color:var(--muted)}
+    .nav-r{display:flex;align-items:center;gap:26px;font-size:14px;color:var(--muted)}
+    .nav-r a:hover{color:var(--text)}
+    .lang{display:flex;gap:2px;font-size:12px;font-weight:600;letter-spacing:.08em}
+    .lang button{background:none;border:0;color:var(--muted);cursor:pointer;padding:4px 6px;font:inherit}
+    .lang button.on{color:var(--text)}
+
+    /* hero */
+    .hero{position:relative;padding:96px 0 70px;text-align:center;overflow:hidden}
+    .hero::before{content:"";position:absolute;left:50%;top:-180px;width:900px;height:620px;transform:translateX(-50%);
+      background:radial-gradient(closest-side,rgba(61,139,255,.16),transparent);pointer-events:none}
+    .hero > *{position:relative;z-index:1}
+    .emblem{height:76px;width:auto;filter:drop-shadow(0 0 22px rgba(61,139,255,.35));opacity:0;animation:in .9s .1s ease forwards}
+    .eyebrow{margin:26px 0 0;font:600 12px/1 var(--display);letter-spacing:.42em;text-transform:uppercase;color:var(--muted);opacity:0;animation:in .9s .2s ease forwards}
+    h1{margin:22px auto 0;max-width:760px;font:600 clamp(38px,6.2vw,68px)/1.06 var(--display);letter-spacing:-.035em;
+      background:linear-gradient(180deg,#fff 30%,#9aa3b4);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:0;animation:in .9s .3s ease forwards}
+    .lead{margin:22px auto 0;max-width:520px;color:var(--muted);font-size:18px;opacity:0;animation:in .9s .4s ease forwards}
+    .actions{margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;opacity:0;animation:in .9s .5s ease forwards}
+    .btn{display:inline-flex;align-items:center;gap:8px;height:46px;padding:0 22px;border-radius:999px;font-weight:600;font-size:15px;transition:background .2s,border-color .2s,transform .2s}
+    .btn-light{background:#f2f5fa;color:#07080b}
+    .btn-light:hover{background:#fff;transform:translateY(-1px)}
+    .btn-ghost{border:1px solid var(--line2);color:var(--text)}
+    .btn-ghost:hover{border-color:rgba(255,255,255,.3)}
+    @keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+    /* projects */
+    #projects{padding:40px 0 110px}
+    .sec-head{display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid var(--line);padding-top:26px;margin-bottom:30px}
+    .sec-head h2{margin:0;font:600 15px/1 var(--display);letter-spacing:.24em;text-transform:uppercase}
+    .sec-head span{color:var(--muted);font-size:14px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:border-color .3s,transform .3s}
+    .card:hover{border-color:var(--line2);transform:translateY(-3px)}
+    .media{aspect-ratio:4/3;overflow:hidden;background:#0d1016;position:relative}
+    .media img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1);filter:saturate(.95)}
+    .card:hover .media img{transform:scale(1.04)}
+    .media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(11,13,18,.85))}
+    .media.cv{display:grid;place-items:center;background:radial-gradient(circle at 50% 35%,#16233a,#05070b 70%)}
+    .media.cv::after{display:none}
+    .sheet{width:38%;aspect-ratio:1/1.32;background:#eef2f8;border-radius:6px;padding:9% 8%;box-shadow:0 30px 60px rgba(0,0,0,.55);transition:transform .6s}
+    .card:hover .sheet{transform:translateY(-4px)}
+    .sheet i{display:block;height:5px;border-radius:3px;background:#cfd6e2;margin-bottom:8px}
+    .sheet i:first-child{width:46%;height:8px;background:#20242c;margin-bottom:12px}
+    .sheet i:nth-child(2){width:70%;background:var(--blue);opacity:.7}
+    .sheet i:nth-child(4){width:84%}.sheet i:nth-child(6){width:62%}
+    .info{padding:20px 22px 22px}
+    .meta{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+    .info h3{margin:8px 0 6px;font:600 21px/1.2 var(--display);letter-spacing:-.01em}
+    .info p{margin:0;color:var(--muted);font-size:15px;line-height:1.55}
+    .more{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:14px;font-weight:600}
+    .more svg{transition:transform .25s}
+    .card:hover .more svg{transform:translateX(3px)}
+    .card a.stretch{position:absolute;inset:0;z-index:2}
+    .soon{margin:26px 0 0;color:var(--muted);font-size:14px}
+
+    footer{border-top:1px solid var(--line);padding:28px 0 36px;color:var(--muted);font-size:13px}
+    .foot{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+    .foot a:hover{color:var(--text)}
+
+    @media (max-width:900px){.grid{grid-template-columns:1fr 1fr}.grid .card:last-child{grid-column:1/-1}}
+    @media (max-width:620px){.grid{grid-template-columns:1fr}.nav-r a{display:none}.hero{padding:90px 0 80px}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important;opacity:1!important;transition:none!important}}
+
+    /* ask-us chat */
+    .chat-fab{position:fixed;right:22px;bottom:22px;z-index:40;width:56px;height:56px;border-radius:50%;border:1px solid var(--line2);background:#0d1220;color:#fff;display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.5),0 0 22px rgba(61,139,255,.25);transition:transform .2s}
+    .chat-fab:hover{transform:translateY(-2px)}
+    .chat{position:fixed;right:22px;bottom:90px;z-index:41;width:min(380px,calc(100vw - 24px));height:min(520px,calc(100vh - 120px));display:none;flex-direction:column;background:rgba(10,13,20,.96);backdrop-filter:blur(16px);border:1px solid var(--line2);border-radius:18px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.6)}
+    .chat.open{display:flex;animation:in .25s ease}
+    .chat-h{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line)}
+    .chat-h img{height:22px}
+    .chat-h b{font:600 13px/1 var(--display);letter-spacing:.2em;text-transform:uppercase;flex:1}
+    .chat-h button{background:none;border:0;color:var(--muted);font-size:22px;line-height:1;cursor:pointer}
+    .chat-log{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
+    .m{max-width:85%;padding:10px 13px;border-radius:14px;font-size:14.5px;line-height:1.5;white-space:pre-wrap;word-wrap:break-word}
+    .m.bot{background:#151b29;border:1px solid var(--line);align-self:flex-start;border-bottom-left-radius:4px}
+    .m.me{background:linear-gradient(135deg,#2f7bff,#5a5cff);align-self:flex-end;border-bottom-right-radius:4px}
+    .m a{color:#8fc0ff;text-decoration:underline}
+    .m.typing{color:var(--muted)}
+    .chat-f{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}
+    .chat-f input{flex:1;background:#0d1220;border:1px solid var(--line2);border-radius:999px;color:var(--text);padding:0 16px;height:42px;font:inherit;font-size:14.5px;outline:none}
+    .chat-f input:focus{border-color:rgba(90,169,255,.6)}
+    .chat-f button{height:42px;padding:0 18px;border:0;border-radius:999px;background:#f2f5fa;color:#07080b;font-weight:600;cursor:pointer}
+    .chat-f button:disabled{opacity:.5;cursor:default}
+    .chat-note{padding:0 16px 10px;font-size:12px;color:var(--muted)}
+    .chat-note a{text-decoration:underline}
+  </style>
+</head>
+<body>
+<div class="space" id="space" aria-hidden="true"></div>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#"><img src="emblem.png" alt=""><span class="wordmark">BrosWars <span>Studio</span></span></a>
+    <div class="nav-r">
+      <a href="#projects" data-i18n="navProjects">Projects</a>
+      <a href="#ask" class="js-ask" data-i18n="navContact">Contact</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="on">EN</button>
+        <button type="button" data-lang="cs">CZ</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <img class="emblem" src="emblem.png" alt="BrosWars Studio">
+      <p class="eyebrow">BrosWars Studio</p>
+      <div class="actions">
+        <a class="btn btn-ghost js-ask" href="#ask" data-i18n="cta2">Ask us</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="sec-head"><h2 data-i18n="projects">Projects</h2><span>03</span></div>
+      <div class="grid">
+        <article class="card">
+          <a class="stretch" href="https://battlecastle.itch.io/castle-wars" target="_blank" rel="noopener" aria-label="Castle WARS"></a>
+          <div class="media"><img src="castle-wars.jpg" alt="Castle WARS" loading="lazy"></div>
+          <div class="info">
+            <div class="meta" data-i18n="mGame">Strategy game</div>
+            <h3>Castle WARS</h3>
+            <p data-i18n="pCw">Build your army, defend your castle and conquer your rivals.</p>
+            <span class="more"><span data-i18n="goCw">Play now</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </article>
+        <article class="card">
+          <a class="stretch" href="https://apps.shopify.com/chatnelo" target="_blank" rel="noopener" aria-label="Chatnelo"></a>
+          <div class="media"><img src="chatnelo.jpg" alt="Chatnelo" loading="lazy"></div>
+          <div class="info">
+            <div class="meta" data-i18n="mAi">AI for online stores</div>
+            <h3>Chatnelo</h3>
+            <p data-i18n="pCh">A chatbot that answers shoppers 24/7 from real products, stock and shipping.</p>
+            <span class="more"><span data-i18n="goCh">View on Shopify</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </article>
+        <article class="card">
+          <a class="stretch" href="https://pracovnitipyai-production.up.railway.app/cv?src=broswars" target="_blank" rel="noopener" aria-label="CV"></a>
+          <div class="media cv"><div class="sheet"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+          <div class="info">
+            <div class="meta" data-i18n="mFree">Free tool</div>
+            <h3 data-i18n="tCv">CV Builder</h3>
+            <p data-i18n="pCv">A professional CV in Czech and English, ready in five minutes.</p>
+            <span class="more"><span data-i18n="goCv">Create your CV</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </article>
+      </div>
+      <p class="soon" data-i18n="soon">More projects are in development.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="y">2026</span> BrosWars Studio</span>
+    <a href="mailto:broswars@chatnelo.com">broswars@chatnelo.com</a>
+  </div>
+</footer>
+
+<button class="chat-fab js-ask" type="button" aria-label="Ask us"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></button>
+<section class="chat" id="chat" role="dialog" aria-label="BrosWars Studio chat">
+  <div class="chat-h"><img src="emblem.png" alt=""><b>BrosWars Studio</b><button type="button" id="chat-x" aria-label="Close">×</button></div>
+  <div class="chat-log" id="chat-log"></div>
+  <form class="chat-f" id="chat-f"><input id="chat-i" maxlength="500" autocomplete="off"><button type="submit" id="chat-b">Send</button></form>
+  <div class="chat-note"><span id="chat-note-t">Prefer e-mail?</span> <a href="mailto:broswars@chatnelo.com">broswars@chatnelo.com</a></div>
+</section>
+
+<script>
+  var CS = {
+    navProjects:"Projekty", navContact:"Kontakt",
+    cta2:"Zeptej se nás", projects:"Projekty",
+    mGame:"Strategická hra", pCw:"Postav armádu, ubraň hrad a poraz své soupeře.", goCw:"Hrát",
+    mAi:"AI pro e-shopy", pCh:"Chatbot, který zákazníkům odpovídá 24/7 podle skutečných produktů, skladu a dopravy.", goCh:"Zobrazit na Shopify",
+    mFree:"Nástroj zdarma", tCv:"Životopis", pCv:"Profesionální životopis česky i anglicky za pět minut.", goCv:"Vytvořit životopis",
+    soon:"Další projekty jsou ve vývoji.", title:"BrosWars Studio — hry a AI nástroje"
+  };
+  var EN = {title:"BrosWars Studio"};
+  document.querySelectorAll("[data-i18n]").forEach(function(e){EN[e.dataset.i18n]=e.textContent;});
+  function setLang(l){
+    var d=l==="cs"?CS:EN; document.documentElement.lang=l;
+    document.querySelectorAll("[data-i18n]").forEach(function(e){if(d[e.dataset.i18n])e.textContent=d[e.dataset.i18n];});
+    document.title=d.title;
+    document.querySelectorAll(".lang button").forEach(function(b){b.classList.toggle("on",b.dataset.lang===l);});
+    try{localStorage.setItem("bw-lang",l);}catch(e){}
+  }
+  document.querySelectorAll(".lang button").forEach(function(b){b.onclick=function(){setLang(b.dataset.lang);};});
+  var s; try{s=localStorage.getItem("bw-lang");}catch(e){}
+  var n=(navigator.language||"en").slice(0,2).toLowerCase();
+  setLang(s||(n==="cs"||n==="sk"?"cs":"en"));
+  document.getElementById("y").textContent=new Date().getFullYear();
+
+  // starfield wallpaper: twinkling stars + rising blue sparks
+  (function(){
+    var sp=document.getElementById("space"), i, e, r;
+    for(i=0;i<140;i++){
+      e=document.createElement("i"); e.className="s"; r=Math.random();
+      var sz=r<.7?1:r<.95?1.5:2.2;
+      e.style.cssText="width:"+sz+"px;height:"+sz+"px;left:"+(Math.random()*100)+"%;top:"+(Math.random()*100)+"%;animation-duration:"+(3+Math.random()*6)+"s;animation-delay:"+(-Math.random()*8)+"s";
+      sp.appendChild(e);
+    }
+    for(i=0;i<36;i++){
+      e=document.createElement("i"); e.className="p";
+      var z=Math.random()<.25?3:2;
+      e.style.cssText="width:"+z+"px;height:"+z+"px;left:"+(Math.random()*100)+"%;top:"+(35+Math.random()*65)+"%;animation-duration:"+(7+Math.random()*10)+"s;animation-delay:"+(-Math.random()*14)+"s";
+      sp.appendChild(e);
+    }
+  })();
+
+  // "Ask us" chat – powered by Chatnelo
+  (function(){
+    var API="https://chatnelo.com/studio/chat";
+    var T={en:{hi:"Hi! I'm the BrosWars Studio assistant. Ask me about Castle WARS, Chatnelo, the free CV builder – or anything else.",ph:"Type your question…",send:"Send",note:"Prefer e-mail?",err:"Sorry, I can't answer right now. Please write to broswars@chatnelo.com.",typing:"…"},
+           cs:{hi:"Ahoj! Jsem asistent BrosWars Studia. Zeptej se na Castle WARS, Chatnelo, životopis zdarma – nebo na cokoliv jiného.",ph:"Napiš svou otázku…",send:"Odeslat",note:"Raději e-mail?",err:"Omlouvám se, teď nemůžu odpovědět. Napiš prosím na broswars@chatnelo.com.",typing:"…"}};
+    var box=document.getElementById("chat"),log=document.getElementById("chat-log"),f=document.getElementById("chat-f"),inp=document.getElementById("chat-i"),btn=document.getElementById("chat-b"),hist=[],started=false;
+    function L(){return T[document.documentElement.lang==="cs"?"cs":"en"];}
+    function esc(t){return t.replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+    function linkify(t){return esc(t).replace(/(https?:\/\/[^\s)]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>').replace(/([\w.+-]+@[\w-]+\.[\w.]+)/g,'<a href="mailto:$1">$1</a>');}
+    function add(role,text){var d=document.createElement("div");d.className="m "+role;d.innerHTML=linkify(text);log.appendChild(d);log.scrollTop=log.scrollHeight;return d;}
+    function labels(){var l=L();inp.placeholder=l.ph;btn.textContent=l.send;document.getElementById("chat-note-t").textContent=l.note;}
+    function open(e){if(e)e.preventDefault();labels();box.classList.add("open");if(!started){started=true;add("bot",L().hi);}setTimeout(function(){inp.focus();},50);}
+    document.querySelectorAll(".js-ask").forEach(function(a){a.addEventListener("click",open);});
+    document.getElementById("chat-x").onclick=function(){box.classList.remove("open");};
+    document.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",labels);});
+    if(location.hash==="#ask")open();
+    f.addEventListener("submit",function(e){
+      e.preventDefault();var msg=inp.value.trim();if(!msg)return;
+      add("me",msg);inp.value="";inp.disabled=btn.disabled=true;var t=add("bot typing",L().typing);
+      fetch(API,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:msg,history:hist})})
+        .then(function(r){return r.json();})
+        .then(function(d){if(!d.reply)throw new Error(d.error||"error");t.remove();add("bot",d.reply);hist.push({role:"user",content:msg},{role:"assistant",content:d.reply});hist=hist.slice(-10);})
+        .catch(function(){t.remove();add("bot",L().err);})
+        .finally(function(){inp.disabled=btn.disabled=false;inp.focus();});
+    });
+  })();
+</script>
+</body>
+</html>
