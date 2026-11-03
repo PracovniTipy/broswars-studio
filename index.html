@@ -1,140 +1,285 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>BrosWars Studio</title>
-  <meta name="description" content="BrosWars Studio — games and AI tools. Castle WARS, Chatnelo and a free CV builder.">
-  <meta property="og:title" content="BrosWars Studio">
-  <meta property="og:description" content="Games and AI tools, crafted with care.">
-  <meta property="og:image" content="og.jpg">
-  <meta name="theme-color" content="#000000">
-  <link rel="icon" href="emblem.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#000;--surface:rgba(10,12,18,.82);--line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.14);
-      --text:#e9edf4;--muted:#7f8796;--blue:#3d8bff;
-      --display:"Sora","Inter",system-ui,sans-serif;--body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.6 var(--body);-webkit-font-smoothing:antialiased}
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#04060c">
+<meta property="og:title" content="BrosWars Studio">
+<meta property="og:description" content="A Czech studio forging games and AI tools: Castle WARS, Chatnelo and a free CV builder.">
+<meta property="og:image" content="https://broswarsstudio.chatnelo.com/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/emblem.png">
+<title>BrosWars Studio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="BrosWars Studio – a Czech studio forging games and AI tools: Castle WARS, Chatnelo and a free CV builder.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,500;0,600;0,700;0,800;1,500;1,700&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one continuous cinematic scroll — the chrome emblem opens a door into each world (castle, store, paper), then an open line to the studio. */
+:root{
+  --void:#04060c;        /* space black, blue-biased */
+  --void-2:#0a0f1c;
+  --chrome:#cfd8e6;      /* polished silver */
+  --ice:#eef5ff;
+  --volt:#3ea2ff;        /* electric blue glow */
+  --ember:#ff9a4a;       /* Castle WARS fire */
+  --gold:#f2c35b;
+  --violet:#8a93ff;      /* Chatnelo chapter */
+  --paper:#f3f0e8;       /* CV chapter */
+  --ink:#151a24;
+  --muted:#8b97ad;
+  --line:rgba(207,216,230,.14);
+  --f-display:"Saira","Bahnschrift","DIN Alternate",system-ui,sans-serif;
+  --f-body:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  --s-1:clamp(.72rem,.68rem + .2vw,.8rem);
+  --s0:clamp(1rem,.95rem + .25vw,1.12rem);
+  --s1:clamp(1.25rem,1.1rem + .6vw,1.6rem);
+  --s2:clamp(2rem,1.4rem + 2.6vw,3.6rem);
+  --s3:clamp(2.8rem,1.6rem + 6vw,7.5rem);
+  --s4:clamp(3.4rem,1rem + 11vw,13rem);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:auto;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--void);color:var(--ice);font:400 var(--s0)/1.6 var(--f-body);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--void)}
+a{color:inherit}
+img{max-width:100%;display:block}
+.gut{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--f-mono);font-size:var(--s-1);letter-spacing:.14em;text-transform:uppercase}
+:focus-visible{outline:2px solid var(--volt);outline-offset:3px;border-radius:4px}
 
-    /* space wallpaper */
-    .space{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;background:#000}
-    .space .s{position:absolute;border-radius:50%;background:#fff;animation:twinkle ease-in-out infinite}
-    .space .p{position:absolute;width:2px;height:2px;border-radius:50%;background:#5aa9ff;box-shadow:0 0 6px #3d8bff;opacity:0;animation:rise linear infinite}
-    @keyframes twinkle{0%,100%{opacity:.15}50%{opacity:.85}}
-    @keyframes rise{0%{transform:translateY(0);opacity:0}12%{opacity:.9}100%{transform:translateY(-75vh);opacity:0}}
-    header,main,footer{position:relative;z-index:1}
-    header{position:sticky}
+/* ---------- header ---------- */
+header{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;padding-block:14px;mix-blend-mode:normal;transition:background .4s,backdrop-filter .4s}
+header.solid{background:rgba(4,6,12,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1440px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{width:30px;height:auto;filter:drop-shadow(0 0 10px rgba(62,162,255,.6))}
+.brand b{font:700 1.05rem/1 var(--f-display);letter-spacing:.02em}
+.brand b span{font-family:var(--f-mono);font-weight:400;font-size:.62rem;letter-spacing:.3em;color:var(--muted);margin-left:8px;vertical-align:2px}
+.nav-r{display:flex;align-items:center;gap:clamp(10px,2vw,28px)}
+.nav-r a{text-decoration:none;color:var(--chrome)}
+.nav-r a:hover{color:var(--ice)}
+.nav-r .hide-s{display:inline}
+.lang{display:flex;border:1px solid var(--line);border-radius:99px;padding:2px}
+.lang button{background:none;border:0;color:var(--muted);font:500 .72rem/1 var(--f-mono);letter-spacing:.1em;padding:7px 10px;border-radius:99px;cursor:pointer}
+.lang button.on{background:var(--chrome);color:var(--void)}
+@media (max-width:640px){.nav-r .hide-s{display:none}.brand b span{display:none}}
 
-    /* nav */
-    header{position:sticky;top:0;z-index:10;background:rgba(0,0,0,.6);backdrop-filter:saturate(140%) blur(16px);border-bottom:1px solid var(--line)}
-    .nav{height:64px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:11px}
-    .brand img{height:26px;width:auto}
-    .wordmark{font:600 13px/1 var(--display);letter-spacing:.32em;text-transform:uppercase}
-    .wordmark span{color:var(--muted)}
-    .nav-r{display:flex;align-items:center;gap:26px;font-size:14px;color:var(--muted)}
-    .nav-r a:hover{color:var(--text)}
-    .lang{display:flex;gap:2px;font-size:12px;font-weight:600;letter-spacing:.08em}
-    .lang button{background:none;border:0;color:var(--muted);cursor:pointer;padding:4px 6px;font:inherit}
-    .lang button.on{color:var(--text)}
+/* ---------- progress rail ---------- */
+.rail{position:fixed;right:max(14px,env(safe-area-inset-right,0px));top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:14px}
+.rail a{display:flex;align-items:center;justify-content:flex-end;gap:10px;text-decoration:none;color:var(--muted)}
+.rail a i{width:6px;height:6px;border-radius:50%;background:currentColor;transition:transform .3s,background .3s}
+.rail a span{opacity:0;transform:translateX(6px);transition:.3s}
+.rail a:hover span,.rail a.on span{opacity:1;transform:none}
+.rail a.on{color:var(--ice)}.rail a.on i{transform:scale(1.7);background:var(--volt)}
+@media (max-width:900px){.rail{display:none}}
 
-    /* hero */
-    .hero{position:relative;padding:96px 0 70px;text-align:center;overflow:hidden}
-    .hero::before{content:"";position:absolute;left:50%;top:-180px;width:900px;height:620px;transform:translateX(-50%);
-      background:radial-gradient(closest-side,rgba(61,139,255,.16),transparent);pointer-events:none}
-    .hero > *{position:relative;z-index:1}
-    .emblem{height:76px;width:auto;filter:drop-shadow(0 0 22px rgba(61,139,255,.35));opacity:0;animation:in .9s .1s ease forwards}
-    .eyebrow{margin:26px 0 0;font:600 12px/1 var(--display);letter-spacing:.42em;text-transform:uppercase;color:var(--muted);opacity:0;animation:in .9s .2s ease forwards}
-    h1{margin:22px auto 0;max-width:760px;font:600 clamp(38px,6.2vw,68px)/1.06 var(--display);letter-spacing:-.035em;
-      background:linear-gradient(180deg,#fff 30%,#9aa3b4);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:0;animation:in .9s .3s ease forwards}
-    .lead{margin:22px auto 0;max-width:520px;color:var(--muted);font-size:18px;opacity:0;animation:in .9s .4s ease forwards}
-    .actions{margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;opacity:0;animation:in .9s .5s ease forwards}
-    .btn{display:inline-flex;align-items:center;gap:8px;height:46px;padding:0 22px;border-radius:999px;font-weight:600;font-size:15px;transition:background .2s,border-color .2s,transform .2s}
-    .btn-light{background:#f2f5fa;color:#07080b}
-    .btn-light:hover{background:#fff;transform:translateY(-1px)}
-    .btn-ghost{border:1px solid var(--line2);color:var(--text)}
-    .btn-ghost:hover{border-color:rgba(255,255,255,.3)}
-    @keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+/* ---------- 01 hero: the chrome emblem ---------- */
+#gl{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.hero{position:relative;height:100vh;height:100svh;min-height:560px;z-index:1;overflow:hidden}
+.hero-in{position:absolute;inset:0;display:grid;place-items:center}
+.hero h1{margin:0;font:800 clamp(3rem,min(.8rem + 8.6vw,14vh),10.5rem)/.9 var(--f-display);letter-spacing:-.02em;text-align:center;text-wrap:balance;display:flex;flex-direction:column;align-items:center;gap:.02em;pointer-events:none}
+.hero h1 .w{display:block;background:linear-gradient(180deg,#fff 0%,#dfe7f3 38%,#7f8ba1 52%,#e9f0fb 70%,#9aa6bb 100%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 0 transparent}
+.hero h1 .w2{font-style:italic;font-weight:600;letter-spacing:-.01em}
+.hero .gap{height:clamp(170px,40vh,420px)}
+.hud{position:absolute;inset:auto 0 0 0;padding-block:28px;display:flex;justify-content:center;align-items:flex-end;gap:18px;color:var(--muted)}
+.hud .cue{display:flex;align-items:center;gap:10px;color:var(--chrome)}
+.hud .cue i{width:1px;height:42px;background:linear-gradient(var(--chrome),transparent);animation:drip 1.8s ease-in-out infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.hud-top{position:absolute;top:84px;left:0;right:0;display:flex;justify-content:space-between;color:var(--muted)}
+.flash{position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(238,245,255,1),rgba(62,162,255,.9) 40%,rgba(4,6,12,0) 75%);opacity:0;pointer-events:none}
+@media (max-width:640px){.hud .hide-s,.hud-top .hide-s{display:none}}
 
-    /* projects */
-    #projects{padding:40px 0 110px}
-    .sec-head{display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid var(--line);padding-top:26px;margin-bottom:30px}
-    .sec-head h2{margin:0;font:600 15px/1 var(--display);letter-spacing:.24em;text-transform:uppercase}
-    .sec-head span{color:var(--muted);font-size:14px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:border-color .3s,transform .3s}
-    .card:hover{border-color:var(--line2);transform:translateY(-3px)}
-    .media{aspect-ratio:4/3;overflow:hidden;background:#0d1016;position:relative}
-    .media img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1);filter:saturate(.95)}
-    .card:hover .media img{transform:scale(1.04)}
-    .media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(11,13,18,.85))}
-    .media.cv{display:grid;place-items:center;background:radial-gradient(circle at 50% 35%,#16233a,#05070b 70%)}
-    .media.cv::after{display:none}
-    .sheet{width:38%;aspect-ratio:1/1.32;background:#eef2f8;border-radius:6px;padding:9% 8%;box-shadow:0 30px 60px rgba(0,0,0,.55);transition:transform .6s}
-    .card:hover .sheet{transform:translateY(-4px)}
-    .sheet i{display:block;height:5px;border-radius:3px;background:#cfd6e2;margin-bottom:8px}
-    .sheet i:first-child{width:46%;height:8px;background:#20242c;margin-bottom:12px}
-    .sheet i:nth-child(2){width:70%;background:var(--blue);opacity:.7}
-    .sheet i:nth-child(4){width:84%}.sheet i:nth-child(6){width:62%}
-    .info{padding:20px 22px 22px}
-    .meta{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
-    .info h3{margin:8px 0 6px;font:600 21px/1.2 var(--display);letter-spacing:-.01em}
-    .info p{margin:0;color:var(--muted);font-size:15px;line-height:1.55}
-    .more{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:14px;font-weight:600}
-    .more svg{transition:transform .25s}
-    .card:hover .more svg{transform:translateX(3px)}
-    .card a.stretch{position:absolute;inset:0;z-index:2}
-    .soon{margin:26px 0 0;color:var(--muted);font-size:14px}
+/* ---------- 02 arsenal arc ---------- */
+.arsenal{position:relative;z-index:2;background:linear-gradient(var(--void),var(--void-2) 40%,var(--void));overflow:hidden}
+.ars-pin{height:100vh;height:100svh;min-height:620px;display:grid;grid-template-rows:auto 1fr auto;padding-block:96px 36px}
+.ars-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;max-width:1440px;margin:0 auto;width:100%}
+.ars-head h2{margin:0;font:700 var(--s3)/.9 var(--f-display);letter-spacing:-.02em}
+.ars-head h2 em{font-weight:500;color:var(--chrome)}
+.ars-head p{max-width:34ch;margin:0;color:var(--muted)}
+.stage{position:relative;perspective:1600px;display:grid;place-items:center}
+.ring{position:relative;width:var(--cw);height:calc(var(--cw)*1.42);transform-style:preserve-3d;--cw:clamp(170px,19vw,300px);--r:clamp(300px,40vw,640px)}
+.unit{position:absolute;inset:0;transform-style:preserve-3d;border-radius:18px;overflow:hidden;text-decoration:none;color:var(--ice);
+  transform:rotateY(calc(var(--i)*360deg/var(--n))) translateZ(var(--r));backface-visibility:hidden;
+  box-shadow:0 40px 80px -30px rgba(0,0,0,.9),0 0 0 1px rgba(207,216,230,.18) inset}
+.unit .art{position:absolute;inset:0;background-size:cover;background-position:center}
+.unit::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(255,255,255,.22) 0%,rgba(255,255,255,0) 32%,rgba(255,255,255,0) 68%,rgba(255,255,255,.12) 100%);mix-blend-mode:screen;pointer-events:none}
+.unit .cap{position:absolute;left:0;right:0;bottom:0;padding:18px;background:linear-gradient(transparent,rgba(4,6,12,.92));display:grid;gap:4px}
+.unit .cap b{font:700 1.35rem/1.05 var(--f-display)}
+.unit .cap .mono{color:var(--chrome);font-size:.62rem}
+.u-cw .art{background-image:url(img/cw-poster.webp)}
+.u-ch .art{background:radial-gradient(120% 70% at 50% 18%,#3b47c9 0%,#141a4d 45%,#060920 100%)}
+.u-ch .ic{position:absolute;left:50%;top:30%;width:46%;transform:translate(-50%,-50%);border-radius:22%;box-shadow:0 0 60px rgba(138,147,255,.55)}
+.u-ch .bub{position:absolute;left:12%;right:12%;top:54%;display:grid;gap:6px}
+.u-ch .bub i{display:block;height:12px;border-radius:8px;background:rgba(238,245,255,.85)}
+.u-ch .bub i:nth-child(1){width:70%}.u-ch .bub i:nth-child(2){width:52%;margin-left:auto;background:var(--violet)}.u-ch .bub i:nth-child(3){width:62%}
+.u-cv .art{background:linear-gradient(160deg,#fbfaf6,#e6e1d4)}
+.u-cv .sheet{position:absolute;left:14%;right:14%;top:12%;bottom:30%;display:grid;align-content:start;gap:8px}
+.u-cv .sheet i{display:block;height:7px;border-radius:3px;background:#c8c2b3}
+.u-cv .sheet .h{height:16px;width:62%;background:var(--ink)}
+.u-cv .sheet .s{width:34%;background:#9a937f}
+.u-cv .cap{background:linear-gradient(transparent,rgba(21,26,36,.94))}
+.u-nm .art{background:radial-gradient(110% 70% at 50% 20%,#5b2bd6 0%,#2a1160 45%,#0b0714 100%)}
+.u-nm .ic{position:absolute;left:50%;top:38%;width:50%;transform:translate(-50%,-50%);border-radius:22%;box-shadow:0 0 70px rgba(139,61,255,.6)}
+.floor{position:absolute;left:50%;bottom:6%;width:min(1100px,92vw);height:120px;transform:translateX(-50%);background:radial-gradient(50% 50% at 50% 50%,rgba(62,162,255,.22),transparent 70%);filter:blur(8px);pointer-events:none}
+.ars-foot{display:flex;justify-content:space-between;gap:16px;color:var(--muted);max-width:1440px;margin:0 auto;width:100%;flex-wrap:wrap}
+.ars-foot .now{color:var(--ice)}
 
-    footer{border-top:1px solid var(--line);padding:28px 0 36px;color:var(--muted);font-size:13px}
-    .foot{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-    .foot a:hover{color:var(--text)}
+/* ---------- chapter shared ---------- */
+.chapter{position:relative;z-index:2;overflow:hidden}
+.pin{position:relative;height:100vh;height:100svh;min-height:600px;overflow:hidden}
+.tag{display:inline-flex;align-items:center;gap:10px;color:var(--chrome)}
+.tag::before{content:"";width:26px;height:1px;background:currentColor}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:15px 22px;border-radius:99px;text-decoration:none;font:600 .95rem/1 var(--f-body);letter-spacing:.01em;transition:transform .25s,box-shadow .25s,background .25s;border:0;cursor:pointer}
+.btn svg{transition:transform .25s}
+.btn:hover svg{transform:translateX(4px)}
+.btn-solid{background:var(--ice);color:var(--void)}
+.btn-solid:hover{box-shadow:0 0 0 6px rgba(238,245,255,.12)}
+.btn-line{border:1px solid rgba(238,245,255,.35);color:var(--ice);background:rgba(4,6,12,.25);backdrop-filter:blur(6px)}
 
-    @media (max-width:900px){.grid{grid-template-columns:1fr 1fr}.grid .card:last-child{grid-column:1/-1}}
-    @media (max-width:620px){.grid{grid-template-columns:1fr}.nav-r a{display:none}.hero{padding:90px 0 80px}}
-    @media (prefers-reduced-motion:reduce){*{animation:none!important;opacity:1!important;transition:none!important}}
+/* ---------- 03 Castle WARS ---------- */
 
-    /* ask-us chat */
-    .chat-fab{position:fixed;right:22px;bottom:22px;z-index:40;width:56px;height:56px;border-radius:50%;border:1px solid var(--line2);background:#0d1220;color:#fff;display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.5),0 0 22px rgba(61,139,255,.25);transition:transform .2s}
-    .chat-fab:hover{transform:translateY(-2px)}
-    .chat{position:fixed;right:22px;bottom:90px;z-index:41;width:min(380px,calc(100vw - 24px));height:min(520px,calc(100vh - 120px));display:none;flex-direction:column;background:rgba(10,13,20,.96);backdrop-filter:blur(16px);border:1px solid var(--line2);border-radius:18px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.6)}
-    .chat.open{display:flex;animation:in .25s ease}
-    .chat-h{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line)}
-    .chat-h img{height:22px}
-    .chat-h b{font:600 13px/1 var(--display);letter-spacing:.2em;text-transform:uppercase;flex:1}
-    .chat-h button{background:none;border:0;color:var(--muted);font-size:22px;line-height:1;cursor:pointer}
-    .chat-log{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
-    .m{max-width:85%;padding:10px 13px;border-radius:14px;font-size:14.5px;line-height:1.5;white-space:pre-wrap;word-wrap:break-word}
-    .m.bot{background:#151b29;border:1px solid var(--line);align-self:flex-start;border-bottom-left-radius:4px}
-    .m.me{background:linear-gradient(135deg,#2f7bff,#5a5cff);align-self:flex-end;border-bottom-right-radius:4px}
-    .m a{color:#8fc0ff;text-decoration:underline}
-    .m.typing{color:var(--muted)}
-    .chat-f{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}
-    .chat-f input{flex:1;background:#0d1220;border:1px solid var(--line2);border-radius:999px;color:var(--text);padding:0 16px;height:42px;font:inherit;font-size:14.5px;outline:none}
-    .chat-f input:focus{border-color:rgba(90,169,255,.6)}
-    .chat-f button{height:42px;padding:0 18px;border:0;border-radius:999px;background:#f2f5fa;color:#07080b;font-weight:600;cursor:pointer}
-    .chat-f button:disabled{opacity:.5;cursor:default}
-    .chat-note{padding:0 16px 10px;font-size:12px;color:var(--muted)}
-    .chat-note a{text-decoration:underline}
-  </style>
+/* ---------- 04 Chatnelo ---------- */
+.ch{background:radial-gradient(80% 60% at 75% 40%,#1a2160 0%,#0a0d2a 45%,var(--void) 100%)}
+.ch-grid{position:absolute;inset:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(24px,5vw,80px);max-width:1440px;margin:0 auto;padding-block:96px 40px}
+.ch-copy{display:grid;gap:22px;align-content:center;min-width:0}
+.ch-copy .tag{color:var(--violet)}
+.ch-copy h2{margin:0;font:800 var(--s3)/.9 var(--f-display);letter-spacing:-.02em;text-wrap:balance}
+.ch-copy h2 em{font-style:italic;font-weight:500;color:var(--violet)}
+.ch-copy p{margin:0;max-width:44ch;color:#c9d0ea}
+.price{display:flex;gap:28px;flex-wrap:wrap}
+.price div{display:grid}
+.price b{font:700 var(--s2)/1 var(--f-display)}
+.price span{color:var(--muted)}
+.store{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.store small{color:var(--muted);font-size:.8rem}
+.ch .btn-solid{background:var(--violet);color:#070a22}
+.win{position:relative;min-width:0;width:min(520px,100%);justify-self:center;border-radius:22px;background:rgba(13,17,48,.78);border:1px solid rgba(138,147,255,.3);box-shadow:0 60px 120px -40px rgba(0,0,0,.9),0 0 120px -30px rgba(138,147,255,.55);backdrop-filter:blur(10px)}
+.win-h{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid rgba(138,147,255,.2)}
+.win-h img{width:34px;height:34px;border-radius:10px}
+.win-h b{display:block;font-weight:600}
+.win-h small{color:#9fe8c0;font-size:.78rem}
+.win-h small::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#58e39a;margin-right:6px;vertical-align:1px}
+.win-b{display:grid;gap:12px;padding:20px 18px 22px;min-height:360px;align-content:start}
+.msg{max-width:84%;padding:11px 14px;border-radius:16px;font-size:.95rem;line-height:1.45}
+.msg.me{justify-self:end;background:var(--violet);color:#080b26;border-bottom-right-radius:4px}
+.msg.bot{background:rgba(238,245,255,.08);border:1px solid rgba(238,245,255,.1);border-bottom-left-radius:4px}
+.msg.card{display:flex;gap:12px;align-items:center;padding:10px;background:rgba(238,245,255,.06)}
+.msg.card .th{width:56px;height:56px;border-radius:10px;flex:none;background:linear-gradient(135deg,#ff9a6b,#ffcf6b)}
+.msg.card b{display:block}
+.msg.card span{color:var(--muted);font-size:.82rem}
+.typing{display:inline-flex;gap:4px}
+.typing i{width:6px;height:6px;border-radius:50%;background:var(--chrome);animation:bl 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes bl{0%,100%{opacity:.25}50%{opacity:1}}
+.win-note{position:absolute;left:18px;bottom:-30px;color:var(--muted)}
+@media (max-width:900px){
+  .ch-grid{grid-template-columns:minmax(0,1fr);align-content:start;padding-block:84px 24px;gap:18px}
+  .ch-copy{gap:12px}.ch-copy p{display:none}
+  .win-b{min-height:0;height:min(44svh,380px);padding:14px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;gap:10px}
+  .win-b .msg.me{align-self:flex-end}.win-b .msg.bot{align-self:flex-start}
+  .msg{font-size:.86rem}
+  .win-note{display:none}
+}
+
+/* ---------- Načti.me ---------- */
+.nm{--g1:#8b3dff;--g2:#ff3d8b;background:radial-gradient(70% 60% at 72% 50%,rgba(139,61,255,.28),transparent 70%),#07060a}
+.nm-grid{position:absolute;inset:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(24px,5vw,80px);max-width:1440px;margin:0 auto;padding-block:96px 40px}
+.nm-copy{display:grid;gap:22px;min-width:0}
+.nm .tag{color:#c79bff}
+.nm h2{margin:0;font:800 var(--s3)/.92 var(--f-display);letter-spacing:-.02em;text-wrap:balance}
+.nm h2 em{font-style:italic;font-weight:600;background:linear-gradient(90deg,var(--g1),var(--g2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.nm p{margin:0;max-width:42ch;color:#c9c4d8}
+.nm .btn-solid{background:linear-gradient(90deg,var(--g1),var(--g2));color:#fff}
+.nm .mono.c{color:var(--muted)}
+.qrcard{position:relative;justify-self:center;width:min(440px,100%);aspect-ratio:1;padding:9%;border-radius:28px;background:#fff;box-shadow:0 0 0 1px rgba(255,255,255,.2),0 50px 120px -30px rgba(139,61,255,.7),0 30px 60px -30px rgba(255,61,139,.6)}
+.qrcard svg{display:block;width:100%;height:100%}
+.qrcard rect{fill:#0b0714}
+.scan{position:absolute;left:5%;right:5%;top:8%;height:3px;border-radius:3px;background:linear-gradient(90deg,transparent,var(--g2),var(--g1),transparent);box-shadow:0 0 24px var(--g2);opacity:0}
+.qrlabel{position:absolute;left:50%;bottom:-46px;transform:translateX(-50%);white-space:nowrap;color:var(--ice)}
+.qrlabel b{color:#3ddc84;font-weight:500}
+@media (max-width:900px){
+  .nm-grid{grid-template-columns:minmax(0,1fr);align-content:start;padding-block:84px 24px;gap:22px}
+  .nm-copy{gap:12px}.nm p{display:none}
+  .qrcard{width:min(250px,62vw)}
+  .qrlabel{bottom:-34px}
+}
+
+/* ---------- 05 CV builder ---------- */
+.cv{background:var(--paper);color:var(--ink)}
+.cv-grid{position:absolute;inset:0;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:center;gap:clamp(24px,5vw,80px);max-width:1440px;margin:0 auto;padding-block:96px 40px}
+.cv .tag{color:#7a705a}
+.cv h2{margin:12px 0 18px;font:800 var(--s3)/.9 var(--f-display);letter-spacing:-.02em;text-wrap:balance}
+.cv h2 em{font-style:italic;font-weight:500;color:#2f56d6}
+.cv p{max-width:44ch;color:#3e4656;margin:0 0 26px}
+.cv .btn-solid{background:var(--ink);color:var(--paper)}
+.cv .mono.c{color:#7a705a;margin-top:18px}
+.cv-copy{min-width:0}
+.doc{position:relative;justify-self:center;width:min(430px,100%);aspect-ratio:1/1.414;background:#fff;border-radius:6px;box-shadow:0 1px 0 #e9e4d8,0 50px 90px -40px rgba(60,50,30,.45),0 18px 30px -18px rgba(60,50,30,.3);padding:9% 9%;display:grid;grid-template-rows:auto auto 1fr;gap:6%;transform:rotate(-3deg);max-width:100%}
+.doc .top{display:flex;gap:7%;align-items:center}
+.doc .ph{width:22%;aspect-ratio:1;border-radius:50%;background:linear-gradient(135deg,#2f56d6,#8a93ff);flex:none}
+.doc .nm{flex:1;display:grid;gap:8px}
+.doc .nm b{font:700 clamp(1rem,2.2vw,1.5rem)/1.1 var(--f-display);color:var(--ink)}
+.doc .nm span{font:500 .62rem/1 var(--f-mono);letter-spacing:.2em;color:#7a705a}
+.doc .ln{display:grid;gap:7px;align-content:start}
+.doc .ln i{display:block;height:6px;border-radius:3px;background:#e3dfd4;transform-origin:left}
+.doc .ln .k{height:9px;width:38%;background:#2f56d6;margin-top:6px}
+.doc .stamp{position:absolute;right:-6%;top:12%;transform:rotate(14deg);border:2px solid #2f56d6;color:#2f56d6;font:500 .66rem/1 var(--f-mono);letter-spacing:.2em;padding:8px 10px;border-radius:6px;background:rgba(255,255,255,.7)}
+@media (max-width:900px){
+  .cv-grid{grid-template-columns:minmax(0,1fr);align-content:start;padding-block:84px 24px;gap:22px}
+  .cv p{margin-bottom:16px}
+  .doc{width:min(250px,64vw)}
+}
+
+/* ---------- 06 ask ---------- */
+.ask{position:relative;z-index:2;background:var(--void);padding-block:clamp(90px,14vh,160px)}
+.ask-in{max-width:980px;margin:0 auto;display:grid;gap:28px}
+.ask h2{margin:0;font:800 var(--s3)/.9 var(--f-display);letter-spacing:-.02em;text-wrap:balance}
+.ask h2 em{font-style:italic;font-weight:500;background:linear-gradient(90deg,var(--chrome),var(--volt));-webkit-background-clip:text;background-clip:text;color:transparent}
+.term{border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,rgba(14,20,38,.9),rgba(8,11,22,.9));overflow:hidden}
+.log{display:grid;gap:12px;padding:22px;max-height:380px;overflow-y:auto;align-content:start}
+.log .m{max-width:80%;padding:11px 14px;border-radius:14px;line-height:1.5}
+.log .m.bot{background:rgba(238,245,255,.06);border:1px solid var(--line)}
+.log .m.me{justify-self:end;background:var(--volt);color:#03101f}
+.log .m a{color:inherit}
+.chips{display:flex;gap:8px;flex-wrap:wrap;padding:0 22px 16px}
+.chips button{border:1px solid var(--line);background:none;color:var(--chrome);border-radius:99px;padding:8px 14px;font:500 .85rem/1 var(--f-body);cursor:pointer}
+.chips button:hover{border-color:var(--volt);color:var(--ice)}
+.ask form{display:flex;gap:10px;padding:14px;border-top:1px solid var(--line)}
+.ask input{flex:1;min-width:0;background:rgba(238,245,255,.05);border:1px solid var(--line);border-radius:99px;padding:14px 18px;color:var(--ice);font:400 1rem var(--f-body)}
+.ask input::placeholder{color:var(--muted)}
+.ask .send{background:var(--ice);color:var(--void)}
+.ask .note{color:var(--muted)}
+.ask .note .mail{color:var(--ice);user-select:all}
+
+/* ---------- footer ---------- */
+footer{position:relative;z-index:2;background:var(--void);border-top:1px solid var(--line);overflow:hidden;padding-block:56px 28px}
+.big{font:800 clamp(3rem,15.5vw,17rem)/.8 var(--f-display);letter-spacing:-.04em;text-align:center;margin:0 0 36px;background:linear-gradient(180deg,#fff 0%,#c9d3e2 40%,#5f6b82 55%,#dbe4f2 72%,#2a3346 100%);-webkit-background-clip:text;background-clip:text;color:transparent;user-select:none}
+.foot{display:flex;justify-content:space-between;gap:18px 32px;flex-wrap:wrap;max-width:1440px;margin:0 auto;color:var(--muted)}
+.foot a{text-decoration:none;color:var(--chrome)}
+.foot a:hover{color:var(--ice)}
+.foot nav{display:flex;gap:18px;flex-wrap:wrap}
+
+@media (prefers-reduced-motion:reduce){
+  .hud .cue i,.typing i{animation:none}
+}
+</style>
 </head>
 <body>
-<div class="space" id="space" aria-hidden="true"></div>
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#"><img src="emblem.png" alt=""><span class="wordmark">BrosWars <span>Studio</span></span></a>
+
+
+<canvas id="gl" aria-hidden="true"></canvas>
+
+<header class="gut" id="hdr">
+  <div class="nav">
+    <a class="brand" href="#top"><img src="img/emblem.png" alt=""><b>BrosWars<span>STUDIO</span></b></a>
     <div class="nav-r">
-      <a href="#projects" data-i18n="navProjects">Projects</a>
-      <a href="#ask" class="js-ask" data-i18n="navContact">Contact</a>
+            <a class="hide-s mono" href="#chatnelo">Chatnelo</a>
+      <a class="hide-s mono" href="#nacti">Načti.me</a>
+      <a class="mono" href="#ask" data-i18n="navAsk">Ask us</a>
       <div class="lang" role="group" aria-label="Language">
         <button type="button" data-lang="en" class="on">EN</button>
         <button type="button" data-lang="cs">CZ</button>
@@ -143,139 +288,410 @@
   </div>
 </header>
 
+<nav class="rail mono" aria-label="Chapters">
+  <a href="#top" data-k="top"><span data-i18n="r0">Studio</span><i></i></a>
+  <a href="#arsenal" data-k="arsenal"><span data-i18n="r1">Arsenal</span><i></i></a>
+  <a href="#chatnelo" data-k="chatnelo"><span>Chatnelo</span><i></i></a>
+  <a href="#nacti" data-k="nacti"><span>Načti.me</span><i></i></a>
+  <a href="#cv" data-k="cv"><span data-i18n="r4">CV Builder</span><i></i></a>
+  <a href="#ask" data-k="ask"><span data-i18n="r5">Ask us</span><i></i></a>
+</nav>
+
 <main>
-  <section class="hero">
-    <div class="wrap">
-      <img class="emblem" src="emblem.png" alt="BrosWars Studio">
-      <p class="eyebrow">BrosWars Studio</p>
-      <div class="actions">
-        <a class="btn btn-ghost js-ask" href="#ask" data-i18n="cta2">Ask us</a>
+  <!-- 01 -->
+  <section class="hero" id="top" data-sec="top">
+    <div class="hero-in gut">
+      <h1 aria-label="Play hard. Build smart.">
+        <span class="w w1" data-i18n="h1a">Play hard.</span>
+        <span class="gap" aria-hidden="true"></span>
+        <span class="w w2" data-i18n="h1b">Build smart.</span>
+      </h1>
+    </div>
+    <div class="hud gut mono">
+      <span class="cue"><i></i><span data-i18n="cue">Scroll to enter</span></span>
+    </div>
+    <div class="flash" id="flash"></div>
+  </section>
+
+  <!-- 02 -->
+  <section class="arsenal" id="arsenal" data-sec="arsenal">
+    <div class="ars-pin gut">
+      <div class="ars-head">
+        <h2><span data-i18n="arsA">The</span> <em data-i18n="arsB">arsenal.</em></h2>
+        <p data-i18n="arsP">Four projects, each one built in-house, from the first pixel to the last line of code.</p>
+      </div>
+      <div class="stage">
+        <div class="ring" id="ring" style="--n:4">
+          <a class="unit u-cw" style="--i:0" href="https://battlecastle.itch.io/castle-wars" target="_blank" rel="noopener"><div class="art"></div><div class="cap"><span class="mono" data-i18n="kGame">Strategy game</span><b>Castle WARS</b></div></a>
+          <a class="unit u-ch" style="--i:1" href="#chatnelo"><div class="art"></div><img class="ic" src="img/chatnelo-icon.webp" alt=""><div class="bub"><i></i><i></i><i></i></div><div class="cap"><span class="mono" data-i18n="kAi">AI for online stores</span><b>Chatnelo</b></div></a>
+          <a class="unit u-nm" style="--i:2" href="#nacti"><div class="art"></div><img class="ic" src="img/nacti-icon.png" alt=""><div class="cap"><span class="mono" data-i18n="kQr">QR codes in seconds</span><b>Načti.me</b></div></a>
+          <a class="unit u-cv" style="--i:3" href="#cv"><div class="art"></div><div class="sheet"><i class="h"></i><i class="s"></i><i></i><i></i><i style="width:80%"></i><i class="s"></i><i></i><i style="width:64%"></i></div><div class="cap"><span class="mono" data-i18n="kFree">Free tool</span><b data-i18n="tCv">CV Builder</b></div></a>
+        </div>
+        <div class="floor"></div>
+      </div>
+      <div class="ars-foot mono"><span data-i18n="arsF">Scroll to turn the ring</span><span class="now" id="now">01 / Castle WARS</span></div>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section class="chapter ch" id="chatnelo" data-sec="chatnelo">
+    <div class="pin">
+      <div class="ch-grid gut">
+        <div class="ch-copy">
+          <span class="tag mono" data-i18n="chTag">Chapter 01 · Chatnelo</span>
+          <h2 data-i18n-html="chH">Your store <em>never sleeps.</em></h2>
+          <p data-i18n="chP">An AI chatbot for Shopify stores. It answers shoppers around the clock from your real products, stock and shipping rules.</p>
+          <div class="price">
+            <div><b data-i18n="p1v">3 days</b><span class="mono" data-i18n="p1">free trial</span></div>
+            <div><b>$16.99</b><span class="mono" data-i18n="p2">per month, from</span></div>
+          </div>
+          <div class="store">
+            <a class="btn btn-solid" href="https://apps.shopify.com/chatnelo" target="_blank" rel="noopener"><span data-i18n="chBtn">Find us on the Shopify App Store</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="win" aria-label="Example conversation">
+          <div class="win-h"><img src="img/chatnelo-icon.webp" alt=""><div><b>Chatnelo</b><small data-i18n="online">Online · replies instantly</small></div></div>
+          <div class="win-b" id="convo">
+            <div class="msg me c1" data-i18n="m1">Do you have the trail runners in size 42?</div>
+            <div class="msg bot c2"><span class="typing"><i></i><i></i><i></i></span></div>
+            <div class="msg bot c3" data-i18n="m2">Yes. Size 42 is in stock and ships tomorrow. Delivery is free on this order.</div>
+            <div class="msg bot card c4"><div class="th"></div><div><b>Trail Runner X</b><span data-i18n="m3">Size 42 · in stock · add to cart</span></div></div>
+            <div class="msg me c5" data-i18n="m4">Can I return them if they don't fit?</div>
+            <div class="msg bot c6" data-i18n="m5">Of course. You have 30 days to return them, and the store sends you a return label.</div>
+          </div>
+          <span class="win-note mono" data-i18n="exNote">Example conversation, sample store</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="projects">
-    <div class="wrap">
-      <div class="sec-head"><h2 data-i18n="projects">Projects</h2><span>03</span></div>
-      <div class="grid">
-        <article class="card">
-          <a class="stretch" href="https://battlecastle.itch.io/castle-wars" target="_blank" rel="noopener" aria-label="Castle WARS"></a>
-          <div class="media"><img src="castle-wars.jpg" alt="Castle WARS" loading="lazy"></div>
-          <div class="info">
-            <div class="meta" data-i18n="mGame">Strategy game</div>
-            <h3>Castle WARS</h3>
-            <p data-i18n="pCw">Build your army, defend your castle and conquer your rivals.</p>
-            <span class="more"><span data-i18n="goCw">Play now</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </div>
-        </article>
-        <article class="card">
-          <a class="stretch" href="https://apps.shopify.com/chatnelo" target="_blank" rel="noopener" aria-label="Chatnelo"></a>
-          <div class="media"><img src="chatnelo.jpg" alt="Chatnelo" loading="lazy"></div>
-          <div class="info">
-            <div class="meta" data-i18n="mAi">AI for online stores</div>
-            <h3>Chatnelo</h3>
-            <p data-i18n="pCh">A chatbot that answers shoppers 24/7 from real products, stock and shipping.</p>
-            <span class="more"><span data-i18n="goCh">View on Shopify</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </div>
-        </article>
-        <article class="card">
-          <a class="stretch" href="https://pracovnitipyai-production.up.railway.app/cv?src=broswars" target="_blank" rel="noopener" aria-label="CV"></a>
-          <div class="media cv"><div class="sheet"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-          <div class="info">
-            <div class="meta" data-i18n="mFree">Free tool</div>
-            <h3 data-i18n="tCv">CV Builder</h3>
-            <p data-i18n="pCv">A professional CV in Czech and English, ready in five minutes.</p>
-            <span class="more"><span data-i18n="goCv">Create your CV</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </div>
-        </article>
+  <!-- Načti.me -->
+  <section class="chapter nm" id="nacti" data-sec="nacti">
+    <div class="pin">
+      <div class="nm-grid gut">
+        <div class="nm-copy">
+          <span class="tag mono" data-i18n="nmTag">Chapter 02 · Načti.me</span>
+          <h2 data-i18n-html="nmH">Your QR code. <em>In five seconds.</em></h2>
+          <p data-i18n="nmP">Links, Wi-Fi, contacts and Czech QR payments, plus business cards and stickers ready to print. Free, with no sign-up, and the codes work forever.</p>
+          <div><a class="btn btn-solid" href="https://nacti.me" target="_blank" rel="noopener"><span data-i18n="nmBtn">Open Načti.me</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+          <div class="mono c" data-i18n="nmC">Runs in your browser</div>
+        </div>
+        <div class="qrcard" aria-label="QR code that opens nacti.me">
+          <svg id="qr" viewBox="0 0 25 25" shape-rendering="crispEdges"></svg>
+          <div class="scan" id="scan"></div>
+          <div class="qrlabel mono" id="qrl"><span data-i18n="nmScan">Scan me</span> · <b>nacti.me</b></div>
+        </div>
       </div>
-      <p class="soon" data-i18n="soon">More projects are in development.</p>
+    </div>
+  </section>
+
+  <!-- 05 -->
+  <section class="chapter cv" id="cv" data-sec="cv">
+    <div class="pin">
+      <div class="cv-grid gut">
+        <div class="cv-copy">
+          <span class="tag mono" data-i18n="cvTag">Chapter 03 · CV Builder</span>
+          <h2 data-i18n-html="cvH">Five minutes. <em>One strong CV.</em></h2>
+          <p data-i18n="cvP">A free tool that turns a few answers into a clean, professional CV in Czech or English.</p>
+          <a class="btn btn-solid" href="https://pracovnitipyai-production.up.railway.app/cv?src=broswars" target="_blank" rel="noopener"><span data-i18n="cvBtn">Create your CV</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <div class="mono c" data-i18n="cvC">Free · CZ / EN</div>
+        </div>
+        <div class="doc" id="doc" aria-hidden="true">
+          <div class="top"><div class="ph"></div><div class="nm"><b>Jana Nováková</b><span data-i18n="cvRole">Project manager</span></div></div>
+          <div class="ln"><i class="k"></i><i></i><i style="width:92%"></i><i style="width:70%"></i></div>
+          <div class="ln"><i class="k"></i><i></i><i style="width:85%"></i><i></i><i style="width:60%"></i><i class="k"></i><i style="width:76%"></i><i style="width:88%"></i></div>
+          <div class="stamp">READY</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 -->
+  <section class="ask gut" id="ask" data-sec="ask">
+    <div class="ask-in">
+      <span class="tag mono" data-i18n="askTag">Open line to the studio</span>
+      <h2 data-i18n-html="askH">Ask us <em>anything.</em></h2>
+      <div class="term">
+        <div class="log" id="log" aria-live="polite"></div>
+        <div class="chips" id="chips">
+          <button type="button" data-i18n="q1">What is Castle WARS?</button>
+          <button type="button" data-i18n="q2">How much is Chatnelo?</button>
+          <button type="button" data-i18n="q3">Can we work together?</button>
+        </div>
+        <form id="askf"><input id="aski" maxlength="500" autocomplete="off" aria-label="Your question"><button class="btn send" id="askb" type="submit">Send</button></form>
+      </div>
+      <div class="note mono"><span data-i18n="mailP">Prefer e-mail?</span> <span class="mail">broswars@chatnelo.com</span></div>
     </div>
   </section>
 </main>
 
-<footer>
-  <div class="wrap foot">
-    <span>© <span id="y">2026</span> BrosWars Studio</span>
-    <a href="mailto:broswars@chatnelo.com">broswars@chatnelo.com</a>
+<footer class="gut">
+  <p class="big" aria-hidden="true">BrosWars</p>
+  <div class="foot mono">
+    <span>© <span id="y">2026</span> BrosWars Studio · Czech Republic</span>
+    <nav>
+      <a href="https://www.instagram.com/broswars_studio/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://battlecastle.itch.io/castle-wars" target="_blank" rel="noopener">itch.io</a>
+      <a href="https://apps.shopify.com/chatnelo" target="_blank" rel="noopener">Shopify App Store</a>
+      <a href="https://nacti.me" target="_blank" rel="noopener">Načti.me</a>
+      <a href="https://chatnelo.com/partneri" target="_blank" rel="noopener" data-i18n="partner">Partner program</a>
+    </nav>
   </div>
 </footer>
 
-<button class="chat-fab js-ask" type="button" aria-label="Ask us"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></button>
-<section class="chat" id="chat" role="dialog" aria-label="BrosWars Studio chat">
-  <div class="chat-h"><img src="emblem.png" alt=""><b>BrosWars Studio</b><button type="button" id="chat-x" aria-label="Close">×</button></div>
-  <div class="chat-log" id="chat-log"></div>
-  <form class="chat-f" id="chat-f"><input id="chat-i" maxlength="500" autocomplete="off"><button type="submit" id="chat-b">Send</button></form>
-  <div class="chat-note"><span id="chat-note-t">Prefer e-mail?</span> <a href="mailto:broswars@chatnelo.com">broswars@chatnelo.com</a></div>
-</section>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
-  var CS = {
-    navProjects:"Projekty", navContact:"Kontakt",
-    cta2:"Zeptej se nás", projects:"Projekty",
-    mGame:"Strategická hra", pCw:"Postav armádu, ubraň hrad a poraz své soupeře.", goCw:"Hrát",
-    mAi:"AI pro e-shopy", pCh:"Chatbot, který zákazníkům odpovídá 24/7 podle skutečných produktů, skladu a dopravy.", goCh:"Zobrazit na Shopify",
-    mFree:"Nástroj zdarma", tCv:"Životopis", pCv:"Profesionální životopis česky i anglicky za pět minut.", goCv:"Vytvořit životopis",
-    soon:"Další projekty jsou ve vývoji.", title:"BrosWars Studio — hry a AI nástroje"
+(function(){
+"use strict";
+var RM = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ================= i18n ================= */
+var CS={
+  navAsk:"Napiš nám",r0:"Studio",r1:"Arzenál",r4:"Životopis",r5:"Napiš nám",
+  hudA:"Hry · AI nástroje",h1a:"Hraj naplno.",h1b:"Tvoř chytře.",hudB:"České studio her a AI nástrojů",hudC:"Hry · AI · Nástroje",cue:"Scrolluj dovnitř",
+  arsA:"Náš",arsB:"arzenál.",arsP:"Čtyři projekty a každý děláme sami, od prvního pixelu po poslední řádek kódu.",
+  kGame:"Strategická hra",kAi:"AI pro e-shopy",kFree:"Nástroj zdarma",tCv:"Životopis",kQr:"QR kódy za pár vteřin",arsF:"Scrollem otáčíš kruhem",
+  cwTag:"Kapitola 01 · Castle WARS",cwH:"Postav<em>.</em> Ubraň<em>.</em> Dobij<em>.</em>",
+  cwP:"Strategie hrad proti hradu. Postav armádu, udrž hradby, sešli blesky a prolom nepřátelskou bránu. Rytíři, Vikingové a Samurajové, každý národ s vlastními jednotkami.",
+  cwBtn:"Hrát zdarma na itch.io",f1:"národy",f2v:"Zdarma",f2:"ke hraní",f3v:"Prohlížeč",f3:"bez instalace",
+  chTag:"Kapitola 01 · Chatnelo",nmTag:"Kapitola 02 · Načti.me",nmH:"Tvůj QR kód. <em>Za pět vteřin.</em>",nmP:"Odkazy, Wi-Fi, kontakty i česká QR platba, k tomu vizitky a samolepky připravené k tisku. Zdarma, bez registrace a kódy fungují navždy.",nmBtn:"Otevřít Načti.me",nmC:"Běží v prohlížeči",nmScan:"Naskenuj mě",chH:"Tvůj e-shop <em>nikdy nespí.</em>",chP:"AI chatbot pro Shopify obchody. Odpovídá zákazníkům nonstop podle tvých skutečných produktů, skladu a dopravy.",
+  p1v:"3 dny",p1:"zkušebně zdarma",p2:"měsíčně, od",chBtn:"Najdeš nás v Shopify App Store",online:"Online · odpovídá hned",
+  m1:"Máte ty trailové boty ve velikosti 42?",m2:"Ano. Velikost 42 je skladem a odešleme ji zítra. Doprava je u této objednávky zdarma.",m3:"Velikost 42 · skladem · do košíku",m4:"Můžu je vrátit, když nesednou?",m5:"Samozřejmě. Na vrácení máš 30 dní a obchod ti pošle štítek na zpáteční zásilku.",exNote:"Ukázková konverzace, vzorový obchod",
+  cvTag:"Kapitola 03 · Životopis",cvH:"Pět minut. <em>Silný životopis.</em>",cvP:"Nástroj zdarma, který z pár odpovědí poskládá čistý profesionální životopis česky nebo anglicky.",
+  cvBtn:"Vytvořit životopis",cvC:"Zdarma · CZ / EN",cvRole:"Projektová manažerka",
+  askTag:"Přímá linka do studia",askH:"Zeptej se <em>na cokoliv.</em>",q1:"Co je Castle WARS?",q2:"Kolik stojí Chatnelo?",q3:"Můžeme spolupracovat?",mailP:"Raději e-mail?",partner:"Partnerský program",
+  title:"BrosWars Studio — hry a AI nástroje"
+};
+var EN={title:"BrosWars Studio"};
+document.querySelectorAll("[data-i18n]").forEach(function(e){EN[e.dataset.i18n]=e.innerHTML;});
+document.querySelectorAll("[data-i18n-html]").forEach(function(e){EN[e.dataset.i18nHtml]=e.innerHTML;});
+var lang="en";
+function setLang(l){
+  lang=l;var d=l==="cs"?CS:EN;document.documentElement.lang=l;
+  document.querySelectorAll("[data-i18n]").forEach(function(e){var v=d[e.dataset.i18n];if(v!=null)e.innerHTML=v;});
+  document.querySelectorAll("[data-i18n-html]").forEach(function(e){var v=d[e.dataset.i18nHtml];if(v!=null)e.innerHTML=v;});
+  document.title=d.title;
+  document.querySelectorAll(".lang button").forEach(function(b){b.classList.toggle("on",b.dataset.lang===l);});
+  try{localStorage.setItem("bw-lang",l);}catch(e){}
+  if(window.ScrollTrigger)ScrollTrigger.refresh();
+  if(window.__askLabels)window.__askLabels();
+}
+document.querySelectorAll(".lang button").forEach(function(b){b.onclick=function(){setLang(b.dataset.lang);};});
+var saved;try{saved=localStorage.getItem("bw-lang");}catch(e){}
+var nl=(navigator.language||"en").slice(0,2).toLowerCase();
+setLang(saved||(nl==="cs"||nl==="sk"?"cs":"en"));
+document.getElementById("y").textContent=new Date().getFullYear();
+
+/* header + rail */
+var hdr=document.getElementById("hdr");
+addEventListener("scroll",function(){hdr.classList.toggle("solid",scrollY>innerHeight*.6);},{passive:true});
+var rail=document.querySelectorAll(".rail a");
+if("IntersectionObserver" in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var k=e.target.dataset.sec;rail.forEach(function(a){a.classList.toggle("on",a.dataset.k===k);});}});},{rootMargin:"-45% 0px -45% 0px"});
+  document.querySelectorAll("[data-sec]").forEach(function(s){io.observe(s);});
+}
+
+/* ================= WebGL chrome emblem ================= */
+var heroP=0, mx=0, my=0, glOK=false;
+(function(){
+  if(!window.THREE)return;
+  var cv=document.getElementById("gl"), R;
+  try{R=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:false,powerPreference:"high-performance"});}catch(e){return;}
+  glOK=true;
+  R.setPixelRatio(Math.min(devicePixelRatio||1,2));
+  R.outputEncoding=THREE.sRGBEncoding;R.toneMapping=THREE.ACESFilmicToneMapping;R.toneMappingExposure=1.35;
+  R.setClearColor(0x04060c,1);
+  var S=new THREE.Scene(), C=new THREE.PerspectiveCamera(32,1,.05,200);
+  C.position.set(0,0,7.2);
+
+  /* studio environment painted on a canvas: soft light strips + electric blue horizon */
+  var ec=document.createElement("canvas");ec.width=2048;ec.height=1024;var x=ec.getContext("2d");
+  var g=x.createLinearGradient(0,0,0,1024);g.addColorStop(0,"#0b1020");g.addColorStop(.5,"#020308");g.addColorStop(1,"#232a38");
+  x.fillStyle=g;x.fillRect(0,0,2048,1024);
+  function strip(cx,cy,w,h,c,a){var gr=x.createRadialGradient(cx,cy,0,cx,cy,Math.max(w,h));gr.addColorStop(0,c);gr.addColorStop(1,"rgba(0,0,0,0)");x.globalAlpha=a;x.fillStyle=gr;x.save();x.translate(cx,cy);x.scale(w/Math.max(w,h),h/Math.max(w,h));x.translate(-cx,-cy);x.beginPath();x.arc(cx,cy,Math.max(w,h),0,7);x.fill();x.restore();x.globalAlpha=1;}
+  strip(1024,250,700,60,"#ffffff",1);strip(1024,90,1100,70,"#ffffff",1);strip(120,520,160,420,"#ffffff",1);strip(1930,520,160,420,"#ffffff",1);strip(300,420,180,260,"#ffffff",.9);strip(1750,400,200,300,"#dfe9ff",.85);
+  strip(1024,505,1500,26,"#f4f8ff",1);strip(1024,548,1500,14,"#3ea2ff",.22);strip(600,700,500,80,"#1d4fff",.1);strip(1024,820,1800,120,"#8f9bb3",.55);strip(1500,180,260,90,"#ffffff",.7);
+  var et=new THREE.CanvasTexture(ec);et.mapping=THREE.EquirectangularReflectionMapping;et.encoding=THREE.sRGBEncoding;
+  var pm=new THREE.PMREMGenerator(R);var env=pm.fromEquirectangular(et).texture;S.environment=env;
+
+  /* the BrosWars emblem: traced from the logo, every shard extruded on its own.
+     left shards are carved stone, right shards polished blue chrome. */
+  var SH={
+    stone:[
+      [[100,240],[215,165],[215,238],[255,214],[255,122],[355,52],[350,300],[255,350],[255,386],[100,276]],
+      [[145,328],[253,405],[253,462],[145,527]],
+      [[8,655],[255,466],[255,580],[320,630],[320,722],[210,655]],
+      [[300,366],[330,345],[345,356],[345,640],[300,582]]
+    ],
+    chrome:[
+      [[385,170],[560,272],[560,375],[475,432],[420,397],[480,350],[480,328],[385,272]],
+      [[375,372],[570,505],[570,578],[345,722],[345,648],[360,640],[360,615],[410,585],[470,548],[470,532],[375,470]]
+    ]
   };
-  var EN = {title:"BrosWars Studio"};
-  document.querySelectorAll("[data-i18n]").forEach(function(e){EN[e.dataset.i18n]=e.textContent;});
-  function setLang(l){
-    var d=l==="cs"?CS:EN; document.documentElement.lang=l;
-    document.querySelectorAll("[data-i18n]").forEach(function(e){if(d[e.dataset.i18n])e.textContent=d[e.dataset.i18n];});
-    document.title=d.title;
-    document.querySelectorAll(".lang button").forEach(function(b){b.classList.toggle("on",b.dataset.lang===l);});
-    try{localStorage.setItem("bw-lang",l);}catch(e){}
+  var P=Math.PI,K=2.5/672;
+  function shp(pts){var sh=new THREE.Shape();pts.forEach(function(q,i){var X=(q[0]-290)*K,Y=-(q[1]-386)*K;i?sh.lineTo(X,Y):sh.moveTo(X,Y);});sh.closePath();return sh;}
+  /* stone texture painted on a canvas: grain, mottling and hairline cracks */
+  function stoneTex(){
+    var n=1024,c=document.createElement("canvas");c.width=c.height=n;var g=c.getContext("2d");
+    g.fillStyle="#9aa1ac";g.fillRect(0,0,n,n);
+    var id=g.getImageData(0,0,n,n),d=id.data;
+    for(var i=0;i<d.length;i+=4){var v=(Math.random()-.5)*46;d[i]+=v;d[i+1]+=v;d[i+2]+=v*1.05;}
+    g.putImageData(id,0,0);
+    for(i=0;i<260;i++){var r=20+Math.random()*120;var gr=g.createRadialGradient(0,0,0,0,0,r);var l=Math.random()<.5;gr.addColorStop(0,l?"rgba(235,240,248,.16)":"rgba(40,46,58,.16)");gr.addColorStop(1,"rgba(0,0,0,0)");g.save();g.translate(Math.random()*n,Math.random()*n);g.fillStyle=gr;g.fillRect(-r,-r,2*r,2*r);g.restore();}
+    g.strokeStyle="rgba(30,34,44,.55)";g.lineWidth=1.2;
+    for(i=0;i<34;i++){var x=Math.random()*n,y=Math.random()*n;g.beginPath();g.moveTo(x,y);for(var k=0;k<9;k++){x+=(Math.random()-.5)*70;y+=(Math.random()-.5)*70;g.lineTo(x,y);}g.stroke();}
+    var t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(1.6,1.6);t.anisotropy=R.capabilities.getMaxAnisotropy();t.encoding=THREE.sRGBEncoding;return t;
   }
-  document.querySelectorAll(".lang button").forEach(function(b){b.onclick=function(){setLang(b.dataset.lang);};});
-  var s; try{s=localStorage.getItem("bw-lang");}catch(e){}
-  var n=(navigator.language||"en").slice(0,2).toLowerCase();
-  setLang(s||(n==="cs"||n==="sk"?"cs":"en"));
-  document.getElementById("y").textContent=new Date().getFullYear();
+  var st=stoneTex();
+  var mStone=new THREE.MeshStandardMaterial({color:0xdfe4ec,map:st,bumpMap:st,bumpScale:.035,roughness:.82,metalness:.18,envMapIntensity:1.1});
+  var mStoneEdge=new THREE.MeshPhysicalMaterial({color:0xf4f7fc,metalness:1,roughness:.12,clearcoat:1,envMapIntensity:2.2});
+  var mChrome=new THREE.MeshPhysicalMaterial({color:0xf3f6fa,metalness:.92,roughness:.2,clearcoat:1,clearcoatRoughness:.04,envMapIntensity:3.4});
+  var grp=new THREE.Group();S.add(grp);
+  var ext={depth:.26,bevelEnabled:true,bevelThickness:.05,bevelSize:.028,bevelSegments:6,curveSegments:2};
+  SH.stone.forEach(function(p,i){var m=new THREE.Mesh(new THREE.ExtrudeGeometry(shp(p),ext),[mStone,mStoneEdge]);m.position.z=-.13+(i%2)*.05;grp.add(m);});
+  SH.chrome.forEach(function(p,i){var m=new THREE.Mesh(new THREE.ExtrudeGeometry(shp(p),ext),mChrome);m.position.z=-.08+i*.04;grp.add(m);});
 
-  // starfield wallpaper: twinkling stars + rising blue sparks
-  (function(){
-    var sp=document.getElementById("space"), i, e, r;
-    for(i=0;i<140;i++){
-      e=document.createElement("i"); e.className="s"; r=Math.random();
-      var sz=r<.7?1:r<.95?1.5:2.2;
-      e.style.cssText="width:"+sz+"px;height:"+sz+"px;left:"+(Math.random()*100)+"%;top:"+(Math.random()*100)+"%;animation-duration:"+(3+Math.random()*6)+"s;animation-delay:"+(-Math.random()*8)+"s";
-      sp.appendChild(e);
-    }
-    for(i=0;i<36;i++){
-      e=document.createElement("i"); e.className="p";
-      var z=Math.random()<.25?3:2;
-      e.style.cssText="width:"+z+"px;height:"+z+"px;left:"+(Math.random()*100)+"%;top:"+(35+Math.random()*65)+"%;animation-duration:"+(7+Math.random()*10)+"s;animation-delay:"+(-Math.random()*14)+"s";
-      sp.appendChild(e);
-    }
-  })();
+  /* electric halo */
+  var hc=document.createElement("canvas");hc.width=hc.height=512;var hx=hc.getContext("2d");
+  var hg=hx.createRadialGradient(256,256,0,256,256,256);hg.addColorStop(0,"rgba(90,180,255,.85)");hg.addColorStop(.35,"rgba(40,120,255,.35)");hg.addColorStop(1,"rgba(0,0,0,0)");
+  hx.fillStyle=hg;hx.fillRect(0,0,512,512);
+  var halo=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(hc),blending:THREE.AdditiveBlending,depthWrite:false,transparent:true}));
+  halo.scale.set(6.5,6.5,1);halo.position.z=-1.2;S.add(halo);
+  var rim=new THREE.PointLight(0x3ea2ff,6,12);rim.position.set(-2.5,1.5,-1.5);S.add(rim);
+  var key=new THREE.PointLight(0xffffff,2.2,14);key.position.set(2.5,2,4);S.add(key);
 
-  // "Ask us" chat – powered by Chatnelo
-  (function(){
-    var API="https://chatnelo.com/studio/chat";
-    var T={en:{hi:"Hi! I'm the BrosWars Studio assistant. Ask me about Castle WARS, Chatnelo, the free CV builder – or anything else.",ph:"Type your question…",send:"Send",note:"Prefer e-mail?",err:"Sorry, I can't answer right now. Please write to broswars@chatnelo.com.",typing:"…"},
-           cs:{hi:"Ahoj! Jsem asistent BrosWars Studia. Zeptej se na Castle WARS, Chatnelo, životopis zdarma – nebo na cokoliv jiného.",ph:"Napiš svou otázku…",send:"Odeslat",note:"Raději e-mail?",err:"Omlouvám se, teď nemůžu odpovědět. Napiš prosím na broswars@chatnelo.com.",typing:"…"}};
-    var box=document.getElementById("chat"),log=document.getElementById("chat-log"),f=document.getElementById("chat-f"),inp=document.getElementById("chat-i"),btn=document.getElementById("chat-b"),hist=[],started=false;
-    function L(){return T[document.documentElement.lang==="cs"?"cs":"en"];}
-    function esc(t){return t.replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
-    function linkify(t){return esc(t).replace(/(https?:\/\/[^\s)]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>').replace(/([\w.+-]+@[\w-]+\.[\w.]+)/g,'<a href="mailto:$1">$1</a>');}
-    function add(role,text){var d=document.createElement("div");d.className="m "+role;d.innerHTML=linkify(text);log.appendChild(d);log.scrollTop=log.scrollHeight;return d;}
-    function labels(){var l=L();inp.placeholder=l.ph;btn.textContent=l.send;document.getElementById("chat-note-t").textContent=l.note;}
-    function open(e){if(e)e.preventDefault();labels();box.classList.add("open");if(!started){started=true;add("bot",L().hi);}setTimeout(function(){inp.focus();},50);}
-    document.querySelectorAll(".js-ask").forEach(function(a){a.addEventListener("click",open);});
-    document.getElementById("chat-x").onclick=function(){box.classList.remove("open");};
-    document.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",labels);});
-    if(location.hash==="#ask")open();
-    f.addEventListener("submit",function(e){
-      e.preventDefault();var msg=inp.value.trim();if(!msg)return;
-      add("me",msg);inp.value="";inp.disabled=btn.disabled=true;var t=add("bot typing",L().typing);
-      fetch(API,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:msg,history:hist})})
-        .then(function(r){return r.json();})
-        .then(function(d){if(!d.reply)throw new Error(d.error||"error");t.remove();add("bot",d.reply);hist.push({role:"user",content:msg},{role:"assistant",content:d.reply});hist=hist.slice(-10);})
-        .catch(function(){t.remove();add("bot",L().err);})
-        .finally(function(){inp.disabled=btn.disabled=false;inp.focus();});
-    });
-  })();
+  /* stars + rising sparks */
+  function pts(n,spread,size,col,op){
+    var a=new Float32Array(n*3);for(var i=0;i<n;i++){a[i*3]=(Math.random()-.5)*spread;a[i*3+1]=(Math.random()-.5)*spread*.6;a[i*3+2]=-Math.random()*60-2;}
+    var bg=new THREE.BufferGeometry();bg.setAttribute("position",new THREE.BufferAttribute(a,3));
+    var sc=document.createElement("canvas");sc.width=sc.height=64;var sx=sc.getContext("2d");var sg=sx.createRadialGradient(32,32,0,32,32,32);sg.addColorStop(0,"#fff");sg.addColorStop(.3,"rgba(255,255,255,.6)");sg.addColorStop(1,"rgba(255,255,255,0)");sx.fillStyle=sg;sx.fillRect(0,0,64,64);
+    var m=new THREE.PointsMaterial({size:size,map:new THREE.CanvasTexture(sc),color:col,transparent:true,opacity:op,depthWrite:false,blending:THREE.AdditiveBlending,sizeAttenuation:true});
+    var p=new THREE.Points(bg,m);S.add(p);return p;
+  }
+  var stars=pts(4200,90,.16,0xdfe9ff,.9), sparks=pts(260,14,.09,0x3ea2ff,1);
+  sparks.geometry.attributes.position.array.forEach(function(v,i,a){if(i%3===2)a[i]=-Math.random()*6;});
+
+  function size(){var w=innerWidth,h=innerHeight;R.setSize(w,h,false);C.aspect=w/h;C.updateProjectionMatrix();
+    var sc=(w<700?.52:.6)*Math.min(1,h/800+.2);grp.scale.setScalar(sc);halo.scale.set(6.5*sc,6.5*sc,1);}
+  size();addEventListener("resize",size);
+  addEventListener("pointermove",function(e){mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5;},{passive:true});
+
+  var t0=performance.now(),vis=true,last=0;
+  function frame(now){
+    requestAnimationFrame(frame);
+    var t=(now-t0)/1000;
+    var on=heroP<1 && scrollY<innerHeight*2.6;
+    if(on!==vis){vis=on;cv.style.visibility=on?"visible":"hidden";}
+    if(!on)return;
+    var p=heroP, e=p*p*(3-2*p);
+    grp.rotation.y=-.38+(RM?0:Math.sin(t*.45)*.3)+mx*.5+e*P*1.15;
+    grp.rotation.x=(RM?0:Math.sin(t*.3)*.06)+my*.25-e*.15;
+    grp.position.y=RM?0:Math.sin(t*.8)*.05;
+    C.position.z=7.2-e*6.6; C.position.x=-e*.12;
+    halo.material.opacity=.85+Math.sin(t*1.7)*.1-e*.5;
+    stars.rotation.z=t*.004; stars.position.z=e*30;
+    var sp=sparks.geometry.attributes.position;for(var i=1;i<sp.array.length;i+=3){sp.array[i]+=.004;if(sp.array[i]>4)sp.array[i]=-4;}sp.needsUpdate=true;
+    R.render(S,C);
+  }
+  requestAnimationFrame(frame);
+})();
+if(!glOK){document.getElementById("gl").style.background="radial-gradient(circle at 50% 50%,#12305e,#04060c 60%)";
+  var fb=document.createElement("img");fb.src="img/emblem.png";fb.alt="";fb.style.cssText="position:absolute;left:50%;top:50%;width:min(240px,40vw);transform:translate(-50%,-50%);filter:drop-shadow(0 0 40px #3ea2ff)";document.querySelector(".hero-in").appendChild(fb);}
+
+/* ================= QR for nacti.me (pre-encoded, scannable) ================= */
+(function(){var M=["1111111010101111001111111", "1000001010011111001000001", "1011101010100110001011101", "1011101000101011101011101", "1011101010111101001011101", "1000001000110110001000001", "1111111010101010101111111", "0000000001011010100000000", "1001111110010111110010111", "1110110100001011000111110", "0000011101101011111001001", "1011110101101010001111111", "1001011011110110101100001", "1111110001101001100010010", "1101011111000011101011111", "1000000111001111010101101", "1010011100011000111110110", "0000000010010000100010110", "1111111010001110101010001", "1000001010010100100010001", "1011101011110101111110001", "1011101011101101111000011", "1011101000110101100011111", "1000001000111100001110111", "1111111011111100111001001"],svg=document.getElementById("qr"),h="";
+  M.forEach(function(r,y){for(var x=0;x<r.length;x++)if(r[x]==="1")h+='<rect x="'+x+'" y="'+y+'" width="1.02" height="1.02"/>';});
+  svg.innerHTML=h;})();
+
+/* ================= scroll story (GSAP) ================= */
+if(window.gsap && window.ScrollTrigger && !RM){
+  gsap.registerPlugin(ScrollTrigger);
+  var mm=gsap.matchMedia();
+
+  /* 01 hero: dive into the emblem */
+  gsap.timeline({scrollTrigger:{trigger:".hero",start:"top top",end:"+=160%",pin:true,scrub:true,
+      onUpdate:function(s){heroP=s.progress;}}})
+    .to(".hero .w1",{xPercent:-38,yPercent:-30,opacity:0,ease:"power2.in"},0)
+    .to(".hero .w2",{xPercent:38,yPercent:30,opacity:0,ease:"power2.in"},0)
+    .to(".hud,.hud-top",{opacity:0,duration:.3},0)
+    .to("#flash",{opacity:1,duration:.25,ease:"power1.in"},.75)
+    .to("#flash",{opacity:0,duration:.0001},1);
+
+  /* 02 arsenal: turn the ring */
+  var names=["01 / Castle WARS","02 / Chatnelo","03 / Načti.me","04 / CV Builder"];
+  var nowEl=document.getElementById("now");
+  gsap.fromTo("#ring",{rotateY:0,rotateX:-6},{rotateY:-270,rotateX:-6,ease:"none",
+    scrollTrigger:{trigger:".arsenal",start:"top top",end:"+=220%",pin:".ars-pin",scrub:.6,
+      onUpdate:function(s){var k=Math.min(3,Math.round(s.progress*3));if(nowEl.textContent!==names[k])nowEl.textContent=names[k];}}});
+  gsap.from(".ars-head h2",{yPercent:40,opacity:0,scrollTrigger:{trigger:".arsenal",start:"top 80%",end:"top 20%",scrub:true}});
+
+  /* 04 Chatnelo: the conversation types itself */
+  var ctl=gsap.timeline({scrollTrigger:{trigger:".ch",start:"top top",end:"+=220%",pin:".ch .pin",scrub:.4}});
+  ctl.from(".ch-copy > *",{y:40,opacity:0,stagger:.08,duration:.4},0)
+     .from(".win",{y:80,rotateX:12,opacity:0,duration:.5,transformPerspective:900},0)
+     .from(".c1",{y:20,opacity:0,duration:.2},.5)
+     .from(".c2",{y:20,opacity:0,duration:.15},.75)
+     .to(".c2",{height:0,padding:0,margin:0,opacity:0,duration:.1},1.0)
+     .from(".c3",{y:20,opacity:0,duration:.2},1.05)
+     .from(".c4",{y:20,opacity:0,scale:.96,duration:.2},1.3)
+     .from(".c5",{y:20,opacity:0,duration:.2},1.6)
+     .from(".c6",{y:20,opacity:0,duration:.2},1.9)
+     .to({},{duration:.3});
+
+  /* Načti.me: the code assembles itself, then gets scanned */
+  var ntl=gsap.timeline({scrollTrigger:{trigger:".nm",start:"top top",end:"+=200%",pin:".nm .pin",scrub:.4}});
+  ntl.from(".nm-copy > *",{y:40,opacity:0,stagger:.08,duration:.4},0)
+     .from(".qrcard",{scale:.85,rotate:-6,opacity:0,duration:.4},0)
+     .from("#qr rect",{x:function(){return (Math.random()-.5)*40;},y:function(){return (Math.random()-.5)*40;},opacity:0,duration:.8,stagger:{amount:.5,from:"random"},ease:"power3.out"},.25)
+     .fromTo("#scan",{opacity:0,top:"8%"},{opacity:1,top:"90%",duration:.5,ease:"none"},1.5)
+     .to("#scan",{opacity:0,duration:.1},2.0)
+     .from("#qrl",{y:10,opacity:0,duration:.2},1.9);
+
+  /* 05 CV: the page writes itself */
+  var vtl=gsap.timeline({scrollTrigger:{trigger:".cv",start:"top top",end:"+=180%",pin:".cv .pin",scrub:.4}});
+  vtl.from(".cv-copy > *",{y:40,opacity:0,stagger:.08,duration:.4},0)
+     .from("#doc",{y:120,rotate:-14,opacity:0,duration:.5,ease:"power2.out"},0)
+     .from("#doc .ph",{scale:0,duration:.25,ease:"back.out(2)"},.4)
+     .from("#doc .nm > *",{x:-20,opacity:0,stagger:.08,duration:.2},.5)
+     .from("#doc .ln i",{scaleX:0,stagger:.04,duration:.18,ease:"power2.out"},.65)
+     .from("#doc .stamp",{scale:2.4,opacity:0,rotate:40,duration:.25,ease:"power3.in"},1.4)
+     .to("#doc",{rotate:-1,duration:.4},1.4);
+
+  /* ask + footer reveal */
+  gsap.from(".ask h2",{y:60,opacity:0,scrollTrigger:{trigger:".ask",start:"top 85%",end:"top 45%",scrub:true}});
+  gsap.from(".big",{yPercent:40,letterSpacing:"0.08em",scrollTrigger:{trigger:"footer",start:"top bottom",end:"bottom bottom",scrub:true}});
+
+  addEventListener("load",function(){ScrollTrigger.refresh();});
+}
+
+/* ================= Ask us (Chatnelo-powered) ================= */
+(function(){
+  var API="https://chatnelo.com/studio/chat";
+  var T={en:{hi:"Hi! I'm the BrosWars Studio assistant. Ask me about Castle WARS, Chatnelo, the free CV builder, or working with us.",ph:"Type your question…",send:"Send",err:"I can't answer right now. Please write to broswars@chatnelo.com and the team will reply."},
+         cs:{hi:"Ahoj! Jsem asistent BrosWars Studia. Zeptej se na Castle WARS, Chatnelo, životopis zdarma nebo na spolupráci.",ph:"Napiš svou otázku…",send:"Odeslat",err:"Teď nemůžu odpovědět. Napiš prosím na broswars@chatnelo.com, tým ti odpoví."}};
+  var log=document.getElementById("log"),f=document.getElementById("askf"),inp=document.getElementById("aski"),btn=document.getElementById("askb"),hist=[];
+  function L(){return T[lang==="cs"?"cs":"en"];}
+  function esc(t){return t.replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  function linkify(t){return esc(t).replace(/(https?:\/\/[^\s)]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>');}
+  function add(role,text){var d=document.createElement("div");d.className="m "+role;d.innerHTML=linkify(text);log.appendChild(d);log.scrollTop=log.scrollHeight;return d;}
+  var hiEl=add("bot",L().hi);
+  window.__askLabels=function(){var l=L();inp.placeholder=l.ph;btn.textContent=l.send;if(hist.length===0)hiEl.innerHTML=linkify(l.hi);};
+  window.__askLabels();
+  document.querySelectorAll("#chips button").forEach(function(b){b.onclick=function(){inp.value=b.textContent;f.requestSubmit?f.requestSubmit():f.dispatchEvent(new Event("submit"));};});
+  f.addEventListener("submit",function(e){
+    e.preventDefault();var msg=inp.value.trim();if(!msg)return;
+    add("me",msg);inp.value="";inp.disabled=btn.disabled=true;var t=add("bot","…");
+    fetch(API,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:msg,history:hist})})
+      .then(function(r){return r.json();})
+      .then(function(d){if(!d.reply)throw new Error(d.error||"error");t.remove();add("bot",d.reply);hist.push({role:"user",content:msg},{role:"assistant",content:d.reply});hist=hist.slice(-10);})
+      .catch(function(){t.remove();add("bot",L().err);})
+      .finally(function(){inp.disabled=btn.disabled=false;inp.focus();});
+  });
+})();
+})();
 </script>
+
 </body>
 </html>
