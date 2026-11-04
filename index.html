@@ -98,12 +98,13 @@ header.solid{background:rgba(4,6,12,.72);backdrop-filter:blur(14px);-webkit-back
 /* ---------- 02 arsenal arc ---------- */
 .arsenal{position:relative;z-index:2;background:linear-gradient(var(--void),var(--void-2) 40%,var(--void));overflow:hidden}
 .ars-pin{height:100vh;height:100svh;min-height:620px;display:grid;grid-template-rows:auto 1fr auto;padding-block:96px 36px}
-.ars-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;max-width:1440px;margin:0 auto;width:100%}
+.ars-head{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;max-width:1440px;margin:0 auto;width:100%}
 .ars-head h2{margin:0;font:700 var(--s3)/.9 var(--f-display);letter-spacing:-.02em}
 .ars-head h2 em{font-weight:500;color:var(--chrome)}
 .ars-head p{max-width:34ch;margin:0;color:var(--muted)}
 .stage{position:relative;perspective:1600px;display:grid;place-items:center}
-.ring{position:relative;width:var(--cw);height:calc(var(--cw)*1.42);transform-style:preserve-3d;--cw:clamp(170px,19vw,300px);--r:clamp(300px,40vw,640px)}
+.ringz{transform-style:preserve-3d;transform:translateZ(calc(-1 * var(--r)));--cw:min(clamp(150px,19vw,280px),calc((100svh - 330px) / 1.42));--r:calc(var(--cw) * 1.9)}
+.ring{position:relative;width:var(--cw);height:calc(var(--cw)*1.42);transform-style:preserve-3d}
 .unit{position:absolute;inset:0;transform-style:preserve-3d;border-radius:18px;overflow:hidden;text-decoration:none;color:var(--ice);
   transform:rotateY(calc(var(--i)*360deg/var(--n))) translateZ(var(--r));backface-visibility:hidden;
   box-shadow:0 40px 80px -30px rgba(0,0,0,.9),0 0 0 1px rgba(207,216,230,.18) inset}
@@ -323,12 +324,12 @@ footer{position:relative;z-index:2;background:var(--void);border-top:1px solid v
         <p data-i18n="arsP">Four projects, each one built in-house, from the first pixel to the last line of code.</p>
       </div>
       <div class="stage">
-        <div class="ring" id="ring" style="--n:4">
+        <div class="ringz"><div class="ring" id="ring" style="--n:4">
           <a class="unit u-cw" style="--i:0" href="https://battlecastle.itch.io/castle-wars" target="_blank" rel="noopener"><div class="art"></div><div class="cap"><span class="mono" data-i18n="kGame">Strategy game</span><b>Castle WARS</b></div></a>
           <a class="unit u-ch" style="--i:1" href="#chatnelo"><div class="art"></div><img class="ic" src="img/chatnelo-icon.webp" alt=""><div class="bub"><i></i><i></i><i></i></div><div class="cap"><span class="mono" data-i18n="kAi">AI for online stores</span><b>Chatnelo</b></div></a>
           <a class="unit u-nm" style="--i:2" href="#nacti"><div class="art"></div><img class="ic" src="img/nacti-icon.png" alt=""><div class="cap"><span class="mono" data-i18n="kQr">QR codes in seconds</span><b>Načti.me</b></div></a>
           <a class="unit u-cv" style="--i:3" href="#cv"><div class="art"></div><div class="sheet"><i class="h"></i><i class="s"></i><i></i><i></i><i style="width:80%"></i><i class="s"></i><i></i><i style="width:64%"></i></div><div class="cap"><span class="mono" data-i18n="kFree">Free tool</span><b data-i18n="tCv">CV Builder</b></div></a>
-        </div>
+        </div></div>
         <div class="floor"></div>
       </div>
       <div class="ars-foot mono"><span data-i18n="arsF">Scroll to turn the ring</span><span class="now" id="now">01 / Castle WARS</span></div>
