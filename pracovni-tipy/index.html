@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Pracovní tipy – práce v EU bez víz</title>
+<meta name="description" content="Práce v zemích Evropské unie s ubytováním. Jako občan EU nepotřebuješ vízum ani pracovní povolení. Nové nabídky každý den.">
+<meta name="theme-color" content="#050816">
+<link rel="canonical" href="https://broswarsstudio.chatnelo.com/pracovni-tipy/">
+<meta property="og:title" content="Pracovní tipy – celá Evropa, bez víz">
+<meta property="og:description" content="Práce v EU s ubytováním. Stačí občanka. Nové nabídky každý den.">
+<meta property="og:image" content="https://broswarsstudio.chatnelo.com/pracovni-tipy/img/denmark.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: one journey through space — a planet with the EU ring, a passport that turns its own pages, a suitcase that comes apart, a boarding pass you aim at a country. */
+:root{
+  --space:#050816;      /* deep space */
+  --space-2:#0b1230;
+  --eu:#1f4fff;         /* EU blue, brightened for screens */
+  --gold:#ffcc00;       /* EU star gold */
+  --burgundy:#6d1b2e;   /* Czech passport cover */
+  --paper:#f4efe2;      /* passport page */
+  --ink:#141a2e;
+  --stamp:#c0262d;
+  --ok:#1f9d55;
+  --snow:#eef2ff;
+  --muted:#8e98b8;
+  --line:rgba(238,242,255,.14);
+  --f-d:"Archivo","Arial Narrow",system-ui,sans-serif;
+  --f-m:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--space);color:var(--snow);font:400 17px/1.6 var(--f-d);font-stretch:100%;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--space)}
+a{color:inherit}
+img{max-width:100%;display:block}
+.gut{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--f-m);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase}
+.wide{font-stretch:125%;font-weight:900;letter-spacing:-.01em;text-transform:uppercase}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 24px;border-radius:99px;text-decoration:none;font:700 1rem/1 var(--f-d);font-stretch:110%;transition:transform .2s,box-shadow .2s;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:#1a1300;box-shadow:0 0 0 0 rgba(255,204,0,.5)}
+.btn-gold:hover{box-shadow:0 0 0 8px rgba(255,204,0,.14)}
+.btn-line{border:1px solid rgba(238,242,255,.35);color:var(--snow);background:rgba(5,8,22,.35);backdrop-filter:blur(6px)}
+
+/* header */
+header{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;padding-block:14px;transition:background .3s}
+header.solid{background:rgba(5,8,22,.75);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:16px;max-width:1440px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 1.05rem/1 var(--f-d);font-stretch:118%;text-transform:uppercase}
+.logo i{width:22px;height:22px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#6f8cff,var(--eu) 60%,#0a1a66);box-shadow:0 0 14px rgba(31,79,255,.8)}
+.nav nav{display:flex;gap:clamp(12px,2.4vw,28px);align-items:center}
+.nav nav a{text-decoration:none;color:#c9d1ee}
+.nav nav a:hover{color:var(--snow)}
+@media (max-width:700px){.nav nav .hs{display:none}}
+
+/* 01 planet */
+#gl{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.hero{position:relative;z-index:1;height:100vh;height:100svh;min-height:560px}
+.hero-in{position:absolute;inset:0;display:grid;align-content:end;gap:18px;padding-block:0 clamp(40px,9vh,96px);max-width:1440px;margin:0 auto}
+.hero h1{margin:0;font-size:clamp(3rem,1rem + 8.4vw,10rem);line-height:.86;text-wrap:balance}
+.hero h1 span{display:block}
+.hero h1 .g{color:var(--gold);text-shadow:0 0 40px rgba(255,204,0,.35)}
+.hero p{margin:0;max-width:44ch;color:#cdd5f2;font-size:clamp(1rem,.95rem + .3vw,1.2rem)}
+.hero .row{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+.hero .cue{position:absolute;right:max(16px,env(safe-area-inset-right,0px));bottom:clamp(40px,9vh,96px);color:var(--muted);writing-mode:vertical-rl}
+@media (max-width:700px){.hero .cue{display:none}}
+
+/* chapter shell */
+.ch{position:relative;z-index:2}
+.pin{position:relative;height:100vh;height:100svh;min-height:600px;overflow:hidden}
+.ch-head{position:absolute;top:84px;left:0;right:0;max-width:1440px;margin:0 auto;display:flex;justify-content:space-between;gap:20px;align-items:flex-end;flex-wrap:wrap;z-index:3}
+.ch-head h2{margin:0;font-size:clamp(2rem,1rem + 3.6vw,4.4rem);line-height:.9}
+.ch-head h2 em{font-style:normal;color:var(--gold)}
+.ch-head p{margin:0;max-width:36ch;color:#c1c9e6}
+.k{color:var(--gold)}
+
+/* 02 passport */
+.pass{background:radial-gradient(70% 60% at 50% 60%,#1a1340 0%,var(--space) 70%)}
+.stage{position:absolute;inset:0;display:grid;place-items:center;perspective:2200px;padding-top:120px}
+.book{position:relative;width:var(--pw);height:calc(var(--pw)*1.42);transform-style:preserve-3d;transform:translateX(calc(var(--pw)*var(--shift,0))) rotateX(10deg);--pw:min(30vw,calc((100svh - 230px)/1.42),380px)}
+.leaf{position:absolute;inset:0;transform-origin:left center;transform-style:preserve-3d;transform:rotateY(calc(var(--r,0)*-180deg))}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:4px 14px 14px 4px;overflow:hidden}
+.face.back{transform:rotateY(180deg);border-radius:14px 4px 4px 14px}
+.cover{background:linear-gradient(135deg,#7d2036,var(--burgundy) 55%,#4a1020);box-shadow:inset 0 0 0 1px rgba(255,255,255,.06),0 40px 80px -30px rgba(0,0,0,.9);display:grid;justify-items:center;align-content:space-between;padding:12% 8%;color:#e9c46a;text-align:center}
+.cover .t{font:600 clamp(.6rem,1.1vw,.82rem)/1.5 var(--f-m);letter-spacing:.22em}
+.cover .emb{width:44%;aspect-ratio:1;position:relative}
+.cover .emb i{position:absolute;left:50%;top:50%;width:11%;aspect-ratio:1;background:#e9c46a;clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);transform:translate(-50%,-50%) rotate(var(--a)) translateY(-190%) rotate(calc(var(--a)*-1))}
+.cover b{font:800 clamp(.9rem,1.9vw,1.4rem)/1.1 var(--f-d);font-stretch:125%;letter-spacing:.06em}
+.cover .chip{width:18%;aspect-ratio:1.4;border:2px solid #e9c46a;border-radius:4px;opacity:.8;position:relative}
+.cover .chip::after{content:"";position:absolute;inset:28%;border:2px solid #e9c46a;border-radius:50%}
+.pg{background:var(--paper);color:var(--ink)}
+.pg.photo{background-size:cover;background-position:center}
+.pg.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,12,30,.85))}
+.pg.photo .nm{position:absolute;left:8%;bottom:7%;z-index:1;color:#fff}
+.pg.photo .nm b{display:block;font:900 clamp(1.4rem,3vw,2.4rem)/.9 var(--f-d);font-stretch:125%;text-transform:uppercase}
+.pg.info{padding:9% 9%;display:grid;align-content:start;gap:7%;background:var(--paper) repeating-linear-gradient(0deg,transparent 0 22px,rgba(31,79,255,.05) 22px 23px)}
+.pg.info .hd{display:flex;justify-content:space-between;font:600 .62rem/1 var(--f-m);letter-spacing:.18em;color:#6a6f86}
+.pg.info h3{margin:0;font:900 clamp(1.1rem,2.2vw,1.7rem)/1 var(--f-d);font-stretch:118%;text-transform:uppercase}
+.pg.info .f{display:grid;gap:4px}
+.pg.info .f small{font:600 .6rem/1 var(--f-m);letter-spacing:.16em;color:#6a6f86;text-transform:uppercase}
+.pg.info .f p{margin:0;font-size:clamp(.72rem,1.15vw,.92rem);line-height:1.45}
+.stampx{position:absolute;right:9%;top:40%;transform:rotate(-14deg);border:3px solid var(--ok);color:var(--ok);border-radius:10px;padding:8px 12px;font:800 clamp(.8rem,1.6vw,1.2rem)/1 var(--f-d);font-stretch:118%;text-transform:uppercase;text-align:center;opacity:.85;mix-blend-mode:multiply}
+.stampx small{display:block;font:600 .55rem/1.4 var(--f-m);letter-spacing:.14em}
+.mrz{position:absolute;left:7%;right:7%;bottom:6%;font:500 clamp(.5rem,.95vw,.72rem)/1.5 var(--f-m);letter-spacing:.12em;color:#3a3f55;word-break:break-all}
+.base{position:absolute;inset:0;border-radius:4px 14px 14px 4px;background:var(--paper);box-shadow:0 50px 90px -30px rgba(0,0,0,.9);transform:translateZ(-2px)}
+.base .end{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:10%;gap:12px;align-content:center}
+.base .end b{font:900 clamp(1.3rem,2.8vw,2.2rem)/.95 var(--f-d);font-stretch:125%;text-transform:uppercase;color:var(--ink)}
+.base .end a{color:var(--eu);font-weight:700}
+.pcount{position:absolute;left:0;right:0;bottom:24px;text-align:center;color:var(--muted)}
+@media (max-width:760px){.book{--pw:min(44vw,calc((100svh - 300px)/1.42))}.stage{padding-top:150px}.ch-head p{display:none}}
+
+/* 03 suitcase */
+.suit{background:radial-gradient(60% 60% at 50% 55%,#0f2a3d 0%,var(--space) 70%)}
+.case-stage{position:absolute;inset:0;display:grid;place-items:center;padding-top:110px}
+.case{position:relative;width:min(300px,50vw);aspect-ratio:1.25}
+.case .shell{position:absolute;inset:0;border-radius:22px;background:linear-gradient(160deg,#2b6cff,#173ec2 60%,#0e2a8c);box-shadow:inset 0 0 0 2px rgba(255,255,255,.12),0 40px 70px -25px rgba(0,0,0,.8)}
+.case .shell::before{content:"";position:absolute;left:34%;right:34%;top:-14%;height:16%;border:6px solid #a9b8ff;border-bottom:0;border-radius:14px 14px 0 0}
+.case .shell::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 22%,rgba(255,255,255,.08) 22% 23%);border-radius:22px}
+.case .tag{position:absolute;right:-4%;top:18%;transform:rotate(12deg);background:var(--gold);color:#1a1300;padding:6px 10px;border-radius:6px;font:700 .62rem/1 var(--f-m);letter-spacing:.12em}
+.item{position:absolute;left:50%;top:50%;width:var(--w,150px);transform:translate(-50%,-50%);z-index:2}
+.item.w-s{--w:110px}.item.w-m{--w:120px}.item.w-l{--w:170px}.item.w-xl{--w:190px}
+.item .card{border-radius:12px;box-shadow:0 24px 40px -18px rgba(0,0,0,.8);overflow:hidden}
+.item .lab{position:absolute;left:50%;top:100%;transform:translateX(-50%);margin-top:10px;width:max-content;max-width:200px;text-align:center}
+.item .lab b{display:block;font:800 .95rem/1.15 var(--f-d);font-stretch:112%}
+.item .lab span{display:block;color:#b8c2e6;font-size:.8rem;line-height:1.35}
+.idc{aspect-ratio:1.586;background:linear-gradient(135deg,#e9eefc,#c9d6fb);padding:10%;display:grid;grid-template-columns:30% 1fr;gap:8%;color:var(--ink)}
+.idc .ph{border-radius:6px;background:linear-gradient(160deg,#8aa0e6,#4b66c9)}
+.idc .ln{display:grid;gap:6px;align-content:center}.idc .ln i{height:6px;border-radius:3px;background:#9aa8cf}.idc .ln i:first-child{width:80%;background:var(--ink)}
+.ehic{aspect-ratio:1.586;background:linear-gradient(135deg,#1f4fff,#0d2a9e);position:relative}
+.ehic::before{content:"";position:absolute;left:8%;top:14%;width:26%;aspect-ratio:1;border-radius:50%;border:3px dotted var(--gold)}
+.ehic::after{content:"EHIC";position:absolute;right:8%;bottom:12%;font:800 1rem/1 var(--f-d);font-stretch:125%;color:#fff}
+.cvd{aspect-ratio:.72;background:#fff;padding:12%;display:grid;gap:7px;align-content:start}
+.cvd i{height:6px;border-radius:3px;background:#dde1ec}.cvd i.h{height:11px;width:70%;background:var(--ink)}.cvd i.a{width:40%;background:var(--eu)}
+.tkt{aspect-ratio:2.3;background:linear-gradient(90deg,#fff 70%,#f1f3f9 70%);color:var(--ink);padding:8% 9%;display:flex;justify-content:space-between;align-items:center;font:800 1.2rem/1 var(--f-d);font-stretch:118%}
+.tkt small{display:block;font:600 .55rem/1.4 var(--f-m);letter-spacing:.12em;color:#7b819c}
+.key{aspect-ratio:1.6;background:radial-gradient(circle at 30% 50%,var(--gold) 0 18%,transparent 19%),linear-gradient(90deg,transparent 30%,var(--gold) 30% 82%,transparent 82%) center/100% 14% no-repeat;filter:drop-shadow(0 10px 14px rgba(0,0,0,.5))}
+.key.card{box-shadow:none;overflow:visible}
+.ins{aspect-ratio:1.4;background:#fff;color:var(--ink);padding:12%;display:grid;place-items:center;text-align:center;font:800 .9rem/1.1 var(--f-d)}
+.ins::before{content:"+";display:grid;place-items:center;width:40%;aspect-ratio:1;border-radius:50%;background:var(--ok);color:#fff;font-size:1.6rem;margin-bottom:6px}
+.packed{position:absolute;left:0;right:0;bottom:28px;text-align:center;font:900 clamp(1.6rem,1rem + 3vw,3.4rem)/1 var(--f-d);font-stretch:125%;text-transform:uppercase;opacity:0}
+@media (max-width:760px){.item.w-s,.item.w-m{--w:78px}.item.w-l,.item.w-xl{--w:112px}.item .lab{max-width:120px}.item .lab span{display:none}.case{width:min(200px,46vw)}}
+
+/* 04 boarding pass */
+.gate{padding-block:clamp(90px,14vh,150px);background:linear-gradient(var(--space),#081a3a 50%,var(--space))}
+.gate-in{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,5vw,70px);align-items:center}
+.gate h2{margin:0 0 14px;font-size:clamp(2rem,1rem + 3.6vw,4.4rem);line-height:.9}
+.gate h2 em{font-style:normal;color:var(--gold)}
+.gate p{color:#c1c9e6;margin:0 0 22px;max-width:42ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{border:1px solid var(--line);background:rgba(238,242,255,.04);color:#d9def3;border-radius:99px;padding:10px 14px;font:600 .9rem/1 var(--f-d);cursor:pointer;transition:.2s}
+.chips button[aria-pressed="true"]{background:var(--gold);color:#1a1300;border-color:var(--gold)}
+.bp-wrap{perspective:1200px;min-width:0}
+.bp{position:relative;border-radius:22px;overflow:hidden;transform:rotateX(var(--rx,6deg)) rotateY(var(--ry,-10deg));transition:transform .25s ease-out;box-shadow:0 60px 100px -40px rgba(0,0,0,.9);background:#fff;color:var(--ink);display:grid;grid-template-columns:1fr 34%}
+.bp::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(calc(110deg + var(--hx,0deg)),rgba(255,0,170,.0) 20%,rgba(0,220,255,.25) 38%,rgba(255,240,120,.3) 50%,rgba(170,90,255,.25) 62%,rgba(255,0,170,0) 80%);mix-blend-mode:color-dodge;opacity:.75}
+.bp .main{padding:clamp(18px,3vw,30px);display:grid;gap:18px;min-width:0}
+.bp .top{display:flex;justify-content:space-between;align-items:center}
+.bp .top b{font:900 .95rem/1 var(--f-d);font-stretch:125%;text-transform:uppercase}
+.bp .route{display:flex;align-items:center;gap:14px}
+.bp .route div{display:grid}
+.bp .route strong{font:900 clamp(2.2rem,1rem + 3.6vw,3.8rem)/.9 var(--f-d);font-stretch:125%}
+.bp .route span{font:600 .7rem/1.3 var(--f-m);letter-spacing:.1em;color:#6a7090;text-transform:uppercase}
+.bp .route i{flex:1;height:2px;background:repeating-linear-gradient(90deg,#9aa3c4 0 6px,transparent 6px 12px);position:relative}
+.bp .route i::after{content:"✈";position:absolute;left:50%;top:50%;transform:translate(-50%,-55%);font-style:normal;color:var(--eu)}
+.bp .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.bp .grid div{display:grid;gap:4px;min-width:0}
+.bp .grid small{font:600 .58rem/1 var(--f-m);letter-spacing:.14em;color:#6a7090;text-transform:uppercase}
+.bp .grid b{font:800 1rem/1.1 var(--f-d)}
+.bp .grid b.ok{color:var(--ok)}
+.bp .note{font-size:.86rem;line-height:1.45;color:#3b415e;min-height:3.9em}
+.bp .stub{position:relative;background-size:cover;background-position:center;border-left:2px dashed #c8cde0}
+.bp .stub::before,.bp .stub::after{content:"";position:absolute;left:-12px;width:22px;height:22px;border-radius:50%;background:var(--space)}
+.bp .stub::before{top:-11px}.bp .stub::after{bottom:-11px}
+.bp-cta{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
+@media (max-width:860px){.gate-in{grid-template-columns:minmax(0,1fr)}.bp{grid-template-columns:1fr}.bp .stub{height:150px;border-left:0;border-top:2px dashed #c8cde0}.bp .stub::before,.bp .stub::after{display:none}}
+
+/* 05 end */
+.end{position:relative;z-index:2;padding-block:clamp(80px,14vh,140px) 40px;text-align:center;background:radial-gradient(60% 70% at 50% 100%,#14206b 0%,var(--space) 70%)}
+.end h2{margin:0 auto 18px;max-width:14ch;font-size:clamp(2.4rem,1rem + 5vw,6rem);line-height:.88}
+.end h2 em{font-style:normal;color:var(--gold)}
+.end p{color:#c1c9e6;max-width:46ch;margin:0 auto 26px}
+.end .row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.ring{display:flex;justify-content:center;gap:10px;margin:0 auto 28px}
+.ring i{width:14px;height:14px;background:var(--gold);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+footer{position:relative;z-index:2;border-top:1px solid var(--line);padding-block:24px 34px;color:var(--muted);display:flex;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;max-width:1440px;margin:0 auto}
+footer a{color:#c9d1ee;text-decoration:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<canvas id="gl" aria-hidden="true"></canvas>
+
+<header class="gut" id="hdr"><div class="nav">
+  <a class="logo" href="#top"><i></i>Pracovní tipy</a>
+  <nav class="mono"><a class="hs" href="#pas">Země</a><a class="hs" href="#kufr">Co s sebou</a><a href="https://pracovnitipyai-production.up.railway.app/go/hh?src=eu-nav">Nabídky</a></nav>
+</div></header>
+
+<main>
+  <section class="hero gut" id="top">
+    <div class="hero-in">
+      <span class="mono k">27 zemí · 1 občanka · 0 víz</span>
+      <h1 class="wide"><span>Celá Evropa.</span><span class="g">Bez víz.</span></h1>
+      <p>Práce v zemích Evropské unie, často s ubytováním. Jako občan EU nepotřebuješ vízum ani pracovní povolení. Nové nabídky přidáváme každý den.</p>
+      <div class="row"><a class="btn btn-gold" href="https://pracovnitipyai-production.up.railway.app/go/hh?src=eu-hero">Ukaž mi nabídky →</a><a class="btn btn-line" href="https://pracovnitipyai-production.up.railway.app/cv?src=eu-hero">Životopis v angličtině zdarma</a></div>
+    </div>
+    <span class="cue mono">Scrolluj · odlet</span>
+  </section>
+
+  <section class="ch pass" id="pas">
+    <div class="pin">
+      <div class="ch-head gut">
+        <h2 class="wide">Tvůj pas <em>do Evropy.</em></h2>
+        <p>Listuj zeměmi, kam posíláme nabídky. U každé najdeš, jaké úřední číslo si po příjezdu vyřídíš.</p>
+      </div>
+      <div class="stage"><div class="book" id="book"><div class="base"><div class="end"><span class="mono" style="color:#6a6f86">Konec pasu</span><b>Kam vyrazíš?</b><a href="https://pracovnitipyai-production.up.railway.app/go/hh?src=eu-book">Nabídky na HeroHero →</a></div></div><div class="leaf" style="z-index:11;transform:rotateY(calc(var(--r,0)*-180deg)) translateZ(6.0px)"><div class="face cover"><span class="t">EVROPSKÁ UNIE<br>ČESKÁ REPUBLIKA</span><div class="emb"><i style="--a:0deg"></i><i style="--a:30deg"></i><i style="--a:60deg"></i><i style="--a:90deg"></i><i style="--a:120deg"></i><i style="--a:150deg"></i><i style="--a:180deg"></i><i style="--a:210deg"></i><i style="--a:240deg"></i><i style="--a:270deg"></i><i style="--a:300deg"></i><i style="--a:330deg"></i></div><b>CESTOVNÍ PAS<br><span style="font-size:.7em">PRÁCE V EU</span></b><span class="chip"></span></div><div class="face back pg photo" style="background-image:url(img/ireland.webp)"><div class="nm"><span class="mono">Práce v Irsku</span><b>Irsko</b></div></div></div><div class="leaf" style="z-index:10;transform:rotateY(calc(var(--r,0)*-180deg)) translateZ(5.3999999999999995px)"><div class="face pg info"><div class="hd"><span>EU · IE</span><span>01</span></div><h3>Irsko</h3><div class="f"><small>Pobyt a práce</small><p>Občan EU nepotřebuje povolení k pobytu ani k práci.</p></div><div class="f"><small>Po příjezdu</small><p>Po příjezdu si vyřiď PPS number (osobní číslo pro práci a daně). Bez něj tě zaměstnavatel nemůže správně vyplácet.</p></div><div class="stampx">Bez víz<small>EU · DUB</small></div></div><div class="face back pg photo" style="background-image:url(img/netherlands.webp)"><div class="nm"><span class="mono">Práce v Nizozemsku</span><b>Nizozemsko</b></div></div></div><div class="leaf" style="z-index:9;transform:rotateY(calc(var(--r,0)*-180deg)) translateZ(4.8px)"><div class="face pg info"><div class="hd"><span>EU · NL</span><span>02</span></div><h3>Nizozemsko</h3><div class="f"><small>Pobyt a práce</small><p>Občan EU nepotřebuje povolení k pobytu ani k práci.</p></div><div class="f"><small>Po příjezdu</small><p>Potřebuješ BSN (burgerservicenummer). Vyřídíš ho na obecním úřadě nebo přes registraci RNI.</p></div><div class="stampx">Bez víz<small>EU · AMS</small></div></div><div class="face back pg photo" style="background-image:url(img/germany.webp)"><div class="nm"><span class="mono">Práce v Německu</span><b>Německo</b></div></div></div><div class="leaf" style="z-index:8;transform:rotateY(calc(var(--r,0)*-180deg)) translateZ(4.2px)"><div class="face pg info"><div class="hd"><span>EU · DE</span><span>03</span></div><h3>Německo</h3><div class="f"><small>Pobyt a práce</small><p>Občan EU nepotřebuje povolení k pobytu ani k práci.</p></div><div class="f"><small>Po příjezdu</small><p>Do 14 dnů od nastěhování se přihlas k pobytu (Anmeldung). Poté ti přijde daňové číslo (Steuer-ID).</p></div><div class="stampx">Bez víz<small>EU · BER</small></div></div><div class="face back pg photo" style="background-image:url(img/austria.webp)"><div class="nm"><span class="mono">Práce v Rakousku</span><b>Rakousko</b></div></div></div><div class="leaf" style="z-index:7;transform:rotateY(calc(var(--r,0)*-180deg)) translateZ(3.5999999999999996px)"><div class="face pg info"><div class="hd"><span>EU · AT</span><span>04</span></div><h3>Rakousko</h3><div class="f"><small>Pobyt a práce</small><p>Občan EU nepotřebuje povolení k práci. Při pobytu nad 3 měsíce si vyřiď potvrzení o registraci.</p></div><div class="f"><small>Po příjezdu</small><p>Do 3 dnů od nastěhování se přihlas k pobytu (Meldezettel). Číslo sociálního pojištění ti vyřídí zaměstnavatel.</p></div><div class="stampx">Bez víz<small>EU · VIE</small></div></div><div class="face back pg photo" style="background-image:url(img/denmark.webp)"><div class="nm"><span class="mono">Práce v Dánsku</span><b>Dánsko</b></div></div></div><div class="leaf" style="z-index:6;transform:rotateY(calc(var(--r,0)*-180deg)) translateZ(3.0px)"><div class="face pg info"><div class="hd"><span>EU · DK</span><span>05</span></div><h3>Dánsko</h3><div class="f"><small>Pobyt a práce</small><p>Občan EU nepotřebuje povolení k práci. Při pobytu nad 3 měsíce si vyřiď registrační potvrzení.</p></div><div class="f"><small>Po příjezdu</small><p>Potřebuješ CPR číslo (osobní číslo) a daňovou kartu (skattekort). Bez CPR se těžko otevírá účet i řeší lékař.</p></div><div class="stampx">Bez víz<small>EU · CPH</small></div></div><div class="face back pg photo" style="background-image:url(img/sweden.webp)"><div class="nm"><span class="mono">Práce ve Švédsku</span><b>Švédsko</b></div></div></div><div class="leaf" style="z-index:5;transform:rotateY(calc(var(--r,0)*-180deg)) translateZ(2.4px)"><div class="face pg info"><div class="hd"><span>EU · SE</span><span>06</span></div><h3>Švédsko</h3><div class="f"><small>Pobyt a práce</small><p>Občan EU nepotřebuje povolení k pobytu ani k práci.</p></div><div class="f"><small>Po příjezdu</small><p>Na kratší práci dostaneš samordningsnummer (koordinační číslo), při pobytu nad rok personnummer. Vyřizuje Skatteverket.</p></div><div class="stampx">Bez víz<small>EU · ARN</small></div></div><div class="face back pg photo" style="background-image:url(img/finland.webp)"><div class="nm"><span class="mono">Práce ve Finsku</span><b>Finsko</b></div></div></div><div class="leaf" style="z-index:4;transform:rotateY(calc(var(--r,0)*-180deg)) translateZ(1.7999999999999998px)"><div class="face pg info"><div class="hd"><span>EU · FI</span><span>07</span></div><h3>Finsko</h3><div class="f"><small>Pobyt a práce</small><p>Občan EU nepotřebuje povolení k práci. Při pobytu nad 3 měsíce se registruješ jako občan EU.</p></div><div class="f"><small>Po příjezdu</small><p>Potřebuješ finské osobní číslo (henkilötunnus) a daňovou kartu (verokortti). Bez ní ti strhnou vyšší daň.</p></div><div class="stampx">Bez víz<small>EU · HEL</small></div></div><div class="face back pg photo" style="background-image:url(img/malta.webp)"><div class="nm"><span class="mono">Práce na Maltě</span><b>Malta</b></div></div></div><div class="leaf" style="z-index:3;transform:rotateY(calc(var(--r,0)*-180deg)) translateZ(1.2px)"><div class="face pg info"><div class="hd"><span>EU · MT</span><span>08</span></div><h3>Malta</h3><div class="f"><small>Pobyt a práce</small><p>Občan EU nepotřebuje povolení k práci a domluví se anglicky – angličtina je tam úřední jazyk.</p></div><div class="f"><small>Po příjezdu</small><p>Pro práci potřebuješ číslo sociálního pojištění. Při delším pobytu si vyřídíš maltský ID průkaz.</p></div><div class="stampx">Bez víz<small>EU · MLA</small></div></div><div class="face back pg photo" style="background-image:url(img/cyprus.webp)"><div class="nm"><span class="mono">Práce na Kypru</span><b>Kypr</b></div></div></div><div class="leaf" style="z-index:2;transform:rotateY(calc(var(--r,0)*-180deg)) translateZ(0.6px)"><div class="face pg info"><div class="hd"><span>EU · CY</span><span>09</span></div><h3>Kypr</h3><div class="f"><small>Pobyt a práce</small><p>Občan EU nepotřebuje povolení k práci. Při pobytu nad 3 měsíce se registruješ (formulář MEU1).</p></div><div class="f"><small>Po příjezdu</small><p>Potřebuješ číslo sociálního pojištění (Social Insurance number), zaregistruje tě zaměstnavatel nebo úřad.</p></div><div class="stampx">Bez víz<small>EU · LCA</small></div></div><div class="face back pg info"><div class="hd"><span>EU</span><span>CZE</span></div><h3>Bez víz.<br>Bez povolení.</h3><div class="f"><small>Platí ve všech zemích EU</small><p>Jako občan EU můžeš v kterékoli zemi Unie pracovat bez víza a pracovního povolení.</p></div><div class="mrz">P&lt;CZEPRACOVNI&lt;&lt;TIPY&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>EU0000027&lt;0CZE&lt;&lt;&lt;&lt;0VIZ&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</div></div></div></div></div>
+      <div class="pcount mono" id="pcount">Obal · Česká republika</div>
+    </div>
+  </section>
+
+  <section class="ch suit" id="kufr">
+    <div class="pin">
+      <div class="ch-head gut">
+        <h2 class="wide">Co si <em>sbalit.</em></h2>
+        <p>Žádné vízum, žádné povolení. Na cestu za prací v EU stačí pár věcí.</p>
+      </div>
+      <div class="case-stage">
+        <div class="case" id="case"><div class="shell"></div><span class="tag">PRG → EU</span></div>
+        <div class="item w-l" data-x="-34" data-y="-24"><div class="card idc"><div class="ph"></div><div class="ln"><i></i><i></i><i></i></div></div><div class="lab"><b>Občanka nebo pas</b><span>Stačí platný doklad. Vízum nepotřebuješ.</span></div></div>
+        <div class="item w-l" data-x="34" data-y="-24"><div class="card ehic"></div><div class="lab"><b>Průkaz pojištěnce</b><span>Zadní strana je evropský průkaz EHIC.</span></div></div>
+        <div class="item w-s" data-x="-36" data-y="20"><div class="card cvd"><i class="h"></i><i class="a"></i><i></i><i></i><i style="width:80%"></i><i class="a"></i><i></i></div><div class="lab"><b>Životopis v angličtině</b><span>Naše AI ti ho udělá zdarma.</span></div></div>
+        <div class="item w-xl" data-x="36" data-y="20"><div class="card tkt"><div><small>Z</small>PRG</div><div style="color:#2b6cff">✈</div><div><small>DO</small>EU</div></div><div class="lab"><b>Letenka</b><span>Kupuješ si ji sám podle nástupu.</span></div></div>
+        <div class="item w-m" data-x="0" data-y="33"><div class="card ins"></div><div class="lab"><b>Cestovní pojištění</b><span>Doporučujeme na celou dobu cesty.</span></div></div>
+        <div class="item w-m" data-x="0" data-y="-30"><div class="card key"></div><div class="lab"><b>Ubytování</b><span>U mnoha nabídek ho zajistí zaměstnavatel.</span></div></div>
+      </div>
+      <div class="packed" id="packed">Sbaleno. <span style="color:var(--gold)">Jedeš.</span></div>
+    </div>
+  </section>
+
+  <section class="gate gut" id="odlet">
+    <div class="gate-in">
+      <div>
+        <span class="mono k">Odletová brána EU</span>
+        <h2 class="wide">Vyber si <em>zemi.</em></h2>
+        <p>Klepni na zemi a palubní lístek ti řekne, co tě tam čeká na úřadě. Nabídky pak najdeš na HeroHero.</p>
+        <div class="chips" id="chips" role="group" aria-label="Země"></div>
+      </div>
+      <div class="bp-wrap">
+        <article class="bp" id="bp" aria-live="polite">
+          <div class="main">
+            <div class="top"><b>Pracovní tipy · Boarding pass</b><span class="mono" id="bpFlag">EU</span></div>
+            <div class="route"><div><strong>PRG</strong><span>Praha</span></div><i></i><div style="text-align:right"><strong id="bpTo">CPH</strong><span id="bpCity">Kodaň</span></div></div>
+            <div class="grid"><div><small>Vízum</small><b class="ok">Nepotřebuješ</b></div><div><small>Pracovní povolení</small><b class="ok">Nepotřebuješ</b></div><div><small>Doklad</small><b>Občanka</b></div></div>
+            <div class="grid" style="grid-template-columns:1fr"><div><small>Po příjezdu</small><div class="note" id="bpNote"></div></div></div>
+          </div>
+          <div class="stub" id="bpImg"></div>
+        </article>
+        <div class="bp-cta"><a class="btn btn-gold" id="bpGo" href="https://pracovnitipyai-production.up.railway.app/go/hh?src=eu-gate">Nabídky do Dánska →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="end gut">
+    <div class="ring" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <h2 class="wide">Tvoje první nabídka <em>čeká.</em></h2>
+    <p>Každý den nové nabídky práce v EU s popisem, mzdou a kontaktem na HeroHero. První 3 dny zdarma.</p>
+    <div class="row"><a class="btn btn-gold" href="https://pracovnitipyai-production.up.railway.app/go/hh?src=eu-end">Chci svou první nabídku →</a><a class="btn btn-line" href="https://pracovnitipyai-production.up.railway.app/cv?src=eu-end">Životopis zdarma</a></div>
+  </section>
+</main>
+<footer class="gut mono">
+  <span>Pracovní tipy · projekt <a href="https://broswarsstudio.chatnelo.com/">BrosWars Studio</a></span>
+  <span><a href="https://www.instagram.com/pracovni_tipy/">Instagram</a> · <a href="https://www.tiktok.com/@pracovni_tipy">TikTok</a></span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+"use strict";
+var C=[{"key": "Ireland", "name": "Irsko", "inn": "v Irsku", "reg": "Po příjezdu si vyřiď PPS number (osobní číslo pro práci a daně). Bez něj tě zaměstnavatel nemůže správně vyplácet.", "stay": "Občan EU nepotřebuje povolení k pobytu ani k práci.", "city": "Dublin", "lat": 53.35, "lon": -6.26, "iata": "DUB", "cc": "IE"}, {"key": "Netherlands", "name": "Nizozemsko", "inn": "v Nizozemsku", "reg": "Potřebuješ BSN (burgerservicenummer). Vyřídíš ho na obecním úřadě nebo přes registraci RNI.", "stay": "Občan EU nepotřebuje povolení k pobytu ani k práci.", "city": "Amsterdam", "lat": 52.37, "lon": 4.9, "iata": "AMS", "cc": "NL"}, {"key": "Germany", "name": "Německo", "inn": "v Německu", "reg": "Do 14 dnů od nastěhování se přihlas k pobytu (Anmeldung). Poté ti přijde daňové číslo (Steuer-ID).", "stay": "Občan EU nepotřebuje povolení k pobytu ani k práci.", "city": "Berlín", "lat": 52.52, "lon": 13.4, "iata": "BER", "cc": "DE"}, {"key": "Austria", "name": "Rakousko", "inn": "v Rakousku", "reg": "Do 3 dnů od nastěhování se přihlas k pobytu (Meldezettel). Číslo sociálního pojištění ti vyřídí zaměstnavatel.", "stay": "Občan EU nepotřebuje povolení k práci. Při pobytu nad 3 měsíce si vyřiď potvrzení o registraci.", "city": "Vídeň", "lat": 48.21, "lon": 16.37, "iata": "VIE", "cc": "AT"}, {"key": "Denmark", "name": "Dánsko", "inn": "v Dánsku", "reg": "Potřebuješ CPR číslo (osobní číslo) a daňovou kartu (skattekort). Bez CPR se těžko otevírá účet i řeší lékař.", "stay": "Občan EU nepotřebuje povolení k práci. Při pobytu nad 3 měsíce si vyřiď registrační potvrzení.", "city": "Kodaň", "lat": 55.68, "lon": 12.57, "iata": "CPH", "cc": "DK"}, {"key": "Sweden", "name": "Švédsko", "inn": "ve Švédsku", "reg": "Na kratší práci dostaneš samordningsnummer (koordinační číslo), při pobytu nad rok personnummer. Vyřizuje Skatteverket.", "stay": "Občan EU nepotřebuje povolení k pobytu ani k práci.", "city": "Stockholm", "lat": 59.33, "lon": 18.07, "iata": "ARN", "cc": "SE"}, {"key": "Finland", "name": "Finsko", "inn": "ve Finsku", "reg": "Potřebuješ finské osobní číslo (henkilötunnus) a daňovou kartu (verokortti). Bez ní ti strhnou vyšší daň.", "stay": "Občan EU nepotřebuje povolení k práci. Při pobytu nad 3 měsíce se registruješ jako občan EU.", "city": "Helsinky", "lat": 60.17, "lon": 24.94, "iata": "HEL", "cc": "FI"}, {"key": "Malta", "name": "Malta", "inn": "na Maltě", "reg": "Pro práci potřebuješ číslo sociálního pojištění. Při delším pobytu si vyřídíš maltský ID průkaz.", "stay": "Občan EU nepotřebuje povolení k práci a domluví se anglicky – angličtina je tam úřední jazyk.", "city": "Valletta", "lat": 35.9, "lon": 14.51, "iata": "MLA", "cc": "MT"}, {"key": "Cyprus", "name": "Kypr", "inn": "na Kypru", "reg": "Potřebuješ číslo sociálního pojištění (Social Insurance number), zaregistruje tě zaměstnavatel nebo úřad.", "stay": "Občan EU nepotřebuje povolení k práci. Při pobytu nad 3 měsíce se registruješ (formulář MEU1).", "city": "Larnaka", "lat": 34.92, "lon": 33.62, "iata": "LCA", "cc": "CY"}];
+var HH="https://pracovnitipyai-production.up.railway.app/go/hh?src=";
+var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+var hdr=document.getElementById("hdr");
+addEventListener("scroll",function(){hdr.classList.toggle("solid",scrollY>innerHeight*.5);},{passive:true});
+
+/* ============ planet ============ */
+var heroP=0;
+(function(){
+  if(!window.THREE)return;
+  var cv=document.getElementById("gl"),R;
+  try{R=new THREE.WebGLRenderer({canvas:cv,antialias:true});}catch(e){return;}
+  R.setPixelRatio(Math.min(devicePixelRatio||1,2));R.setClearColor(0x050816,1);
+  var S=new THREE.Scene(),Cm=new THREE.PerspectiveCamera(35,1,.01,200);Cm.position.set(0,0,4.2);
+  var G=new THREE.Group();S.add(G);
+  function v3(lat,lon,r){var ph=(90-lat)*Math.PI/180,th=(lon+180)*Math.PI/180;return new THREE.Vector3(-r*Math.sin(ph)*Math.cos(th),r*Math.cos(ph),r*Math.sin(ph)*Math.sin(th));}
+  /* ocean sphere with soft day/night shading */
+  var sph=new THREE.Mesh(new THREE.SphereGeometry(1,96,96),new THREE.ShaderMaterial({uniforms:{},vertexShader:"varying vec3 n;varying vec3 p;void main(){n=normalize(normalMatrix*normal);p=(modelViewMatrix*vec4(position,1.)).xyz;gl_Position=projectionMatrix*vec4(p,1.);}",
+    fragmentShader:"varying vec3 n;varying vec3 p;void main(){vec3 l=normalize(vec3(-.6,.5,.7));float d=max(dot(n,l),0.);float f=pow(1.-max(dot(n,normalize(-p)),0.),2.6);vec3 c=mix(vec3(.02,.04,.12),vec3(.07,.16,.42),d)+vec3(.25,.45,1.)*f*.9;gl_FragColor=vec4(c,1.);}"}));
+  G.add(sph);
+  /* graticule */
+  var gm=new THREE.LineBasicMaterial({color:0x5f7dff,transparent:true,opacity:.18});
+  for(var la=-75;la<=75;la+=15){var pts=[];for(var lo=-180;lo<=180;lo+=4)pts.push(v3(la,lo,1.002));G.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),gm));}
+  for(var lo2=-180;lo2<180;lo2+=15){var p2=[];for(var la2=-88;la2<=88;la2+=4)p2.push(v3(la2,lo2,1.002));G.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(p2),gm));}
+  /* atmosphere */
+  var atm=new THREE.Mesh(new THREE.SphereGeometry(1.12,64,64),new THREE.ShaderMaterial({transparent:true,side:THREE.BackSide,blending:THREE.AdditiveBlending,depthWrite:false,
+    vertexShader:"varying vec3 n;void main(){n=normalize(normalMatrix*normal);gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}",
+    fragmentShader:"varying vec3 n;void main(){float i=pow(.72-dot(n,vec3(0,0,1.)),3.);gl_FragColor=vec4(.3,.5,1.,1.)*i;}"}));
+  S.add(atm);
+  /* cities + arcs from Prague */
+  var dotTex=(function(){var c=document.createElement("canvas");c.width=c.height=64;var x=c.getContext("2d");var g=x.createRadialGradient(32,32,0,32,32,32);g.addColorStop(0,"#fff");g.addColorStop(.25,"rgba(255,214,60,.9)");g.addColorStop(1,"rgba(255,204,0,0)");x.fillStyle=g;x.fillRect(0,0,64,64);return new THREE.CanvasTexture(c);})();
+  function dot(lat,lon,s){var sp=new THREE.Sprite(new THREE.SpriteMaterial({map:dotTex,blending:THREE.AdditiveBlending,depthWrite:false,transparent:true}));sp.position.copy(v3(lat,lon,1.01));sp.scale.set(s,s,1);G.add(sp);return sp;}
+  var PRG=[50.08,14.42];dot(PRG[0],PRG[1],.16);
+  var arcs=[];
+  C.forEach(function(c){
+    dot(c.lat,c.lon,.09);
+    var a=v3(PRG[0],PRG[1],1.01),b=v3(c.lat,c.lon,1.01),m=a.clone().add(b).multiplyScalar(.5);var dist=a.distanceTo(b);m.normalize().multiplyScalar(1.01+dist*.45);
+    var curve=new THREE.QuadraticBezierCurve3(a,m,b),pts=curve.getPoints(60);
+    var geo=new THREE.BufferGeometry().setFromPoints(pts);geo.setDrawRange(0,0);
+    var ln=new THREE.Line(geo,new THREE.LineBasicMaterial({color:0xffcc00,transparent:true,opacity:.95}));G.add(ln);arcs.push(geo);
+  });
+  /* EU ring of 12 stars */
+  var starTex=(function(){var c=document.createElement("canvas");c.width=c.height=128;var x=c.getContext("2d");x.translate(64,64);x.fillStyle="#ffcc00";x.shadowColor="#ffcc00";x.shadowBlur=18;x.beginPath();for(var i=0;i<10;i++){var r=i%2?22:52,a=-Math.PI/2+i*Math.PI/5;x.lineTo(Math.cos(a)*r,Math.sin(a)*r);}x.closePath();x.fill();return new THREE.CanvasTexture(c);})();
+  var ring=new THREE.Group();S.add(ring);var stars12=[];
+  for(var i=0;i<12;i++){var sp=new THREE.Sprite(new THREE.SpriteMaterial({map:starTex,transparent:true,depthWrite:false}));sp.scale.set(.16,.16,1);ring.add(sp);stars12.push(sp);}
+  /* far stars */
+  var n=2600,arr=new Float32Array(n*3);for(var k=0;k<n;k++){var r=30+Math.random()*60,t=Math.random()*Math.PI*2,u=Math.acos(2*Math.random()-1);arr[k*3]=r*Math.sin(u)*Math.cos(t);arr[k*3+1]=r*Math.sin(u)*Math.sin(t);arr[k*3+2]=r*Math.cos(u);}
+  var sg=new THREE.BufferGeometry();sg.setAttribute("position",new THREE.BufferAttribute(arr,3));
+  S.add(new THREE.Points(sg,new THREE.PointsMaterial({color:0xdfe6ff,size:.09,transparent:true,opacity:.8})));
+  /* face Europe: rotate globe so Prague faces the camera */
+  var target=new THREE.Quaternion().setFromUnitVectors(v3(PRG[0],PRG[1],1).normalize(),new THREE.Vector3(0,0,1));
+  var tilt=new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1,0,0),.28);
+  function size(){var w=innerWidth,h=innerHeight;R.setSize(w,h,false);Cm.aspect=w/h;Cm.updateProjectionMatrix();}
+  size();addEventListener("resize",size);
+  var t0=performance.now(),vis=true;
+  (function loop(now){requestAnimationFrame(loop);var t=(now-t0)/1000;
+    var on=heroP<1.02&&scrollY<innerHeight*2.4;if(on!==vis){vis=on;cv.style.visibility=on?"visible":"hidden";}if(!on)return;
+    var p=Math.min(1,heroP),e=p*p*(3-2*p),narrow=innerWidth<760;
+    var spin=new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,1,0),RM?0:(1-e)*(t*.12%(Math.PI*2)-Math.PI*.6));
+    var q=new THREE.Quaternion().copy(tilt).multiply(spin).multiply(target);G.quaternion.slerp(q,.08);
+    var asp=innerWidth/innerHeight,far=asp<1?Math.min(2.4,1.15/asp):1;var ox=narrow?0:1.05*(1-e),oy=narrow?.62*(1-e):.12*(1-e);G.position.set(ox,oy,0);atm.position.copy(G.position);
+    Cm.position.z=(4.6-e*1.7)*far;
+    var draw=Math.min(61,Math.floor(61*Math.min(1,e*1.6+.15)));arcs.forEach(function(g,i){g.setDrawRange(0,Math.max(0,Math.min(61,draw-i*2)));});
+    ring.position.copy(G.position);ring.rotation.z=t*.15;stars12.forEach(function(s,i){var a=i/12*Math.PI*2+t*.12;s.position.set(Math.cos(a)*1.45,Math.sin(a)*1.45*.42+Math.sin(a)*.0,Math.sin(a)*1.45*.9);s.material.opacity=.4+.6*(Math.sin(a)*.5+.5);});
+    R.render(S,Cm);
+  })(t0);
+})();
+
+/* ============ boarding pass ============ */
+(function(){
+  var chips=document.getElementById("chips"),bp=document.getElementById("bp");
+  C.forEach(function(c,i){var b=document.createElement("button");b.type="button";b.textContent=c.name;b.setAttribute("aria-pressed",i===4?"true":"false");b.onclick=function(){sel(i);};chips.appendChild(b);});
+  function sel(i){var c=C[i];[].forEach.call(chips.children,function(b,j){b.setAttribute("aria-pressed",j===i?"true":"false");});
+    document.getElementById("bpTo").textContent=c.iata;document.getElementById("bpCity").textContent=c.city;document.getElementById("bpNote").textContent=c.reg;
+    document.getElementById("bpImg").style.backgroundImage="url(img/"+c.key.toLowerCase()+".webp)";
+    var go=document.getElementById("bpGo");go.textContent="Nabídky "+c.inn+" →";go.href=HH+"eu-gate-"+c.key.toLowerCase();
+    if(window.gsap&&!RM)gsap.fromTo(bp,{"--hx":"-60deg"},{"--hx":"60deg",duration:.9,ease:"power2.out"});}
+  sel(4);
+  var wrap=bp.parentElement;
+  wrap.addEventListener("pointermove",function(e){var r=wrap.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;bp.style.setProperty("--ry",(x*18).toFixed(1)+"deg");bp.style.setProperty("--rx",(-y*12).toFixed(1)+"deg");bp.style.setProperty("--hx",(x*80).toFixed(0)+"deg");});
+  wrap.addEventListener("pointerleave",function(){bp.style.setProperty("--ry","-10deg");bp.style.setProperty("--rx","6deg");});
+})();
+
+/* ============ scroll story ============ */
+if(window.gsap&&window.ScrollTrigger&&!RM){
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.create({trigger:".hero",start:"top top",end:"+=120%",pin:true,scrub:true,onUpdate:function(s){heroP=s.progress;}});
+  gsap.to(".hero-in",{opacity:0,y:-60,scrollTrigger:{trigger:".hero",start:"top top",end:"+=70%",scrub:true}});
+
+  /* passport: cover opens, then each page turns */
+  var leaves=gsap.utils.toArray(".leaf"),pc=document.getElementById("pcount"),book=document.getElementById("book");
+  var labels=["Obal · Česká republika"].concat(C.map(function(c,i){return (i+1)+" / "+C.length+" · "+c.name;}));
+  var ptl=gsap.timeline({scrollTrigger:{trigger:".pass",start:"top top",end:"+="+(leaves.length*55)+"%",pin:".pass .pin",scrub:.5,
+    onUpdate:function(s){var k=Math.min(labels.length-1,Math.floor(s.progress*leaves.length));if(pc.textContent!==labels[k])pc.textContent=labels[k];}}});
+  ptl.to(book,{"--shift":.5,duration:.6,ease:"power2.inOut"},0);
+  leaves.forEach(function(l,i){ptl.to(l,{"--r":1,duration:1,ease:"power1.inOut"},i===0?0:"-=0.15");});
+
+  /* suitcase: everything flies out, then back in */
+  var items=gsap.utils.toArray(".item");
+  var stl=gsap.timeline({scrollTrigger:{trigger:".suit",start:"top top",end:"+=230%",pin:".suit .pin",scrub:.5}});
+  items.forEach(function(it){var x=+it.dataset.x,y=+it.dataset.y;
+    stl.fromTo(it,{x:0,y:0,scale:.35,rotate:(Math.random()-.5)*40,opacity:0},{xPercent:-50,yPercent:-50,x:function(){return x/100*(innerWidth<760?innerWidth*1.05:Math.min(innerWidth*1.1,1100));},y:function(){return (y/100*Math.min(innerHeight,900))*(innerWidth<760?.82:1)+(innerWidth<760?30:20);},scale:1,rotate:(Math.random()-.5)*8,opacity:1,duration:1,ease:"power3.out"},0.1+Math.random()*.25);});
+  stl.to("#case",{scale:1.08,duration:.3},0).to({},{duration:.8});
+  items.forEach(function(it){stl.to(it,{x:0,y:0,scale:.3,opacity:0,rotate:0,duration:.6,ease:"power2.in"},2.0+Math.random()*.2);});
+  stl.to("#case",{scale:1,rotate:-3,duration:.4},2.4).to("#packed",{opacity:1,y:-10,duration:.4},2.5);
+
+  gsap.from(".gate-in > *",{y:60,opacity:0,stagger:.12,scrollTrigger:{trigger:".gate",start:"top 75%",end:"top 30%",scrub:true}});
+  gsap.from(".end h2",{y:60,opacity:0,scrollTrigger:{trigger:".end",start:"top 85%",end:"top 45%",scrub:true}});
+  addEventListener("load",function(){ScrollTrigger.refresh();});
+} else {
+  document.querySelectorAll(".leaf").forEach(function(l,i){if(i===0)l.style.setProperty("--r",1);});
+  document.querySelectorAll(".item").forEach(function(it){it.style.transform="translate(calc(-50% + "+it.dataset.x+"vw),calc(-50% + "+it.dataset.y+"vh))";});
+}
+})();
+</script>
+</body>
+</html>
