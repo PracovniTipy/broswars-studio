@@ -1,0 +1,7 @@
+<!doctype html><meta charset="utf-8"><title>relay</title>
+<script>
+// Pomocná stránka: stáhne soubor z této domény a pošle ho rodičovskému/otevírajícímu oknu (nahrání reelu do TikToku/Instagramu).
+(async()=>{const q=new URLSearchParams(location.search);const src=q.get('src');const to=window.opener||window.parent;
+if(!src||!/^[\w\-./]+$/.test(src)){to.postMessage({relay:'error',msg:'bad src'},'*');return}
+try{const r=await fetch(src,{cache:'no-store'});const b=await r.blob();to.postMessage({relay:'file',name:src.split('/').pop(),type:b.type||'video/mp4',blob:b},'*')}catch(e){to.postMessage({relay:'error',msg:String(e)},'*')}})();
+</script>
