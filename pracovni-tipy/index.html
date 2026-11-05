@@ -192,6 +192,9 @@ header.solid{background:rgba(5,8,22,.75);backdrop-filter:blur(14px);-webkit-back
 footer{position:relative;z-index:2;border-top:1px solid var(--line);padding-block:24px 34px;color:var(--muted);display:flex;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;max-width:1440px;margin:0 auto}
 footer a{color:#c9d1ee;text-decoration:none}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+/* výkon: --r a --shift se animují při rolování; nedědí se, takže se nepřepočítávají styly celé knížky v každém snímku */
+@property --r{syntax:"<number>";inherits:false;initial-value:0}
+@property --shift{syntax:"<number>";inherits:false;initial-value:0}
 </style>
 </head>
 <body>
@@ -296,7 +299,9 @@ var heroP=0;
   if(!window.THREE)return;
   var cv=document.getElementById("gl"),R;
   try{R=new THREE.WebGLRenderer({canvas:cv,antialias:true});}catch(e){return;}
-  R.setPixelRatio(Math.min(devicePixelRatio||1,2));R.setClearColor(0x050816,1);
+  /* výkon: rozlišení max 1,5×; když zařízení nestíhá, samo sleví až na 0,75× */
+  var DPR=devicePixelRatio||1,pr=Math.min(DPR,1.5),prMin=Math.min(DPR,.75);
+  R.setPixelRatio(pr);R.setClearColor(0x050816,1);
   var S=new THREE.Scene(),Cm=new THREE.PerspectiveCamera(35,1,.01,200);Cm.position.set(0,0,4.2);
   var G=new THREE.Group();S.add(G);
   function v3(lat,lon,r){var ph=(90-lat)*Math.PI/180,th=(lon+180)*Math.PI/180;return new THREE.Vector3(-r*Math.sin(ph)*Math.cos(th),r*Math.cos(ph),r*Math.sin(ph)*Math.sin(th));}
@@ -337,10 +342,12 @@ var heroP=0;
   var target=new THREE.Quaternion().setFromUnitVectors(v3(PRG[0],PRG[1],1).normalize(),new THREE.Vector3(0,0,1));
   var tilt=new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1,0,0),.28);
   function size(){var w=innerWidth,h=innerHeight;R.setSize(w,h,false);Cm.aspect=w/h;Cm.updateProjectionMatrix();}
-  size();addEventListener("resize",size);
-  var t0=performance.now(),vis=true;
+  size();addEventListener("resize",size,{passive:true});
+  var t0=performance.now(),vis=true,last=t0,acc=0,nf=0,warm=t0+800;
   (function loop(now){requestAnimationFrame(loop);var t=(now-t0)/1000;
-    var on=heroP<1.02&&scrollY<innerHeight*2.4;if(on!==vis){vis=on;cv.style.visibility=on?"visible":"hidden";}if(!on)return;
+    var on=heroP<1.02&&scrollY<innerHeight*2.4&&!document.hidden;if(on!==vis){vis=on;cv.style.visibility=on?"visible":"hidden";warm=now+500;acc=nf=0;}if(!on){last=now;return;}
+    var dt=now-last;last=now;
+    if(pr>prMin&&now>warm&&dt<400){acc+=dt;nf++;if(acc>1000){if(acc/nf>24){pr=Math.max(prMin,pr-.25);R.setPixelRatio(pr);}acc=0;nf=0;}}
     var p=Math.min(1,heroP),e=p*p*(3-2*p),narrow=innerWidth<760;
     var spin=new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,1,0),RM?0:(1-e)*(t*.12%(Math.PI*2)-Math.PI*.6));
     var q=new THREE.Quaternion().copy(tilt).multiply(spin).multiply(target);G.quaternion.slerp(q,.08);
@@ -370,6 +377,7 @@ var heroP=0;
 /* ============ scroll story ============ */
 if(window.gsap&&window.ScrollTrigger&&!RM){
   gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.config({ignoreMobileResize:true});
   ScrollTrigger.create({trigger:".hero",start:"top top",end:"+=120%",pin:true,scrub:true,onUpdate:function(s){heroP=s.progress;}});
   gsap.to(".hero-in",{opacity:0,y:-60,scrollTrigger:{trigger:".hero",start:"top top",end:"+=70%",scrub:true}});
 
@@ -392,7 +400,7 @@ if(window.gsap&&window.ScrollTrigger&&!RM){
 
   gsap.from(".gate-in > *",{y:60,opacity:0,stagger:.12,scrollTrigger:{trigger:".gate",start:"top 75%",end:"top 30%",scrub:true}});
   gsap.from(".end h2",{y:60,opacity:0,scrollTrigger:{trigger:".end",start:"top 85%",end:"top 45%",scrub:true}});
-  addEventListener("load",function(){ScrollTrigger.refresh();});
+  addEventListener("load",function(){if(document.fonts&&document.fonts.status!=="loaded")document.fonts.ready.then(function(){ScrollTrigger.refresh();});});
 } else {
   document.querySelectorAll(".leaf").forEach(function(l,i){if(i===0)l.style.setProperty("--r",1);});
   document.querySelectorAll(".item").forEach(function(it){it.style.transform="translate(calc(-50% + "+it.dataset.x+"vw),calc(-50% + "+it.dataset.y+"vh))";});
