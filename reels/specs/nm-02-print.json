@@ -1,0 +1,71 @@
+{
+ "theme": {
+  "bg": "#0b0912",
+  "grad": "radial-gradient(90% 60% at 80% 20%,#ff4fa355,transparent 60%),radial-gradient(90% 60% at 10% 85%,#7b4dff55,transparent 60%),#0b0912",
+  "fg": "#ffffff",
+  "mut": "#b3a9c4",
+  "accent": "#ff5fae",
+  "accent2": "linear-gradient(180deg,#ffd0e8,#ff5fae 60%,#b34dff)",
+  "pill": "linear-gradient(180deg,#ffffff,#ffd7ec)"
+ },
+ "tag": "Načti.me · BrosWars Studio",
+ "music": {
+  "src": "../assets/music/drive.mp3",
+  "ss": 60
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 2.2,
+   "kicker": "Small business?",
+   "text": "Put a *QR* on every table.",
+   "size": 130,
+   "y": 560
+  },
+  {
+   "type": "list",
+   "dur": 3.8,
+   "text": "Ready to *print.*",
+   "size": 130,
+   "y": 320,
+   "listY": 700,
+   "items": [
+    {
+     "i": "🪪",
+     "t": "Business cards"
+    },
+    {
+     "i": "🃏",
+     "t": "A6 table cards"
+    },
+    {
+     "i": "🏷️",
+     "t": "Stickers"
+    },
+    {
+     "i": "✅",
+     "t": "Readability check"
+    }
+   ]
+  },
+  {
+   "type": "hook",
+   "dur": 2.2,
+   "text": "Scan. *Pay.* Done.",
+   "size": 150,
+   "y": 700,
+   "center": true,
+   "anim": "slam"
+  },
+  {
+   "type": "cta",
+   "icon": "../../img/nacti-icon.png",
+   "dur": 3.2,
+   "head": "Try it *free*",
+   "size": 120,
+   "pill": "nacti.me",
+   "foot": "Works forever · no account",
+   "cardY": 520
+  }
+ ]
+}

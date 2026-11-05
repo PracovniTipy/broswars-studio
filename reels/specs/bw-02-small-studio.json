@@ -1,0 +1,73 @@
+{
+ "theme": {
+  "bg": "#03040a",
+  "grad": "radial-gradient(80% 50% at 50% 35%,#1b4dff44,transparent 65%),#03040a",
+  "fg": "#ffffff",
+  "mut": "#9aa3b4",
+  "accent": "#7fb4ff",
+  "accent2": "linear-gradient(180deg,#ffffff 20%,#b9c2d0 70%,#f4f6fa)",
+  "pill": "linear-gradient(180deg,#ffffff,#c9d1de)"
+ },
+ "music": {
+  "src": "../assets/music/pulse.mp3",
+  "ss": 100
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 2.4,
+   "kicker": "Behind the scenes",
+   "text": "A *tiny* Czech studio.",
+   "size": 140,
+   "y": 560
+  },
+  {
+   "type": "hook",
+   "dur": 2.2,
+   "text": "*3* products shipped.",
+   "size": 150,
+   "y": 660,
+   "anim": "rise"
+  },
+  {
+   "type": "list",
+   "dur": 3.8,
+   "text": "Built with *AI.*",
+   "size": 140,
+   "y": 320,
+   "listY": 700,
+   "items": [
+    {
+     "i": "🏰",
+     "t": "Castle WARS · strategy game"
+    },
+    {
+     "i": "💬",
+     "t": "Chatnelo · AI for e-shops"
+    },
+    {
+     "i": "🔳",
+     "t": "Načti.me · QR codes"
+    }
+   ]
+  },
+  {
+   "type": "hook",
+   "dur": 2.0,
+   "text": "And we're just *starting.*",
+   "size": 130,
+   "y": 640,
+   "center": true
+  },
+  {
+   "type": "cta",
+   "icon": "emblem.png",
+   "dur": 3.0,
+   "head": "Follow *us*",
+   "size": 140,
+   "pill": "@broswars_studio",
+   "foot": "broswarsstudio.chatnelo.com",
+   "cardY": 520
+  }
+ ]
+}

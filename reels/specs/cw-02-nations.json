@@ -1,0 +1,106 @@
+{
+ "theme": {
+  "bg": "#070d1c",
+  "grad": "radial-gradient(120% 70% at 50% 30%,#16305e 0%,#0a1428 55%,#05080f 100%)",
+  "fg": "#ffffff",
+  "mut": "#c3cde0",
+  "accent": "#ffc23d",
+  "accent2": "linear-gradient(180deg,#fff3b0,#ffc23d 55%,#e08a12)",
+  "pill": "linear-gradient(180deg,#ffe07a,#f2a91c)"
+ },
+ "music": {
+  "src": "../assets/music/battle.mp3",
+  "ss": 30
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "bg": "../assets/img/cw-feature.png",
+   "dur": 2.2,
+   "kicker": "Castle WARS",
+   "text": "Pick your *side.*",
+   "size": 170,
+   "y": 620,
+   "center": true
+  },
+  {
+   "type": "clip",
+   "src": "../assets/clips/r2_sk.mp4",
+   "ss": 0.3,
+   "dur": 2.2,
+   "kicker": "Nation 01",
+   "text": "⚔️ *Knights* of the Lion Crown",
+   "size": 104,
+   "y": 270,
+   "bandY": 600,
+   "anim": "rise",
+   "bandH": 920,
+   "zoom": 1.3
+  },
+  {
+   "type": "clip",
+   "src": "../assets/clips/r3_vs.mp4",
+   "ss": 0.6,
+   "dur": 2.2,
+   "kicker": "Nation 02",
+   "text": "🗡️ *Samurai* of the Kazehana Clan",
+   "size": 104,
+   "y": 270,
+   "bandY": 600,
+   "anim": "rise",
+   "bandH": 920,
+   "zoom": 1.3
+  },
+  {
+   "type": "clip",
+   "src": "../assets/clips/r1_kv.mp4",
+   "ss": 3,
+   "dur": 2.2,
+   "kicker": "Nation 03",
+   "text": "🪓 *Vikings* of the Stormfjord",
+   "size": 104,
+   "y": 270,
+   "bandY": 600,
+   "anim": "rise",
+   "bandH": 920,
+   "zoom": 1.3
+  },
+  {
+   "type": "list",
+   "dur": 3.2,
+   "kicker": "Inside the game",
+   "text": "Built to *win.*",
+   "size": 130,
+   "y": 330,
+   "listY": 720,
+   "items": [
+    {
+     "i": "📜",
+     "t": "5-act story campaign"
+    },
+    {
+     "i": "✨",
+     "t": "26 special attacks"
+    },
+    {
+     "i": "🌐",
+     "t": "1v1 & 2v2 online battles"
+    },
+    {
+     "i": "📴",
+     "t": "Plays fully offline"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.2,
+   "head": "Which side are *you?*",
+   "size": 112,
+   "pill": "Play free · link in bio",
+   "foot": "itch.io & Microsoft Store",
+   "cardY": 480,
+   "art": "../assets/img/cw-feature.png"
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "theme": {
+  "bg": "#0b0912",
+  "grad": "radial-gradient(90% 60% at 80% 20%,#ff4fa355,transparent 60%),radial-gradient(90% 60% at 10% 85%,#7b4dff55,transparent 60%),#0b0912",
+  "fg": "#ffffff",
+  "mut": "#b3a9c4",
+  "accent": "#ff5fae",
+  "accent2": "linear-gradient(180deg,#ffd0e8,#ff5fae 60%,#b34dff)",
+  "pill": "linear-gradient(180deg,#ffffff,#ffd7ec)"
+ },
+ "tag": "Načti.me · BrosWars Studio",
+ "music": {
+  "src": "../assets/music/pulse.mp3",
+  "ss": 40
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 2.2,
+   "kicker": "Stop paying for this",
+   "text": "Your QR code *expired?*",
+   "size": 140,
+   "y": 560
+  },
+  {
+   "type": "hook",
+   "dur": 2.0,
+   "text": "Ours work *forever.*",
+   "size": 160,
+   "y": 680,
+   "anim": "rise"
+  },
+  {
+   "type": "list",
+   "dur": 3.8,
+   "kicker": "Načti.me",
+   "text": "One app. Every *QR.*",
+   "size": 120,
+   "y": 300,
+   "listY": 680,
+   "items": [
+    {
+     "i": "🔗",
+     "t": "Links & text"
+    },
+    {
+     "i": "📶",
+     "t": "Wi-Fi in one scan"
+    },
+    {
+     "i": "👤",
+     "t": "Business cards (vCard)"
+    },
+    {
+     "i": "💳",
+     "t": "Czech QR payments"
+    }
+   ]
+  },
+  {
+   "type": "hook",
+   "dur": 2.0,
+   "text": "*Free.* No sign-up.",
+   "size": 150,
+   "y": 700,
+   "center": true
+  },
+  {
+   "type": "cta",
+   "icon": "../../img/nacti-icon.png",
+   "dur": 3.2,
+   "head": "Make yours in *5 seconds*",
+   "size": 104,
+   "pill": "nacti.me",
+   "foot": "Free · print-ready · PNG & SVG",
+   "cardY": 520
+  }
+ ]
+}

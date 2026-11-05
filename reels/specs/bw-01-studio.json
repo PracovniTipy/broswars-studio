@@ -1,0 +1,83 @@
+{
+ "theme": {
+  "bg": "#03040a",
+  "grad": "radial-gradient(80% 50% at 50% 35%,#1b4dff44,transparent 65%),#03040a",
+  "fg": "#ffffff",
+  "mut": "#9aa3b4",
+  "accent": "#7fb4ff",
+  "accent2": "linear-gradient(180deg,#ffffff 20%,#b9c2d0 70%,#f4f6fa)",
+  "pill": "linear-gradient(180deg,#ffffff,#c9d1de)"
+ },
+ "music": {
+  "src": "../assets/music/drive.mp3",
+  "ss": 80
+ },
+ "scenes": [
+  {
+   "type": "cta",
+   "icon": "emblem.png",
+   "dur": 2.4,
+   "head": "BrosWars *Studio*",
+   "size": 124,
+   "foot": "Games & AI tools · Czech Republic",
+   "cardY": 520
+  },
+  {
+   "type": "image",
+   "bg": "../assets/img/cw-feature.png",
+   "dur": 2.2,
+   "kicker": "Game",
+   "text": "*Castle* *WARS*",
+   "size": 150,
+   "y": 1180,
+   "anim": "rise"
+  },
+  {
+   "type": "chat",
+   "dur": 3.6,
+   "head": "Chatnelo · AI for e-shops",
+   "boxY": 600,
+   "text": "*Chatnelo*",
+   "size": 130,
+   "y": 300,
+   "msgs": [
+    {
+     "me": true,
+     "t": "Is this in stock?"
+    },
+    {
+     "t": "Yes — ships tomorrow! 📦"
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "dur": 3.2,
+   "kicker": "Tool",
+   "text": "*Načti.me*",
+   "size": 140,
+   "y": 320,
+   "listY": 720,
+   "items": [
+    {
+     "i": "🔳",
+     "t": "Free QR codes forever"
+    },
+    {
+     "i": "🖨️",
+     "t": "Print-ready designs"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "icon": "emblem.png",
+   "dur": 3.2,
+   "head": "Follow the *build.*",
+   "size": 120,
+   "pill": "@broswars_studio",
+   "foot": "New projects coming soon",
+   "cardY": 520
+  }
+ ]
+}

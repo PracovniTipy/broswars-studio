@@ -1,0 +1,89 @@
+{
+ "theme": {
+  "bg": "#061033",
+  "grad": "radial-gradient(100% 60% at 50% 20%,#1d4ed8aa,transparent 65%),#061033",
+  "fg": "#ffffff",
+  "mut": "#c4cdf0",
+  "accent": "#ffcc00",
+  "accent2": "linear-gradient(180deg,#fff2a8,#ffcc00)",
+  "pill": "linear-gradient(180deg,#ffe066,#ffc400)"
+ },
+ "tag": "Pracovní tipy",
+ "music": {
+  "src": "../assets/music/drive.mp3",
+  "ss": 40
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "bg": "../../pracovni-tipy/img/denmark.webp",
+   "dur": 2.4,
+   "kicker": "Práce v zahraničí",
+   "text": "Jsi občan EU? Nepotřebuješ *vízum.*",
+   "size": 120,
+   "y": 520
+  },
+  {
+   "type": "image",
+   "bg": "../../pracovni-tipy/img/netherlands.webp",
+   "dur": 2.0,
+   "kicker": "🇳🇱 Nizozemsko",
+   "text": "Žádné *pracovní* *povolení.*",
+   "size": 118,
+   "y": 1150,
+   "anim": "rise"
+  },
+  {
+   "type": "image",
+   "bg": "../../pracovni-tipy/img/austria.webp",
+   "dur": 2.0,
+   "kicker": "🇦🇹 Rakousko",
+   "text": "Žádná *víza.*",
+   "size": 140,
+   "y": 1200,
+   "anim": "rise"
+  },
+  {
+   "type": "image",
+   "bg": "../../pracovni-tipy/img/sweden.webp",
+   "dur": 2.0,
+   "kicker": "🇸🇪 Švédsko",
+   "text": "Prostě *jedeš.*",
+   "size": 140,
+   "y": 1200,
+   "anim": "rise"
+  },
+  {
+   "type": "list",
+   "dur": 3.6,
+   "kicker": "Pracovní tipy",
+   "text": "Každý den *nové* nabídky",
+   "size": 110,
+   "y": 300,
+   "listY": 700,
+   "items": [
+    {
+     "i": "🏠",
+     "t": "Často s ubytováním"
+    },
+    {
+     "i": "🗣️",
+     "t": "Stačí základní angličtina"
+    },
+    {
+     "i": "🇪🇺",
+     "t": "Jen země EU"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.2,
+   "head": "Napiš do komentáře *ZEMI*",
+   "size": 104,
+   "pill": "Odkaz v profilu",
+   "foot": "Nabídky na HeroHero · 3 dny zdarma",
+   "cardY": 520
+  }
+ ]
+}

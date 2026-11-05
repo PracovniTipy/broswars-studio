@@ -1,0 +1,76 @@
+{
+ "theme": {
+  "bg": "#061033",
+  "grad": "radial-gradient(100% 60% at 50% 20%,#1d4ed8aa,transparent 65%),#061033",
+  "fg": "#ffffff",
+  "mut": "#c4cdf0",
+  "accent": "#ffcc00",
+  "accent2": "linear-gradient(180deg,#fff2a8,#ffcc00)",
+  "pill": "linear-gradient(180deg,#ffe066,#ffc400)"
+ },
+ "tag": "Pracovní tipy",
+ "music": {
+  "src": "../assets/music/pulse.mp3",
+  "ss": 70
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 2.2,
+   "kicker": "Chceš práci v EU?",
+   "text": "Bez *anglického* životopisu to nepůjde.",
+   "size": 112,
+   "y": 520
+  },
+  {
+   "type": "chat",
+   "dur": 5.4,
+   "head": "AI životopis · zdarma",
+   "boxY": 420,
+   "msgs": [
+    {
+     "me": true,
+     "t": "Pracoval jsem 3 roky ve skladu a mám řidičák B."
+    },
+    {
+     "t": "Super! Z toho udělám profesionální CV v češtině i angličtině 📄"
+    },
+    {
+     "me": true,
+     "t": "Wow, hotovo za 5 minut 😮"
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "dur": 3.4,
+   "text": "Hotové za *5 minut.*",
+   "size": 120,
+   "y": 320,
+   "listY": 700,
+   "items": [
+    {
+     "i": "🇨🇿",
+     "t": "Česky i anglicky"
+    },
+    {
+     "i": "📄",
+     "t": "PDF ke stažení"
+    },
+    {
+     "i": "🎁",
+     "t": "Úplně zdarma"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.2,
+   "head": "Udělej si ho *teď*",
+   "size": 120,
+   "pill": "Odkaz v profilu",
+   "foot": "Napiš do zpráv „CV“",
+   "cardY": 520
+  }
+ ]
+}

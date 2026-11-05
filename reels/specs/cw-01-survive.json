@@ -1,0 +1,79 @@
+{
+ "theme": {
+  "bg": "#070d1c",
+  "grad": "radial-gradient(120% 70% at 50% 30%,#16305e 0%,#0a1428 55%,#05080f 100%)",
+  "fg": "#ffffff",
+  "mut": "#c3cde0",
+  "accent": "#ffc23d",
+  "accent2": "linear-gradient(180deg,#fff3b0,#ffc23d 55%,#e08a12)",
+  "pill": "linear-gradient(180deg,#ffe07a,#f2a91c)"
+ },
+ "music": {
+  "src": "../assets/music/battle.mp3",
+  "ss": 2
+ },
+ "scenes": [
+  {
+   "type": "clip",
+   "src": "../assets/clips/r1_kv.mp4",
+   "ss": 0.5,
+   "dur": 2.6,
+   "kicker": "Castle WARS",
+   "text": "Can your castle *survive* this?",
+   "size": 118,
+   "y": 250,
+   "bandY": 600,
+   "bandH": 920,
+   "zoom": 1.3
+  },
+  {
+   "type": "clip",
+   "src": "../assets/clips/r4_meteor.mp4",
+   "ss": 2.0,
+   "dur": 2.4,
+   "text": "Drop a *GIANT* *METEOR*",
+   "size": 124,
+   "y": 260,
+   "bandY": 600,
+   "anim": "rise",
+   "bandH": 920,
+   "zoom": 1.3
+  },
+  {
+   "type": "clip",
+   "src": "../assets/clips/r6_vir.mp4",
+   "ss": 1.2,
+   "dur": 2.4,
+   "text": "Call the *Storm* *of* *the* *Gods*",
+   "size": 116,
+   "y": 260,
+   "bandY": 600,
+   "anim": "rise",
+   "bandH": 920,
+   "zoom": 1.3
+  },
+  {
+   "type": "clip",
+   "src": "../assets/clips/r5_drak.mp4",
+   "ss": 0.5,
+   "dur": 2.2,
+   "text": "Or burn them with *dragon* *fire*",
+   "size": 116,
+   "y": 260,
+   "bandY": 600,
+   "anim": "rise",
+   "bandH": 920,
+   "zoom": 1.3
+  },
+  {
+   "type": "cta",
+   "dur": 3.4,
+   "head": "Play *FREE* now",
+   "size": 120,
+   "pill": "itch.io · Microsoft Store",
+   "foot": "Search “Castle WARS” · link in bio",
+   "cardY": 480,
+   "art": "../assets/img/cw-feature.png"
+  }
+ ]
+}
