@@ -112,7 +112,7 @@ header.solid{background:rgba(4,6,12,.72);backdrop-filter:blur(14px);-webkit-back
   transform:rotateY(calc(var(--i)*360deg/var(--n))) translateZ(var(--r));backface-visibility:hidden;
   box-shadow:0 40px 80px -30px rgba(0,0,0,.9),0 0 0 1px rgba(207,216,230,.18) inset}
 .unit .art{position:absolute;inset:0;background-size:cover;background-position:center}
-.unit::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(255,255,255,.22) 0%,rgba(255,255,255,0) 32%,rgba(255,255,255,0) 68%,rgba(255,255,255,.12) 100%);mix-blend-mode:screen;pointer-events:none}
+.unit::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(255,255,255,.22) 0%,rgba(255,255,255,0) 32%,rgba(255,255,255,0) 68%,rgba(255,255,255,.12) 100%);pointer-events:none}
 .unit .cap{position:absolute;left:0;right:0;bottom:0;padding:18px;background:linear-gradient(transparent,rgba(4,6,12,.92));display:grid;gap:4px}
 .unit .cap b{font:700 1.35rem/1.05 var(--f-display)}
 .unit .cap .mono{color:var(--chrome);font-size:.62rem}
@@ -163,7 +163,7 @@ header.solid{background:rgba(4,6,12,.72);backdrop-filter:blur(14px);-webkit-back
 .store{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .store small{color:var(--muted);font-size:.8rem}
 .ch .btn-solid{background:var(--violet);color:#070a22}
-.win{position:relative;min-width:0;width:min(520px,100%);justify-self:center;border-radius:22px;background:rgba(13,17,48,.78);border:1px solid rgba(138,147,255,.3);box-shadow:0 60px 120px -40px rgba(0,0,0,.9),0 0 120px -30px rgba(138,147,255,.55);backdrop-filter:blur(10px)}
+.win{position:relative;min-width:0;width:min(520px,100%);justify-self:center;border-radius:22px;background:rgba(13,17,48,.78);border:1px solid rgba(138,147,255,.3);box-shadow:0 60px 120px -40px rgba(0,0,0,.9),0 0 120px -30px rgba(138,147,255,.55)}
 .win-h{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid rgba(138,147,255,.2)}
 .win-h img{width:34px;height:34px;border-radius:10px}
 .win-h b{display:block;font-weight:600}
@@ -281,7 +281,7 @@ footer{position:relative;z-index:2;background:var(--void);border-top:1px solid v
 
 <header class="gut" id="hdr">
   <div class="nav">
-    <a class="brand" href="#top"><img src="img/emblem.png" alt=""><b>BrosWars<span>STUDIO</span></b></a>
+    <a class="brand" href="#top"><img src="img/emblem-sm.png" alt="" width="30" height="31" decoding="async"><b>BrosWars<span>STUDIO</span></b></a>
     <div class="nav-r">
             <a class="hide-s mono" href="#chatnelo">Chatnelo</a>
       <a class="hide-s mono" href="#nacti">Načti.me</a>
@@ -329,8 +329,8 @@ footer{position:relative;z-index:2;background:var(--void);border-top:1px solid v
       <div class="stage">
         <div class="ringz"><div class="ring" id="ring" style="--n:4">
           <a class="unit u-cw" style="--i:0" href="https://battlecastle.itch.io/castle-wars" target="_blank" rel="noopener"><div class="art"></div><div class="cap"><span class="mono" data-i18n="kGame">Strategy game</span><b>Castle WARS</b></div></a>
-          <a class="unit u-ch" style="--i:1" href="#chatnelo"><div class="art"></div><img class="ic" src="img/chatnelo-icon.webp" alt=""><div class="bub"><i></i><i></i><i></i></div><div class="cap"><span class="mono" data-i18n="kAi">AI for online stores</span><b>Chatnelo</b></div></a>
-          <a class="unit u-nm" style="--i:2" href="#nacti"><div class="art"></div><img class="ic" src="img/nacti-icon.png" alt=""><div class="cap"><span class="mono" data-i18n="kQr">QR codes in seconds</span><b>Načti.me</b></div></a>
+          <a class="unit u-ch" style="--i:1" href="#chatnelo"><div class="art"></div><img class="ic" src="img/chatnelo-icon.webp" alt="" loading="lazy" decoding="async"><div class="bub"><i></i><i></i><i></i></div><div class="cap"><span class="mono" data-i18n="kAi">AI for online stores</span><b>Chatnelo</b></div></a>
+          <a class="unit u-nm" style="--i:2" href="#nacti"><div class="art"></div><img class="ic" src="img/nacti-icon.png" alt="" loading="lazy" decoding="async"><div class="cap"><span class="mono" data-i18n="kQr">QR codes in seconds</span><b>Načti.me</b></div></a>
           <a class="unit u-cv" style="--i:3" href="#cv"><div class="art"></div><div class="sheet"><i class="h"></i><i class="s"></i><i></i><i></i><i style="width:80%"></i><i class="s"></i><i></i><i style="width:64%"></i></div><div class="cap"><span class="mono" data-i18n="kFree">Free tool</span><b data-i18n="tCv">CV Builder</b></div></a>
         </div></div>
         <div class="floor"></div>
@@ -356,7 +356,7 @@ footer{position:relative;z-index:2;background:var(--void);border-top:1px solid v
           </div>
         </div>
         <div class="win" aria-label="Example conversation">
-          <div class="win-h"><img src="img/chatnelo-icon.webp" alt=""><div><b>Chatnelo</b><small data-i18n="online">Online · replies instantly</small></div></div>
+          <div class="win-h"><img src="img/chatnelo-icon.webp" alt="" loading="lazy" decoding="async"><div><b>Chatnelo</b><small data-i18n="online">Online · replies instantly</small></div></div>
           <div class="win-b" id="convo">
             <div class="msg me c1" data-i18n="m1">Do you have the trail runners in size 42?</div>
             <div class="msg bot c2"><span class="typing"><i></i><i></i><i></i></span></div>
@@ -506,21 +506,23 @@ var heroP=0, mx=0, my=0, glOK=false;
   var cv=document.getElementById("gl"), R;
   try{R=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:false,powerPreference:"high-performance"});}catch(e){return;}
   glOK=true;
-  R.setPixelRatio(Math.min(devicePixelRatio||1,2));
+  /* výkon: rozlišení max 1,5× (2× znamenalo 78 % pixelů navíc v každém snímku); když zařízení nestíhá, samo sleví až na 1× / 0,75× */
+  var DPR=devicePixelRatio||1, prMax=Math.min(DPR,1.5), pr=prMax, prMin=Math.min(DPR,.75);
+  R.setPixelRatio(pr);
   R.outputEncoding=THREE.sRGBEncoding;R.toneMapping=THREE.ACESFilmicToneMapping;R.toneMappingExposure=1.35;
   R.setClearColor(0x04060c,1);
   var S=new THREE.Scene(), C=new THREE.PerspectiveCamera(32,1,.05,200);
   C.position.set(0,0,7.2);
 
   /* studio environment painted on a canvas: soft light strips + electric blue horizon */
-  var ec=document.createElement("canvas");ec.width=2048;ec.height=1024;var x=ec.getContext("2d");
+  var ec=document.createElement("canvas");ec.width=1024;ec.height=512;var x=ec.getContext("2d");x.scale(.5,.5);/* výkon: PMREM stejně vzorkuje do 256px, 2048×1024 bylo zbytečné */
   var g=x.createLinearGradient(0,0,0,1024);g.addColorStop(0,"#0b1020");g.addColorStop(.5,"#020308");g.addColorStop(1,"#232a38");
   x.fillStyle=g;x.fillRect(0,0,2048,1024);
   function strip(cx,cy,w,h,c,a){var gr=x.createRadialGradient(cx,cy,0,cx,cy,Math.max(w,h));gr.addColorStop(0,c);gr.addColorStop(1,"rgba(0,0,0,0)");x.globalAlpha=a;x.fillStyle=gr;x.save();x.translate(cx,cy);x.scale(w/Math.max(w,h),h/Math.max(w,h));x.translate(-cx,-cy);x.beginPath();x.arc(cx,cy,Math.max(w,h),0,7);x.fill();x.restore();x.globalAlpha=1;}
   strip(1024,250,700,60,"#ffffff",1);strip(1024,90,1100,70,"#ffffff",1);strip(120,520,160,420,"#ffffff",1);strip(1930,520,160,420,"#ffffff",1);strip(300,420,180,260,"#ffffff",.9);strip(1750,400,200,300,"#dfe9ff",.85);
   strip(1024,505,1500,26,"#f4f8ff",1);strip(1024,548,1500,14,"#3ea2ff",.22);strip(600,700,500,80,"#1d4fff",.1);strip(1024,820,1800,120,"#8f9bb3",.55);strip(1500,180,260,90,"#ffffff",.7);
   var et=new THREE.CanvasTexture(ec);et.mapping=THREE.EquirectangularReflectionMapping;et.encoding=THREE.sRGBEncoding;
-  var pm=new THREE.PMREMGenerator(R);var env=pm.fromEquirectangular(et).texture;S.environment=env;
+  var pm=new THREE.PMREMGenerator(R);var env=pm.fromEquirectangular(et).texture;S.environment=env;et.dispose();pm.dispose();
 
   /* the BrosWars emblem: traced from the logo, every shard extruded on its own.
      left shards are carved stone, right shards polished blue chrome. */
@@ -540,15 +542,15 @@ var heroP=0, mx=0, my=0, glOK=false;
   function shp(pts){var sh=new THREE.Shape();pts.forEach(function(q,i){var X=(q[0]-290)*K,Y=-(q[1]-386)*K;i?sh.lineTo(X,Y):sh.moveTo(X,Y);});sh.closePath();return sh;}
   /* stone texture painted on a canvas: grain, mottling and hairline cracks */
   function stoneTex(){
-    var n=1024,c=document.createElement("canvas");c.width=c.height=n;var g=c.getContext("2d");
+    var n=512,c=document.createElement("canvas");c.width=c.height=n;var g=c.getContext("2d");g.scale(.5,.5);n=1024;/* výkon: textura 512 px (na obrazovce má kámen ~100 px na opakování), kreslíme ve stejném měřítku */
     g.fillStyle="#9aa1ac";g.fillRect(0,0,n,n);
-    var id=g.getImageData(0,0,n,n),d=id.data;
+    var id=g.getImageData(0,0,512,512),d=id.data;
     for(var i=0;i<d.length;i+=4){var v=(Math.random()-.5)*46;d[i]+=v;d[i+1]+=v;d[i+2]+=v*1.05;}
     g.putImageData(id,0,0);
     for(i=0;i<260;i++){var r=20+Math.random()*120;var gr=g.createRadialGradient(0,0,0,0,0,r);var l=Math.random()<.5;gr.addColorStop(0,l?"rgba(235,240,248,.16)":"rgba(40,46,58,.16)");gr.addColorStop(1,"rgba(0,0,0,0)");g.save();g.translate(Math.random()*n,Math.random()*n);g.fillStyle=gr;g.fillRect(-r,-r,2*r,2*r);g.restore();}
     g.strokeStyle="rgba(30,34,44,.55)";g.lineWidth=1.2;
     for(i=0;i<34;i++){var x=Math.random()*n,y=Math.random()*n;g.beginPath();g.moveTo(x,y);for(var k=0;k<9;k++){x+=(Math.random()-.5)*70;y+=(Math.random()-.5)*70;g.lineTo(x,y);}g.stroke();}
-    var t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(1.6,1.6);t.anisotropy=R.capabilities.getMaxAnisotropy();t.encoding=THREE.sRGBEncoding;return t;
+    var t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(1.6,1.6);t.anisotropy=Math.min(4,R.capabilities.getMaxAnisotropy());t.encoding=THREE.sRGBEncoding;return t;
   }
   var st=stoneTex();
   var mStone=new THREE.MeshStandardMaterial({color:0xdfe4ec,map:st,bumpMap:st,bumpScale:.035,roughness:.82,metalness:.18,envMapIntensity:1.1});
@@ -581,16 +583,20 @@ var heroP=0, mx=0, my=0, glOK=false;
 
   function size(){var w=innerWidth,h=innerHeight;R.setSize(w,h,false);C.aspect=w/h;C.updateProjectionMatrix();
     var sc=(w<700?.52:.6)*Math.min(1,h/800+.2);grp.scale.setScalar(sc);halo.scale.set(6.5*sc,6.5*sc,1);}
-  size();addEventListener("resize",size);
+  size();addEventListener("resize",size,{passive:true});
   addEventListener("pointermove",function(e){mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5;},{passive:true});
 
-  var t0=performance.now(),vis=true,last=0;
+  var t0=performance.now(),vis=true,last=0,acc=0,nf=0,warm=t0+800;
   function frame(now){
     requestAnimationFrame(frame);
     var t=(now-t0)/1000;
-    var on=heroP<1 && scrollY<innerHeight*2.6;
-    if(on!==vis){vis=on;cv.style.visibility=on?"visible":"hidden";}
-    if(!on)return;
+    var on=heroP<1 && scrollY<innerHeight*2.6 && !document.hidden;
+    if(on!==vis){vis=on;cv.style.visibility=on?"visible":"hidden";warm=now+500;acc=nf=0;}
+    if(!on){last=now;return;}
+    /* výkon: když snímky trvají déle než ~24 ms, sníží se rozlišení plátna (jen dolů, aby to neblikalo) */
+    var dt=now-last;last=now;
+    if(pr>prMin && now>warm && dt<400){acc+=dt;nf++;
+      if(acc>1000){if(acc/nf>24){pr=Math.max(prMin,pr-.25);R.setPixelRatio(pr);}acc=0;nf=0;}}
     var p=heroP, e=p*p*(3-2*p);
     grp.rotation.y=-.38+(RM?0:Math.sin(t*.45)*.3)+mx*.5+e*P*1.15;
     grp.rotation.x=(RM?0:Math.sin(t*.3)*.06)+my*.25-e*.15;
@@ -614,6 +620,7 @@ if(!glOK){document.getElementById("gl").style.background="radial-gradient(circle
 /* ================= scroll story (GSAP) ================= */
 if(window.gsap && window.ScrollTrigger && !RM){
   gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.config({ignoreMobileResize:true});/* schovávání lišty prohlížeče na mobilu nepřepočítává všechny piny */
   var mm=gsap.matchMedia();
 
   /* 01 hero: dive into the emblem */
@@ -669,7 +676,8 @@ if(window.gsap && window.ScrollTrigger && !RM){
   gsap.from(".ask h2",{y:60,opacity:0,scrollTrigger:{trigger:".ask",start:"top 85%",end:"top 45%",scrub:true}});
   gsap.from(".big",{yPercent:40,letterSpacing:"0.08em",scrollTrigger:{trigger:"footer",start:"top bottom",end:"bottom bottom",scrub:true}});
 
-  addEventListener("load",function(){ScrollTrigger.refresh();});
+  /* výkon: ScrollTrigger se po "load" přepočítá sám; navíc jen když písma dorazí až potom */
+  addEventListener("load",function(){if(document.fonts&&document.fonts.status!=="loaded")document.fonts.ready.then(function(){ScrollTrigger.refresh();});});
 }
 
 /* ================= Ask us (Chatnelo-powered) ================= */
