@@ -43,13 +43,16 @@
     {
       "id": "cw-01-survive",
       "brand": "castle",
-      "status": "pending",
+      "status": "posted",
       "targets": [
         "ig:broswars_studio",
         "tiktok:broswars_studio"
       ],
       "caption": "Can your castle survive this? ⚔️ Giant Meteor, Storm of the Gods, dragon fire.\n\nPlay FREE: search “Castle WARS” on itch.io (battlecastle.itch.io/castle-wars) or in the Microsoft Store 🏰 Link in bio.\n\n#castlewars #strategygame #gaming #towerdefense #medieval #vikings #samurai #knights #pcgaming",
-      "url": "https://broswarsstudio.chatnelo.com/r/cw-01-survive.mp4"
+      "url": "https://broswarsstudio.chatnelo.com/r/cw-01-survive.mp4",
+      "posted": {
+        "ig:broswars_studio": "2026-11-06"
+      }
     },
     {
       "id": "pt-02-cv",
