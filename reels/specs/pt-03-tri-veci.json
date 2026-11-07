@@ -1,0 +1,80 @@
+{
+ "theme": {
+  "bg": "#061033",
+  "grad": "radial-gradient(100% 60% at 50% 20%,#1d4ed8aa,transparent 65%),#061033",
+  "fg": "#ffffff",
+  "mut": "#c4cdf0",
+  "accent": "#ffcc00",
+  "accent2": "linear-gradient(180deg,#fff2a8,#ffcc00)",
+  "pill": "linear-gradient(180deg,#ffe066,#ffc400)"
+ },
+ "tag": "Pracovní tipy",
+ "music": {
+  "src": "../assets/music/drive.mp3",
+  "ss": 95
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "bg": "../../pracovni-tipy/img/ireland.webp",
+   "dur": 2.4,
+   "kicker": "Práce v EU",
+   "text": "Potřebuješ *míň,* než si myslíš.",
+   "size": 118,
+   "y": 520
+  },
+  {
+   "type": "image",
+   "bg": "../../pracovni-tipy/img/germany.webp",
+   "dur": 2.2,
+   "kicker": "1 · 🪪 Občanka EU",
+   "text": "Bez víz a *pracovního* *povolení.*",
+   "size": 108,
+   "y": 1120,
+   "anim": "rise"
+  },
+  {
+   "type": "image",
+   "bg": "../../pracovni-tipy/img/finland.webp",
+   "dur": 2.2,
+   "kicker": "2 · 🗣️ Angličtina",
+   "text": "Často stačí *základní.*",
+   "size": 118,
+   "y": 1150,
+   "anim": "rise"
+  },
+  {
+   "type": "image",
+   "bg": "../../pracovni-tipy/img/malta.webp",
+   "dur": 2.2,
+   "kicker": "3 · 📄 Životopis",
+   "text": "AI ti ho udělá *zdarma.*",
+   "size": 118,
+   "y": 1150,
+   "anim": "rise"
+  },
+  {
+   "type": "list",
+   "dur": 3.4,
+   "kicker": "A nabídky?",
+   "text": "Každý den *nové.*",
+   "size": 120,
+   "y": 320,
+   "listY": 700,
+   "items": [
+    { "i": "🏠", "t": "Často s ubytováním" },
+    { "i": "🇪🇺", "t": "Jen země EU" },
+    { "i": "🎁", "t": "HeroHero 3 dny zdarma" }
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.2,
+   "head": "Napiš do komentáře *ZEMI*",
+   "size": 104,
+   "pill": "Odkaz v profilu",
+   "foot": "CV zdarma: napiš do zpráv „CV“",
+   "cardY": 520
+  }
+ ]
+}
