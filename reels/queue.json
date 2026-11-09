@@ -57,7 +57,7 @@
     {
       "id": "pt-02-cv",
       "brand": "pt",
-      "status": "pending",
+      "status": "posted",
       "targets": [
         "ig:pracovni_tipy",
         "tiktok:pracovni_tipy"
@@ -65,7 +65,8 @@
       "caption": "📄 Chceš práci v EU? Bez životopisu v angličtině to nepůjde.\n\nAI ti zdarma udělá profesionální životopis v češtině i angličtině – hotový za 5 minut 🎁\n\n👉 Odkaz v profilu nebo mi napiš do zpráv „CV“.\n\n#zivotopis #cv #pracevzahranici #praceveu #brigada #prace #pracovnitipy",
       "url": "https://broswarsstudio.chatnelo.com/r/pt-02-cv.mp4",
       "posted": {
-        "tiktok:pracovni_tipy": "2026-11-06"
+        "tiktok:pracovni_tipy": "2026-11-06",
+        "ig:pracovni_tipy": "2026-11-09"
       }
     },
     {
