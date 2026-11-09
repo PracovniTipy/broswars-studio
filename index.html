@@ -8,16 +8,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#04060c">
 <meta property="og:title" content="BrosWars Studio">
-<meta property="og:description" content="A Czech studio forging games and AI tools: Castle WARS, Chatnelo and a free CV builder.">
+<meta property="og:description" content="A Czech studio forging games and AI tools: Castle WARS, Chatnelo, Don Chaos live wallpapers and a free CV builder.">
 <meta property="og:image" content="https://broswarsstudio.chatnelo.com/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="img/emblem.png">
 <link rel="canonical" href="https://broswarsstudio.chatnelo.com/">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "BrosWars Studio", "url": "https://broswarsstudio.chatnelo.com/", "logo": "https://broswarsstudio.chatnelo.com/img/emblem.png", "email": "broswars@chatnelo.com", "sameAs": ["https://www.instagram.com/broswars_studio/"], "makesOffer": [{"@type": "Offer", "itemOffered": {"@type": "VideoGame", "name": "Castle WARS", "url": "https://battlecastle.itch.io/castle-wars"}}, {"@type": "Offer", "itemOffered": {"@type": "SoftwareApplication", "name": "Chatnelo", "url": "https://apps.shopify.com/chatnelo"}}, {"@type": "Offer", "itemOffered": {"@type": "SoftwareApplication", "name": "Načti.me", "url": "https://nacti.me/"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "BrosWars Studio", "url": "https://broswarsstudio.chatnelo.com/", "logo": "https://broswarsstudio.chatnelo.com/img/emblem.png", "email": "broswars@chatnelo.com", "sameAs": ["https://www.instagram.com/broswars_studio/"], "makesOffer": [{"@type": "Offer", "itemOffered": {"@type": "VideoGame", "name": "Castle WARS", "url": "https://battlecastle.itch.io/castle-wars"}}, {"@type": "Offer", "itemOffered": {"@type": "SoftwareApplication", "name": "Chatnelo", "url": "https://apps.shopify.com/chatnelo"}}, {"@type": "Offer", "itemOffered": {"@type": "SoftwareApplication", "name": "Načti.me", "url": "https://nacti.me/"}}, {"@type": "Offer", "price": "3", "priceCurrency": "USD", "itemOffered": {"@type": "Product", "name": "Don Chaos Wallpapers", "url": "https://donchaos.chatnelo.com/"}}]}</script>
 <title>BrosWars Studio</title>
 <script src="/js/bw.js"></script>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="BrosWars Studio – a Czech studio forging games and AI tools: Castle WARS, Chatnelo and a free CV builder.">
+<meta name="description" content="BrosWars Studio – a Czech studio forging games and AI tools: Castle WARS, Chatnelo, Don Chaos live wallpapers and a free CV builder.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,500;0,600;0,700;0,800;1,500;1,700&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -73,6 +73,7 @@ header.solid{background:rgba(4,6,12,.72);backdrop-filter:blur(14px);-webkit-back
 .lang button{background:none;border:0;color:var(--muted);font:500 .72rem/1 var(--f-mono);letter-spacing:.1em;padding:7px 10px;border-radius:99px;cursor:pointer}
 .lang button.on{background:var(--chrome);color:var(--void)}
 @media (max-width:640px){.nav-r .hide-s{display:none}.brand b span{display:none}}
+@media (max-width:860px){.nav-r .hide-m{display:none}}
 
 /* ---------- progress rail ---------- */
 .rail{position:fixed;right:max(14px,env(safe-area-inset-right,0px));top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:14px}
@@ -131,6 +132,9 @@ header.solid{background:rgba(4,6,12,.72);backdrop-filter:blur(14px);-webkit-back
 .u-cv .cap{background:linear-gradient(transparent,rgba(21,26,36,.94))}
 .u-nm .art{background:radial-gradient(110% 70% at 50% 20%,#5b2bd6 0%,#2a1160 45%,#0b0714 100%)}
 .u-nm .ic{position:absolute;left:50%;top:38%;width:50%;transform:translate(-50%,-50%);border-radius:22%;box-shadow:0 0 70px rgba(139,61,255,.6)}
+.u-dc .art{background:url(img/donchaos/samurai-03.webp) center/cover}
+.u-dc .fr{position:absolute;left:24%;right:24%;top:8%;bottom:25%;border-radius:16px;border:2px solid rgba(255,236,214,.75);box-shadow:0 0 0 999px rgba(7,6,10,.42),0 0 40px rgba(255,74,28,.55)}
+.u-dc .fr::before{content:"";position:absolute;top:5%;left:50%;width:32%;height:4%;transform:translateX(-50%);border-radius:99px;background:#07060a}
 .floor{position:absolute;left:50%;bottom:6%;width:min(1100px,92vw);height:120px;transform:translateX(-50%);background:radial-gradient(50% 50% at 50% 50%,rgba(62,162,255,.22),transparent 70%);filter:blur(8px);pointer-events:none}
 .ars-foot{display:flex;justify-content:space-between;gap:16px;color:var(--muted);max-width:1440px;margin:0 auto;width:100%;flex-wrap:wrap}
 .ars-foot .now{color:var(--ice)}
@@ -241,6 +245,66 @@ header.solid{background:rgba(4,6,12,.72);backdrop-filter:blur(14px);-webkit-back
   .doc{width:min(250px,64vw)}
 }
 
+/* ---------- Don Chaos: live wallpapers ---------- */
+.dc{--dc1:#ff4a1c;--dc2:#ffb347;--glow:rgba(255,74,28,.5);background:radial-gradient(55% 50% at 74% 40%,rgba(255,74,28,.16),transparent 70%),radial-gradient(40% 40% at 8% 92%,rgba(255,179,71,.07),transparent 70%),#07060a;padding-block:clamp(96px,14vh,150px) clamp(64px,10vh,110px)}
+.dc-in{max-width:1440px;margin:0 auto;display:grid;gap:clamp(44px,8vh,90px)}
+.dc-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(24px,5vw,80px)}
+.dc-copy{display:grid;gap:22px;min-width:0;justify-items:start}
+.dc .tag{color:var(--dc2)}
+.dc h2{margin:0;font:800 var(--s3)/.9 var(--f-display);letter-spacing:-.02em;text-wrap:balance}
+.dc h2 em{font-style:italic;font-weight:500;padding-right:.08em;background:linear-gradient(180deg,var(--dc2) 10%,var(--dc1) 65%,#b3200f);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.dc p{margin:0;max-width:44ch;color:#d3c9cf}
+.dc .btn-solid{background:linear-gradient(90deg,var(--dc1),#ff7a2a);color:#fff}
+.dc .btn-solid:hover{box-shadow:0 0 0 6px rgba(255,74,28,.18),0 18px 50px -12px rgba(255,74,28,.7)}
+.dc .mono.c{color:var(--muted)}
+.dc .price{gap:22px 30px}
+.dc-stage{position:relative;justify-self:center;display:grid;justify-items:center;gap:22px;perspective:1100px;min-width:0}
+.dc-stage::before{content:"";position:absolute;left:50%;top:46%;width:min(640px,150vw);aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(closest-side,var(--glow),transparent 72%);opacity:.55;pointer-events:none;transition:background .8s}
+.dc-stage::after{content:"";position:absolute;left:50%;top:46%;width:min(560px,128vw);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;border:1px solid rgba(255,179,71,.14);box-shadow:0 0 0 46px rgba(255,179,71,.025),0 0 0 47px rgba(255,179,71,.08);pointer-events:none}
+.phone{position:relative;z-index:1;width:min(300px,64vw);aspect-ratio:9/19;border-radius:15%/7.2%;padding:3.4%;container-type:inline-size;background:linear-gradient(145deg,#3d3743,#0c0b10 38%,#1d1a22 70%,#0a090c);box-shadow:0 0 0 1px rgba(255,255,255,.14) inset,0 0 0 2px #050407,0 70px 120px -40px rgba(0,0,0,.95),0 0 140px -30px var(--glow);transform-style:preserve-3d;will-change:transform;transition:box-shadow .8s;cursor:grab;touch-action:pan-y}
+.phone::before,.phone::after{content:"";position:absolute;width:3px;border-radius:2px;background:#2b2730}
+.phone::before{right:-3px;top:24%;height:11%}
+.phone::after{left:-3px;top:19%;height:7%;box-shadow:0 9cqw 0 #2b2730,0 19cqw 0 #2b2730}
+.scr{position:absolute;inset:3.4%;border-radius:12.5%/5.8%;overflow:hidden;background:#000;isolation:isolate;transition:opacity .25s}
+.scr.sw{opacity:.15}
+.scr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.12);will-change:transform;user-select:none;-webkit-user-drag:none}
+.scr img[hidden]{display:none}
+.lock{position:absolute;left:0;right:0;top:10%;z-index:0;display:grid;justify-items:center;gap:1.5cqw;color:rgba(255,255,255,.95);text-shadow:0 2px 24px rgba(0,0,0,.35);pointer-events:none;will-change:transform}
+.lock span{font:500 4.6cqw/1 var(--f-body);letter-spacing:.02em;opacity:.9}
+.lock b{font:600 25cqw/.9 var(--f-display);letter-spacing:-.02em}
+.isl{position:absolute;top:2.6%;left:50%;width:31%;height:3.6%;transform:translateX(-50%);border-radius:99px;background:#000;z-index:6}
+.hbar{position:absolute;bottom:1.8%;left:50%;width:34%;height:4px;transform:translateX(-50%);border-radius:99px;background:rgba(255,255,255,.75);z-index:6}
+.sheen{position:absolute;inset:0;z-index:7;pointer-events:none;background:linear-gradient(112deg,rgba(255,255,255,0) 30%,rgba(255,255,255,.16) 46%,rgba(255,255,255,0) 60%);transform:translateX(var(--sx,0%));mix-blend-mode:screen}
+.dc-cap{display:flex;align-items:center;gap:10px;color:var(--muted);min-height:1.4em;text-align:center}
+.dc-cap b{color:var(--ice);font-weight:500}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--dc1);box-shadow:0 0 12px var(--dc1);flex:none}
+.dot.off{background:var(--muted);box-shadow:none}
+.dc-hint{color:rgba(255,179,71,.75);font-size:.62rem}
+.dc-packs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(22px,3.4vw,48px)}
+.rack{min-width:0;border-top:1px solid var(--line);padding-top:18px;display:grid;gap:12px}
+.rack-h{display:flex;justify-content:space-between;align-items:baseline;gap:6px 14px;flex-wrap:wrap}
+.rack-h b{font:700 var(--s1)/1 var(--f-display)}
+.rack-h b small{font:500 .62rem/1 var(--f-mono);letter-spacing:.2em;color:var(--dc2);margin-right:10px;vertical-align:.35em}
+.rack-h .mono{color:var(--muted)}
+.strip{display:flex;gap:10px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;padding:8px 2px 14px;scrollbar-width:thin;scrollbar-color:rgba(255,179,71,.35) transparent;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 48px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 48px),transparent)}
+.strip::-webkit-scrollbar{height:4px}.strip::-webkit-scrollbar-thumb{background:rgba(255,179,71,.35);border-radius:4px}
+.th{position:relative;flex:0 0 auto;width:clamp(76px,6.6vw,100px);aspect-ratio:300/525;padding:0;border:0;border-radius:12px;overflow:hidden;cursor:pointer;background:#141118;scroll-snap-align:start;box-shadow:0 0 0 1px rgba(255,255,255,.08);transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s}
+.th img{width:100%;height:100%;object-fit:cover}
+.th:hover{transform:translateY(-4px)}
+.th[aria-pressed=true]{box-shadow:0 0 0 2px var(--dc2),0 12px 30px -10px var(--glow)}
+.th .lv{position:absolute;left:5px;top:5px;font:500 .52rem/1 var(--f-mono);letter-spacing:.14em;padding:4px 6px;border-radius:99px;background:rgba(7,6,10,.72);color:var(--dc2)}
+.th .n{position:absolute;right:6px;bottom:5px;font:500 .6rem/1 var(--f-mono);color:rgba(255,255,255,.85);text-shadow:0 1px 4px #000}
+@media (max-width:900px){
+  .dc{padding-block:84px 56px}
+  .dc-grid{grid-template-columns:minmax(0,1fr);gap:40px}
+  .dc-copy{gap:16px}
+  .dc .price{display:grid;grid-template-columns:repeat(3,minmax(0,auto));gap:18px}
+  .dc .price b{font-size:2.4rem}
+  .phone{width:min(250px,62vw)}
+  .dc-packs{grid-template-columns:minmax(0,1fr)}
+  .th{width:84px}
+}
+
 /* ---------- 06 ask ---------- */
 .ask{position:relative;z-index:2;background:var(--void);padding-block:clamp(90px,14vh,160px)}
 .ask-in{max-width:980px;margin:0 auto;display:grid;gap:28px}
@@ -286,6 +350,7 @@ footer{position:relative;z-index:2;background:var(--void);border-top:1px solid v
     <div class="nav-r">
             <a class="hide-s mono" href="#chatnelo">Chatnelo</a>
       <a class="hide-s mono" href="#nacti">Načti.me</a>
+      <a class="hide-s hide-m mono" href="#donchaos">Don Chaos</a>
       <a class="hide-s mono" href="/tvurci/" data-i18n="navCr">For creators</a>
       <a class="mono" href="#ask" data-i18n="navAsk">Ask us</a>
       <div class="lang" role="group" aria-label="Language">
@@ -302,6 +367,7 @@ footer{position:relative;z-index:2;background:var(--void);border-top:1px solid v
   <a href="#chatnelo" data-k="chatnelo"><span>Chatnelo</span><i></i></a>
   <a href="#nacti" data-k="nacti"><span>Načti.me</span><i></i></a>
   <a href="#cv" data-k="cv"><span data-i18n="r4">CV Builder</span><i></i></a>
+  <a href="#donchaos" data-k="donchaos"><span>Don Chaos</span><i></i></a>
   <a href="#ask" data-k="ask"><span data-i18n="r5">Ask us</span><i></i></a>
 </nav>
 
@@ -326,14 +392,15 @@ footer{position:relative;z-index:2;background:var(--void);border-top:1px solid v
     <div class="ars-pin gut">
       <div class="ars-head">
         <h2><span data-i18n="arsA">The</span> <em data-i18n="arsB">arsenal.</em></h2>
-        <p data-i18n="arsP">Four projects, each one built in-house, from the first pixel to the last line of code.</p>
+        <p data-i18n="arsP">Five projects, each one built in-house, from the first pixel to the last line of code.</p>
       </div>
       <div class="stage">
-        <div class="ringz"><div class="ring" id="ring" style="--n:4">
+        <div class="ringz"><div class="ring" id="ring" style="--n:5">
           <a class="unit u-cw" style="--i:0" href="https://battlecastle.itch.io/castle-wars" target="_blank" rel="noopener"><div class="art"></div><div class="cap"><span class="mono" data-i18n="kGame">Strategy game</span><b>Castle WARS</b></div></a>
           <a class="unit u-ch" style="--i:1" href="#chatnelo"><div class="art"></div><img class="ic" src="img/chatnelo-icon.webp" alt="" loading="lazy" decoding="async"><div class="bub"><i></i><i></i><i></i></div><div class="cap"><span class="mono" data-i18n="kAi">AI for online stores</span><b>Chatnelo</b></div></a>
           <a class="unit u-nm" style="--i:2" href="#nacti"><div class="art"></div><img class="ic" src="img/nacti-icon.png" alt="" loading="lazy" decoding="async"><div class="cap"><span class="mono" data-i18n="kQr">QR codes in seconds</span><b>Načti.me</b></div></a>
           <a class="unit u-cv" style="--i:3" href="#cv"><div class="art"></div><div class="sheet"><i class="h"></i><i class="s"></i><i></i><i></i><i style="width:80%"></i><i class="s"></i><i></i><i style="width:64%"></i></div><div class="cap"><span class="mono" data-i18n="kFree">Free tool</span><b data-i18n="tCv">CV Builder</b></div></a>
+          <a class="unit u-dc" style="--i:4" href="#donchaos"><div class="art"></div><div class="fr"></div><div class="cap"><span class="mono" data-i18n="kDc">Live wallpapers</span><b>Don Chaos</b></div></a>
         </div></div>
         <div class="floor"></div>
       </div>
@@ -414,6 +481,51 @@ footer{position:relative;z-index:2;background:var(--void);border-top:1px solid v
     </div>
   </section>
 
+  <!-- Don Chaos -->
+  <section class="chapter dc" id="donchaos" data-sec="donchaos">
+    <div class="dc-in gut">
+      <div class="dc-grid">
+        <div class="dc-copy">
+          <span class="tag mono" data-i18n="dcTag">Chapter 04 · Don Chaos</span>
+          <h2 data-i18n-html="dcH">Wallpapers that <em>move with you.</em></h2>
+          <p data-i18n="dcP">Live parallax wallpapers for your phone. Each one is built from five layers of depth that shift as you tilt the screen. Two packs, Samurai and Animals, with 10 wallpapers in each.</p>
+          <div class="price">
+            <div><b>$3</b><span class="mono" data-i18n="dcS1">per pack</span></div>
+            <div><b>10</b><span class="mono" data-i18n="dcS2">wallpapers per pack</span></div>
+            <div><b>5</b><span class="mono" data-i18n="dcS3">layers of depth</span></div>
+          </div>
+          <div><a class="btn btn-solid" href="https://donchaos.chatnelo.com" target="_blank" rel="noopener"><span data-i18n="dcBtn">Get the packs</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+          <div class="mono c" data-i18n="dcC">Full resolution 1536 × 2688 · instant download</div>
+        </div>
+        <div class="dc-stage">
+          <div class="phone" id="dcPhone" role="img" aria-label="Don Chaos wallpaper preview">
+            <div class="scr" id="dcScr">
+              <img class="L0" src="img/donchaos/samurai-03-L0.webp" alt="" width="360" height="630" loading="lazy" decoding="async" draggable="false">
+              <div class="lock" id="dcLock"><span id="dcDate"></span><b id="dcTime">9:41</b></div>
+              <img class="L1" src="img/donchaos/samurai-03-L1.webp" alt="" width="360" height="630" loading="lazy" decoding="async" draggable="false">
+              <img class="L2" src="img/donchaos/samurai-03-L2.webp" alt="" width="360" height="630" loading="lazy" decoding="async" draggable="false">
+              <img class="L3" src="img/donchaos/samurai-03-L3.webp" alt="" width="360" height="630" loading="lazy" decoding="async" draggable="false">
+              <img class="L4" src="img/donchaos/samurai-03-L4.webp" alt="" width="360" height="630" loading="lazy" decoding="async" draggable="false">
+              <i class="isl"></i><i class="hbar"></i><i class="sheen" id="dcSheen"></i>
+            </div>
+          </div>
+          <div class="dc-cap mono"><i class="dot" id="dcDot"></i><span id="dcCap">Samurai · 03</span></div>
+          <div class="dc-hint mono" data-i18n="dcHint">Move the cursor or tilt your phone</div>
+        </div>
+      </div>
+      <div class="dc-packs">
+        <div class="rack">
+          <div class="rack-h"><b><small data-i18n="dcP1">Pack 01</small><span data-i18n="dcN1">Samurai</span></b><span class="mono" data-i18n="dcCnt">10 wallpapers · $3</span></div>
+          <div class="strip" id="dcS-samurai" role="group" aria-label="Samurai"></div>
+        </div>
+        <div class="rack">
+          <div class="rack-h"><b><small data-i18n="dcP2">Pack 02</small><span data-i18n="dcN2">Animals</span></b><span class="mono" data-i18n="dcCnt2">10 wallpapers · $3</span></div>
+          <div class="strip" id="dcS-zvirata" role="group" aria-label="Animals"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 06 -->
   <section class="ask gut" id="ask" data-sec="ask">
     <div class="ask-in">
@@ -442,6 +554,7 @@ footer{position:relative;z-index:2;background:var(--void);border-top:1px solid v
       <a href="https://battlecastle.itch.io/castle-wars" target="_blank" rel="noopener">itch.io</a>
       <a href="https://apps.shopify.com/chatnelo" target="_blank" rel="noopener">Shopify App Store</a>
       <a href="https://nacti.me" target="_blank" rel="noopener">Načti.me</a>
+      <a href="https://donchaos.chatnelo.com" target="_blank" rel="noopener">Don Chaos</a>
       <a href="/tvurci/" data-i18n="partner">Creator program (CZ)</a>
     </nav>
   </div>
@@ -459,7 +572,7 @@ var RM = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").mat
 var CS={
   navAsk:"Napiš nám",r0:"Studio",r1:"Arzenál",r4:"Životopis",r5:"Napiš nám",
   hudA:"Hry · AI nástroje",h1a:"Hraj naplno.",h1b:"Tvoř chytře.",hudB:"České studio her a AI nástrojů",hudC:"Hry · AI · Nástroje",cue:"Scrolluj dovnitř",
-  arsA:"Náš",arsB:"arzenál.",arsP:"Čtyři projekty a každý děláme sami, od prvního pixelu po poslední řádek kódu.",
+  arsA:"Náš",arsB:"arzenál.",arsP:"Pět projektů a každý děláme sami, od prvního pixelu po poslední řádek kódu.",
   kGame:"Strategická hra",kAi:"AI pro e-shopy",kFree:"Nástroj zdarma",tCv:"Životopis",kQr:"QR kódy za pár vteřin",arsF:"Scrollem otáčíš kruhem",
   cwTag:"Kapitola 01 · Castle WARS",cwH:"Postav<em>.</em> Ubraň<em>.</em> Dobij<em>.</em>",
   cwP:"Strategie hrad proti hradu. Postav armádu, udrž hradby, sešli blesky a prolom nepřátelskou bránu. Rytíři, Vikingové a Samurajové, každý národ s vlastními jednotkami.",
@@ -470,6 +583,10 @@ var CS={
   cvTag:"Kapitola 03 · Životopis",cvH:"Pět minut. <em>Silný životopis.</em>",cvP:"Nástroj zdarma, který z pár odpovědí poskládá čistý profesionální životopis česky nebo anglicky.",
   cvBtn:"Vytvořit životopis",cvC:"Zdarma · CZ / EN",cvRole:"Projektová manažerka",
   askTag:"Přímá linka do studia",askH:"Zeptej se <em>na cokoliv.</em>",q1:"Co je Castle WARS?",q2:"Kolik stojí Chatnelo?",q3:"Můžeme spolupracovat?",mailP:"Raději e-mail?",partner:"Pro tvůrce",navCr:"Pro tvůrce",
+  kDc:"Živé tapety",dcTag:"Kapitola 04 · Don Chaos",dcH:"Tapety, které <em>se hýbou s tebou.</em>",
+  dcP:"Živé parallax tapety do telefonu. Každá má pět vrstev hloubky, které se posunou, když telefon nakloníš. Dva balíčky, Samuraj a Zvířata, v každém 10 tapet.",
+  dcS1:"za balíček",dcS2:"tapet v balíčku",dcS3:"vrstev hloubky",dcBtn:"Koupit balíčky",dcC:"Plné rozlišení 1536 × 2688 · okamžité stažení",
+  dcHint:"Pohni kurzorem nebo nakloň telefon",dcP1:"Balíček 01",dcP2:"Balíček 02",dcN1:"Samuraj",dcN2:"Zvířata",dcCnt:"10 tapet · $3",dcCnt2:"10 tapet · $3",
   title:"BrosWars Studio — hry a AI nástroje"
 };
 var EN={title:"BrosWars Studio"};
@@ -485,6 +602,7 @@ function setLang(l){
   try{localStorage.setItem("bw-lang",l);}catch(e){}
   if(window.ScrollTrigger)ScrollTrigger.refresh();
   if(window.__askLabels)window.__askLabels();
+  if(window.__dcLang)window.__dcLang();
 }
 document.querySelectorAll(".lang button").forEach(function(b){b.onclick=function(){setLang(b.dataset.lang);};});
 var saved;try{saved=localStorage.getItem("bw-lang");}catch(e){}
@@ -635,11 +753,12 @@ if(window.gsap && window.ScrollTrigger && !RM){
     .to("#flash",{opacity:0,duration:.0001},1);
 
   /* 02 arsenal: turn the ring */
-  var names=["01 / Castle WARS","02 / Chatnelo","03 / Načti.me","04 / CV Builder"];
+  var names=["01 / Castle WARS","02 / Chatnelo","03 / Načti.me","04 / CV Builder","05 / Don Chaos"],last=names.length-1;
   var nowEl=document.getElementById("now");
-  gsap.fromTo("#ring",{rotateY:0,rotateX:-6},{rotateY:-270,rotateX:-6,ease:"none",
-    scrollTrigger:{trigger:".arsenal",start:"top top",end:"+=220%",pin:".ars-pin",scrub:.6,
-      onUpdate:function(s){var k=Math.min(3,Math.round(s.progress*3));if(nowEl.textContent!==names[k])nowEl.textContent=names[k];}}});
+  /* the ring turns one full step per project: -(n-1)/n of a revolution */
+  gsap.fromTo("#ring",{rotateY:0,rotateX:-6},{rotateY:-360*last/names.length,rotateX:-6,ease:"none",
+    scrollTrigger:{trigger:".arsenal",start:"top top",end:"+=260%",pin:".ars-pin",scrub:.6,
+      onUpdate:function(s){var k=Math.min(last,Math.round(s.progress*last));if(nowEl.textContent!==names[k])nowEl.textContent=names[k];}}});
   gsap.from(".ars-head h2",{yPercent:40,opacity:0,scrollTrigger:{trigger:".arsenal",start:"top 80%",end:"top 20%",scrub:true}});
 
   /* 04 Chatnelo: the conversation types itself */
@@ -674,6 +793,11 @@ if(window.gsap && window.ScrollTrigger && !RM){
      .from("#doc .stamp",{scale:2.4,opacity:0,rotate:40,duration:.25,ease:"power3.in"},1.4)
      .to("#doc",{rotate:-1,duration:.4},1.4);
 
+  /* Don Chaos: the phone rises out of the ember glow */
+  gsap.from(".dc-copy > *",{y:40,opacity:0,stagger:.08,ease:"power2.out",scrollTrigger:{trigger:".dc",start:"top 75%",end:"top 20%",scrub:.4}});
+  gsap.from(".dc-stage",{y:140,rotateX:24,scale:.92,opacity:0,transformPerspective:900,ease:"power2.out",scrollTrigger:{trigger:".dc-stage",start:"top 100%",end:"top 35%",scrub:.4}});
+  gsap.from(".rack",{y:50,opacity:0,stagger:.15,ease:"power2.out",scrollTrigger:{trigger:".dc-packs",start:"top 98%",end:"top 60%",scrub:.4}});
+
   /* ask + footer reveal */
   gsap.from(".ask h2",{y:60,opacity:0,scrollTrigger:{trigger:".ask",start:"top 85%",end:"top 45%",scrub:true}});
   gsap.from(".big",{yPercent:40,letterSpacing:"0.08em",scrollTrigger:{trigger:"footer",start:"top bottom",end:"bottom bottom",scrub:true}});
@@ -681,6 +805,79 @@ if(window.gsap && window.ScrollTrigger && !RM){
   /* výkon: ScrollTrigger se po "load" přepočítá sám; navíc jen když písma dorazí až potom */
   addEventListener("load",function(){if(document.fonts&&document.fonts.status!=="loaded")document.fonts.ready.then(function(){ScrollTrigger.refresh();});});
 }
+
+/* ================= Don Chaos: layered wallpaper on a phone that follows the cursor / gyro ================= */
+(function(){
+  var sec=document.getElementById("donchaos"),phone=document.getElementById("dcPhone"),scr=document.getElementById("dcScr");
+  if(!sec||!phone)return;
+  /* only small previews live here (full-res files are the paid product) */
+  var PK={
+    samurai:{en:"Samurai",cs:"Samuraj",glow:"rgba(255,74,28,.5)",live:[1,3],
+      names:{en:["Blood moon","Misty pass","Torii gate","Storm over the castle","Bamboo forest","Snowy gate","Helmet at sunset","Fire bridge","Mirror lake","Dawn rider"],
+             cs:["Krvavý měsíc","Mlžný průsmyk","Brána torii","Bouře nad hradem","Bambusový les","Zasněžená brána","Helma při západu","Ohnivý most","Zrcadlo jezera","Jezdec úsvitu"]}},
+    zvirata:{en:"Animals",cs:"Zvířata",glow:"rgba(255,179,71,.42)",live:[2,6],
+      names:{en:["Wolf in the mist","Fire fox","Night owl","Dawn tiger","Raven","Panther","Deer in the snow","Lion in red","Snow leopard","Bear in the mist"],
+             cs:["Vlk v mlze","Liška ohně","Sova noci","Tygr úsvitu","Havran","Pantera","Jelen ve sněhu","Lev v rudé","Levhart sněžný","Medvěd v mlze"]}}
+  };
+  var LY=[].slice.call(scr.querySelectorAll("img")),lock=document.getElementById("dcLock"),sheen=document.getElementById("dcSheen");
+  var cap=document.getElementById("dcCap"),dot=document.getElementById("dcDot"),cur={p:"samurai",i:3},btns=[];
+  function pad(i){return (i<10?"0":"")+i;}
+  function isLive(p,i){return PK[p].live.indexOf(i)>=0;}
+  function L(){return lang==="cs"?"cs":"en";}
+  function caption(){var p=PK[cur.p];cap.innerHTML=p[L()]+" · "+pad(cur.i)+" · <b>"+p.names[L()][cur.i-1]+"</b>";dot.classList.toggle("off",!isLive(cur.p,cur.i));
+    phone.setAttribute("aria-label",(L()==="cs"?"Ukázka tapety Don Chaos: ":"Don Chaos wallpaper preview: ")+p[L()]+", "+p.names[L()][cur.i-1]);}
+  /* thumbnail strips */
+  Object.keys(PK).forEach(function(k){
+    var st=document.getElementById("dcS-"+k);
+    for(var i=1;i<=10;i++)(function(i){
+      var b=document.createElement("button");b.type="button";b.className="th";b.dataset.p=k;b.dataset.i=i;
+      b.innerHTML='<img src="img/donchaos/'+k+"-"+pad(i)+'.webp" alt="" width="300" height="525" loading="lazy" decoding="async" draggable="false">'+(isLive(k,i)?'<span class="lv">LIVE</span>':"")+'<span class="n">'+pad(i)+"</span>";
+      b.onclick=function(){show(k,i);};st.appendChild(b);btns.push(b);
+    })(i);
+  });
+  function labels(){btns.forEach(function(b){var p=PK[b.dataset.p];b.setAttribute("aria-label",p[L()]+" "+pad(+b.dataset.i)+": "+p.names[L()][b.dataset.i-1]);
+    b.setAttribute("aria-pressed",String(b.dataset.p===cur.p&&+b.dataset.i===cur.i));});caption();
+    document.getElementById("dcS-samurai").setAttribute("aria-label",PK.samurai[L()]);document.getElementById("dcS-zvirata").setAttribute("aria-label",PK.zvirata[L()]);}
+  var swapT;
+  function show(k,i){
+    if(k===cur.p&&i===cur.i)return;cur={p:k,i:i};sec.style.setProperty("--glow",PK[k].glow);labels();
+    var live=isLive(k,i),base="img/donchaos/"+k+"-"+pad(i);
+    scr.classList.add("sw");clearTimeout(swapT);
+    swapT=setTimeout(function(){
+      var first=LY[0];first.onload=first.onerror=function(){scr.classList.remove("sw");};
+      LY.forEach(function(im,n){im.loading="eager";if(live){im.hidden=false;im.src=base+"-L"+n+".webp";}else if(n===0){im.src=base+".webp";}else{im.hidden=true;im.removeAttribute("src");}});
+      if(first.complete&&first.naturalWidth)scr.classList.remove("sw");
+    },180);
+  }
+  /* lock-screen clock */
+  function clock(){var d=new Date();document.getElementById("dcTime").textContent=d.getHours()+":"+pad(d.getMinutes());
+    try{document.getElementById("dcDate").textContent=d.toLocaleDateString(L()==="cs"?"cs-CZ":"en-US",{weekday:"long",day:"numeric",month:"long"});}catch(e){}}
+  clock();setInterval(clock,20000);
+  window.__dcLang=function(){labels();clock();};labels();
+  if(RM)return;
+  /* parallax: pointer (desktop), gyroscope (phones), gentle idle sway otherwise */
+  var F=[0,1.3,2.6,4,5.4],tx=0,ty=0,qx=0,qy=0,lastPtr=-1e9,gyro=null,on=false,raf=0,t0=performance.now();
+  addEventListener("pointermove",function(e){if(e.pointerType==="touch"||!on)return;var r=phone.getBoundingClientRect();
+    tx=Math.max(-1,Math.min(1,(e.clientX-(r.left+r.width/2))/(innerWidth*.45)));ty=Math.max(-1,Math.min(1,(e.clientY-(r.top+r.height/2))/(innerHeight*.5)));lastPtr=performance.now();},{passive:true});
+  addEventListener("deviceorientation",function(e){if(e.gamma==null||e.beta==null)return;gyro=[Math.max(-1,Math.min(1,e.gamma/25)),Math.max(-1,Math.min(1,(e.beta-45)/25))];},{passive:true});
+  var asked=false;phone.addEventListener("pointerdown",function(){
+    if(asked||!window.DeviceOrientationEvent||typeof DeviceOrientationEvent.requestPermission!=="function")return;asked=true;
+    DeviceOrientationEvent.requestPermission().catch(function(){});});
+  function frame(now){
+    raf=on?requestAnimationFrame(frame):0;
+    var t=(now-t0)/1000,ax,ay;
+    if(now-lastPtr<2500){ax=tx;ay=ty;}else if(gyro){ax=gyro[0];ay=gyro[1];}else{ax=Math.sin(t*.6)*.55;ay=Math.cos(t*.45)*.35;}
+    qx+=(ax-qx)*.08;qy+=(ay-qy)*.08;
+    for(var n=0;n<LY.length;n++)LY[n].style.transform="translate3d("+(-qx*F[n]).toFixed(2)+"%,"+(-qy*F[n]*.6).toFixed(2)+"%,0) scale(1.12)";
+    lock.style.transform="translate3d("+(-qx*F[1]*2).toFixed(2)+"px,"+(-qy*F[1]*1.2).toFixed(2)+"px,0)";
+    phone.style.transform="rotateY("+(qx*13).toFixed(2)+"deg) rotateX("+(-qy*9).toFixed(2)+"deg)";
+    sheen.style.setProperty("--sx",(qx*-38).toFixed(1)+"%");
+  }
+  var inView=!("IntersectionObserver" in window);
+  function run(){on=inView&&!document.hidden;if(on&&!raf)raf=requestAnimationFrame(frame);}
+  if(!inView)new IntersectionObserver(function(es){inView=es[0].isIntersecting;run();}).observe(phone);
+  document.addEventListener("visibilitychange",run);run();
+})();
 
 /* ================= Ask us (Chatnelo-powered) ================= */
 (function(){
