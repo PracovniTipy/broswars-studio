@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<script>if(location.protocol==='http:'&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))location.replace('https://'+location.host+location.pathname+location.search+location.hash);document.documentElement.className='js'</script>
+<title>Partnerský panel – BrosWars Partner</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#04060c">
+<link rel="icon" href="/img/emblem.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/tvurci/tvurci.css">
+<script src="/js/bw.js"></script>
+<style>
+body{display:flex;flex-direction:column}
+main{padding-block:clamp(28px,5vw,56px) 40px;flex:1;width:100%}
+.stack{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+.cols{grid-template-columns:minmax(0,1fr)}
+.hello{display:grid;gap:14px;margin-bottom:22px}
+.hello h1{font-weight:800;font-size:clamp(2rem,1.4rem + 2.6vw,3.2rem)}
+.status{display:grid;gap:12px}
+.status p{color:var(--muted-2);max-width:70ch}
+.cols{display:grid;gap:16px}
+@media (min-width:960px){.cols{grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);align-items:start}}
+.card h2{font-size:1.35rem;font-weight:700;margin-bottom:6px}
+.card > p.sub{color:var(--muted-2);font-size:.94rem;margin-bottom:16px}
+.codebox{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 18px}
+.codebox .code{font:800 clamp(1.8rem,1.4rem + 1.6vw,2.6rem)/1 var(--f-display);letter-spacing:.06em}
+.links{display:grid;gap:12px}
+.lnk{display:grid;gap:9px;padding:14px;border-radius:16px;border:1px solid var(--line);background:rgba(238,245,255,.03);transition:border-color .2s}
+.lnk.sel{border-color:rgba(62,162,255,.6);background:rgba(62,162,255,.06)}
+.lnk .h{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.lnk .h b{display:flex;align-items:center;gap:10px;font:600 1.05rem/1.1 var(--f-display)}
+.lnk .h b img{width:28px;height:28px;border-radius:8px}
+.lnk .h .rate{font:500 .74rem/1 var(--f-mono);letter-spacing:.1em;color:var(--volt-2)}
+.lnk .acts{display:flex;gap:8px}
+.lnk .copy code{font-size:.8rem}
+@media (max-width:520px){.lnk .row2{flex-direction:column}.lnk .row2 .acts .btn{flex:1}}
+.qrw{display:grid;gap:14px;justify-items:center;text-align:center}
+@media (min-width:960px){.qrw{position:sticky;top:84px}}
+.qrbox{width:min(260px,100%);aspect-ratio:1;background:#fff;border-radius:18px;padding:10px;box-shadow:0 0 0 1px rgba(255,255,255,.2),0 30px 80px -30px rgba(62,162,255,.7)}
+.qrbox svg{display:block;width:100%;height:100%}
+.qrw .for{font:600 1.05rem/1.2 var(--f-display)}
+.qrw small{color:var(--muted);font-size:.84rem;overflow-wrap:anywhere;max-width:100%}
+.kpis{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:760px){.kpis{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.kpi{padding:16px;border-radius:16px;border:1px solid var(--line);background:rgba(238,245,255,.03);display:grid;gap:6px;min-width:0}
+.kpi .v{font:800 clamp(1.5rem,1.2rem + 1vw,2rem)/1.05 var(--f-display);font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.kpi .v.sm{font-size:1.25rem}
+.kpi .l{font:500 .7rem/1.3 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.bars{display:grid;gap:10px;margin-top:18px}
+.bar{display:grid;grid-template-columns:110px minmax(0,1fr) 52px;gap:12px;align-items:center;font-size:.92rem}
+.bar .t{height:10px;border-radius:10px;background:rgba(207,216,230,.1);overflow:hidden}
+.bar .t i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#2b8cf0,var(--volt-2));box-shadow:0 0 14px rgba(62,162,255,.6)}
+.bar span:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.tbl{width:100%;border-collapse:collapse;font-size:.94rem}
+.tbl th{text-align:left;font:500 .7rem/1.2 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:0 10px 10px;border-bottom:1px solid var(--line)}
+.tbl td{padding:12px 10px;border-bottom:1px solid rgba(207,216,230,.07);font-variant-numeric:tabular-nums;vertical-align:top}
+.tbl td.r,.tbl th.r{text-align:right}
+.tbl small{display:block;color:var(--muted);font-size:.8rem}
+@media (max-width:640px){
+  .tbl thead{display:none}
+  .tbl,.tbl tbody,.tbl tr,.tbl td{display:block;width:100%}
+  .tbl tr{padding:12px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:4px 12px}
+  .tbl td{border:0;padding:0}
+  .tbl td.r{text-align:right}
+  .tbl td[data-l]::before{content:attr(data-l) " ";color:var(--muted);font-size:.8rem}
+}
+.empty{padding:22px;border:1px dashed var(--line-2);border-radius:16px;color:var(--muted-2);text-align:center}
+.payf{display:grid;gap:14px}
+.payf ul{margin:0;padding-left:1.1em;color:var(--muted-2);font-size:.93rem;display:grid;gap:4px}
+.state{display:grid;justify-items:center;text-align:center;gap:16px;padding-block:clamp(40px,10vw,100px)}
+.state img{width:96px;filter:drop-shadow(0 0 24px rgba(62,162,255,.6))}
+.state h1{font-weight:800;font-size:clamp(1.8rem,1.3rem + 2vw,2.6rem)}
+.state p{color:var(--muted-2);max-width:52ch}
+.sk{border-radius:16px;background:linear-gradient(90deg,rgba(238,245,255,.04),rgba(238,245,255,.09),rgba(238,245,255,.04));background-size:200% 100%;animation:sk 1.4s linear infinite}
+@keyframes sk{to{background-position:-200% 0}}
+.help{color:var(--muted);font-size:.88rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#app">Přeskočit na obsah</a>
+<header class="hdr">
+  <div class="wrap">
+    <a class="brand" href="/tvurci/" aria-label="BrosWars Partner – o programu"><img src="/img/emblem-sm.png" alt="" width="28" height="29"><b>BrosWars<span>PARTNER</span></b></a>
+    <nav class="hnav" aria-label="Odkazy"><a class="mono hide-s" href="/tvurci/#faq">FAQ</a><a class="mono" href="/tvurci/podminky/">Podmínky</a></nav>
+  </div>
+</header>
+
+<main id="app" class="wrap" tabindex="-1" aria-busy="true">
+  <div class="stack" aria-hidden="true"><div class="sk" style="height:90px"></div><div class="sk" style="height:120px"></div><div class="sk" style="height:320px"></div></div>
+</main>
+
+<footer class="ftr">
+  <div class="wrap mono">
+    <span>© <span id="y">2026</span> BrosWars Studio · IČO 08938920</span>
+    <nav aria-label="Patička"><a href="/tvurci/">O programu</a><a href="/tvurci/podminky/">Podmínky</a><a href="mailto:broswars@chatnelo.com">broswars@chatnelo.com</a></nav>
+  </div>
+</footer>
+
+<script src="/js/vendor/qrcode.js"></script>
+<script src="/tvurci/partner.js"></script>
+<script>
+(function(){
+"use strict";
+var $=function(id){return document.getElementById(id);},E=BWP.esc,app=$("app");
+$("y").textContent=new Date().getFullYear();
+var token=new URLSearchParams(location.search).get("t")||"";
+var SITE="https://broswarsstudio.chatnelo.com";
+var T=[
+  {k:"chatnelo",label:"Chatnelo",ic:"/img/chatnelo-icon.webp",path:"/chatnelo"},
+  {k:"nacti",label:"Načti.me Pro",ic:"/img/nacti-icon.png",path:"/nacti"},
+  {k:"castlewars",label:"Castle WARS",ic:"/img/cw-icon.webp",path:"/castlewars"},
+  {k:"studio",label:"Web studia",ic:"/img/emblem-sm.png",path:""}
+];
+var STATUS={
+  pending:["b-warn","Čeká na schválení","Přihlášku máme a ručně ji procházíme. Jakmile ji schválíme, objeví se tady tvoje odkazy a QR kódy. Tenhle odkaz si ulož – je to tvoje přihlášení."],
+  approved:["b-ok","Schváleno","Jsi v programu. Sdílej své odkazy nebo kód – každé kliknutí i provizi uvidíš níže. Placený obsah vždy označ jako „spolupráce“ nebo „reklama“."],
+  rejected:["b-bad","Neschváleno","Tentokrát jsme přihlášku neschválili. Pokud se u tebe něco změnilo nebo chceš vědět víc, napiš nám na <a href=\"mailto:broswars@chatnelo.com\">broswars@chatnelo.com</a>."],
+  paused:["b-mute","Pozastaveno","Účast je teď pozastavená: nová kliknutí na tvoje odkazy se nezapočítávají. Provize z dřívějších kliknutí ti zůstávají a vyplatíme je. Podrobnosti ti rádi napíšeme na <a href=\"mailto:broswars@chatnelo.com\">broswars@chatnelo.com</a>."]
+};
+var CST={pending:["b-warn","Čeká"],payable:["b-ok","K výplatě"],paid:["b-mute","Vyplaceno"],rejected:["b-bad","Zamítnuto"]};
+var df=new Intl.DateTimeFormat("cs-CZ",{day:"numeric",month:"numeric",year:"numeric"});
+function d(s){try{return df.format(new Date(s));}catch(e){return "";}}
+var copyIco='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>';
+
+function state(title,text,extra){
+  app.removeAttribute("aria-busy");
+  app.innerHTML='<div class="state"><img src="/img/emblem.png" alt="" width="96" height="100"><h1>'+title+'</h1><p>'+text+'</p>'+(extra||"")+'</div>';
+}
+
+if(!/^[a-f0-9]{16,128}$/i.test(token)){
+  state("Tady chybí tvůj odkaz","Do panelu se dostaneš jen přes soukromý odkaz, který jsi dostal po odeslání přihlášky. Otevři ho celý, včetně části za otazníkem.",'<a class="btn btn-solid" href="/tvurci/#prihlaska">Ještě nemám přihlášku</a><p class="help">Ztratil jsi odkaz? Napiš z e-mailu, se kterým ses přihlásil, na broswars@chatnelo.com.</p>');
+  return;
+}
+
+function load(){
+  BWP.rpc("aff_dashboard",{t:token}).then(function(r){
+    if(!r.ok){
+      if(r.kind==="unavailable")return state("Panel ještě spouštíme","Partnerský program právě zapínáme. Tvůj odkaz platí – zkus to prosím za chvíli znovu.",'<button class="btn btn-solid" type="button" id="retry">Zkusit znovu</button>');
+      if(r.kind==="offline")return state("Jsi offline?","Nepodařilo se spojit se serverem. Zkontroluj připojení a zkus to znovu.",'<button class="btn btn-solid" type="button" id="retry">Zkusit znovu</button>');
+      return state("Něco se pokazilo","Na naší straně se něco nepovedlo. Zkus to prosím za pár minut.",'<button class="btn btn-solid" type="button" id="retry">Zkusit znovu</button>');
+    }
+    var x=r.data||{};
+    if(x.error)return state("Tenhle odkaz neplatí","Panel s tímto odkazem jsme nenašli. Zkontroluj, že jsi zkopíroval celý odkaz. Pokud problém trvá, napiš nám na broswars@chatnelo.com.",'<a class="btn btn-line" href="/tvurci/">O programu</a>');
+    render(x);
+  });
+}
+app.addEventListener("click",function(e){if(e.target.id==="retry"){app.innerHTML='<div class="stack"><div class="sk" style="height:200px"></div></div>';load();}});
+
+function render(x){
+  var st=STATUS[x.status]||STATUS.pending,live=x.status==="approved"||x.status==="paused";
+  var code=String(x.code||"").replace(/[^A-Za-z0-9]/g,"");
+  var rates=x.rates||{};
+  function rate(k){var v=rates[k]&&rates[k].rate;return v!=null?Math.round(v*100)+" %":"";}
+  var h='';
+  h+='<section class="hello"><span class="tag mono">Partnerský panel</span><h1>Ahoj, '+E(x.name||"tvůrce")+'</h1></section>';
+  h+='<section class="stack">';
+  h+='<div class="card status"><span class="badge '+st[0]+'" style="justify-self:start">'+st[1]+'</span><p>'+st[2]+'</p>'+(x.created_at?'<small class="help">Přihláška odeslaná '+d(x.created_at)+(x.approved_at?' · schválená '+d(x.approved_at):'')+'</small>':'')+'</div>';
+
+  if(x.status!=="rejected"){
+    h+='<div class="card"><div class="codebox"><div><span class="mono muted">Tvůj kód</span><div class="code chromeText" id="code">'+E(code)+'</div></div><button class="btn btn-line btn-sm" type="button" data-copy="code">'+copyIco+'Zkopírovat kód</button></div><p class="help" style="margin-top:10px">'+(live?'Zákazník může kód zadat i ručně (např. když odkaz neotevře). Počítá se stejně jako kliknutí.':'Kód se aktivuje po schválení přihlášky.')+'</p></div>';
+  }
+
+  if(live){
+    h+='<div class="cols"><div class="card"><h2>Tvoje odkazy</h2><p class="sub">'+(x.status==="paused"?'Během pozastavení odkazy fungují, ale nová kliknutí se nezapočítávají.':'Každý odkaz vede na jeden produkt. Klikni na „QR“ a stáhni si kód pro video, stream nebo tisk.')+'</p><div class="links">';
+    T.forEach(function(t,i){
+      var url=SITE+"/go/"+code+t.path;
+      h+='<div class="lnk'+(i===0?" sel":"")+'" data-i="'+i+'"><div class="h"><b><img src="'+t.ic+'" alt="" width="28" height="28">'+t.label+'</b><span class="rate">'+(t.k==="studio"?"všechny produkty":rate(t.k))+'</span></div><div class="copy row2"><code id="l'+i+'">'+E(url)+'</code><div class="acts"><button class="btn btn-solid btn-sm" type="button" data-copy="l'+i+'">'+copyIco+'Kopírovat</button><button class="btn btn-line btn-sm" type="button" data-qr="'+i+'" aria-controls="qrw">QR</button></div></div></div>';
+    });
+    h+='</div></div>';
+    h+='<div class="card qrw" id="qrw" aria-live="polite"><div class="qrbox" id="qr" role="img"></div><div class="for" id="qrfor"></div><small id="qrurl"></small><button class="btn btn-volt btn-sm" type="button" id="qrdl">Stáhnout PNG</button><small>Kód vytvořený přímo ve tvém prohlížeči.</small></div></div>';
+
+    var c=x.clicks||{},bt=c.by_target||{},max=1;
+    T.forEach(function(t){max=Math.max(max,+bt[t.k]||0);});
+    h+='<div class="card"><h2>Kliknutí</h2><p class="sub">Počítáme kliknutí na odkazy i zadané kódy. Opakovaná kliknutí z jednoho zařízení během dne počítáme jen omezeně.</p><div class="kpis"><div class="kpi"><span class="v">'+BWP.num(+c.total||0)+'</span><span class="l">Celkem</span></div><div class="kpi"><span class="v">'+BWP.num(+c.d30||0)+'</span><span class="l">Posledních 30 dní</span></div>';
+    var conv=Array.isArray(x.conversions)?x.conversions:[];
+    h+='<div class="kpi"><span class="v">'+BWP.num(conv.length)+'</span><span class="l">Platby s provizí</span></div><div class="kpi"><span class="v">'+(c.total?(Math.round(conv.length/c.total*1000)/10).toLocaleString("cs-CZ")+' %':'–')+'</span><span class="l">Platby / kliknutí</span></div></div><div class="bars">';
+    T.forEach(function(t){var n=+bt[t.k]||0;h+='<div class="bar"><span>'+t.label+'</span><span class="t"><i style="width:'+(n/max*100)+'%"></i></span><span>'+BWP.num(n)+'</span></div>';});
+    h+='</div></div>';
+
+    /* provize podle stavu a měny */
+    var tot={pending:{},payable:{},paid:{}};
+    (x.totals||[]).forEach(function(z){if(tot[z.status]){tot[z.status][z.currency]=(tot[z.status][z.currency]||0)+(+z.commission||0);}});
+    function amt(o){var k=Object.keys(o);if(!k.length)return BWP.money(0,"CZK");return k.map(function(cu){return BWP.money(o[cu],cu);}).join("<br>");}
+    h+='<div class="card"><h2>Provize</h2><p class="sub">Nová provize 30 dní čeká (kvůli vrácení peněz), pak je k výplatě. Vyplácíme jednou měsíčně od 500 Kč.</p><div class="kpis" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr))">'+
+      '<div class="kpi"><span class="v sm">'+amt(tot.pending)+'</span><span class="l">Čeká 30 dní</span></div>'+
+      '<div class="kpi" style="border-color:rgba(88,227,154,.35)"><span class="v sm">'+amt(tot.payable)+'</span><span class="l">K výplatě</span></div>'+
+      '<div class="kpi"><span class="v sm">'+amt(tot.paid)+'</span><span class="l">Vyplaceno</span></div></div>';
+    if(conv.length){
+      h+='<div style="overflow-x:auto;margin-top:18px"><table class="tbl"><caption class="sr">Platby zákazníků s provizí</caption><thead><tr><th>Datum</th><th>Produkt</th><th class="r">Platba</th><th class="r">Provize</th><th>Stav</th></tr></thead><tbody>';
+      conv.forEach(function(v){
+        var s=CST[v.status]||["b-mute",E(v.status)],lb=(rates[v.source]&&rates[v.source].label)||v.source;
+        h+='<tr><td>'+d(v.paid_at)+'</td><td>'+E(lb)+'</td><td class="r" data-l="Platba">'+BWP.money(v.amount,v.currency)+'</td><td class="r" data-l="Provize"><b>'+BWP.money(v.commission,v.currency)+'</b></td><td><span class="badge '+s[0]+'">'+s[1]+'</span>'+(v.status==="pending"?'<small>k výplatě od '+d(v.payable_after)+'</small>':'')+'</td></tr>';
+      });
+      h+='</tbody></table></div>';
+    } else h+='<div class="empty" style="margin-top:18px">Zatím tu nejsou žádné platby. Jakmile zákazník z tvého odkazu zaplatí, objeví se tady (obvykle do hodiny).</div>';
+    h+='<p class="help" style="margin-top:14px">Provize z plateb v jiné měně než v korunách přepočítáme při výplatě na Kč.</p></div>';
+  }
+
+  if(x.status!=="rejected"){
+    h+='<form class="card payf" id="pf" novalidate><div><h2>Výplatní údaje</h2><p class="sub" style="margin:0">'+(x.has_payout?'<span class="badge b-ok">Uloženo</span> Údaje máme. Pokud se něco změnilo, vyplň je znovu – nové přepíšou staré.':'<span class="badge b-warn">Chybí</span> Bez nich ti nemůžeme poslat peníze.')+'</p></div>'+
+      '<ul><li>číslo českého bankovního účtu (nebo IBAN) a jméno majitele účtu,</li><li>IČO, pokud podnikáš – jinak napiš „nepodnikám“,</li><li>případně poznámku (např. jestli jsi plátce DPH).</li></ul>'+
+      '<div class="field"><label for="pi">Údaje pro výplatu</label><textarea class="inp" id="pi" rows="4" maxlength="500" autocomplete="off" placeholder="Účet: 123456789/0800, Jan Novák&#10;IČO: 12345678 (nebo: nepodnikám)"></textarea><small>Uložené údaje se tu z bezpečnostních důvodů znovu nezobrazují. Max. 500 znaků.</small></div>'+
+      '<div id="pmsg" role="alert" aria-live="polite"></div><div><button class="btn btn-solid" id="pb" type="submit">Uložit výplatní údaje</button></div></form>';
+  }
+  h+='<p class="help">Odkaz na tuto stránku je tvoje přihlášení – nesdílej ho. Své odkazy pro sledující kopíruj jen z části „Tvoje odkazy“.</p>';
+  h+='</section>';
+  app.innerHTML=h;app.removeAttribute("aria-busy");
+
+  if(live)initQR(code);
+  var pf=$("pf");
+  if(pf)pf.addEventListener("submit",function(e){
+    e.preventDefault();var v=$("pi").value.trim(),m=$("pmsg"),b=$("pb");
+    if(v.length<8){m.innerHTML='<div class="msg err">Napiš prosím číslo účtu, jméno majitele a IČO (nebo „nepodnikám“).</div>';$("pi").focus();return;}
+    b.disabled=true;b.textContent="Ukládám…";
+    BWP.rpc("aff_set_payout",{t:token,info:v}).then(function(r){
+      b.disabled=false;b.textContent="Uložit výplatní údaje";
+      if(r.ok&&r.data&&r.data.ok){m.innerHTML='<div class="msg ok">Uloženo. Díky!</div>';$("pi").value="";var s=pf.querySelector(".sub");if(s)s.innerHTML='<span class="badge b-ok">Uloženo</span> Údaje máme. Pokud se něco změnilo, vyplň je znovu – nové přepíšou staré.';}
+      else m.innerHTML='<div class="msg err">'+(r.kind==="offline"?"Nepodařilo se spojit se serverem. Zkus to znovu.":r.kind==="unavailable"?"Ukládání teď nejde, program právě spouštíme. Zkus to prosím později.":"Uložení se nepovedlo. Zkus to prosím znovu.")+'</div>';
+    });
+  });
+}
+
+function initQR(code){
+  var cur=0;
+  function url(i){return SITE+"/go/"+code+T[i].path;}
+  function matrix(text){var q=qrcode(0,"M");q.addData(text);q.make();return q;}
+  function draw(i){
+    cur=i;var q=matrix(url(i)),n=q.getModuleCount(),pad=2,s=n+pad*2,p="";
+    for(var r=0;r<n;r++)for(var c=0;c<n;c++)if(q.isDark(r,c))p+="M"+(c+pad)+" "+(r+pad)+"h1v1h-1z";
+    var box=$("qr");box.innerHTML='<svg viewBox="0 0 '+s+' '+s+'" shape-rendering="crispEdges" aria-hidden="true"><path fill="#04060c" d="'+p+'"/></svg>';
+    box.setAttribute("aria-label","QR kód pro odkaz "+T[i].label);
+    $("qrfor").textContent="QR · "+T[i].label;$("qrurl").textContent=url(i).replace("https://","");
+    document.querySelectorAll(".lnk").forEach(function(l){l.classList.toggle("sel",+l.dataset.i===i);});
+  }
+  app.addEventListener("click",function(e){
+    var b=e.target.closest("[data-qr]");if(!b)return;draw(+b.dataset.qr);
+    if(innerWidth<960)$("qrw").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"center"});
+  });
+  $("qrdl").addEventListener("click",function(){
+    var q=matrix(url(cur)),n=q.getModuleCount(),pad=4,sc=Math.floor(1200/(n+pad*2)),S=sc*(n+pad*2);
+    var cv=document.createElement("canvas");cv.width=cv.height=S;var g=cv.getContext("2d");
+    g.fillStyle="#fff";g.fillRect(0,0,S,S);g.fillStyle="#04060c";
+    for(var r=0;r<n;r++)for(var c=0;c<n;c++)if(q.isDark(r,c))g.fillRect((c+pad)*sc,(r+pad)*sc,sc,sc);
+    cv.toBlob(function(bl){var a=document.createElement("a");a.href=URL.createObjectURL(bl);a.download="broswars-"+code.toLowerCase()+"-"+T[cur].k+".png";document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},500);},"image/png");
+  });
+  draw(0);
+}
+load();
+})();
+</script>
+</body>
+</html>

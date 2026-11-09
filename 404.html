@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<script>
+/* GitHub Pages nemá přesměrování: partnerské odkazy /go/<KOD>[/<cil>] zpracujeme tady, ještě před vykreslením. */
+(function(){
+  var HUB = "https://smjplqxwqyraphfeqsyk.supabase.co/functions/v1/aff/go";
+  var TARGETS = { chatnelo: 1, nacti: 1, castlewars: 1, studio: 1 };
+  function goUrl(path){
+    var m = /^\/go\/([A-Za-z0-9]{1,40})(?:\/([A-Za-z]{1,20}))?\/?$/i.exec(path || "");
+    if (!m) return null;
+    var to = (m[2] || "").toLowerCase();
+    return HUB + "?c=" + encodeURIComponent(m[1].toUpperCase()) + (TARGETS[to] ? "&to=" + to : "");
+  }
+  window.bwGoUrl = goUrl;
+  var p; try{ p = decodeURIComponent(location.pathname); }catch(e){ p = location.pathname; }
+  var u = goUrl(p);
+  if (u){ document.documentElement.setAttribute("data-go", "1"); location.replace(u); }
+})();
+</script>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#04060c">
+<title>Stránka nenalezena · BrosWars Studio</title>
+<link rel="icon" href="/img/emblem.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,700;0,800;1,500&family=Hanken+Grotesk:wght@400;600&family=JetBrains+Mono:wght@400&display=swap">
+<script src="/js/bw.js"></script>
+<style>
+:root{--void:#04060c;--chrome:#cfd8e6;--ice:#eef5ff;--volt:#3ea2ff;--muted:#8b97ad;--line:rgba(207,216,230,.18);color-scheme:dark}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:radial-gradient(60% 50% at 50% 38%,rgba(62,162,255,.16),transparent 70%),var(--void);color:var(--ice);font:400 1.05rem/1.6 "Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;display:grid;place-items:center;padding:24px 16px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.55;background:radial-gradient(1px 1px at 12% 18%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 78% 12%,#dfe9ff 50%,transparent 51%),radial-gradient(1.5px 1.5px at 34% 72%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 88% 64%,#cfe0ff 50%,transparent 51%),radial-gradient(1px 1px at 56% 38%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 6% 86%,#dfe9ff 50%,transparent 51%);background-size:420px 420px,520px 520px,640px 640px,380px 380px,560px 560px,460px 460px}
+html[data-go] main{visibility:hidden}
+main{display:grid;justify-items:center;text-align:center;gap:18px;max-width:560px}
+img{width:min(120px,30vw);height:auto;filter:drop-shadow(0 0 30px rgba(62,162,255,.75));animation:f 6s ease-in-out infinite}
+@keyframes f{50%{transform:translateY(-8px)}}
+.code{font:800 clamp(5rem,3rem + 12vw,9rem)/.85 "Saira",system-ui,sans-serif;letter-spacing:-.04em;background:linear-gradient(180deg,#fff 0%,#c9d3e2 40%,#5f6b82 55%,#dbe4f2 72%,#2a3346 100%);-webkit-background-clip:text;background-clip:text;color:transparent;margin:0}
+h1{margin:0;font:700 clamp(1.5rem,1.2rem + 1.4vw,2.1rem)/1.1 "Saira",system-ui,sans-serif}
+p{margin:0;color:#a9b4c8}
+.btns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:8px}
+a.b{display:inline-flex;align-items:center;min-height:48px;padding:13px 22px;border-radius:99px;text-decoration:none;font-weight:600}
+.s{background:var(--ice);color:var(--void)}
+.l{border:1px solid var(--line);color:var(--ice)}
+.l:hover{border-color:var(--volt)}
+:focus-visible{outline:2px solid var(--volt);outline-offset:3px}
+.m{font:400 .72rem/1 "JetBrains Mono",monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){img{animation:none}}
+</style>
+</head>
+<body>
+<main>
+  <img src="/img/emblem.png" alt="" width="260" height="272">
+  <p class="code" aria-hidden="true">404</p>
+  <h1>Tahle stránka se ztratila ve vesmíru</h1>
+  <p>Odkaz je možná překlep, nebo stránka už neexistuje. <span lang="en">Page not found.</span></p>
+  <div class="btns"><a class="b s" href="/">Domů do studia</a><a class="b l" href="/tvurci/">Program pro tvůrce</a></div>
+  <span class="m">BrosWars Studio</span>
+</main>
+</body>
+</html>

@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<script>if(location.protocol==='http:'&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))location.replace('https://'+location.host+location.pathname+location.search+location.hash);document.documentElement.className='js'</script>
+<title>BrosWars Partner – provize pro tvůrce</title>
+<meta name="description" content="Partnerský program BrosWars Studia pro české tvůrce. Doporučuj Chatnelo, Načti.me Pro a Castle WARS a ber 20–30 % z každé platby po dobu 12 měsíců od posledního kliknutí.">
+<meta name="theme-color" content="#04060c">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://broswarsstudio.chatnelo.com/tvurci/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:title" content="BrosWars Partner – provize pro tvůrce">
+<meta property="og:description" content="Doporučuj hry a AI nástroje, které lidi opravdu používají – a ber provizi. 30 % Chatnelo, 30 % Načti.me Pro, 20 % Castle WARS.">
+<meta property="og:url" content="https://broswarsstudio.chatnelo.com/tvurci/">
+<meta property="og:image" content="https://broswarsstudio.chatnelo.com/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/img/emblem.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/tvurci/tvurci.css">
+<script src="/js/bw.js"></script>
+<style>
+/* ---------- hero ---------- */
+.hero{position:relative;padding-block:clamp(40px,8vw,96px) clamp(56px,8vw,110px);overflow-x:clip}
+.hero .wrap{display:grid;gap:clamp(36px,5vw,64px);align-items:center}
+@media (min-width:980px){.hero .wrap{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)}}
+.hero h1{font-weight:800;font-size:clamp(2.35rem,1.2rem + 4.6vw,4.6rem);line-height:.98;margin:18px 0 20px}
+.hero h1 em{font-style:italic;font-weight:600}
+.hero .lead{font-size:clamp(1.05rem,1rem + .3vw,1.2rem);color:var(--muted-2);max-width:54ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:26px;color:var(--muted)}
+.facts span{display:inline-flex;align-items:center;gap:8px}
+.facts span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--volt);box-shadow:0 0 8px var(--volt)}
+
+/* hero visual: emblém + "tvůj odkaz" */
+.vis{position:relative;justify-self:center;width:min(460px,100%)}
+.vis .glow{position:absolute;left:50%;top:44%;width:120%;aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(62,162,255,.38),rgba(62,162,255,.08) 55%,transparent);pointer-events:none;z-index:-1}
+.vis .emb{width:min(150px,34vw);margin:0 auto -34px;filter:drop-shadow(0 0 28px rgba(62,162,255,.75)) drop-shadow(0 18px 30px rgba(0,0,0,.6));animation:float 6s ease-in-out infinite;position:relative;z-index:2}
+@keyframes float{50%{transform:translateY(-8px)}}
+.lk{position:relative;border-radius:24px;padding:46px 18px 18px;background:linear-gradient(180deg,rgba(22,30,56,.92),rgba(8,11,22,.95));border:1px solid rgba(207,216,230,.22);box-shadow:0 50px 100px -40px rgba(0,0,0,.95),0 0 0 1px rgba(62,162,255,.08) inset,0 0 80px -30px rgba(62,162,255,.6)}
+.lk::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(140deg,rgba(255,255,255,.55),rgba(255,255,255,0) 30%,rgba(62,162,255,0) 70%,rgba(62,162,255,.6));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.lk .url{display:flex;align-items:center;gap:10px;background:rgba(238,245,255,.06);border:1px solid var(--line);border-radius:12px;padding:11px 12px;font:500 .8rem/1.3 var(--f-mono);color:var(--chrome);overflow:hidden;white-space:nowrap}
+.lk .url svg{flex:none;color:var(--volt)}
+.lk .url b{color:var(--ice);font-weight:500}
+.lk .url i{font-style:normal;color:var(--volt-2)}
+.caret{display:inline-block;width:2px;height:1em;background:var(--volt);vertical-align:-2px;margin-left:1px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.rows{display:grid;gap:8px;margin-top:14px}
+.row{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px;border-radius:14px;background:rgba(238,245,255,.035);border:1px solid rgba(207,216,230,.08)}
+.row img{width:40px;height:40px;border-radius:11px;object-fit:cover}
+.row b{display:block;font:600 1rem/1.15 var(--f-display)}
+.row small{display:block;color:var(--muted);font-size:.8rem;line-height:1.3}
+.row .pc{font:800 1.5rem/1 var(--f-display)}
+.lk .ping{display:flex;align-items:center;gap:10px;margin-top:14px;padding:12px;border-radius:14px;background:rgba(88,227,154,.07);border:1px solid rgba(88,227,154,.25);font-size:.88rem;color:#cff7e2}
+.lk .ping i{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 12px var(--ok);flex:none;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35}}
+
+/* ---------- produkty ---------- */
+.prod{display:flex;flex-direction:column;padding:0;overflow:hidden}
+.prod .art{position:relative;aspect-ratio:16/9;overflow:hidden;border-bottom:1px solid var(--line)}
+.prod .art img.bg{width:100%;height:100%;object-fit:cover}
+.prod .art .ic{position:absolute;left:50%;top:50%;width:30%;height:auto;transform:translate(-50%,-50%);border-radius:22%}
+.a-ch{background:radial-gradient(120% 90% at 50% 10%,#3b47c9 0%,#141a4d 50%,#060920 100%)}
+.a-ch .ic{box-shadow:0 0 60px rgba(138,147,255,.6)}
+.a-nm{background:radial-gradient(110% 90% at 50% 15%,#5b2bd6 0%,#2a1160 50%,#0b0714 100%)}
+.a-nm .ic{box-shadow:0 0 70px rgba(139,61,255,.6)}
+.prod .pct{position:absolute;right:14px;bottom:12px;font:800 clamp(2.4rem,1.8rem + 2vw,3.2rem)/1 var(--f-display);text-shadow:0 4px 30px rgba(0,0,0,.6)}
+.prod .pct small{font-size:.42em;font-weight:600;margin-left:2px}
+.prod .body{display:grid;gap:10px;padding:20px 20px 22px;flex:1;align-content:start}
+.prod h3{font-size:1.5rem;font-weight:700}
+.prod p{color:var(--muted-2);font-size:.97rem}
+.prod ul{margin:4px 0 0;padding:0;list-style:none;display:grid;gap:6px;font-size:.93rem}
+.prod li{display:flex;gap:10px}
+.prod li::before{content:"";flex:none;width:6px;height:6px;margin-top:.62em;border-radius:50%;background:var(--volt)}
+.prod .who{margin-top:auto;padding-top:12px;border-top:1px dashed var(--line);color:var(--muted);font-size:.86rem}
+.note-sm{color:var(--muted);font-size:.86rem;margin-top:16px}
+
+/* ---------- jak to funguje ---------- */
+.steps{counter-reset:s;display:grid;gap:14px}
+@media (min-width:900px){.steps{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.step{counter-increment:s}
+.step::before{content:"0" counter(s);display:block;font:500 .74rem/1 var(--f-mono);letter-spacing:.16em;color:var(--volt);margin-bottom:14px}
+.step h3{font-size:1.2rem;font-weight:700;margin-bottom:8px}
+.step p{color:var(--muted-2);font-size:.95rem}
+.tl{margin-top:22px}
+.tl h3{font-size:1.25rem;margin-bottom:6px}
+.tl > p{color:var(--muted-2);font-size:.95rem;max-width:70ch}
+.track{position:relative;height:120px;margin:26px 4px 6px}
+.track .base{position:absolute;left:0;right:0;top:60px;height:2px;background:rgba(207,216,230,.16);border-radius:2px}
+.track .win{position:absolute;top:50px;height:22px;border-radius:8px}
+.track .w1{background:repeating-linear-gradient(135deg,rgba(62,162,255,.14) 0 6px,rgba(62,162,255,.05) 6px 12px);border:1px dashed rgba(62,162,255,.4)}
+.track .w2{background:linear-gradient(90deg,rgba(62,162,255,.5),rgba(62,162,255,.22));border:1px solid rgba(124,195,255,.7);box-shadow:0 0 24px -4px rgba(62,162,255,.7);top:76px}
+.track .clk{position:absolute;top:0;transform:translateX(-50%);display:grid;justify-items:center;gap:4px;font:500 .64rem/1.1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ice);white-space:nowrap}
+.track .clk::after{content:"";width:2px;height:22px;background:linear-gradient(var(--volt),transparent)}
+.track .pay{position:absolute;top:56px;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:var(--ok);box-shadow:0 0 10px var(--ok)}
+.track .pay.no{background:#3a4458;box-shadow:none;border:1px solid #56627a}
+.axis{display:flex;justify-content:space-between;color:var(--muted);font:500 .66rem/1 var(--f-mono);letter-spacing:.08em;margin:0 4px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;font-size:.86rem;color:var(--muted-2)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%}
+.legend .lw{width:22px;height:10px;border-radius:4px}
+@media (max-width:560px){.track .clk span.long{display:none}}
+
+/* ---------- kalkulačka ---------- */
+.calc{display:grid;gap:20px}
+@media (min-width:900px){.calc{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:stretch}}
+.seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;padding:4px;border-radius:16px;background:rgba(238,245,255,.05);border:1px solid var(--line)}
+.seg button{min-height:44px;border:0;border-radius:12px;background:none;color:var(--muted-2);font:600 .92rem/1.1 var(--f-body);cursor:pointer;padding:8px 6px}
+.seg button[aria-pressed=true]{background:var(--ice);color:var(--void)}
+.ctl{display:grid;gap:22px;margin-top:22px}
+.rng{display:grid;gap:10px}
+.rng .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.rng output{font:700 1.35rem/1 var(--f-display);color:var(--ice)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:28px;background:none;margin:0;cursor:pointer;--p:50%}
+input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:6px;background:linear-gradient(90deg,var(--volt) var(--p),rgba(207,216,230,.16) var(--p))}
+input[type=range]::-moz-range-track{height:6px;border-radius:6px;background:rgba(207,216,230,.16)}
+input[type=range]::-moz-range-progress{height:6px;border-radius:6px;background:var(--volt)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;margin-top:-9px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#c9d3e2 55%,#8793a8);border:0;box-shadow:0 0 0 4px rgba(62,162,255,.25),0 4px 10px rgba(0,0,0,.5)}
+input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#c9d3e2 55%,#8793a8);border:0;box-shadow:0 0 0 4px rgba(62,162,255,.25)}
+input[type=range]:focus-visible{outline:none}
+input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 6px rgba(62,162,255,.55)}
+.res{display:grid;align-content:center;gap:14px;text-align:center;background:radial-gradient(120% 90% at 50% 0%,rgba(62,162,255,.22),transparent 60%),linear-gradient(180deg,rgba(18,26,50,.9),rgba(8,11,22,.9))}
+.res .big{font:800 clamp(2.6rem,1.6rem + 4vw,4.4rem)/1 var(--f-display);font-variant-numeric:tabular-nums}
+.res .per{color:var(--muted-2)}
+.res .f{font:500 .82rem/1.5 var(--f-mono);color:var(--chrome);background:rgba(238,245,255,.05);border:1px solid var(--line);border-radius:12px;padding:10px 12px;overflow-wrap:anywhere}
+.res small{color:var(--muted);font-size:.82rem;line-height:1.45}
+
+/* ---------- výplaty & pravidla ---------- */
+.pay-c h3{font-size:1.15rem;margin:12px 0 6px}
+.pay-c p{color:var(--muted-2);font-size:.94rem}
+.pay-c .k{font:800 2rem/1 var(--f-display)}
+.rules h3{display:flex;align-items:center;gap:10px;font-size:1.25rem;margin-bottom:14px}
+.rules ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+.rules li{display:grid;grid-template-columns:24px minmax(0,1fr);gap:10px;font-size:.97rem}
+.rules li b{display:block}
+.rules li span{color:var(--muted-2);font-size:.92rem}
+.ico{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:.8rem;font-weight:700;margin-top:1px}
+.ico.y{background:rgba(88,227,154,.14);color:var(--ok)}
+.ico.n{background:rgba(255,107,122,.14);color:var(--bad)}
+
+/* ---------- FAQ ---------- */
+.faq{display:grid;gap:10px;max-width:860px}
+.faq details{border:1px solid var(--line);border-radius:16px;background:rgba(14,20,38,.55);transition:border-color .2s}
+.faq details[open]{border-color:var(--line-2);background:rgba(14,20,38,.8)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:17px 20px;font-weight:600;font-size:1.02rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:10px;height:10px;border-right:2px solid var(--chrome);border-bottom:2px solid var(--chrome);transform:rotate(45deg) translateY(-3px);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(225deg) translateY(-1px)}
+.faq .a{padding:0 20px 18px;color:var(--muted-2)}
+.faq .a p+p{margin-top:8px}
+
+/* ---------- přihláška ---------- */
+.apply{display:grid;gap:22px}
+@media (min-width:980px){.apply{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);align-items:start}}
+.apply aside{display:grid;gap:14px}
+.apply aside h2{font-weight:800;font-size:clamp(2rem,1.3rem + 3vw,3.2rem)}
+.apply aside p{color:var(--muted-2)}
+.apply aside ol{margin:6px 0 0;padding-left:1.2em;color:var(--muted-2);display:grid;gap:6px}
+form.card{display:grid;gap:18px}
+.f2{display:grid;gap:18px}
+@media (min-width:640px){.f2{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.hp{position:absolute;left:-5000px;width:1px;height:1px;overflow:hidden}
+.done{display:grid;gap:18px;border-color:rgba(62,162,255,.45);box-shadow:0 0 80px -30px rgba(62,162,255,.7)}
+.done h3{font-size:1.7rem;font-weight:800}
+.done .warn{display:flex;gap:12px;padding:14px;border-radius:14px;background:rgba(242,195,91,.08);border:1px solid rgba(242,195,91,.35);color:#fbe7b9;font-size:.95rem}
+.done .warn b{color:#fff3d6}
+.done .code{font:800 1.6rem/1 var(--f-display);letter-spacing:.06em}
+.done .btns{display:flex;flex-wrap:wrap;gap:10px}
+@media (max-width:520px){.copy{flex-direction:column}.copy .btn{width:100%}}
+
+/* závěrečný pruh */
+.final{text-align:center;display:grid;gap:18px;justify-items:center;padding-block:clamp(56px,8vw,96px)}
+.final h2{font-weight:800;font-size:clamp(2rem,1.2rem + 3.4vw,3.6rem)}
+</style>
+</head>
+<body>
+<a class="skip" href="#obsah">Přeskočit na obsah</a>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="BrosWars Studio – hlavní stránka"><img src="/img/emblem-sm.png" alt="" width="28" height="29"><b>BrosWars<span>PARTNER</span></b></a>
+    <nav class="hnav" aria-label="Sekce">
+      <a class="hide-s mono" href="#produkty">Produkty</a>
+      <a class="hide-s mono" href="#jak">Jak to funguje</a>
+      <a class="hide-s mono" href="#kalkulacka">Kalkulačka</a>
+      <a class="hide-s mono" href="#faq">FAQ</a>
+      <a class="btn btn-solid btn-sm" href="#prihlaska">Přihlásit se</a>
+    </nav>
+  </div>
+</header>
+
+<main id="obsah">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="tag mono">BrosWars Partner · pro české tvůrce</span>
+        <h1><span class="chromeText">Doporučuj hry a AI nástroje, které lidi opravdu používají</span> <em class="voltText">– a&nbsp;ber provizi.</em></h1>
+        <p class="lead">Dostaneš vlastní odkaz a kód. Za každou platbu zákazníka, kterého k nám pošleš, dostaneš 20–30 % – a to ještě 12 měsíců od jeho posledního kliknutí.</p>
+        <div class="cta">
+          <a class="btn btn-volt" href="#prihlaska">Chci se přidat<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-line" href="#kalkulacka">Spočítat výdělek</a>
+        </div>
+        <div class="facts mono"><span>Zdarma</span><span>Jen pro tvůrce z ČR</span><span>Každou přihlášku schvalujeme</span></div>
+      </div>
+
+      <div class="vis" aria-hidden="true">
+        <div class="glow"></div>
+        <img class="emb" src="/img/emblem.png" alt="" width="260" height="272">
+        <div class="lk">
+          <div class="url"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1 1"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1-1"/></svg><span>…/go/<b>TVUJKOD</b>/<i id="typed">chatnelo</i><span class="caret"></span></span></div>
+          <div class="rows">
+            <div class="row"><img src="/img/chatnelo-icon.webp" alt="" width="40" height="40"><div><b>Chatnelo</b><small>AI chatbot pro e-shopy</small></div><span class="pc chromeText">30 %</span></div>
+            <div class="row"><img src="/img/nacti-icon.png" alt="" width="40" height="40"><div><b>Načti.me Pro</b><small>QR kódy se statistikami</small></div><span class="pc chromeText">30 %</span></div>
+            <div class="row"><img src="/img/cw-icon.webp" alt="" width="40" height="40"><div><b>Castle WARS</b><small>Strategie hrad proti hradu</small></div><span class="pc chromeText">20 %</span></div>
+          </div>
+          <div class="ping"><i></i><span id="ping">Nové kliknutí · okno 12 měsíců začíná znovu</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUKTY -->
+  <section class="sec" id="produkty" style="padding-top:clamp(24px,4vw,48px)">
+    <div class="wrap">
+      <div class="sec-h rv">
+        <span class="tag mono">Co doporučuješ</span>
+        <h2>Tři produkty. <em>Jedna provize z ceny, kterou zákazník zaplatí.</em></h2>
+        <p>Všechno vyvíjíme sami v BrosWars Studiu. Doporučuj jen to, co dává smysl tvému publiku – a co bys sám ukázal kamarádovi.</p>
+      </div>
+      <div class="grid g3">
+        <article class="card prod rv">
+          <div class="art a-ch"><img class="ic" src="/img/chatnelo-icon.webp" alt="" width="480" height="480" loading="lazy" decoding="async"><span class="pct chromeText">30<small>%</small></span></div>
+          <div class="body">
+            <h3>Chatnelo</h3>
+            <p>AI chatbot pro Shopify e-shopy. Odpovídá zákazníkům nonstop podle skutečných produktů, skladu a dopravy.</p>
+            <ul><li>Předplatné od 379 Kč (16,99 $) měsíčně</li><li>Provize z každé měsíční platby</li><li>3 dny zdarma na vyzkoušení</li></ul>
+            <p class="who">Pro koho: e-commerce, marketing, podnikání, Shopify</p>
+          </div>
+        </article>
+        <article class="card prod rv">
+          <div class="art a-nm"><img class="ic" src="/img/nacti-icon.png" alt="" width="512" height="512" loading="lazy" decoding="async"><span class="pct chromeText">30<small>%</small></span></div>
+          <div class="body">
+            <h3>Načti.me Pro</h3>
+            <p>QR kódy za pár vteřin. Pro předplatné přidává dynamické kódy, které jdou změnit i po vytištění, a statistiky skenů.</p>
+            <ul><li>Pro za 99 Kč měsíčně</li><li>Provize z každé měsíční platby</li><li>Základní verze je zdarma – snadný začátek</li></ul>
+            <p class="who">Pro koho: živnostníci, kavárny, eventy, tisk, malé firmy</p>
+          </div>
+        </article>
+        <article class="card prod rv">
+          <div class="art"><img class="bg" src="/img/cw-card.webp" alt="Castle WARS – dřevěná pevnost ve sněhu a útočící Vikingové" width="1200" height="675" loading="lazy" decoding="async"><span class="pct chromeText">20<small>%</small></span></div>
+          <div class="body">
+            <h3>Castle WARS</h3>
+            <p>Strategie hrad proti hradu: Rytíři, Vikingové a Samurajové. Hraje se zdarma v prohlížeči, na itch.io i jinde.</p>
+            <ul><li>Provize z nákupů ve hře (např. 49–99 Kč)</li><li>Hra zdarma = nízká bariéra pro diváky</li><li>Hraje se i offline</li></ul>
+            <p class="who">Pro koho: hráči, gaming, strategie, streameři</p>
+          </div>
+        </article>
+      </div>
+      <p class="note-sm rv">Provize se počítá z částky, kterou zákazník skutečně zaplatil. Ze zkušebních verzí, testovacích obchodů a vrácených plateb provize nevzniká.</p>
+    </div>
+  </section>
+
+  <!-- JAK TO FUNGUJE -->
+  <section class="sec" id="jak">
+    <div class="wrap">
+      <div class="sec-h rv">
+        <span class="tag mono">Jak to funguje</span>
+        <h2>Jeden odkaz. <em>Provize ještě rok po kliknutí.</em></h2>
+      </div>
+      <div class="steps">
+        <div class="card step rv"><h3>Přihlásíš se</h3><p>Vyplníš krátkou přihlášku. Každou čteme ručně a schvalujeme jen tvůrce, kterým věříme.</p></div>
+        <div class="card step rv"><h3>Dostaneš odkaz a kód</h3><p>V panelu najdeš odkazy na každý produkt, QR kódy a svůj kód, který můžou lidi i opsat.</p></div>
+        <div class="card step rv"><h3>Zákazník klikne</h3><p>Od jeho <b>posledního</b> kliknutí běží 12 měsíců. Každé nové kliknutí na tvůj odkaz okno obnoví.</p></div>
+        <div class="card step rv"><h3>Platí = vyděláváš</h3><p>Z každé platby v tomhle okně dostaneš provizi – u předplatného tedy klidně z 12 plateb za sebou.</p></div>
+      </div>
+
+      <div class="card tl rv">
+        <h3>Okno 12 měsíců od posledního kliknutí</h3>
+        <p>Příklad: zákazník klikne na tvůj odkaz, začne platit předplatné a po sedmi měsících na tvůj odkaz klikne znovu. Okno se posune a provize běží dál. Když okno vyprší, další platby se nepočítají – dokud zákazník znovu neklikne. Klikne-li mezitím na odkaz jiného tvůrce, platí poslední kliknutí.</p>
+        <div class="track" role="img" aria-label="Časová osa: kliknutí v měsíci 0 otevře okno na 12 měsíců, druhé kliknutí v měsíci 7 ho prodlouží do měsíce 19. Platby do měsíce 19 nesou provizi, pozdější ne.">
+          <div class="base"></div>
+          <div class="win w1" style="left:0;width:50%"></div>
+          <div class="win w2" style="left:29.17%;width:50%"></div>
+          <div class="clk" style="left:0%;transform:none;justify-items:start"><span>Klik</span></div>
+          <div class="clk" style="left:29.17%"><span>Nový klik</span></div>
+          <div id="pays"></div>
+        </div>
+        <div class="axis" aria-hidden="true"><span>0</span><span>6</span><span>12</span><span>18</span><span>24 měs.</span></div>
+        <div class="legend"><span><i class="lw" style="background:repeating-linear-gradient(135deg,rgba(62,162,255,.4) 0 4px,rgba(62,162,255,.1) 4px 8px)"></i>původní okno</span><span><i class="lw" style="background:var(--volt)"></i>obnovené okno</span><span><i style="background:var(--ok)"></i>platba s provizí</span><span><i style="background:#3a4458;border:1px solid #56627a"></i>platba po vypršení</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KALKULAČKA -->
+  <section class="sec" id="kalkulacka">
+    <div class="wrap">
+      <div class="sec-h rv">
+        <span class="tag mono">Kalkulačka</span>
+        <h2>Kolik to může <em>dělat?</em></h2>
+        <p>Posuň jezdci a uvidíš orientační provizi podle našeho ceníku.</p>
+      </div>
+      <div class="calc rv">
+        <div class="card">
+          <div class="seg" role="group" aria-label="Produkt">
+            <button type="button" data-p="ch" aria-pressed="true">Chatnelo</button>
+            <button type="button" data-p="nm" aria-pressed="false">Načti.me Pro</button>
+            <button type="button" data-p="cw" aria-pressed="false">Castle WARS</button>
+          </div>
+          <div class="ctl">
+            <div class="rng"><div class="top"><label for="c-n" id="c-nl">Počet e-shopů</label><output for="c-n" id="c-no">5</output></div><input type="range" id="c-n" min="1" max="50" value="5"></div>
+            <div class="field" id="c-planw"><label for="c-plan" id="c-planl">Tarif</label><select class="inp" id="c-plan"></select></div>
+            <div class="rng" id="c-mw"><div class="top"><label for="c-m">Kolik měsíců platí</label><output for="c-m" id="c-mo">12</output></div><input type="range" id="c-m" min="1" max="12" value="12"></div>
+          </div>
+        </div>
+        <div class="card res" aria-live="polite">
+          <span class="mono muted">Tvoje provize celkem</span>
+          <div class="big chromeText" id="c-tot">0 Kč</div>
+          <div class="per" id="c-per"></div>
+          <div class="f" id="c-f"></div>
+          <small>Orientační výpočet, ne slib výdělku. Skutečná provize závisí na tom, kolik lidí opravdu zaplatí a jak dlouho.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VÝPLATY -->
+  <section class="sec" id="vyplaty">
+    <div class="wrap">
+      <div class="sec-h rv">
+        <span class="tag mono">Výplaty</span>
+        <h2>Jednoduše a <em>každý měsíc.</em></h2>
+      </div>
+      <div class="grid g4">
+        <div class="card pay-c rv"><div class="k chromeText">30 dní</div><h3>Ochranná lhůta</h3><p>Nová provize je 30 dní „čekající“ – kvůli případnému vrácení peněz. Pak se změní na „k výplatě“.</p></div>
+        <div class="card pay-c rv"><div class="k chromeText">500 Kč</div><h3>Výplata jednou měsíčně</h3><p>Vyplácíme, jakmile máš k výplatě aspoň 500 Kč. Menší částka se přesouvá do dalšího měsíce, nepropadá.</p></div>
+        <div class="card pay-c rv"><div class="k chromeText">Převod</div><h3>Na tvůj bankovní účet</h3><p>Číslo účtu vyplníš v panelu. Posíláme bankovním převodem v Kč.</p></div>
+        <div class="card pay-c rv"><div class="k chromeText">Daně</div><h3>Řešíš si sám</h3><p>Provize je tvůj příjem. Daně, pojištění a případné podnikatelské oprávnění si zajišťuješ sám.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRAVIDLA -->
+  <section class="sec" id="pravidla">
+    <div class="wrap">
+      <div class="sec-h rv">
+        <span class="tag mono">Pravidla</span>
+        <h2>Férově vůči lidem, <em>kteří ti věří.</em></h2>
+        <p>Chceme dlouhodobé partnery, ne rychlé triky. Kdo pravidla poruší, z programu odchází a nevyplacené provize z porušení propadají.</p>
+      </div>
+      <div class="grid g2">
+        <div class="card rules rv">
+          <h3><span class="ico y" aria-hidden="true">✓</span>Ano</h3>
+          <ul>
+            <li><span class="ico y" aria-hidden="true">✓</span><div><b>Jen čeští tvůrci</b><span>Program je pro partnery z České republiky s českým bankovním účtem.</span></div></li>
+            <li><span class="ico y" aria-hidden="true">✓</span><div><b>Schvalujeme každou přihlášku</b><span>Ručně se podíváme na tvoje kanály a na to, jak chceš propagovat.</span></div></li>
+            <li><span class="ico y" aria-hidden="true">✓</span><div><b>Placený obsah vždy označ</b><span>Napiš jasně „spolupráce“ nebo „reklama“ – v textu, ve videu i v příspěvku. Skrytá reklama je podle českých pravidel zakázaná.</span></div></li>
+            <li><span class="ico y" aria-hidden="true">✓</span><div><b>Mluv pravdivě</b><span>Ukazuj, co produkt opravdu umí. Neslibuj funkce, slevy ani výsledky, které neexistují.</span></div></li>
+          </ul>
+        </div>
+        <div class="card rules rv">
+          <h3><span class="ico n" aria-hidden="true">✕</span>Ne</h3>
+          <ul>
+            <li><span class="ico n" aria-hidden="true">✕</span><div><b>Žádný spam a studené e-maily</b><span>Žádné hromadné zprávy, nevyžádané e-maily ani spam v komentářích a skupinách.</span></div></li>
+            <li><span class="ico n" aria-hidden="true">✕</span><div><b>Žádné falešné recenze</b><span>Ani hodnocení v obchodech s aplikacemi, ani vymyšlené zkušenosti.</span></div></li>
+            <li><span class="ico n" aria-hidden="true">✕</span><div><b>Žádné nákupy přes vlastní odkaz</b><span>Provize je za zákazníky, které přivedeš – ne za vlastní platby nebo platby domluvené kvůli provizi.</span></div></li>
+            <li><span class="ico n" aria-hidden="true">✕</span><div><b>Žádná placená reklama na naše značky</b><span>Neinzeruj ve vyhledávačích ani sítích na názvy Chatnelo, Načti.me, Castle WARS a BrosWars a nevydávej se za nás.</span></div></li>
+          </ul>
+        </div>
+      </div>
+      <p class="note-sm rv">Úplné znění najdeš v <a href="/tvurci/podminky/">podmínkách programu</a>.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec" id="faq">
+    <div class="wrap">
+      <div class="sec-h rv"><span class="tag mono">Časté otázky</span><h2>Než se <em>přihlásíš</em></h2></div>
+      <div class="faq rv">
+        <details><summary>Stojí mě účast něco?</summary><div class="a"><p>Ne. Program je zdarma a nemusíš nic kupovat.</p></div></details>
+        <details><summary>Potřebuju velký kanál?</summary><div class="a"><p>Ne. Víc než počet sledujících nás zajímá, jestli tvoje publikum produkty opravdu využije – e-shopaři, malé firmy, hráči strategií.</p></div></details>
+        <details><summary>Jak dlouho platí kliknutí?</summary><div class="a"><p>12 měsíců (365 dní) od posledního kliknutí zákazníka na tvůj odkaz. Každé další kliknutí na tvůj odkaz okno obnoví. Když zákazník později klikne na odkaz jiného tvůrce, platí to poslední kliknutí.</p></div></details>
+        <details><summary>Co když zákazník zadá můj kód místo kliknutí?</summary><div class="a"><p>Zadání kódu se počítá stejně jako kliknutí na odkaz – i od něj běží 12 měsíců.</p></div></details>
+        <details><summary>Uvidím, kdo nakoupil?</summary><div class="a"><p>Ne. V panelu vidíš produkt, datum, částku a svou provizi. Osobní údaje zákazníků (jména, e-maily, obchody) ti nesdílíme.</p></div></details>
+        <details><summary>Kdy dostanu odpověď na přihlášku?</summary><div class="a"><p>Každou přihlášku čteme ručně. Jakmile rozhodneme, uvidíš výsledek ve svém soukromém panelu. Odkazy se aktivují až po schválení.</p></div></details>
+        <details><summary>Ztratil jsem odkaz do panelu. Co teď?</summary><div class="a"><p>Napiš nám z e-mailu, se kterým ses přihlásil, na <a href="mailto:broswars@chatnelo.com">broswars@chatnelo.com</a>. Po ověření ti pošleme nový.</p></div></details>
+        <details><summary>Proč v programu nejsou Pracovní tipy?</summary><div class="a"><p>Předplatné Pracovních tipů běží přes HeroHero a tam nákupy nedokážeme spolehlivě přiřadit konkrétnímu tvůrci. Proto je do programu zatím nezařazujeme.</p></div></details>
+        <details><summary>Musím mít živnost?</summary><div class="a"><p>Provize je tvůj příjem a jak ho zdaníš, záleží na tvé situaci. Pokud si nejsi jistý, poraď se s účetní nebo na finančním úřadě. Když máš IČO, uveď ho u výplatních údajů.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- PŘIHLÁŠKA -->
+  <section class="sec" id="prihlaska">
+    <div class="wrap apply">
+      <aside class="rv">
+        <span class="tag mono">Přihláška</span>
+        <h2>Pojď do <span class="voltText">toho.</span></h2>
+        <p>Zabere to dvě minuty. Po odeslání hned dostaneš odkaz do svého soukromého panelu.</p>
+        <ol><li>Vyplníš přihlášku</li><li>Uložíš si odkaz do panelu</li><li>My přihlášku projdeme a schválíme</li><li>V panelu se ti objeví odkazy a QR kódy</li></ol>
+      </aside>
+
+      <div>
+        <form class="card" id="af" novalidate>
+          <div class="f2">
+            <div class="field"><label for="f-name">Jméno nebo název kanálu</label><input class="inp" id="f-name" name="name" autocomplete="name" maxlength="120" required placeholder="např. Petr Tech"><small>Z něj vytvoříme tvůj kód (např. PETRTECH).</small></div>
+            <div class="field"><label for="f-email">E-mail</label><input class="inp" id="f-email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="200" required placeholder="ty@email.cz"><small>Jen pro komunikaci o programu.</small></div>
+          </div>
+          <div class="field"><label for="f-ch">Tvoje kanály a profily</label><textarea class="inp" id="f-ch" name="channels" maxlength="1000" rows="3" required placeholder="instagram.com/…, tiktok.com/@…, youtube.com/@…, web, newsletter"></textarea><small>Odkazy, ať se můžeme podívat. Jeden na řádek.</small></div>
+          <div class="field"><label for="f-aud">Velikost publika</label>
+            <select class="inp" id="f-aud" name="audience" required>
+              <option value="">Vyber…</option>
+              <option>do 1 000 sledujících</option>
+              <option>1 000 – 10 000</option>
+              <option>10 000 – 50 000</option>
+              <option>50 000 – 100 000</option>
+              <option>přes 100 000</option>
+            </select>
+          </div>
+          <div class="field"><label for="f-how">Jak bys nás propagoval?</label><textarea class="inp" id="f-how" name="how" maxlength="2000" rows="4" required placeholder="Např. recenze Chatnela ve videu o Shopify, gameplay Castle WARS na streamu, tip na Načti.me v newsletteru…"></textarea></div>
+          <div class="hp" aria-hidden="true"><label for="f-web">Nevyplňuj</label><input id="f-web" name="web" tabindex="-1" autocomplete="off"></div>
+          <label class="check"><input type="checkbox" id="f-agree" required><span>Souhlasím s <a href="/tvurci/podminky/" target="_blank" rel="noopener">podmínkami programu</a>, placený obsah budu označovat jako „spolupráce“ nebo „reklama“ a beru na vědomí zpracování svých údajů pro účely programu.</span></label>
+          <div id="f-msg" role="alert" aria-live="assertive"></div>
+          <div><button class="btn btn-volt" id="f-btn" type="submit">Odeslat přihlášku<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+        </form>
+
+        <div class="card done" id="done" hidden tabindex="-1">
+          <span class="badge b-warn" style="justify-self:start">Čeká na schválení</span>
+          <h3>Přihláška je odeslaná. Díky!</h3>
+          <p class="muted">Tohle je odkaz do tvého soukromého panelu. Uvidíš v něm stav přihlášky a po schválení i své odkazy, QR kódy, kliknutí a provize.</p>
+          <div class="copy"><code id="d-link"></code><button class="btn btn-solid btn-sm" type="button" data-copy="d-link">Zkopírovat</button></div>
+          <div class="warn"><span aria-hidden="true">⚠</span><span><b>Ulož si tento odkaz – je to tvoje přihlášení.</b> Nemáš heslo, odkaz je klíč. Neposílej ho nikomu dalšímu.</span></div>
+          <div><span class="mono muted">Tvůj kód</span><div class="code chromeText" id="d-code"></div><small class="muted">Aktivuje se po schválení. Zákazníci ho můžou zadat i ručně.</small></div>
+          <div class="btns"><a class="btn btn-volt" id="d-open" href="#">Otevřít můj panel<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+          <p class="muted" style="font-size:.92rem">Každou přihlášku procházíme ručně. Až ji schválíme, uvidíš to v panelu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap mono">
+    <span>© <span id="y">2026</span> BrosWars Studio · IČO 08938920</span>
+    <nav aria-label="Patička"><a href="/">Studio</a><a href="/tvurci/podminky/">Podmínky programu</a><a href="mailto:broswars@chatnelo.com">broswars@chatnelo.com</a></nav>
+  </div>
+</footer>
+
+<script src="/tvurci/partner.js"></script>
+<script>
+(function(){
+"use strict";
+var $=function(id){return document.getElementById(id);};
+$("y").textContent=new Date().getFullYear();
+
+/* hero: odkaz se "přepisuje" mezi produkty */
+(function(){
+  var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;if(RM)return;
+  var w=["chatnelo","nacti","castlewars"],p=["Nové kliknutí · okno 12 měsíců začíná znovu","Platba Načti.me Pro · provize 30 %","Nákup v Castle WARS · provize 20 %"],i=0,el=$("typed"),pg=$("ping");
+  function type(s,cb){var k=el.textContent.length;(function del(){if(k>0){el.textContent=el.textContent.slice(0,--k);setTimeout(del,40);}else(function add(){if(k<s.length){el.textContent=s.slice(0,++k);setTimeout(add,70);}else cb&&cb();})();})();}
+  setInterval(function(){i=(i+1)%3;type(w[i]);pg.textContent=p[i];},3600);
+})();
+
+/* časová osa: platby každý měsíc 1–22, s provizí do měsíce 19 */
+(function(){var h="";for(var m=1;m<=22;m++){h+='<span class="pay'+(m>19?" no":"")+'" style="left:'+(m/24*100).toFixed(2)+'%"></span>';}$("pays").innerHTML=h;})();
+
+/* kalkulačka */
+(function(){
+  var P={
+    ch:{rate:.3,n:"Počet e-shopů",max:50,def:5,months:true,plans:[["Start 70",379],["Basic 150",779],["Growth 400",1570],["Pro 1000",3490],["Business 5000",7990]],planL:"Tarif Chatnelo (měsíčně)",unit:"e-shopů"},
+    nm:{rate:.3,n:"Počet předplatitelů Pro",max:200,def:20,months:true,plans:[["Načti.me Pro",99]],planL:"Tarif",unit:"předplatitelů"},
+    cw:{rate:.2,n:"Počet nákupů ve hře",max:500,def:60,months:false,plans:[["Nákup za 49 Kč",49],["Nákup za 99 Kč",99]],planL:"Průměrná cena nákupu",unit:"nákupů"}
+  };
+  var cur="ch",n=$("c-n"),m=$("c-m"),plan=$("c-plan");
+  function fill(r){r.style.setProperty("--p",((r.value-r.min)/(r.max-r.min)*100)+"%");}
+  function setP(k){
+    cur=k;var c=P[k];
+    document.querySelectorAll(".seg button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.p===k);});
+    $("c-nl").textContent=c.n;n.max=c.max;n.value=c.def;
+    plan.innerHTML=c.plans.map(function(p,i){return '<option value="'+p[1]+'">'+p[0]+' · '+p[1]+' Kč</option>';}).join("");
+    $("c-planl").textContent=c.planL;$("c-planw").hidden=c.plans.length<2;
+    $("c-mw").hidden=!c.months;
+    calc();
+  }
+  function calc(){
+    var c=P[cur],N=+n.value,pr=+plan.value,M=c.months?+m.value:1;
+    var tot=N*pr*c.rate*M;
+    $("c-no").textContent=N;$("c-mo").textContent=M;fill(n);fill(m);
+    $("c-tot").textContent=BWP.money(tot,"CZK");
+    $("c-per").textContent=c.months?("≈ "+BWP.money(N*pr*c.rate,"CZK")+" každý měsíc"):"jednorázově z nákupů";
+    $("c-f").textContent=N+" "+c.unit+" × "+pr+" Kč × "+Math.round(c.rate*100)+" %"+(c.months?" × "+M+" měs.":"");
+  }
+  document.querySelectorAll(".seg button").forEach(function(b){b.onclick=function(){setP(b.dataset.p);};});
+  n.oninput=m.oninput=plan.onchange=calc;
+  setP("ch");
+})();
+
+/* přihláška */
+(function(){
+  var f=$("af"),btn=$("f-btn"),msg=$("f-msg");
+  function say(t,k){msg.innerHTML=t?'<div class="msg '+(k||"err")+'">'+t+'</div>':"";}
+  function bad(el,on){el.setAttribute("aria-invalid",on?"true":"false");}
+  f.addEventListener("submit",function(e){
+    e.preventDefault();say("");
+    if($("f-web").value)return;/* robot */
+    var d={name:$("f-name").value.trim(),email:$("f-email").value.trim(),channels:$("f-ch").value.trim(),audience:$("f-aud").value,how:$("f-how").value.trim(),agree:$("f-agree").checked};
+    var first=null;
+    [["f-name",d.name.length>=2],["f-email",/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email)],["f-ch",d.channels.length>=3],["f-aud",!!d.audience],["f-how",d.how.length>=10]].forEach(function(x){var el=$(x[0]);bad(el,!x[1]);if(!x[1]&&!first)first=el;});
+    if(first){say("Doplň prosím zvýrazněná pole. U „Jak bys nás propagoval“ stačí pár vět.");first.focus();return;}
+    if(!d.agree){say("Pro odeslání je potřeba souhlasit s podmínkami programu.");$("f-agree").focus();return;}
+    btn.disabled=true;var lbl=btn.innerHTML;btn.textContent="Odesílám…";
+    BWP.rpc("aff_apply",{p:d}).then(function(r){
+      btn.disabled=false;btn.innerHTML=lbl;
+      if(!r.ok){
+        if(r.kind==="unavailable")return say("Program právě spouštíme a přihlášky se ještě nedají odeslat. Zkus to prosím za chvíli, nebo nám napiš na <a href=\"mailto:broswars@chatnelo.com\">broswars@chatnelo.com</a>.");
+        if(r.kind==="offline")return say("Nepodařilo se spojit se serverem. Zkontroluj připojení a zkus to znovu.");
+        return say("Něco se pokazilo na naší straně. Zkus to prosím znovu za pár minut.");
+      }
+      var x=r.data||{};
+      if(x.error){
+        var E={invalid:"Zkontroluj jméno a e-mail – něco v nich nesedí.",agree:"Pro odeslání je potřeba souhlasit s podmínkami programu.",exists:"S tímhle e-mailem už přihláška existuje. Ztratil jsi odkaz do panelu? Napiš nám z tohoto e-mailu na <a href=\"mailto:broswars@chatnelo.com\">broswars@chatnelo.com</a>.",busy:"Právě přichází hodně přihlášek. Zkus to prosím za hodinu."};
+        return say(E[x.error]||"Přihlášku se nepodařilo uložit. Zkus to prosím znovu.");
+      }
+      if(!x.token||!/^[a-f0-9]{16,128}$/.test(x.token))return say("Přihlášku se nepodařilo dokončit. Napiš nám prosím na <a href=\"mailto:broswars@chatnelo.com\">broswars@chatnelo.com</a>.");
+      var link=location.origin+"/tvurci/panel/?t="+x.token;
+      $("d-link").textContent=link;$("d-open").href=link;$("d-code").textContent=x.code||"";
+      f.hidden=true;var dn=$("done");dn.hidden=false;dn.focus();dn.scrollIntoView({block:"start"});
+    });
+  });
+  f.addEventListener("input",function(e){if(e.target.getAttribute("aria-invalid")==="true")bad(e.target,false);});
+})();
+})();
+</script>
+</body>
+</html>
