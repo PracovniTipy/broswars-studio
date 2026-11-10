@@ -246,6 +246,7 @@ header.solid{background:rgba(4,6,12,.72);backdrop-filter:blur(14px);-webkit-back
 }
 
 /* ---------- Don Chaos: live wallpapers ---------- */
+.dc-req{margin-top:14px;font-size:14px;line-height:1.5;color:#ffb38a;max-width:46ch}
 .dc{--dc1:#ff4a1c;--dc2:#ffb347;--glow:rgba(255,74,28,.5);background:radial-gradient(55% 50% at 74% 40%,rgba(255,74,28,.16),transparent 70%),radial-gradient(40% 40% at 8% 92%,rgba(255,179,71,.07),transparent 70%),#07060a;padding-block:clamp(96px,14vh,150px) clamp(64px,10vh,110px)}
 .dc-in{max-width:1440px;margin:0 auto;display:grid;gap:clamp(44px,8vh,90px)}
 .dc-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(24px,5vw,80px)}
@@ -493,6 +494,7 @@ footer{position:relative;z-index:2;background:var(--void);border-top:1px solid v
             <div><b>5</b><span class="mono" data-i18n="dcS3">layers of depth</span></div>
           </div>
           <div><a class="btn btn-solid" href="https://wallpapers.chatnelo.com" target="_blank" rel="noopener"><span data-i18n="dcBtn">Get the packs</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+          <p class="dc-req" data-i18n="dcReq">⚠️ The live motion needs a newer phone with a gyroscope and support for live/3D wallpapers. On older phones it shows as a regular still image.</p>
           <div class="mono c" data-i18n="dcC">Full resolution 1536 × 2688 · instant download</div>
         </div>
         <div class="dc-stage">
@@ -587,7 +589,7 @@ var CS={
   askTag:"Přímá linka do studia",askH:"Zeptej se <em>na cokoliv.</em>",q1:"Co je Castle WARS?",q2:"Kolik stojí Chatnelo?",q3:"Můžeme spolupracovat?",mailP:"Raději e-mail?",partner:"Pro tvůrce",navCr:"Pro tvůrce",
   kDc:"Živé · 3 balíčky",kDcB:"Tapety",r6:"Tapety",ftDc:"Tapety",dcTag:"Kapitola 04 · Tapety",dcH:"Tapety, které <em>se hýbou s tebou.</em>",
   dcP:"Živé parallax tapety do telefonu. Každá má pět vrstev hloubky, které se posunou, když telefon nakloníš. Tři balíčky: Mýtická stvoření, Válečníci a Zvěrokruh.",
-  dcS1:"za balíček",dcS2:"živých tapet v balíčku",dcS3:"vrstev hloubky",dcBtn:"Koupit balíčky",dcC:"Plné rozlišení 1536 × 2688 · okamžité stažení",
+  dcS1:"za balíček",dcS2:"živých tapet v balíčku",dcS3:"vrstev hloubky",dcBtn:"Koupit balíčky",dcReq:"⚠️ Živý pohyb potřebuje novější telefon s gyroskopem a podporou živých/3D tapet. Na starších telefonech se tapeta zobrazí jen jako obyčejný obrázek.",dcC:"Plné rozlišení 1536 × 2688 · okamžité stažení",
   dcHint:"Pohni kurzorem nebo nakloň telefon",dcP1:"Balíček 01",dcP2:"Balíček 02",dcP3:"Balíček 03",dcN1:"Mýtická stvoření",dcN2:"Válečníci",dcN3:"Zvěrokruh",dcCnt:"6 tapet · $3",dcCnt2:"6 tapet · $3",dcCnt3:"6 tapet · $3",
   title:"BrosWars Studio — hry a AI nástroje"
 };
