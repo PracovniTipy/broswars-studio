@@ -149,7 +149,7 @@
     {
       "id": "pt-03-tri-veci",
       "brand": "pt",
-      "status": "pending",
+      "status": "posted",
       "targets": [
         "ig:pracovni_tipy",
         "tiktok:pracovni_tipy"
@@ -157,7 +157,8 @@
       "caption": "🇪🇺 Na práci v EU potřebuješ míň, než si myslíš.\n\n🪪 Občanka EU – bez víz a pracovního povolení\n🗣️ Často stačí základní angličtina\n📄 Životopis ti zdarma udělá AI (napiš do zpráv „CV“)\n\nNabídky každý den nové, často s ubytováním. Napiš do komentáře ZEMI 👇 Odkaz v profilu.\n\n#pracevzahranici #praceveu #brigada #prace #zivotopis #pracovnitipy",
       "url": "https://broswarsstudio.chatnelo.com/r/pt-03-tri-veci.mp4",
       "posted": {
-        "tiktok:pracovni_tipy": "2026-11-07"
+        "tiktok:pracovni_tipy": "2026-11-07",
+        "ig:pracovni_tipy": "2026-11-10"
       }
     },
     {
