@@ -1,0 +1,89 @@
+{
+ "theme": {
+  "bg": "#061033",
+  "grad": "radial-gradient(100% 60% at 50% 20%,#1d4ed8aa,transparent 65%),#061033",
+  "fg": "#ffffff",
+  "mut": "#c4cdf0",
+  "accent": "#ffcc00",
+  "accent2": "linear-gradient(180deg,#fff2a8,#ffcc00)",
+  "pill": "linear-gradient(180deg,#ffe066,#ffc400)"
+ },
+ "tag": "Pracovní tipy",
+ "music": {
+  "src": "../assets/music/pulse.mp3",
+  "ss": 55
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "bg": "../../pracovni-tipy/img/netherlands.webp",
+   "dur": 2.2,
+   "kicker": "Hra na 10 sekund",
+   "text": "Vyber si *jednu* zemi. 👇",
+   "size": 124,
+   "y": 520
+  },
+  {
+   "type": "image",
+   "bg": "../../pracovni-tipy/img/ireland.webp",
+   "dur": 1.6,
+   "kicker": "🇮🇪 Možnost 1",
+   "text": "*Irsko?*",
+   "size": 170,
+   "y": 1180,
+   "anim": "slam"
+  },
+  {
+   "type": "image",
+   "bg": "../../pracovni-tipy/img/malta.webp",
+   "dur": 1.6,
+   "kicker": "🇲🇹 Možnost 2",
+   "text": "*Malta?*",
+   "size": 170,
+   "y": 1180,
+   "anim": "slam"
+  },
+  {
+   "type": "image",
+   "bg": "../../pracovni-tipy/img/cyprus.webp",
+   "dur": 1.6,
+   "kicker": "🇨🇾 Možnost 3",
+   "text": "*Kypr?*",
+   "size": 170,
+   "y": 1180,
+   "anim": "slam"
+  },
+  {
+   "type": "list",
+   "dur": 3.4,
+   "kicker": "Ať vybereš kteroukoli",
+   "text": "Všude je to *EU.*",
+   "size": 120,
+   "y": 320,
+   "listY": 700,
+   "items": [
+    {
+     "i": "🪪",
+     "t": "Bez víz a pracovního povolení"
+    },
+    {
+     "i": "🗣️",
+     "t": "Často stačí základní angličtina"
+    },
+    {
+     "i": "🏠",
+     "t": "Často s ubytováním"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.4,
+   "head": "Napiš do komentáře *ZEMI*",
+   "size": 104,
+   "pill": "Nabídky denně · odkaz v profilu",
+   "foot": "HeroHero 3 dny zdarma · CV zdarma: napiš „CV“",
+   "cardY": 520
+  }
+ ]
+}
