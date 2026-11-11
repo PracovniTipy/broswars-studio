@@ -1,0 +1,102 @@
+{
+ "theme": {
+  "bg": "#07050a",
+  "grad": "radial-gradient(90% 60% at 50% 30%,#ff6a2a44,transparent 65%),#07050a",
+  "fg": "#ffffff",
+  "mut": "#c9b9ad",
+  "accent": "#ffb066",
+  "accent2": "linear-gradient(180deg,#fff1d6,#ffb066 55%,#ff6a2a)",
+  "pill": "linear-gradient(180deg,#ffe2b8,#ffb066)"
+ },
+ "music": {
+  "src": "../assets/music/battle.mp3",
+  "ss": 10
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 1.8,
+   "bg": "../assets/img/tp/warriors-02.jpg",
+   "text": "Pick your *warrior.*",
+   "size": 130,
+   "y": 1250,
+   "center": true
+  },
+  {
+   "type": "hook",
+   "dur": 1.0,
+   "bg": "../assets/img/tp/warriors-01.jpg",
+   "text": "*Samurai*",
+   "size": 120,
+   "y": 1350,
+   "center": true
+  },
+  {
+   "type": "hook",
+   "dur": 1.0,
+   "bg": "../assets/img/tp/warriors-08.jpg",
+   "text": "*Spartan*",
+   "size": 120,
+   "y": 1350,
+   "center": true
+  },
+  {
+   "type": "hook",
+   "dur": 1.0,
+   "bg": "../assets/img/tp/warriors-07.jpg",
+   "text": "*Knight*",
+   "size": 120,
+   "y": 1350,
+   "center": true
+  },
+  {
+   "type": "hook",
+   "dur": 1.0,
+   "bg": "../assets/img/tp/warriors-10.jpg",
+   "text": "*Centurion*",
+   "size": 120,
+   "y": 1350,
+   "center": true
+  },
+  {
+   "type": "hook",
+   "dur": 1.0,
+   "bg": "../assets/img/tp/warriors-09.jpg",
+   "text": "*Celtic*",
+   "size": 120,
+   "y": 1350,
+   "center": true
+  },
+  {
+   "type": "hook",
+   "dur": 1.0,
+   "bg": "../assets/img/tp/warriors-02.jpg",
+   "text": "*Viking*",
+   "size": 120,
+   "y": 1350,
+   "center": true
+  },
+  {
+   "type": "phone",
+   "dur": 3.6,
+   "src": "../assets/clips/tp_samurai.mp4",
+   "ss": 0,
+   "phoneW": 560,
+   "phoneY": 560,
+   "kicker": "Live version",
+   "text": "It *moves* with you.",
+   "size": 110,
+   "y": 300
+  },
+  {
+   "type": "cta",
+   "icon": "emblem.png",
+   "dur": 3.2,
+   "head": "*$3* static · *$5* live",
+   "size": 104,
+   "pill": "10 wallpapers / pack",
+   "foot": "wallpapers.chatnelo.com · link in bio",
+   "cardY": 520
+  }
+ ]
+}

@@ -1,0 +1,87 @@
+{
+ "theme": {
+  "bg": "#07050a",
+  "grad": "radial-gradient(90% 60% at 50% 30%,#ff6a2a44,transparent 65%),#07050a",
+  "fg": "#ffffff",
+  "mut": "#c9b9ad",
+  "accent": "#ffb066",
+  "accent2": "linear-gradient(180deg,#fff1d6,#ffb066 55%,#ff6a2a)",
+  "pill": "linear-gradient(180deg,#ffe2b8,#ffb066)"
+ },
+ "music": {
+  "src": "../assets/music/drive.mp3",
+  "ss": 20
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 2.2,
+   "bg": "../assets/img/tp/mythical-01.jpg",
+   "text": "Your lock screen is *boring.*",
+   "size": 130,
+   "y": 1300,
+   "center": true
+  },
+  {
+   "type": "phone",
+   "dur": 4.2,
+   "src": "../assets/clips/tp_dragon.mp4",
+   "ss": 0,
+   "phoneW": 560,
+   "phoneY": 560,
+   "kicker": "Live wallpaper",
+   "text": "Tilt it. It *moves.*",
+   "size": 110,
+   "y": 300
+  },
+  {
+   "type": "hook",
+   "dur": 1.1,
+   "bg": "../assets/img/tp/warriors-02.jpg",
+   "text": "*Warriors.*",
+   "size": 130,
+   "y": 1350,
+   "center": true
+  },
+  {
+   "type": "hook",
+   "dur": 1.1,
+   "bg": "../assets/img/tp/mythical-02.jpg",
+   "text": "*Legends.*",
+   "size": 130,
+   "y": 1350,
+   "center": true
+  },
+  {
+   "type": "hook",
+   "dur": 1.1,
+   "bg": "../assets/img/tp/zodiac-03.jpg",
+   "text": "*Your sign.*",
+   "size": 130,
+   "y": 1350,
+   "center": true
+  },
+  {
+   "type": "phone",
+   "dur": 3.4,
+   "src": "../assets/clips/tp_samurai.mp4",
+   "ss": 0,
+   "phoneW": 560,
+   "phoneY": 560,
+   "kicker": "Real depth",
+   "text": "5 layers. *Parallax.*",
+   "size": 110,
+   "y": 300
+  },
+  {
+   "type": "cta",
+   "icon": "emblem.png",
+   "dur": 3.2,
+   "head": "*$3* static · *$5* live",
+   "size": 104,
+   "pill": "10 wallpapers / pack",
+   "foot": "wallpapers.chatnelo.com · link in bio",
+   "cardY": 520
+  }
+ ]
+}

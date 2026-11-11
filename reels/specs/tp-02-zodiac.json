@@ -1,0 +1,126 @@
+{
+ "theme": {
+  "bg": "#07050a",
+  "grad": "radial-gradient(90% 60% at 50% 30%,#ff6a2a44,transparent 65%),#07050a",
+  "fg": "#ffffff",
+  "mut": "#c9b9ad",
+  "accent": "#ffb066",
+  "accent2": "linear-gradient(180deg,#fff1d6,#ffb066 55%,#ff6a2a)",
+  "pill": "linear-gradient(180deg,#ffe2b8,#ffb066)"
+ },
+ "music": {
+  "src": "../assets/music/pulse.mp3",
+  "ss": 40
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 2.0,
+   "kicker": "Comment your sign 👇",
+   "text": "Find your *zodiac* wallpaper",
+   "size": 120,
+   "y": 620,
+   "center": true
+  },
+  {
+   "type": "hook",
+   "dur": 0.9,
+   "bg": "../assets/img/tp/zodiac-01.jpg",
+   "text": "*Aries*",
+   "size": 150,
+   "y": 1350,
+   "center": true
+  },
+  {
+   "type": "hook",
+   "dur": 0.9,
+   "bg": "../assets/img/tp/zodiac-09.jpg",
+   "text": "*Taurus*",
+   "size": 150,
+   "y": 1350,
+   "center": true
+  },
+  {
+   "type": "hook",
+   "dur": 0.9,
+   "bg": "../assets/img/tp/zodiac-10.jpg",
+   "text": "*Gemini*",
+   "size": 150,
+   "y": 1350,
+   "center": true
+  },
+  {
+   "type": "hook",
+   "dur": 0.9,
+   "bg": "../assets/img/tp/zodiac-02.jpg",
+   "text": "*Cancer*",
+   "size": 150,
+   "y": 1350,
+   "center": true
+  },
+  {
+   "type": "hook",
+   "dur": 0.9,
+   "bg": "../assets/img/tp/zodiac-03.jpg",
+   "text": "*Leo*",
+   "size": 150,
+   "y": 1350,
+   "center": true
+  },
+  {
+   "type": "hook",
+   "dur": 0.9,
+   "bg": "../assets/img/tp/zodiac-04.jpg",
+   "text": "*Libra*",
+   "size": 150,
+   "y": 1350,
+   "center": true
+  },
+  {
+   "type": "hook",
+   "dur": 0.9,
+   "bg": "../assets/img/tp/zodiac-05.jpg",
+   "text": "*Scorpio*",
+   "size": 150,
+   "y": 1350,
+   "center": true
+  },
+  {
+   "type": "hook",
+   "dur": 0.9,
+   "bg": "../assets/img/tp/zodiac-07.jpg",
+   "text": "*Sagittarius*",
+   "size": 150,
+   "y": 1350,
+   "center": true
+  },
+  {
+   "type": "hook",
+   "dur": 0.9,
+   "bg": "../assets/img/tp/zodiac-08.jpg",
+   "text": "*Aquarius*",
+   "size": 150,
+   "y": 1350,
+   "center": true
+  },
+  {
+   "type": "hook",
+   "dur": 0.9,
+   "bg": "../assets/img/tp/zodiac-06.jpg",
+   "text": "*Pisces*",
+   "size": 150,
+   "y": 1350,
+   "center": true
+  },
+  {
+   "type": "cta",
+   "icon": "emblem.png",
+   "dur": 3.2,
+   "head": "*$3* static · *$5* live",
+   "size": 104,
+   "pill": "10 wallpapers / pack",
+   "foot": "wallpapers.chatnelo.com · link in bio",
+   "cardY": 520
+  }
+ ]
+}

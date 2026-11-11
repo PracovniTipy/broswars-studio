@@ -1,0 +1,82 @@
+{
+ "theme": {
+  "bg": "#03040a",
+  "grad": "radial-gradient(80% 50% at 50% 35%,#1b4dff44,transparent 65%),#03040a",
+  "fg": "#ffffff",
+  "mut": "#9aa3b4",
+  "accent": "#7fb4ff",
+  "accent2": "linear-gradient(180deg,#ffffff 20%,#b9c2d0 70%,#f4f6fa)",
+  "pill": "linear-gradient(180deg,#ffffff,#c9d1de)"
+ },
+ "music": {
+  "src": "../assets/music/pulse.mp3",
+  "ss": 60
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 2.4,
+   "kicker": "Hledáme tvůrce",
+   "text": "Točíš *videa?*",
+   "size": 160,
+   "y": 600
+  },
+  {
+   "type": "hook",
+   "dur": 2.6,
+   "text": "Ber až *30 %* z každé platby.",
+   "size": 130,
+   "y": 600,
+   "anim": "rise"
+  },
+  {
+   "type": "list",
+   "dur": 4.2,
+   "text": "Doporučuj *tohle:*",
+   "size": 120,
+   "y": 320,
+   "listY": 640,
+   "items": [
+    {
+     "i": "💬",
+     "t": "Chatnelo · 30 %"
+    },
+    {
+     "i": "🔳",
+     "t": "Načti.me Pro · 30 %"
+    },
+    {
+     "i": "🏰",
+     "t": "Castle WARS · 20 %"
+    }
+   ]
+  },
+  {
+   "type": "hook",
+   "dur": 3.0,
+   "text": "Klik platí *celý rok.*",
+   "size": 130,
+   "y": 600,
+   "sub": "Zákazník zaplatí do 12 měsíců = tvoje provize.",
+   "subY": 1000
+  },
+  {
+   "type": "hook",
+   "dur": 2.2,
+   "text": "Zdarma. Bez *smluv.*",
+   "size": 130,
+   "y": 640,
+   "center": true
+  },
+  {
+   "type": "cta",
+   "icon": "emblem.png",
+   "dur": 3.2,
+   "head": "Přidej se *teď*",
+   "size": 130,
+   "pill": "broswarsstudio.chatnelo.com/tvurci",
+   "foot": "Odkaz v profilu",
+   "cardY": 520
+  }
+ ]
+}
