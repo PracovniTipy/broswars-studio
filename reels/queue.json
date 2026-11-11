@@ -6,7 +6,6 @@
   },
   "rotation": [
     "castle",
-    "tapety",
     "chatnelo",
     "pt",
     "nacti",
@@ -239,7 +238,7 @@
     },
     {
       "id": "tp-01-alive",
-      "brand": "tapety",
+      "brand": "studio",
       "status": "pending",
       "targets": [
         "ig:broswars_studio",
@@ -261,7 +260,7 @@
     },
     {
       "id": "tp-02-zodiac",
-      "brand": "tapety",
+      "brand": "studio",
       "status": "pending",
       "targets": [
         "ig:broswars_studio",
@@ -272,7 +271,7 @@
     },
     {
       "id": "tp-03-warriors",
-      "brand": "tapety",
+      "brand": "studio",
       "status": "pending",
       "targets": [
         "ig:broswars_studio",
