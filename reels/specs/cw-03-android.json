@@ -1,0 +1,93 @@
+{
+ "theme": {
+  "bg": "#070d1c",
+  "grad": "radial-gradient(120% 70% at 50% 30%,#16305e 0%,#0a1428 55%,#05080f 100%)",
+  "fg": "#ffffff",
+  "mut": "#c3cde0",
+  "accent": "#ffc23d",
+  "accent2": "linear-gradient(180deg,#fff3b0,#ffc23d 55%,#e08a12)",
+  "pill": "linear-gradient(180deg,#ffe07a,#f2a91c)"
+ },
+ "music": {
+  "src": "../assets/music/battle.mp3",
+  "ss": 60
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "bg": "../assets/img/cw-feature.png",
+   "dur": 2.4,
+   "kicker": "Castle WARS · Android",
+   "text": "Your phone is about to become a *battlefield.*",
+   "size": 118,
+   "y": 1080,
+   "center": true,
+   "anim": "slam"
+  },
+  {
+   "type": "phone",
+   "dur": 2.8,
+   "src": "../assets/clips/r4_meteor.mp4",
+   "ss": 2.2,
+   "phoneW": 980,
+   "ratio": 0.5625,
+   "phoneY": 760,
+   "kicker": "Siege on the go",
+   "text": "Drop *meteors* from your pocket",
+   "size": 100,
+   "y": 300,
+   "zoom": 1.0
+  },
+  {
+   "type": "phone",
+   "dur": 2.6,
+   "src": "../assets/clips/r5_drak.mp4",
+   "ss": 2.0,
+   "phoneW": 980,
+   "ratio": 0.5625,
+   "phoneY": 760,
+   "kicker": "26 special attacks",
+   "text": "Unleash *dragon* *fire*",
+   "size": 104,
+   "y": 300,
+   "zoom": 1.0
+  },
+  {
+   "type": "list",
+   "dur": 3.2,
+   "kicker": "Castle vs castle",
+   "text": "Built for *your* *phone.*",
+   "size": 118,
+   "y": 320,
+   "listY": 700,
+   "items": [
+    {
+     "i": "🏰",
+     "t": "3 nations to command"
+    },
+    {
+     "i": "✨",
+     "t": "26 special attacks"
+    },
+    {
+     "i": "🌐",
+     "t": "1v1 & 2v2 online"
+    },
+    {
+     "i": "📴",
+     "t": "Plays offline too"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.6,
+   "head": "Join the *Android* test",
+   "size": 110,
+   "pill": "Google Play · free test",
+   "foot": "groups.google.com/g/castlewars-testers",
+   "cardY": 480,
+   "art": "../assets/img/cw-feature.png"
+  }
+ ]
+}
