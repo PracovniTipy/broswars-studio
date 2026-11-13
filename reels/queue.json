@@ -1,342 +1,342 @@
 {
-  "accounts": {
-    "pracovni_tipy": "17841480053248729",
-    "chatbot_chatnelo": "17841438765149678",
-    "broswars_studio": null
+ "accounts": {
+  "pracovni_tipy": "17841480053248729",
+  "chatbot_chatnelo": "17841438765149678",
+  "broswars_studio": null
+ },
+ "rotation": [
+  "castle",
+  "chatnelo",
+  "pt",
+  "nacti",
+  "studio"
+ ],
+ "items": [
+  {
+   "id": "pt-01-bez-viz",
+   "brand": "pt",
+   "status": "posted",
+   "posted": {
+    "ig:pracovni_tipy": "2026-11-05",
+    "tiktok:pracovni_tipy": "2026-11-05"
+   },
+   "targets": [
+    "ig:pracovni_tipy",
+    "tiktok:pracovni_tipy"
+   ],
+   "url": "https://broswarsstudio.chatnelo.com/r/pt-01-bez-viz.mp4"
   },
-  "rotation": [
-    "castle",
-    "chatnelo",
-    "pt",
-    "nacti",
-    "studio"
-  ],
-  "items": [
-    {
-      "id": "pt-01-bez-viz",
-      "brand": "pt",
-      "status": "posted",
-      "posted": {
-        "ig:pracovni_tipy": "2026-11-05",
-        "tiktok:pracovni_tipy": "2026-11-05"
-      },
-      "targets": [
-        "ig:pracovni_tipy",
-        "tiktok:pracovni_tipy"
-      ],
-      "url": "https://broswarsstudio.chatnelo.com/r/pt-01-bez-viz.mp4"
-    },
-    {
-      "id": "ch-01-2am",
-      "brand": "chatnelo",
-      "status": "posted",
-      "posted": {
-        "ig:chatbot_chatnelo": "2026-11-05",
-        "tiktok:broswars_studio": "2026-11-11"
-      },
-      "targets": [
-        "ig:chatbot_chatnelo",
-        "ig:broswars_studio",
-        "tiktok:broswars_studio"
-      ],
-      "url": "https://broswarsstudio.chatnelo.com/r/ch-01-2am.mp4"
-    },
-    {
-      "id": "cw-01-survive",
-      "brand": "castle",
-      "status": "posted",
-      "targets": [
-        "ig:broswars_studio",
-        "tiktok:broswars_studio"
-      ],
-      "caption": "Can your castle survive this? ⚔️ Giant Meteor, Storm of the Gods, dragon fire.\n\nPlay FREE: search “Castle WARS” on itch.io (battlecastle.itch.io/castle-wars) or in the Microsoft Store 🏰 Link in bio.\n\n#castlewars #strategygame #gaming #towerdefense #medieval #vikings #samurai #knights #pcgaming",
-      "url": "https://broswarsstudio.chatnelo.com/r/cw-01-survive.mp4",
-      "posted": {
-        "ig:broswars_studio": "2026-11-06",
-        "tiktok:broswars_studio": "2026-11-11"
-      }
-    },
-    {
-      "id": "pt-02-cv",
-      "brand": "pt",
-      "status": "posted",
-      "targets": [
-        "ig:pracovni_tipy",
-        "tiktok:pracovni_tipy"
-      ],
-      "caption": "📄 Chceš práci v EU? Bez životopisu v angličtině to nepůjde.\n\nAI ti zdarma udělá profesionální životopis v češtině i angličtině – hotový za 5 minut 🎁\n\n👉 Odkaz v profilu nebo mi napiš do zpráv „CV“.\n\n#zivotopis #cv #pracevzahranici #praceveu #brigada #prace #pracovnitipy",
-      "url": "https://broswarsstudio.chatnelo.com/r/pt-02-cv.mp4",
-      "posted": {
-        "tiktok:pracovni_tipy": "2026-11-06",
-        "ig:pracovni_tipy": "2026-11-09"
-      }
-    },
-    {
-      "id": "ch-02-questions",
-      "brand": "chatnelo",
-      "status": "posted",
-      "targets": [
-        "ig:chatbot_chatnelo",
-        "ig:broswars_studio",
-        "tiktok:broswars_studio"
-      ],
-      "caption": "“Where is my order?” “Which size?” “Can I return it?” 🙃 Every. Single. Day.\n\nLet Chatnelo answer your shoppers 24/7 from your real store data. ⚡\n\n👉 Find us on the Shopify App Store – search “Chatnelo”. 3 days free. Link in bio.\n\n#shopify #ecommerce #aichatbot #customerservice #shopifyapp #onlinestore #chatnelo",
-      "url": "https://broswarsstudio.chatnelo.com/r/ch-02-questions.mp4",
-      "posted": {
-        "ig:chatbot_chatnelo": "2026-11-06",
-        "ig:broswars_studio": "2026-11-06 (spolupráce, čeká na přijetí)",
-        "tiktok:broswars_studio": "2026-11-11"
-      }
-    },
-    {
-      "id": "nm-01-forever",
-      "brand": "nacti",
-      "status": "posted",
-      "targets": [
-        "ig:broswars_studio",
-        "tiktok:broswars_studio"
-      ],
-      "caption": "Your QR code expired? Ours work forever. 🔳\n\nLinks, Wi-Fi, business cards and Czech QR payments – free, no sign-up, print-ready. 👉 nacti.me\n\n#qrcode #qr #smallbusiness #freetools #nactime #broswarsstudio",
-      "url": "https://broswarsstudio.chatnelo.com/r/nm-01-forever.mp4",
-      "posted": {
-        "ig:broswars_studio": "2026-11-06",
-        "tiktok:broswars_studio": "2026-11-11"
-      }
-    },
-    {
-      "id": "cw-02-nations",
-      "brand": "castle",
-      "status": "posted",
-      "targets": [
-        "ig:broswars_studio",
-        "tiktok:broswars_studio"
-      ],
-      "caption": "Knights, Samurai or Vikings – which side are you? ⚔️🗡️🪓 Comment below!\n\nPlay FREE: search “Castle WARS” on itch.io (battlecastle.itch.io/castle-wars) or in the Microsoft Store 🏰 Link in bio.\n\n#castlewars #strategygame #gaming #towerdefense #medieval #vikings #samurai #knights #pcgaming",
-      "url": "https://broswarsstudio.chatnelo.com/r/cw-02-nations.mp4",
-      "posted": {
-        "ig:broswars_studio": "2026-11-08",
-        "tiktok:broswars_studio": "2026-11-11"
-      }
-    },
-    {
-      "id": "bw-01-studio",
-      "brand": "studio",
-      "status": "posted",
-      "targets": [
-        "ig:broswars_studio",
-        "tiktok:broswars_studio"
-      ],
-      "caption": "BrosWars Studio – games & AI tools from the Czech Republic 🇨🇿\n\n🏰 Castle WARS · 💬 Chatnelo · 🔳 Načti.me\nFollow the build 🚀\n\n#broswarsstudio #gamedev #ai #startup #buildinpublic",
-      "url": "https://broswarsstudio.chatnelo.com/r/bw-01-studio.mp4",
-      "posted": {
-        "ig:broswars_studio": "2026-11-11",
-        "tiktok:broswars_studio": "2026-11-11"
-      }
-    },
-    {
-      "id": "nm-02-print",
-      "brand": "nacti",
-      "status": "posted",
-      "targets": [
-        "ig:broswars_studio",
-        "tiktok:broswars_studio"
-      ],
-      "caption": "Put a QR on every table. Scan. Pay. Done. ✅\n\nPrint-ready business cards, A6 table cards and stickers with a readability check – free at 👉 nacti.me\n\n#qrcode #restaurant #smallbusiness #cafe #nactime",
-      "url": "https://broswarsstudio.chatnelo.com/r/nm-02-print.mp4",
-      "posted": {
-        "ig:broswars_studio": "2026-11-11",
-        "tiktok:broswars_studio": "2026-11-11"
-      }
-    },
-    {
-      "id": "bw-02-small-studio",
-      "brand": "studio",
-      "status": "posted",
-      "targets": [
-        "ig:broswars_studio",
-        "tiktok:broswars_studio"
-      ],
-      "caption": "A tiny Czech studio. 3 products shipped. Built with AI. And we're just starting. 🚀\n\n#broswarsstudio #buildinpublic #gamedev #aitools #startup",
-      "url": "https://broswarsstudio.chatnelo.com/r/bw-02-small-studio.mp4",
-      "posted": {
-        "ig:broswars_studio": "2026-11-11",
-        "tiktok:broswars_studio": "2026-11-11"
-      }
-    },
-    {
-      "id": "pt-03-tri-veci",
-      "brand": "pt",
-      "status": "posted",
-      "targets": [
-        "ig:pracovni_tipy",
-        "tiktok:pracovni_tipy"
-      ],
-      "caption": "🇪🇺 Na práci v EU potřebuješ míň, než si myslíš.\n\n🪪 Občanka EU – bez víz a pracovního povolení\n🗣️ Často stačí základní angličtina\n📄 Životopis ti zdarma udělá AI (napiš do zpráv „CV“)\n\nNabídky každý den nové, často s ubytováním. Napiš do komentáře ZEMI 👇 Odkaz v profilu.\n\n#pracevzahranici #praceveu #brigada #prace #zivotopis #pracovnitipy",
-      "url": "https://broswarsstudio.chatnelo.com/r/pt-03-tri-veci.mp4",
-      "posted": {
-        "tiktok:pracovni_tipy": "2026-11-07",
-        "ig:pracovni_tipy": "2026-11-10"
-      }
-    },
-    {
-      "id": "nm-03-ad",
-      "brand": "nacti",
-      "status": "posted",
-      "targets": [
-        "ig:broswars_studio",
-        "tiktok:broswars_studio"
-      ],
-      "caption": "Still paying for QR codes? 🔳\n\nType a link or your Wi-Fi – your QR code is ready in seconds. Free, no sign-up, and it never expires. Print-ready PNG + SVG.\n\n👉 nacti.me\n\n#qrcode #qr #smallbusiness #freetools #nactime #broswarsstudio",
-      "url": "https://broswarsstudio.chatnelo.com/r/nm-03-ad.mp4",
-      "posted": {
-        "tiktok:broswars_studio": "2026-11-11"
-      }
-    },
-    {
-      "id": "ch-03-ad",
-      "brand": "chatnelo",
-      "status": "posted",
-      "targets": [
-        "ig:chatbot_chatnelo",
-        "ig:broswars_studio",
-        "tiktok:broswars_studio"
-      ],
-      "caption": "What if your store answered itself? 🛍️\n\nA shopper asks “Is it in stock?” – Chatnelo answers in seconds from your real products, stock, prices and shipping. 24/7, in your customer's language.\n\n👉 Find us on the Shopify App Store – search “Chatnelo”. 3 days free.\n\n#shopify #shopifyapp #ecommerce #aichatbot #customerservice #onlinestore #chatnelo",
-      "url": "https://broswarsstudio.chatnelo.com/r/ch-03-ad.mp4",
-      "posted": {
-        "ig:chatbot_chatnelo": "2026-11-09",
-        "tiktok:broswars_studio": "2026-11-11"
-      }
-    },
-    {
-      "id": "ch-h2-stock",
-      "brand": "chatnelo",
-      "status": "posted",
-      "targets": [
-        "ig:chatbot_chatnelo",
-        "ig:broswars_studio",
-        "tiktok:broswars_studio"
-      ],
-      "caption": "Still answering \"Is this in stock?\" 50 times a day? Let Chatnelo do it, answering from your real store data, 24/7.\n\nFind us on the Shopify App Store – search \"Chatnelo\", 3 days free.\n\n#shopify #shopifystore #ecommerce #aichatbot #smallbusiness",
-      "url": "https://broswarsstudio.chatnelo.com/r/ch-h2-stock.mp4",
-      "posted": {
-        "ig:chatbot_chatnelo": "2026-11-10",
-        "ig:broswars_studio": "2026-11-11",
-        "tiktok:broswars_studio": "2026-11-11"
-      }
-    },
-    {
-      "id": "pt-04-vyber-zemi",
-      "brand": "pt",
-      "status": "pending",
-      "targets": [
-        "ig:pracovni_tipy",
-        "tiktok:pracovni_tipy"
-      ],
-      "caption": "🇪🇺 Hra na 10 sekund: vyber si jednu zemi 👇\n\n🇮🇪 Irsko? 🇲🇹 Malta? 🇨🇾 Kypr?\n\n🪪 Všude EU – bez víz a pracovního povolení\n🗣️ Často stačí základní angličtina\n🏠 Často s ubytováním\n\nNabídky každý den nové. Napiš do komentáře ZEMI 👇 Odkaz v profilu (HeroHero 3 dny zdarma). AI životopis CZ+EN zdarma – napiš do zpráv „CV“.\n\n#pracevzahranici #praceveu #brigada #prace #irsko #malta #kypr #pracovnitipy",
-      "url": "https://broswarsstudio.chatnelo.com/r/pt-04-vyber-zemi.mp4"
-    },
-    {
-      "id": "tp-01-alive",
-      "brand": "studio",
-      "status": "pending",
-      "targets": [
-        "ig:broswars_studio",
-        "tiktok:broswars_studio"
-      ],
-      "caption": "Your lock screen, but alive. 🐉 Tilt your phone and the wallpaper moves.\n\n🔥 10 wallpapers per pack · $3 static · $5 LIVE (moves when you tilt your phone)\n👉 wallpapers.chatnelo.com · link in bio\n\n#livewallpaper #wallpaper #lockscreen #iphonewallpaper #dragon #aiart #phonewallpaper",
-      "url": "https://broswarsstudio.chatnelo.com/r/tp-01-alive.mp4"
-    },
-    {
-      "id": "bw-03-tvurci",
-      "brand": "studio",
-      "status": "pending",
-      "targets": [
-        "ig:broswars_studio",
-        "tiktok:broswars_studio"
-      ],
-      "caption": "Točíš videa nebo máš komunitu? 🎥 Doporučuj naše produkty a ber až 30 % z každé platby – celý rok od kliknutí.\n\nChatnelo 30 % · Načti.me Pro 30 % · Castle WARS 20 %\nZdarma, bez smluv 👉 broswarsstudio.chatnelo.com/tvurci (odkaz v profilu)\n\n#tvurci #affiliate #provize #influencer #ceskytiktok #prachy #brigada",
-      "url": "https://broswarsstudio.chatnelo.com/r/bw-03-tvurci.mp4"
-    },
-    {
-      "id": "tp-02-zodiac",
-      "brand": "studio",
-      "status": "pending",
-      "targets": [
-        "ig:broswars_studio",
-        "tiktok:broswars_studio"
-      ],
-      "caption": "Find your zodiac wallpaper ♈♉♊♋♌♎♏♐♒♓ Comment your sign 👇\n\n🔥 10 wallpapers per pack · $3 static · $5 LIVE (moves when you tilt your phone)\n👉 wallpapers.chatnelo.com · link in bio\n\n#zodiac #zodiacsigns #astrology #wallpaper #livewallpaper #lockscreen #horoscope",
-      "url": "https://broswarsstudio.chatnelo.com/r/tp-02-zodiac.mp4"
-    },
-    {
-      "id": "tp-03-warriors",
-      "brand": "studio",
-      "status": "pending",
-      "targets": [
-        "ig:broswars_studio",
-        "tiktok:broswars_studio"
-      ],
-      "caption": "Pick your warrior ⚔️ Samurai, Spartan, Knight, Viking…\n\n🔥 10 wallpapers per pack · $3 static · $5 LIVE (moves when you tilt your phone)\n👉 wallpapers.chatnelo.com · link in bio\n\n#warrior #samurai #spartan #viking #wallpaper #livewallpaper #lockscreen #aiart",
-      "url": "https://broswarsstudio.chatnelo.com/r/tp-03-warriors.mp4"
-    },
-    {
-      "id": "cw-03-android",
-      "brand": "castle",
-      "status": "ready",
-      "targets": [
-        "ig:broswars_studio",
-        "tiktok:broswars_studio"
-      ],
-      "caption": "Your phone is about to become a battlefield 🏰📱\n\nCastle WARS is in Android testing on Google Play – join the free test group: groups.google.com/g/castlewars-testers\n\nAlready free on itch.io and in the Microsoft Store. 3 nations, 26 special attacks, 1v1 & 2v2 online, plays offline.\n\n#castlewars #strategygame #androidgames #mobilegaming #gaming #medieval",
-      "url": "https://broswarsstudio.chatnelo.com/r/cw-03-android.mp4",
-      "posted": {
-        "tiktok:broswars_studio": "2026-11-11"
-      }
-    },
-    {
-      "id": "ch-04-languages",
-      "brand": "chatnelo",
-      "status": "ready",
-      "targets": [
-        "ig:broswars_studio",
-        "tiktok:broswars_studio"
-      ],
-      "caption": "Your next customer might not speak your language. 🌍\n\nA shopper from Berlin asks in German – Chatnelo answers in German, from your real products, stock, prices and shipping. 24/7, in every customer's language.\n\n👉 Find us on the Shopify App Store – search “Chatnelo”. 3 days free.\n\n#shopify #shopifyapp #ecommerce #aichatbot #customerservice #onlinestore #chatnelo ",
-      "url": "https://broswarsstudio.chatnelo.com/r/ch-04-languages.mp4",
-      "posted": {
-        "tiktok:broswars_studio": "2026-11-13"
-      }
-    },
-    {
-      "id": "ch-05-gift",
-      "brand": "chatnelo",
-      "status": "posted",
-      "targets": [
-        "ig:chatbot_chatnelo",
-        "ig:broswars_studio",
-        "tiktok:broswars_studio"
-      ],
-      "caption": "“I don't know what to buy.” 🎁 Without an answer, she leaves.\n\nChatnelo recommends your real products with clickable product cards, checks stock, prices & shipping and replies in your shopper's language – 24/7.\n\nFind us on the Shopify App Store – search “Chatnelo” 🛍️ 3 days free. Live demo on chatnelo.com\n\n#shopify #shopifyapp #ecommerce #aichatbot #onlinestore #shopifystore #customerservice #ecommercetips #smallbusiness",
-      "url": "https://broswarsstudio.chatnelo.com/r/ch-05-gift.mp4",
-      "posted": {
-        "ig:chatbot_chatnelo": "2026-11-13"
-      }
-    },
-    {
-      "id": "ch-06-shipping",
-      "brand": "chatnelo",
-      "status": "posted",
-      "targets": [
-        "ig:chatbot_chatnelo",
-        "ig:broswars_studio",
-        "tiktok:broswars_studio"
-      ],
-      "caption": "“Do you ship to Austria?” 📦 If nobody answers, the cart gets abandoned.\n\nChatnelo answers shipping, stock and price questions from your real store data – 24/7, in your shopper's language, with clickable product cards.\n\nFind us on the Shopify App Store – search “Chatnelo” 🛍️ 3 days free. Live demo on chatnelo.com\n\n#shopify #shopifyapp #ecommerce #aichatbot #onlinestore #shopifystore #abandonedcart #customerservice #smallbusiness",
-      "url": "https://broswarsstudio.chatnelo.com/r/ch-06-shipping.mp4",
-      "posted": {
-        "ig:chatbot_chatnelo": "2026-11-13"
-      }
-    }
-  ]
+  {
+   "id": "ch-01-2am",
+   "brand": "chatnelo",
+   "status": "posted",
+   "posted": {
+    "ig:chatbot_chatnelo": "2026-11-05",
+    "tiktok:broswars_studio": "2026-11-11"
+   },
+   "targets": [
+    "ig:chatbot_chatnelo",
+    "ig:broswars_studio",
+    "tiktok:broswars_studio"
+   ],
+   "url": "https://broswarsstudio.chatnelo.com/r/ch-01-2am.mp4"
+  },
+  {
+   "id": "cw-01-survive",
+   "brand": "castle",
+   "status": "posted",
+   "targets": [
+    "ig:broswars_studio",
+    "tiktok:broswars_studio"
+   ],
+   "caption": "Can your castle survive this? ⚔️ Giant Meteor, Storm of the Gods, dragon fire.\n\nPlay FREE: search “Castle WARS” on itch.io (battlecastle.itch.io/castle-wars) or in the Microsoft Store 🏰 Link in bio.\n\n#castlewars #strategygame #gaming #towerdefense #medieval #vikings #samurai #knights #pcgaming",
+   "url": "https://broswarsstudio.chatnelo.com/r/cw-01-survive.mp4",
+   "posted": {
+    "ig:broswars_studio": "2026-11-06",
+    "tiktok:broswars_studio": "2026-11-11"
+   }
+  },
+  {
+   "id": "pt-02-cv",
+   "brand": "pt",
+   "status": "posted",
+   "targets": [
+    "ig:pracovni_tipy",
+    "tiktok:pracovni_tipy"
+   ],
+   "caption": "📄 Chceš práci v EU? Bez životopisu v angličtině to nepůjde.\n\nAI ti zdarma udělá profesionální životopis v češtině i angličtině – hotový za 5 minut 🎁\n\n👉 Odkaz v profilu nebo mi napiš do zpráv „CV“.\n\n#zivotopis #cv #pracevzahranici #praceveu #brigada #prace #pracovnitipy",
+   "url": "https://broswarsstudio.chatnelo.com/r/pt-02-cv.mp4",
+   "posted": {
+    "tiktok:pracovni_tipy": "2026-11-06",
+    "ig:pracovni_tipy": "2026-11-09"
+   }
+  },
+  {
+   "id": "ch-02-questions",
+   "brand": "chatnelo",
+   "status": "posted",
+   "targets": [
+    "ig:chatbot_chatnelo",
+    "ig:broswars_studio",
+    "tiktok:broswars_studio"
+   ],
+   "caption": "“Where is my order?” “Which size?” “Can I return it?” 🙃 Every. Single. Day.\n\nLet Chatnelo answer your shoppers 24/7 from your real store data. ⚡\n\n👉 Find us on the Shopify App Store – search “Chatnelo”. 3 days free. Link in bio.\n\n#shopify #ecommerce #aichatbot #customerservice #shopifyapp #onlinestore #chatnelo",
+   "url": "https://broswarsstudio.chatnelo.com/r/ch-02-questions.mp4",
+   "posted": {
+    "ig:chatbot_chatnelo": "2026-11-06",
+    "ig:broswars_studio": "2026-11-06 (spolupráce, čeká na přijetí)",
+    "tiktok:broswars_studio": "2026-11-11"
+   }
+  },
+  {
+   "id": "nm-01-forever",
+   "brand": "nacti",
+   "status": "posted",
+   "targets": [
+    "ig:broswars_studio",
+    "tiktok:broswars_studio"
+   ],
+   "caption": "Your QR code expired? Ours work forever. 🔳\n\nLinks, Wi-Fi, business cards and Czech QR payments – free, no sign-up, print-ready. 👉 nacti.me\n\n#qrcode #qr #smallbusiness #freetools #nactime #broswarsstudio",
+   "url": "https://broswarsstudio.chatnelo.com/r/nm-01-forever.mp4",
+   "posted": {
+    "ig:broswars_studio": "2026-11-06",
+    "tiktok:broswars_studio": "2026-11-11"
+   }
+  },
+  {
+   "id": "cw-02-nations",
+   "brand": "castle",
+   "status": "posted",
+   "targets": [
+    "ig:broswars_studio",
+    "tiktok:broswars_studio"
+   ],
+   "caption": "Knights, Samurai or Vikings – which side are you? ⚔️🗡️🪓 Comment below!\n\nPlay FREE: search “Castle WARS” on itch.io (battlecastle.itch.io/castle-wars) or in the Microsoft Store 🏰 Link in bio.\n\n#castlewars #strategygame #gaming #towerdefense #medieval #vikings #samurai #knights #pcgaming",
+   "url": "https://broswarsstudio.chatnelo.com/r/cw-02-nations.mp4",
+   "posted": {
+    "ig:broswars_studio": "2026-11-08",
+    "tiktok:broswars_studio": "2026-11-11"
+   }
+  },
+  {
+   "id": "bw-01-studio",
+   "brand": "studio",
+   "status": "posted",
+   "targets": [
+    "ig:broswars_studio",
+    "tiktok:broswars_studio"
+   ],
+   "caption": "BrosWars Studio – games & AI tools from the Czech Republic 🇨🇿\n\n🏰 Castle WARS · 💬 Chatnelo · 🔳 Načti.me\nFollow the build 🚀\n\n#broswarsstudio #gamedev #ai #startup #buildinpublic",
+   "url": "https://broswarsstudio.chatnelo.com/r/bw-01-studio.mp4",
+   "posted": {
+    "ig:broswars_studio": "2026-11-11",
+    "tiktok:broswars_studio": "2026-11-11"
+   }
+  },
+  {
+   "id": "nm-02-print",
+   "brand": "nacti",
+   "status": "posted",
+   "targets": [
+    "ig:broswars_studio",
+    "tiktok:broswars_studio"
+   ],
+   "caption": "Put a QR on every table. Scan. Pay. Done. ✅\n\nPrint-ready business cards, A6 table cards and stickers with a readability check – free at 👉 nacti.me\n\n#qrcode #restaurant #smallbusiness #cafe #nactime",
+   "url": "https://broswarsstudio.chatnelo.com/r/nm-02-print.mp4",
+   "posted": {
+    "ig:broswars_studio": "2026-11-11",
+    "tiktok:broswars_studio": "2026-11-11"
+   }
+  },
+  {
+   "id": "bw-02-small-studio",
+   "brand": "studio",
+   "status": "posted",
+   "targets": [
+    "ig:broswars_studio",
+    "tiktok:broswars_studio"
+   ],
+   "caption": "A tiny Czech studio. 3 products shipped. Built with AI. And we're just starting. 🚀\n\n#broswarsstudio #buildinpublic #gamedev #aitools #startup",
+   "url": "https://broswarsstudio.chatnelo.com/r/bw-02-small-studio.mp4",
+   "posted": {
+    "ig:broswars_studio": "2026-11-11",
+    "tiktok:broswars_studio": "2026-11-11"
+   }
+  },
+  {
+   "id": "pt-03-tri-veci",
+   "brand": "pt",
+   "status": "posted",
+   "targets": [
+    "ig:pracovni_tipy",
+    "tiktok:pracovni_tipy"
+   ],
+   "caption": "🇪🇺 Na práci v EU potřebuješ míň, než si myslíš.\n\n🪪 Občanka EU – bez víz a pracovního povolení\n🗣️ Často stačí základní angličtina\n📄 Životopis ti zdarma udělá AI (napiš do zpráv „CV“)\n\nNabídky každý den nové, často s ubytováním. Napiš do komentáře ZEMI 👇 Odkaz v profilu.\n\n#pracevzahranici #praceveu #brigada #prace #zivotopis #pracovnitipy",
+   "url": "https://broswarsstudio.chatnelo.com/r/pt-03-tri-veci.mp4",
+   "posted": {
+    "tiktok:pracovni_tipy": "2026-11-07",
+    "ig:pracovni_tipy": "2026-11-10"
+   }
+  },
+  {
+   "id": "nm-03-ad",
+   "brand": "nacti",
+   "status": "posted",
+   "targets": [
+    "ig:broswars_studio",
+    "tiktok:broswars_studio"
+   ],
+   "caption": "Still paying for QR codes? 🔳\n\nType a link or your Wi-Fi – your QR code is ready in seconds. Free, no sign-up, and it never expires. Print-ready PNG + SVG.\n\n👉 nacti.me\n\n#qrcode #qr #smallbusiness #freetools #nactime #broswarsstudio",
+   "url": "https://broswarsstudio.chatnelo.com/r/nm-03-ad.mp4",
+   "posted": {
+    "tiktok:broswars_studio": "2026-11-11"
+   }
+  },
+  {
+   "id": "ch-03-ad",
+   "brand": "chatnelo",
+   "status": "posted",
+   "targets": [
+    "ig:chatbot_chatnelo",
+    "ig:broswars_studio",
+    "tiktok:broswars_studio"
+   ],
+   "caption": "What if your store answered itself? 🛍️\n\nA shopper asks “Is it in stock?” – Chatnelo answers in seconds from your real products, stock, prices and shipping. 24/7, in your customer's language.\n\n👉 Find us on the Shopify App Store – search “Chatnelo”. 3 days free.\n\n#shopify #shopifyapp #ecommerce #aichatbot #customerservice #onlinestore #chatnelo",
+   "url": "https://broswarsstudio.chatnelo.com/r/ch-03-ad.mp4",
+   "posted": {
+    "ig:chatbot_chatnelo": "2026-11-09",
+    "tiktok:broswars_studio": "2026-11-11"
+   }
+  },
+  {
+   "id": "ch-h2-stock",
+   "brand": "chatnelo",
+   "status": "posted",
+   "targets": [
+    "ig:chatbot_chatnelo",
+    "ig:broswars_studio",
+    "tiktok:broswars_studio"
+   ],
+   "caption": "Still answering \"Is this in stock?\" 50 times a day? Let Chatnelo do it, answering from your real store data, 24/7.\n\nFind us on the Shopify App Store – search \"Chatnelo\", 3 days free.\n\n#shopify #shopifystore #ecommerce #aichatbot #smallbusiness",
+   "url": "https://broswarsstudio.chatnelo.com/r/ch-h2-stock.mp4",
+   "posted": {
+    "ig:chatbot_chatnelo": "2026-11-10",
+    "ig:broswars_studio": "2026-11-11",
+    "tiktok:broswars_studio": "2026-11-11"
+   }
+  },
+  {
+   "id": "pt-04-vyber-zemi",
+   "brand": "pt",
+   "status": "pending",
+   "targets": [
+    "ig:pracovni_tipy",
+    "tiktok:pracovni_tipy"
+   ],
+   "caption": "🇪🇺 Hra na 10 sekund: vyber si jednu zemi 👇\n\n🇮🇪 Irsko? 🇲🇹 Malta? 🇨🇾 Kypr?\n\n🪪 Všude EU – bez víz a pracovního povolení\n🗣️ Často stačí základní angličtina\n🏠 Často s ubytováním\n\nNabídky každý den nové. Napiš do komentáře ZEMI 👇 Odkaz v profilu (HeroHero 3 dny zdarma). AI životopis CZ+EN zdarma – napiš do zpráv „CV“.\n\n#pracevzahranici #praceveu #brigada #prace #irsko #malta #kypr #pracovnitipy",
+   "url": "https://broswarsstudio.chatnelo.com/r/pt-04-vyber-zemi.mp4"
+  },
+  {
+   "id": "tp-01-alive",
+   "brand": "studio",
+   "status": "pending",
+   "targets": [
+    "ig:broswars_studio",
+    "tiktok:broswars_studio"
+   ],
+   "caption": "Your lock screen, but alive. 🐉 Tilt your phone and the wallpaper moves.\n\n🔥 10 wallpapers per pack · $3 static · $5 LIVE (moves when you tilt your phone)\n👉 wallpapers.chatnelo.com · link in bio\n\n#livewallpaper #wallpaper #lockscreen #iphonewallpaper #dragon #aiart #phonewallpaper",
+   "url": "https://broswarsstudio.chatnelo.com/r/tp-01-alive.mp4"
+  },
+  {
+   "id": "bw-03-tvurci",
+   "brand": "studio",
+   "status": "pending",
+   "targets": [
+    "ig:broswars_studio",
+    "tiktok:broswars_studio"
+   ],
+   "caption": "Točíš videa nebo máš komunitu? 🎥 Doporučuj naše produkty a ber až 30 % z každé platby – celý rok od kliknutí.\n\nChatnelo 30 % · Načti.me Pro 30 % · Castle WARS 20 %\nZdarma, bez smluv 👉 broswarsstudio.chatnelo.com/tvurci (odkaz v profilu)\n\n#tvurci #affiliate #provize #influencer #ceskytiktok #prachy #brigada",
+   "url": "https://broswarsstudio.chatnelo.com/r/bw-03-tvurci.mp4"
+  },
+  {
+   "id": "tp-02-zodiac",
+   "brand": "studio",
+   "status": "pending",
+   "targets": [
+    "ig:broswars_studio",
+    "tiktok:broswars_studio"
+   ],
+   "caption": "Find your zodiac wallpaper ♈♉♊♋♌♎♏♐♒♓ Comment your sign 👇\n\n🔥 10 wallpapers per pack · $3 static · $5 LIVE (moves when you tilt your phone)\n👉 wallpapers.chatnelo.com · link in bio\n\n#zodiac #zodiacsigns #astrology #wallpaper #livewallpaper #lockscreen #horoscope",
+   "url": "https://broswarsstudio.chatnelo.com/r/tp-02-zodiac.mp4"
+  },
+  {
+   "id": "tp-03-warriors",
+   "brand": "studio",
+   "status": "pending",
+   "targets": [
+    "ig:broswars_studio",
+    "tiktok:broswars_studio"
+   ],
+   "caption": "Pick your warrior ⚔️ Samurai, Spartan, Knight, Viking…\n\n🔥 10 wallpapers per pack · $3 static · $5 LIVE (moves when you tilt your phone)\n👉 wallpapers.chatnelo.com · link in bio\n\n#warrior #samurai #spartan #viking #wallpaper #livewallpaper #lockscreen #aiart",
+   "url": "https://broswarsstudio.chatnelo.com/r/tp-03-warriors.mp4"
+  },
+  {
+   "id": "cw-03-android",
+   "brand": "castle",
+   "status": "ready",
+   "targets": [
+    "ig:broswars_studio",
+    "tiktok:broswars_studio"
+   ],
+   "caption": "Your phone is about to become a battlefield 🏰📱\n\nCastle WARS is in Android testing on Google Play – join the free test group: groups.google.com/g/castlewars-testers\n\nAlready free on itch.io and in the Microsoft Store. 3 nations, 26 special attacks, 1v1 & 2v2 online, plays offline.\n\n#castlewars #strategygame #androidgames #mobilegaming #gaming #medieval",
+   "url": "https://broswarsstudio.chatnelo.com/r/cw-03-android.mp4",
+   "posted": {
+    "tiktok:broswars_studio": "2026-11-11"
+   }
+  },
+  {
+   "id": "ch-04-languages",
+   "brand": "chatnelo",
+   "status": "ready",
+   "targets": [
+    "ig:broswars_studio",
+    "tiktok:broswars_studio"
+   ],
+   "caption": "Your next customer might not speak your language. 🌍\n\nA shopper from Berlin asks in German – Chatnelo answers in German, from your real products, stock, prices and shipping. 24/7, in every customer's language.\n\n👉 Find us on the Shopify App Store – search “Chatnelo”. 3 days free.\n\n#shopify #shopifyapp #ecommerce #aichatbot #customerservice #onlinestore #chatnelo ",
+   "url": "https://broswarsstudio.chatnelo.com/r/ch-04-languages.mp4",
+   "posted": {
+    "tiktok:broswars_studio": "2026-11-13"
+   }
+  },
+  {
+   "id": "ch-05-gift",
+   "brand": "chatnelo",
+   "status": "posted",
+   "targets": [
+    "ig:chatbot_chatnelo",
+    "ig:broswars_studio",
+    "tiktok:broswars_studio"
+   ],
+   "caption": "“I don't know what to buy.” 🎁 Without an answer, she leaves.\n\nChatnelo recommends your real products with clickable product cards, checks stock, prices & shipping and replies in your shopper's language – 24/7.\n\nFind us on the Shopify App Store – search “Chatnelo” 🛍️ 3 days free. Live demo on chatnelo.com\n\n#shopify #shopifyapp #ecommerce #aichatbot #onlinestore #shopifystore #customerservice #ecommercetips #smallbusiness",
+   "url": "https://broswarsstudio.chatnelo.com/r/ch-05-gift.mp4",
+   "posted": {
+    "ig:chatbot_chatnelo": "2026-11-13"
+   }
+  },
+  {
+   "id": "ch-06-shipping",
+   "brand": "chatnelo",
+   "status": "posted",
+   "targets": [
+    "ig:chatbot_chatnelo",
+    "ig:broswars_studio",
+    "tiktok:broswars_studio"
+   ],
+   "caption": "“Do you ship to Austria?” 📦 If nobody answers, the cart gets abandoned.\n\nChatnelo answers shipping, stock and price questions from your real store data – 24/7, in your shopper's language, with clickable product cards.\n\nFind us on the Shopify App Store – search “Chatnelo” 🛍️ 3 days free. Live demo on chatnelo.com\n\n#shopify #shopifyapp #ecommerce #aichatbot #onlinestore #shopifystore #abandonedcart #customerservice #smallbusiness",
+   "url": "https://broswarsstudio.chatnelo.com/r/ch-06-shipping.mp4",
+   "posted": {
+    "ig:chatbot_chatnelo": "2026-11-13"
+   }
+  }
+ ]
 }
