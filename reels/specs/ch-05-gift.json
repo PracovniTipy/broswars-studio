@@ -1,0 +1,105 @@
+{
+ "theme": {
+  "bg": "#05060c",
+  "grad": "radial-gradient(90% 60% at 50% 15%,#6a2cc9aa,transparent 60%),radial-gradient(80% 50% at 20% 90%,#1d5cffaa,transparent 60%),#05060c",
+  "fg": "#ffffff",
+  "mut": "#a3abbd",
+  "accent": "#9b85ff",
+  "accent2": "linear-gradient(180deg,#e4dbff,#9b7bff)",
+  "bubble": "linear-gradient(135deg,#2f7bff,#6a5cff)",
+  "pill": "linear-gradient(180deg,#ffffff,#d5dbe6)"
+ },
+ "tag": "Chatnelo · BrosWars Studio",
+ "music": {
+  "src": "../assets/music/battle.mp3",
+  "ss": 12
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 2.0,
+   "kicker": "🎁 11:47 PM · gift shopping",
+   "text": "“I don't know *what to buy.*”",
+   "size": 128,
+   "y": 600,
+   "anim": "slam"
+  },
+  {
+   "type": "hook",
+   "dur": 1.8,
+   "kicker": "No answer = no sale",
+   "text": "She *leaves.*",
+   "size": 170,
+   "y": 680,
+   "anim": "slam"
+  },
+  {
+   "type": "chat",
+   "dur": 4.2,
+   "head": "Your store · online",
+   "boxY": 420,
+   "msgs": [
+    {
+     "me": true,
+     "t": "Need a gift for my dad, he loves coffee ☕"
+    },
+    {
+     "t": "Great pick! Here are 3 coffee favourites in stock – tap a card to see it 👇"
+    },
+    {
+     "me": true,
+     "t": "Perfect, the grinder! 🙌"
+    }
+   ]
+  },
+  {
+   "type": "phone",
+   "src": "../assets/clips/ch_widget.mp4",
+   "phoneW": 760,
+   "ratio": 1.4667,
+   "phoneY": 470,
+   "size": 88,
+   "y": 270,
+   "dur": 3.2,
+   "ss": 9.0,
+   "kicker": "Chatnelo · your real data",
+   "text": "Real stock. *Real shipping.*"
+  },
+  {
+   "type": "list",
+   "dur": 3.2,
+   "text": "Like your *best salesperson*",
+   "size": 104,
+   "y": 300,
+   "listY": 660,
+   "items": [
+    {
+     "i": "🛍️",
+     "t": "Recommends your real products"
+    },
+    {
+     "i": "🃏",
+     "t": "Clickable product cards"
+    },
+    {
+     "i": "🌍",
+     "t": "Replies in the shopper's language"
+    },
+    {
+     "i": "🌙",
+     "t": "Online 24/7"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "icon": "../assets/img/chatnelo-icon.png",
+   "dur": 3.2,
+   "head": "Find us on the *Shopify App Store*",
+   "size": 96,
+   "pill": "Search: Chatnelo",
+   "foot": "3 days free · live demo on chatnelo.com",
+   "cardY": 500
+  }
+ ]
+}
