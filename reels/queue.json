@@ -320,6 +320,16 @@
    "posted": {
     "ig:chatbot_chatnelo": "2026-11-13"
    }
+  },
+  {
+   "id": "ch-06-shipping",
+   "brand": "chatnelo",
+   "status": "pending",
+   "targets": [
+    "ig:chatbot_chatnelo"
+   ],
+   "caption": "“Do you ship to Austria?” 📦 If nobody answers, the cart gets abandoned.\n\nChatnelo answers shipping, stock and price questions from your real store data – 24/7, in your shopper's language, with clickable product cards.\n\nFind us on the Shopify App Store – search “Chatnelo” 🛍️ 3 days free. Live demo on chatnelo.com\n\n#shopify #shopifyapp #ecommerce #aichatbot #onlinestore #shopifystore #abandonedcart #customerservice #smallbusiness",
+   "url": "https://broswarsstudio.chatnelo.com/r/ch-06-shipping.mp4"
   }
  ]
 }

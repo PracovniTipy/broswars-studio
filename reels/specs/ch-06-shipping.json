@@ -1,0 +1,31 @@
+{
+ "theme": {
+  "bg": "#05060c",
+  "grad": "radial-gradient(90% 60% at 50% 85%,#1d5cffaa,transparent 60%),radial-gradient(80% 50% at 80% 10%,#6a2cc9aa,transparent 60%),#05060c",
+  "fg": "#ffffff",
+  "mut": "#a3abbd",
+  "accent": "#9b85ff",
+  "accent2": "linear-gradient(180deg,#e4dbff,#9b7bff)",
+  "bubble": "linear-gradient(135deg,#2f7bff,#6a5cff)",
+  "pill": "linear-gradient(180deg,#ffffff,#d5dbe6)"
+ },
+ "tag": "Chatnelo · BrosWars Studio",
+ "music": {"src": "../assets/music/drive.mp3", "ss": 110},
+ "scenes": [
+  {"type": "hook", "dur": 2.0, "kicker": "🛒 Full cart · last step", "text": "“Do you ship *to Austria?*”", "size": 128, "y": 600, "anim": "slam"},
+  {"type": "hook", "dur": 1.7, "kicker": "Nobody answers…", "text": "Cart *abandoned.*", "size": 165, "y": 680, "anim": "slam"},
+  {"type": "chat", "dur": 4.3, "head": "Your store · online", "boxY": 420, "msgs": [
+    {"me": true, "t": "Do you ship to Austria? How long does it take? 📦"},
+    {"t": "Yes, we ship to Austria 🇦🇹 Here's the rate and delivery time from our shipping settings 👇"},
+    {"me": true, "t": "Great, ordering now! 🙌"}
+  ]},
+  {"type": "phone", "src": "../assets/clips/ch_widget.mp4", "phoneW": 760, "ratio": 1.4667, "phoneY": 470, "size": 96, "y": 270, "dur": 3.2, "ss": 6.0, "kicker": "Chatnelo · live on your store", "text": "Answers from *your* data"},
+  {"type": "list", "dur": 3.2, "text": "The last question *before checkout*", "size": 100, "y": 300, "listY": 680, "items": [
+    {"i": "🚚", "t": "Shipping & delivery"},
+    {"i": "📊", "t": "What's in stock"},
+    {"i": "💶", "t": "Real prices"},
+    {"i": "🌙", "t": "Answered 24/7"}
+  ]},
+  {"type": "cta", "icon": "../assets/img/chatnelo-icon.png", "dur": 3.3, "head": "Find us on the *Shopify App Store*", "size": 96, "pill": "Search: Chatnelo", "foot": "3 days free · live demo on chatnelo.com", "cardY": 500}
+ ]
+}
