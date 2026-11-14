@@ -1,0 +1,87 @@
+{
+ "theme": {
+  "bg": "#0b0912",
+  "grad": "radial-gradient(90% 60% at 80% 20%,#ff4fa355,transparent 60%),radial-gradient(90% 60% at 10% 85%,#7b4dff55,transparent 60%),#0b0912",
+  "fg": "#ffffff",
+  "mut": "#b3a9c4",
+  "accent": "#ff5fae",
+  "accent2": "linear-gradient(180deg,#ffd0e8,#ff5fae 60%,#b34dff)",
+  "pill": "linear-gradient(180deg,#ffffff,#ffd7ec)"
+ },
+ "tag": "Načti.me · BrosWars Studio",
+ "music": {
+  "src": "../assets/music/pulse.mp3",
+  "ss": 30
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 2.2,
+   "kicker": "QR kódy zdarma",
+   "text": "Pořád *platíš* za QR kódy?",
+   "size": 135,
+   "y": 640,
+   "anim": "slam"
+  },
+  {
+   "type": "phone",
+   "dur": 4.0,
+   "src": "../assets/clips/nm_app.mp4",
+   "ss": 2.0,
+   "phoneW": 560,
+   "phoneY": 560,
+   "kicker": "Krok 1",
+   "text": "Vlož *odkaz.*",
+   "size": 110,
+   "y": 300
+  },
+  {
+   "type": "phone",
+   "dur": 3.6,
+   "src": "../assets/clips/nm_app.mp4",
+   "ss": 6.6,
+   "phoneW": 560,
+   "phoneY": 560,
+   "kicker": "Nebo Wi-Fi",
+   "text": "Hosté *naskenují.* Hotovo.",
+   "size": 110,
+   "y": 300
+  },
+  {
+   "type": "list",
+   "dur": 3.4,
+   "text": "Proč *Načti.me?*",
+   "size": 120,
+   "y": 320,
+   "listY": 680,
+   "items": [
+    {
+     "i": "♾️",
+     "t": "Funguje navždy"
+    },
+    {
+     "i": "🔓",
+     "t": "Bez registrace"
+    },
+    {
+     "i": "🖨️",
+     "t": "PNG + SVG pro tisk"
+    },
+    {
+     "i": "✅",
+     "t": "Kontrola čitelnosti"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "icon": "../../img/nacti-icon.png",
+   "dur": 3.2,
+   "head": "Vytvoř si ho *zdarma*",
+   "size": 115,
+   "pill": "nacti.me",
+   "foot": "Bez účtu · funguje navždy",
+   "cardY": 520
+  }
+ ]
+}
