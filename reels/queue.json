@@ -341,12 +341,15 @@
   {
    "id": "ch-07-vacation",
    "brand": "chatnelo",
-   "status": "pending",
+   "status": "posted",
    "targets": [
     "ig:chatbot_chatnelo"
    ],
    "caption": "POV: you're on vacation 🏖️ …and your store keeps selling.\n\nChatnelo answers your shoppers 24/7 from your real products, stock, prices and shipping – in their language, with clickable product cards.\n\nFind us on the Shopify App Store – search “Chatnelo” 🛍️ 3 days free. Live demo on chatnelo.com\n\n#shopify #shopifyapp #ecommerce #aichatbot #onlinestore #shopifystore #customerservice #ecommercetips #smallbusiness",
-   "url": "https://broswarsstudio.chatnelo.com/r/ch-07-vacation.mp4"
+   "url": "https://broswarsstudio.chatnelo.com/r/ch-07-vacation.mp4",
+   "posted": {
+    "ig:chatbot_chatnelo": "2026-11-14"
+   }
   }
  ]
 }
