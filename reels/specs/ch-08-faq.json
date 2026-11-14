@@ -1,0 +1,105 @@
+{
+ "theme": {
+  "bg": "#04070c",
+  "grad": "radial-gradient(90% 60% at 15% 18%,#00b3a4aa,transparent 60%),radial-gradient(85% 55% at 85% 85%,#5a3cffaa,transparent 60%),#04070c",
+  "fg": "#ffffff",
+  "mut": "#a3b3bd",
+  "accent": "#5ff0d8",
+  "accent2": "linear-gradient(180deg,#d9fff7,#5ff0d8)",
+  "bubble": "linear-gradient(135deg,#0fa896,#4d5cff)",
+  "pill": "linear-gradient(180deg,#ffffff,#d5e6e3)"
+ },
+ "tag": "Chatnelo · BrosWars Studio",
+ "music": {
+  "src": "../assets/music/drive.mp3",
+  "ss": 62
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 1.9,
+   "kicker": "📄 Hard truth for store owners",
+   "text": "Nobody reads your *FAQ page.*",
+   "size": 128,
+   "y": 600,
+   "anim": "slam"
+  },
+  {
+   "type": "hook",
+   "dur": 1.8,
+   "kicker": "They just want an answer…",
+   "text": "So they *ask.* Right now.",
+   "size": 128,
+   "y": 640,
+   "anim": "slam"
+  },
+  {
+   "type": "chat",
+   "dur": 4.3,
+   "head": "Your store · online",
+   "boxY": 420,
+   "msgs": [
+    {
+     "me": true,
+     "t": "How much is delivery to Poland? And is the black one in stock? 📦"
+    },
+    {
+     "t": "Here are the delivery options and prices for Poland 👇 and yes, black is in stock – tap the card to see it."
+    },
+    {
+     "me": true,
+     "t": "Perfect, ordering now! 🙌"
+    }
+   ]
+  },
+  {
+   "type": "phone",
+   "src": "../assets/clips/ch_widget.mp4",
+   "phoneW": 760,
+   "ratio": 1.4667,
+   "phoneY": 470,
+   "size": 92,
+   "y": 270,
+   "dur": 3.2,
+   "ss": 1.5,
+   "kicker": "Chatnelo · live on your store",
+   "text": "Your FAQ, *answering back*"
+  },
+  {
+   "type": "list",
+   "dur": 3.2,
+   "text": "Every answer, *instantly*",
+   "size": 104,
+   "y": 300,
+   "listY": 660,
+   "items": [
+    {
+     "i": "🛍️",
+     "t": "From your real products"
+    },
+    {
+     "i": "📊",
+     "t": "Real stock, prices & shipping"
+    },
+    {
+     "i": "🃏",
+     "t": "Clickable product cards"
+    },
+    {
+     "i": "🌍",
+     "t": "In your shopper's language, 24/7"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "icon": "../assets/img/chatnelo-icon.png",
+   "dur": 3.3,
+   "head": "Find us on the *Shopify App Store*",
+   "size": 96,
+   "pill": "Search: Chatnelo",
+   "foot": "3 days free · live demo on chatnelo.com",
+   "cardY": 500
+  }
+ ]
+}
