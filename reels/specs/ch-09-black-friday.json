@@ -1,0 +1,33 @@
+{
+ "theme": {
+  "bg": "#07050a",
+  "grad": "radial-gradient(90% 60% at 85% 15%,#ff5a3caa,transparent 60%),radial-gradient(85% 55% at 15% 88%,#00b3a4aa,transparent 60%),#07050a",
+  "fg": "#ffffff",
+  "mut": "#b9b0bd",
+  "accent": "#ffb347",
+  "accent2": "linear-gradient(180deg,#fff1d9,#ffb347)",
+  "bubble": "linear-gradient(135deg,#0fa896,#4d5cff)",
+  "pill": "linear-gradient(180deg,#ffffff,#e6dcd5)"
+ },
+ "tag": "Chatnelo · BrosWars Studio",
+ "music": {"src": "../assets/music/battle.mp3", "ss": 48},
+ "scenes": [
+  {"type": "hook", "dur": 1.8, "kicker": "🛒 Black Friday is coming", "text": "Everyone shops. *At once.*", "size": 128, "y": 600, "anim": "slam"},
+  {"type": "hook", "dur": 1.8, "kicker": "Every shopper has a question…", "text": "Who *answers* them all?", "size": 128, "y": 640, "anim": "slam"},
+  {"type": "chat", "dur": 4.3, "head": "Your store · online", "boxY": 420,
+   "msgs": [
+    {"me": true, "t": "Is the Black Friday deal on the grey hoodie still on? Do you have size M? 🔥"},
+    {"t": "Yes! Here's the grey hoodie with today's price 👇 size M is in stock – tap the card to add it."},
+    {"me": true, "t": "Got it, checking out! 🛍️"}
+   ]},
+  {"type": "phone", "src": "../assets/clips/ch_widget.mp4", "phoneW": 760, "ratio": 1.4667, "phoneY": 470, "size": 92, "y": 270, "dur": 3.2, "ss": 4, "kicker": "Chatnelo · live on your store", "text": "Ready for the *rush*"},
+  {"type": "list", "dur": 3.2, "text": "Busiest week? *Covered.*", "size": 104, "y": 300, "listY": 660,
+   "items": [
+    {"i": "⚡", "t": "Answers 24/7, no queue"},
+    {"i": "📊", "t": "Real stock, prices & shipping"},
+    {"i": "🃏", "t": "Clickable product cards"},
+    {"i": "🌍", "t": "In your shopper's language"}
+   ]},
+  {"type": "cta", "icon": "../assets/img/chatnelo-icon.png", "dur": 3.3, "head": "Find us on the *Shopify App Store*", "size": 96, "pill": "Search: Chatnelo", "foot": "3 days free · live demo on chatnelo.com", "cardY": 500}
+ ]
+}
