@@ -15,7 +15,7 @@
 <link rel="canonical" href="https://broswarsstudio.chatnelo.com/">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "BrosWars Studio", "url": "https://broswarsstudio.chatnelo.com/", "logo": "https://broswarsstudio.chatnelo.com/img/emblem.png", "email": "broswars@chatnelo.com", "sameAs": ["https://www.instagram.com/broswars_studio/"], "makesOffer": [{"@type": "Offer", "itemOffered": {"@type": "VideoGame", "name": "Castle WARS", "url": "https://battlecastle.itch.io/castle-wars"}}, {"@type": "Offer", "itemOffered": {"@type": "SoftwareApplication", "name": "Chatnelo", "url": "https://apps.shopify.com/chatnelo"}}, {"@type": "Offer", "itemOffered": {"@type": "SoftwareApplication", "name": "Načti.me", "url": "https://nacti.me/"}}, {"@type": "Offer", "price": "3", "priceCurrency": "USD", "url": "https://wallpapers.chatnelo.com/", "itemOffered": {"@type": "Product", "name": "Wallpaper Pack – Static", "description": "10 phone wallpapers (1536 × 2688) per pack; themes: Mythical Creatures, Warriors, Zodiac.", "url": "https://wallpapers.chatnelo.com/"}}, {"@type": "Offer", "price": "5", "priceCurrency": "USD", "url": "https://wallpapers.chatnelo.com/", "itemOffered": {"@type": "Product", "name": "Wallpaper Pack – Live", "description": "The same 10 wallpapers plus 5 parallax depth layers each (live wallpaper); themes: Mythical Creatures, Warriors, Zodiac.", "url": "https://wallpapers.chatnelo.com/"}}]}</script>
 <title>BrosWars Studio</title>
-<script src="/js/bw.js"></script>
+<script src="/js/bw.js" defer></script>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="BrosWars Studio – a Czech studio forging games and AI tools: Castle WARS, Chatnelo, live wallpapers and a free CV builder.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,8 +58,9 @@ img{max-width:100%;display:block}
 :focus-visible{outline:2px solid var(--volt);outline-offset:3px;border-radius:4px}
 
 /* ---------- header ---------- */
-header{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;padding-block:14px;mix-blend-mode:normal;transition:background .4s,backdrop-filter .4s}
-header.solid{background:rgba(4,6,12,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+header{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;padding-block:14px;mix-blend-mode:normal;transition:background .4s}
+header.solid{background:rgba(4,6,12,.94)}
+@media (hover:hover) and (min-width:861px){header.solid{background:rgba(4,6,12,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1440px;margin:0 auto}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
 .brand img{width:30px;height:auto;filter:drop-shadow(0 0 10px rgba(62,162,255,.6))}
@@ -135,7 +136,7 @@ header.solid{background:rgba(4,6,12,.72);backdrop-filter:blur(14px);-webkit-back
 .u-dc .art{background:url(img/donchaos/mythical-01.webp) center/cover}
 .u-dc .fr{position:absolute;left:24%;right:24%;top:8%;bottom:25%;border-radius:16px;border:2px solid rgba(255,236,214,.75);box-shadow:0 0 0 999px rgba(7,6,10,.42),0 0 40px rgba(255,74,28,.55)}
 .u-dc .fr::before{content:"";position:absolute;top:5%;left:50%;width:32%;height:4%;transform:translateX(-50%);border-radius:99px;background:#07060a}
-.floor{position:absolute;left:50%;bottom:6%;width:min(1100px,92vw);height:120px;transform:translateX(-50%);background:radial-gradient(50% 50% at 50% 50%,rgba(62,162,255,.22),transparent 70%);filter:blur(8px);pointer-events:none}
+.floor{position:absolute;left:50%;bottom:6%;width:min(1100px,92vw);height:120px;transform:translateX(-50%);background:radial-gradient(50% 50% at 50% 50%,rgba(62,162,255,.2),transparent 75%);pointer-events:none}
 .ars-foot{display:flex;justify-content:space-between;gap:16px;color:var(--muted);max-width:1440px;margin:0 auto;width:100%;flex-wrap:wrap}
 .ars-foot .now{color:var(--ice)}
 
@@ -149,7 +150,7 @@ header.solid{background:rgba(4,6,12,.72);backdrop-filter:blur(14px);-webkit-back
 .btn:hover svg{transform:translateX(4px)}
 .btn-solid{background:var(--ice);color:var(--void)}
 .btn-solid:hover{box-shadow:0 0 0 6px rgba(238,245,255,.12)}
-.btn-line{border:1px solid rgba(238,245,255,.35);color:var(--ice);background:rgba(4,6,12,.25);backdrop-filter:blur(6px)}
+.btn-line{border:1px solid rgba(238,245,255,.35);color:var(--ice);background:rgba(4,6,12,.55)}
 
 /* ---------- 03 Castle WARS ---------- */
 
@@ -487,7 +488,7 @@ footer{position:relative;z-index:2;background:var(--void);border-top:1px solid v
         <div class="dc-copy">
           <span class="tag mono" data-i18n="dcTag">Chapter 04 · Wallpapers</span>
           <h2 data-i18n-html="dcH">Wallpapers that <em>move with you.</em></h2>
-          <p data-i18n="dcP">Wallpapers for your phone in three themes: Mythical Creatures, Warriors and Zodiac. Every pack has 10 wallpapers. Static is the still images; Live adds five layers of depth that shift as you tilt the screen.</p>
+          <p data-i18n="dcP">Wallpapers for your phone in three themes: Mythical Creatures, Warriors and Zodiac. Every pack has 10 wallpapers. Static is 10 still images (JPG); Live adds 10 video loops (MP4) and 5 parallax layers per wallpaper. How it moves depends on your phone and app.</p>
           <div class="price">
             <div><b>$3</b><span class="mono" data-i18n="dcS1">Static pack</span></div>
             <div><b>$5</b><span class="mono" data-i18n="dcS3">Live pack</span></div>
@@ -588,7 +589,7 @@ var CS={
   cvBtn:"Vytvořit životopis",cvC:"Zdarma · CZ / EN",cvRole:"Projektová manažerka",
   askTag:"Přímá linka do studia",askH:"Zeptej se <em>na cokoliv.</em>",q1:"Co je Castle WARS?",q2:"Kolik stojí Chatnelo?",q3:"Můžeme spolupracovat?",mailP:"Raději e-mail?",partner:"Pro tvůrce",navCr:"Pro tvůrce",
   kDc:"Static / Live · 3 témata",kDcB:"Tapety",r6:"Tapety",ftDc:"Tapety",dcTag:"Kapitola 04 · Tapety",dcH:"Tapety, které <em>se hýbou s tebou.</em>",
-  dcP:"Tapety do telefonu ve třech tématech: Mýtická stvoření, Válečníci a Zvěrokruh. Každý balíček má 10 tapet. Static jsou klidné obrázky, Live k nim přidá pět vrstev hloubky, které se posunou, když telefon nakloníš.",
+  dcP:"Tapety do telefonu ve třech tématech: Mýtická stvoření, Válečníci a Zvěrokruh. Každý balíček má 10 tapet. Static je 10 obrázků (JPG), Live k nim přidá 10 video smyček (MP4) a 5 parallax vrstev ke každé tapetě. Jak se hýbou, záleží na telefonu a aplikaci.",
   dcS1:"balíček Static",dcS2:"tapet v balíčku",dcS3:"balíček Live",dcBtn:"Koupit balíčky",dcReq:"⚠️ Živý pohyb potřebuje novější telefon s gyroskopem a podporou živých/3D tapet. Na starších telefonech se tapeta zobrazí jen jako obyčejný obrázek.",dcC:"Plné rozlišení 1536 × 2688 · okamžité stažení",
   dcHint:"Pohni kurzorem nebo nakloň telefon",dcP1:"Téma 01",dcP2:"Téma 02",dcP3:"Téma 03",dcN1:"Mýtická stvoření",dcN2:"Válečníci",dcN3:"Zvěrokruh",dcCnt:"10 tapet · $3 / $5",dcCnt2:"10 tapet · $3 / $5",dcCnt3:"10 tapet · $3 / $5",
   title:"BrosWars Studio — hry a AI nástroje"
@@ -616,7 +617,7 @@ document.getElementById("y").textContent=new Date().getFullYear();
 
 /* header + rail */
 var hdr=document.getElementById("hdr");
-addEventListener("scroll",function(){hdr.classList.toggle("solid",scrollY>innerHeight*.6);},{passive:true});
+var hdrOn=null;addEventListener("scroll",function(){var on=scrollY>innerHeight*.6;if(on!==hdrOn){hdrOn=on;hdr.classList.toggle("solid",on);}},{passive:true});
 var rail=document.querySelectorAll(".rail a");
 if("IntersectionObserver" in window){
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var k=e.target.dataset.sec;rail.forEach(function(a){a.classList.toggle("on",a.dataset.k===k);});}});},{rootMargin:"-45% 0px -45% 0px"});
@@ -628,10 +629,11 @@ var heroP=0, mx=0, my=0, glOK=false;
 (function(){
   if(!window.THREE)return;
   var cv=document.getElementById("gl"), R;
-  try{R=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:false,powerPreference:"high-performance"});}catch(e){return;}
+  var SMALL=Math.min(innerWidth,innerHeight)<760||matchMedia("(pointer:coarse)").matches;
+  try{R=new THREE.WebGLRenderer({canvas:cv,antialias:!SMALL,alpha:false,powerPreference:"high-performance"});}catch(e){return;}
   glOK=true;
   /* výkon: rozlišení max 1,5× (2× znamenalo 78 % pixelů navíc v každém snímku); když zařízení nestíhá, samo sleví až na 1× / 0,75× */
-  var DPR=devicePixelRatio||1, prMax=Math.min(DPR,1.5), pr=prMax, prMin=Math.min(DPR,.75);
+  var DPR=devicePixelRatio||1, prMax=Math.min(DPR,SMALL?1.25:1.5), pr=prMax, prMin=Math.min(DPR,SMALL?.6:.75);
   R.setPixelRatio(pr);
   R.outputEncoding=THREE.sRGBEncoding;R.toneMapping=THREE.ACESFilmicToneMapping;R.toneMappingExposure=1.35;
   R.setClearColor(0x04060c,1);
@@ -678,10 +680,10 @@ var heroP=0, mx=0, my=0, glOK=false;
   }
   var st=stoneTex();
   var mStone=new THREE.MeshStandardMaterial({color:0xdfe4ec,map:st,bumpMap:st,bumpScale:.035,roughness:.82,metalness:.18,envMapIntensity:1.1});
-  var mStoneEdge=new THREE.MeshPhysicalMaterial({color:0xf4f7fc,metalness:1,roughness:.12,clearcoat:1,envMapIntensity:2.2});
-  var mChrome=new THREE.MeshPhysicalMaterial({color:0xf3f6fa,metalness:.92,roughness:.2,clearcoat:1,clearcoatRoughness:.04,envMapIntensity:3.4});
+  var mStoneEdge=SMALL?new THREE.MeshStandardMaterial({color:0xf4f7fc,metalness:1,roughness:.12,envMapIntensity:2.4}):new THREE.MeshPhysicalMaterial({color:0xf4f7fc,metalness:1,roughness:.12,clearcoat:1,envMapIntensity:2.2});
+  var mChrome=SMALL?new THREE.MeshStandardMaterial({color:0xf3f6fa,metalness:.92,roughness:.16,envMapIntensity:3.6}):new THREE.MeshPhysicalMaterial({color:0xf3f6fa,metalness:.92,roughness:.2,clearcoat:1,clearcoatRoughness:.04,envMapIntensity:3.4});
   var grp=new THREE.Group();S.add(grp);
-  var ext={depth:.26,bevelEnabled:true,bevelThickness:.05,bevelSize:.028,bevelSegments:6,curveSegments:2};
+  var ext={depth:.26,bevelEnabled:true,bevelThickness:.05,bevelSize:.028,bevelSegments:SMALL?3:5,curveSegments:2};
   SH.stone.forEach(function(p,i){var m=new THREE.Mesh(new THREE.ExtrudeGeometry(shp(p),ext),[mStone,mStoneEdge]);m.position.z=-.13+(i%2)*.05;grp.add(m);});
   SH.chrome.forEach(function(p,i){var m=new THREE.Mesh(new THREE.ExtrudeGeometry(shp(p),ext),mChrome);m.position.z=-.08+i*.04;grp.add(m);});
 
@@ -702,7 +704,7 @@ var heroP=0, mx=0, my=0, glOK=false;
     var m=new THREE.PointsMaterial({size:size,map:new THREE.CanvasTexture(sc),color:col,transparent:true,opacity:op,depthWrite:false,blending:THREE.AdditiveBlending,sizeAttenuation:true});
     var p=new THREE.Points(bg,m);S.add(p);return p;
   }
-  var stars=pts(4200,90,.16,0xdfe9ff,.9), sparks=pts(260,14,.09,0x3ea2ff,1);
+  var stars=pts(SMALL?1800:3600,90,SMALL?.2:.16,0xdfe9ff,.9), sparks=pts(SMALL?140:240,14,.09,0x3ea2ff,1);
   sparks.geometry.attributes.position.array.forEach(function(v,i,a){if(i%3===2)a[i]=-Math.random()*6;});
 
   function size(){var w=innerWidth,h=innerHeight;R.setSize(w,h,false);C.aspect=w/h;C.updateProjectionMatrix();
@@ -720,7 +722,7 @@ var heroP=0, mx=0, my=0, glOK=false;
     /* výkon: když snímky trvají déle než ~24 ms, sníží se rozlišení plátna (jen dolů, aby to neblikalo) */
     var dt=now-last;last=now;
     if(pr>prMin && now>warm && dt<400){acc+=dt;nf++;
-      if(acc>1000){if(acc/nf>24){pr=Math.max(prMin,pr-.25);R.setPixelRatio(pr);}acc=0;nf=0;}}
+      if(acc>500){if(acc/nf>22){pr=Math.max(prMin,pr-.25);R.setPixelRatio(pr);}acc=0;nf=0;}}
     var p=heroP, e=p*p*(3-2*p);
     grp.rotation.y=-.38+(RM?0:Math.sin(t*.45)*.3)+mx*.5+e*P*1.15;
     grp.rotation.x=(RM?0:Math.sin(t*.3)*.06)+my*.25-e*.15;
@@ -748,7 +750,7 @@ if(window.gsap && window.ScrollTrigger && !RM){
   var mm=gsap.matchMedia();
 
   /* 01 hero: dive into the emblem */
-  gsap.timeline({scrollTrigger:{trigger:".hero",start:"top top",end:"+=160%",pin:true,scrub:true,
+  gsap.timeline({scrollTrigger:{trigger:".hero",start:"top top",end:"+=160%",anticipatePin:1,pin:true,scrub:true,
       onUpdate:function(s){heroP=s.progress;}}})
     .to(".hero .w1",{xPercent:-38,yPercent:-30,opacity:0,ease:"power2.in"},0)
     .to(".hero .w2",{xPercent:38,yPercent:30,opacity:0,ease:"power2.in"},0)
@@ -761,12 +763,12 @@ if(window.gsap && window.ScrollTrigger && !RM){
   var nowEl=document.getElementById("now");
   /* the ring turns one full step per project: -(n-1)/n of a revolution */
   gsap.fromTo("#ring",{rotateY:0,rotateX:-6},{rotateY:-360*last/names.length,rotateX:-6,ease:"none",
-    scrollTrigger:{trigger:".arsenal",start:"top top",end:"+=260%",pin:".ars-pin",scrub:.6,
+    scrollTrigger:{trigger:".arsenal",start:"top top",end:"+=260%",anticipatePin:1,pin:".ars-pin",scrub:.6,
       onUpdate:function(s){var k=Math.min(last,Math.round(s.progress*last));var nm=(k===last&&lang==="cs")?"05 / Tapety":names[k];if(nowEl.textContent!==nm)nowEl.textContent=nm;}}});
   gsap.from(".ars-head h2",{yPercent:40,opacity:0,scrollTrigger:{trigger:".arsenal",start:"top 80%",end:"top 20%",scrub:true}});
 
   /* 04 Chatnelo: the conversation types itself */
-  var ctl=gsap.timeline({scrollTrigger:{trigger:".ch",start:"top top",end:"+=220%",pin:".ch .pin",scrub:.4}});
+  var ctl=gsap.timeline({scrollTrigger:{trigger:".ch",start:"top top",end:"+=220%",anticipatePin:1,pin:".ch .pin",scrub:.4}});
   ctl.from(".ch-copy > *",{y:40,opacity:0,stagger:.08,duration:.4},0)
      .from(".win",{y:80,rotateX:12,opacity:0,duration:.5,transformPerspective:900},0)
      .from(".c1",{y:20,opacity:0,duration:.2},.5)
@@ -779,16 +781,20 @@ if(window.gsap && window.ScrollTrigger && !RM){
      .to({},{duration:.3});
 
   /* Načti.me: the code assembles itself, then gets scanned */
-  var ntl=gsap.timeline({scrollTrigger:{trigger:".nm",start:"top top",end:"+=200%",pin:".nm .pin",scrub:.4}});
+  var ntl=gsap.timeline({scrollTrigger:{trigger:".nm",start:"top top",end:"+=200%",anticipatePin:1,pin:".nm .pin",scrub:.4}});
   ntl.from(".nm-copy > *",{y:40,opacity:0,stagger:.08,duration:.4},0)
      .from(".qrcard",{scale:.85,rotate:-6,opacity:0,duration:.4},0)
-     .from("#qr rect",{x:function(){return (Math.random()-.5)*40;},y:function(){return (Math.random()-.5)*40;},opacity:0,duration:.8,stagger:{amount:.5,from:"random"},ease:"power3.out"},.25)
-     .fromTo("#scan",{opacity:0,top:"8%"},{opacity:1,top:"90%",duration:.5,ease:"none"},1.5)
+     .add(innerWidth<760
+        /* telefony: celý kód najednou (stovky animovaných čtverečků v SVG = překreslování v každém snímku) */
+        ? gsap.from("#qr",{scale:.6,opacity:0,rotate:-8,duration:.8,ease:"power3.out"})
+        : gsap.from("#qr rect",{x:function(){return (Math.random()-.5)*40;},y:function(){return (Math.random()-.5)*40;},opacity:0,duration:.8,stagger:{amount:.5,from:"random"},ease:"power3.out"}),.25)
+     /* sken jede transformem (ne přes top → bez přepočtu rozvržení) */
+     .fromTo("#scan",{opacity:0,top:"8%",y:0},{opacity:1,y:function(){var c=document.querySelector(".qrcard");return c?c.offsetHeight*.82:0;},duration:.5,ease:"none"},1.5)
      .to("#scan",{opacity:0,duration:.1},2.0)
      .from("#qrl",{y:10,opacity:0,duration:.2},1.9);
 
   /* 05 CV: the page writes itself */
-  var vtl=gsap.timeline({scrollTrigger:{trigger:".cv",start:"top top",end:"+=180%",pin:".cv .pin",scrub:.4}});
+  var vtl=gsap.timeline({scrollTrigger:{trigger:".cv",start:"top top",end:"+=180%",anticipatePin:1,pin:".cv .pin",scrub:.4}});
   vtl.from(".cv-copy > *",{y:40,opacity:0,stagger:.08,duration:.4},0)
      .from("#doc",{y:120,rotate:-14,opacity:0,duration:.5,ease:"power2.out"},0)
      .from("#doc .ph",{scale:0,duration:.25,ease:"back.out(2)"},.4)
