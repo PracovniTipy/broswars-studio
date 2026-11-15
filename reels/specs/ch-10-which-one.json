@@ -1,0 +1,33 @@
+{
+ "theme": {
+  "bg": "#08040d",
+  "grad": "radial-gradient(90% 60% at 80% 12%,#c13cffaa,transparent 60%),radial-gradient(85% 55% at 18% 90%,#00b3a4aa,transparent 60%),#08040d",
+  "fg": "#ffffff",
+  "mut": "#b8aec4",
+  "accent": "#e7a6ff",
+  "accent2": "linear-gradient(180deg,#fbeaff,#e7a6ff)",
+  "bubble": "linear-gradient(135deg,#0fa896,#7a4dff)",
+  "pill": "linear-gradient(180deg,#ffffff,#e3d9ea)"
+ },
+ "tag": "Chatnelo · BrosWars Studio",
+ "music": {"src": "../assets/music/pulse.mp3", "ss": 78},
+ "scenes": [
+  {"type": "hook", "dur": 1.8, "kicker": "🤔 The sales-killing question", "text": "“Which one *should I buy?*”", "size": 124, "y": 600, "anim": "slam"},
+  {"type": "hook", "dur": 1.8, "kicker": "No answer = no decision…", "text": "…and the tab gets *closed.*", "size": 124, "y": 640, "anim": "slam"},
+  {"type": "chat", "dur": 4.4, "head": "Your store · online", "boxY": 420,
+   "msgs": [
+    {"me": true, "t": "I need running shoes for wet trails – which one is better for me? 🏃"},
+    {"t": "For wet trails I'd pick the waterproof model 👇 it's in stock in your size – tap the card to see it."},
+    {"me": true, "t": "Perfect, adding it to cart! 🛒"}
+   ]},
+  {"type": "phone", "src": "../assets/clips/ch_widget.mp4", "phoneW": 760, "ratio": 1.4667, "phoneY": 470, "size": 92, "y": 270, "dur": 3.2, "ss": 8, "kicker": "Chatnelo · live on a real store", "text": "Like a *shop assistant*"},
+  {"type": "list", "dur": 3.2, "text": "Helps them *choose.*", "size": 104, "y": 300, "listY": 660,
+   "items": [
+    {"i": "🧭", "t": "Recommends from your real products"},
+    {"i": "📦", "t": "Knows stock, prices & shipping"},
+    {"i": "🃏", "t": "Clickable product cards"},
+    {"i": "🌍", "t": "24/7, in your shopper's language"}
+   ]},
+  {"type": "cta", "icon": "../assets/img/chatnelo-icon.png", "dur": 3.3, "head": "Find us on the *Shopify App Store*", "size": 96, "pill": "Search: Chatnelo", "foot": "3 days free · live demo on chatnelo.com", "cardY": 500}
+ ]
+}
