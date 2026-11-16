@@ -1,0 +1,33 @@
+{
+ "theme": {
+  "bg": "#06080a",
+  "grad": "radial-gradient(90% 60% at 82% 14%,#ff7a3daa,transparent 60%),radial-gradient(85% 55% at 15% 88%,#12b8c9aa,transparent 60%),#06080a",
+  "fg": "#ffffff",
+  "mut": "#aeb8bf",
+  "accent": "#ffb27a",
+  "accent2": "linear-gradient(180deg,#fff1e4,#ffb27a)",
+  "bubble": "linear-gradient(135deg,#12a3b8,#ff7a3d)",
+  "pill": "linear-gradient(180deg,#ffffff,#e6e0da)"
+ },
+ "tag": "Chatnelo · BrosWars Studio",
+ "music": {"src": "../assets/music/drive.mp3", "ss": 96},
+ "scenes": [
+  {"type": "hook", "dur": 1.7, "kicker": "🔍 Your store's search bar", "text": "*0 results* found.", "size": 140, "y": 620, "anim": "slam"},
+  {"type": "hook", "dur": 1.8, "kicker": "She typed it her own way…", "text": "…so she *left.*", "size": 140, "y": 640, "anim": "slam"},
+  {"type": "chat", "dur": 4.4, "head": "Your store · online", "boxY": 420,
+   "msgs": [
+    {"me": true, "t": "something warm for winter hikes, not too heavy? 🥾"},
+    {"t": "Here are two lightweight insulated jackets we have in stock 👇 tap a card to see sizes."},
+    {"me": true, "t": "Oh nice, the green one! 💚"}
+   ]},
+  {"type": "phone", "src": "../assets/clips/ch_widget.mp4", "phoneW": 760, "ratio": 1.4667, "phoneY": 470, "size": 92, "y": 270, "dur": 3.2, "ss": 8, "kicker": "Chatnelo · live on a real store", "text": "Ask it *like a human*"},
+  {"type": "list", "dur": 3.2, "text": "Search that *understands.*", "size": 100, "y": 300, "listY": 660,
+   "items": [
+    {"i": "💬", "t": "Shoppers ask in their own words"},
+    {"i": "🛍️", "t": "Answers from your real products"},
+    {"i": "🃏", "t": "Clickable product cards"},
+    {"i": "🌍", "t": "24/7, in your shopper's language"}
+   ]},
+  {"type": "cta", "icon": "../assets/img/chatnelo-icon.png", "dur": 3.3, "head": "Find us on the *Shopify App Store*", "size": 96, "pill": "Search: Chatnelo", "foot": "3 days free · live demo on chatnelo.com", "cardY": 500}
+ ]
+}
