@@ -1,0 +1,33 @@
+{
+ "theme": {
+  "bg": "#07060d",
+  "grad": "radial-gradient(90% 60% at 18% 12%,#7b5cff99,transparent 60%),radial-gradient(85% 55% at 85% 90%,#20d39a99,transparent 60%),#07060d",
+  "fg": "#ffffff",
+  "mut": "#b4b0c8",
+  "accent": "#7ef0c4",
+  "accent2": "linear-gradient(180deg,#eafff6,#7ef0c4)",
+  "bubble": "linear-gradient(135deg,#6a4dff,#18b98a)",
+  "pill": "linear-gradient(180deg,#ffffff,#e4e2ee)"
+ },
+ "tag": "Chatnelo · BrosWars Studio",
+ "music": {"src": "../assets/music/battle.mp3", "ss": 72},
+ "scenes": [
+  {"type": "hook", "dur": 1.6, "kicker": "💸 The question every shop gets", "text": "“Anything *under €50?*”", "size": 132, "y": 620, "anim": "slam"},
+  {"type": "hook", "dur": 1.8, "kicker": "No reply? No filter?", "text": "She buys it *somewhere else.*", "size": 120, "y": 640, "anim": "slam"},
+  {"type": "chat", "dur": 4.6, "head": "Your store · online", "boxY": 420,
+   "msgs": [
+    {"me": true, "t": "gift for my dad, he loves coffee ☕ anything under €50?"},
+    {"t": "Sure! Here are coffee picks under €50 that are in stock right now 👇 tap a card for details."},
+    {"me": true, "t": "Perfect, the grinder! Does it ship to Slovakia?"}
+   ]},
+  {"type": "phone", "src": "../assets/clips/ch_widget.mp4", "phoneW": 760, "ratio": 1.4667, "phoneY": 470, "size": 92, "y": 270, "dur": 3.2, "ss": 12, "kicker": "Chatnelo · live on a real store", "text": "Real prices. *Real stock.*"},
+  {"type": "list", "dur": 3.2, "text": "Your budget *assistant.*", "size": 100, "y": 300, "listY": 660,
+   "items": [
+    {"i": "🏷️", "t": "Answers from your real prices"},
+    {"i": "📦", "t": "Only what's actually in stock"},
+    {"i": "🚚", "t": "Knows your shipping options"},
+    {"i": "🌍", "t": "24/7, in your shopper's language"}
+   ]},
+  {"type": "cta", "icon": "../assets/img/chatnelo-icon.png", "dur": 3.3, "head": "Find us on the *Shopify App Store*", "size": 96, "pill": "Search: Chatnelo", "foot": "3 days free · live demo on chatnelo.com", "cardY": 500}
+ ]
+}
