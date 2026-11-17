@@ -1,0 +1,33 @@
+{
+ "theme": {
+  "bg": "#08060a",
+  "grad": "radial-gradient(90% 60% at 82% 12%,#ff4d8d99,transparent 60%),radial-gradient(85% 55% at 15% 88%,#2fd4ffaa,transparent 60%),#08060a",
+  "fg": "#ffffff",
+  "mut": "#bdb3c2",
+  "accent": "#ff8fb8",
+  "accent2": "linear-gradient(180deg,#ffe9f1,#ff8fb8)",
+  "bubble": "linear-gradient(135deg,#1fa8d8,#ff4d8d)",
+  "pill": "linear-gradient(180deg,#ffffff,#ece0e6)"
+ },
+ "tag": "Chatnelo · BrosWars Studio",
+ "music": {"src": "../assets/music/battle.mp3", "ss": 30},
+ "scenes": [
+  {"type": "hook", "dur": 1.6, "kicker": "🛒 Cart: full", "text": "One question *left.*", "size": 140, "y": 620, "anim": "slam"},
+  {"type": "chat", "dur": 4.6, "head": "Your store · 23:12", "boxY": 420,
+   "msgs": [
+    {"me": true, "t": "do you have this in size 42? 👟"},
+    {"t": "Yes – size 42 is in stock 👇 tap the card to add it to your cart."},
+    {"me": true, "t": "and can it ship to Austria?"}
+   ]},
+  {"type": "hook", "dur": 1.7, "kicker": "No answer = no order", "text": "Don't leave her *waiting.*", "size": 124, "y": 640, "anim": "slam"},
+  {"type": "phone", "src": "../assets/clips/ch_widget.mp4", "phoneW": 760, "ratio": 1.4667, "phoneY": 470, "size": 92, "y": 270, "dur": 3.3, "ss": 4.5, "kicker": "Chatnelo · live on a real store", "text": "The answer. *Right there.*"},
+  {"type": "list", "dur": 3.2, "text": "Every last question, *answered.*", "size": 96, "y": 300, "listY": 680,
+   "items": [
+    {"i": "📦", "t": "Real stock, sizes & prices"},
+    {"i": "🚚", "t": "Your real shipping rules"},
+    {"i": "🌍", "t": "In your shopper's language"},
+    {"i": "🌙", "t": "24/7 – day and night"}
+   ]},
+  {"type": "cta", "icon": "../assets/img/chatnelo-icon.png", "dur": 3.3, "head": "Find us on the *Shopify App Store*", "size": 96, "pill": "Search: Chatnelo", "foot": "3 days free · live demo on chatnelo.com", "cardY": 500}
+ ]
+}
