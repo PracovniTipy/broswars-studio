@@ -1,0 +1,33 @@
+{
+ "theme": {
+  "bg": "#05070d",
+  "grad": "radial-gradient(90% 60% at 15% 14%,#ffc83d99,transparent 60%),radial-gradient(85% 55% at 85% 88%,#2f6bffaa,transparent 60%),#05070d",
+  "fg": "#ffffff",
+  "mut": "#b0b6c6",
+  "accent": "#ffd35c",
+  "accent2": "linear-gradient(180deg,#fff6d9,#ffd35c)",
+  "bubble": "linear-gradient(135deg,#2f6bff,#8a5cff)",
+  "pill": "linear-gradient(180deg,#ffffff,#e4e6ee)"
+ },
+ "tag": "Chatnelo · BrosWars Studio",
+ "music": {"src": "../assets/music/pulse.mp3", "ss": 54},
+ "scenes": [
+  {"type": "hook", "dur": 1.6, "kicker": "Ctrl+C · Ctrl+V · Repeat", "text": "Typing the *same answer* again?", "size": 124, "y": 600, "anim": "slam"},
+  {"type": "chat", "dur": 4.4, "head": "Your inbox · today", "boxY": 400,
+   "msgs": [
+    {"me": true, "t": "is this in stock?"},
+    {"me": true, "t": "how much is shipping to Germany?"},
+    {"me": true, "t": "do you have it in blue? 💙"}
+   ]},
+  {"type": "hook", "dur": 1.7, "kicker": "Every day. Every shop.", "text": "Let *AI* answer them.", "size": 132, "y": 640, "anim": "slam"},
+  {"type": "phone", "src": "../assets/clips/ch_widget.mp4", "phoneW": 760, "ratio": 1.4667, "phoneY": 470, "size": 92, "y": 270, "dur": 3.3, "ss": 8, "kicker": "Chatnelo · live on a real store", "text": "Answered. *Instantly.*"},
+  {"type": "list", "dur": 3.2, "text": "You stop *copy-pasting.*", "size": 100, "y": 300, "listY": 660,
+   "items": [
+    {"i": "📦", "t": "Real stock, prices & shipping"},
+    {"i": "🌍", "t": "In your shopper's language"},
+    {"i": "🃏", "t": "Clickable product cards"},
+    {"i": "🌙", "t": "24/7 – even while you sleep"}
+   ]},
+  {"type": "cta", "icon": "../assets/img/chatnelo-icon.png", "dur": 3.3, "head": "Find us on the *Shopify App Store*", "size": 96, "pill": "Search: Chatnelo", "foot": "3 days free · live demo on chatnelo.com", "cardY": 500}
+ ]
+}
