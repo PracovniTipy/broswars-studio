@@ -1,0 +1,34 @@
+{
+ "theme": {
+  "bg": "#07060c",
+  "grad": "radial-gradient(90% 60% at 80% 10%,#8a5cffaa,transparent 60%),radial-gradient(85% 55% at 18% 90%,#ffc23d99,transparent 60%),#07060c",
+  "fg": "#ffffff",
+  "mut": "#bab4c8",
+  "accent": "#ffd36b",
+  "accent2": "linear-gradient(180deg,#fff6dc,#ffd36b)",
+  "bubble": "linear-gradient(135deg,#6b3dff,#ffb02e)",
+  "pill": "linear-gradient(180deg,#ffffff,#e9e4f2)"
+ },
+ "tag": "Chatnelo · BrosWars Studio",
+ "music": {"src": "../assets/music/pulse.mp3", "ss": 18},
+ "scenes": [
+  {"type": "hook", "dur": 1.6, "kicker": "💬 Your shopper, right now", "text": "“Hello…? *Anyone there?*”", "size": 124, "y": 600, "anim": "slam"},
+  {"type": "chat", "dur": 4.6, "head": "Your store · Sunday 21:47", "boxY": 420,
+   "msgs": [
+    {"me": true, "t": "hi, anyone there? 👋"},
+    {"t": "Hi! I'm here 24/7 – what are you looking for?"},
+    {"me": true, "t": "this lamp, but in black?"},
+    {"t": "Black is in stock 👇 tap the card to add it."}
+   ]},
+  {"type": "hook", "dur": 1.7, "kicker": "Silence closes tabs", "text": "Someone *always answers.*", "size": 120, "y": 640, "anim": "slam"},
+  {"type": "phone", "src": "../assets/clips/ch_widget.mp4", "phoneW": 760, "ratio": 1.4667, "phoneY": 470, "size": 92, "y": 270, "dur": 3.3, "ss": 4.5, "kicker": "Chatnelo · real store", "text": "Always *on duty.*"},
+  {"type": "list", "dur": 3.2, "text": "Never a *silent store.*", "size": 96, "y": 300, "listY": 680,
+   "items": [
+    {"i": "🌙", "t": "Answers 24/7, weekends too"},
+    {"i": "📦", "t": "Real products, stock & prices"},
+    {"i": "🚚", "t": "Your real shipping rules"},
+    {"i": "🌍", "t": "In your shopper's language"}
+   ]},
+  {"type": "cta", "icon": "../assets/img/chatnelo-icon.png", "dur": 3.3, "head": "Find us on the *Shopify App Store*", "size": 96, "pill": "Search: Chatnelo", "foot": "3 days free · live demo on chatnelo.com", "cardY": 500}
+ ]
+}
