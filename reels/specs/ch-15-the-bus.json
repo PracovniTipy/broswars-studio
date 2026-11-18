@@ -1,0 +1,33 @@
+{
+ "theme": {
+  "bg": "#060a08",
+  "grad": "radial-gradient(90% 60% at 18% 12%,#3dff9e88,transparent 60%),radial-gradient(85% 55% at 85% 88%,#ff9a3daa,transparent 60%),#060a08",
+  "fg": "#ffffff",
+  "mut": "#b3c2b9",
+  "accent": "#7dffb8",
+  "accent2": "linear-gradient(180deg,#e6fff1,#7dffb8)",
+  "bubble": "linear-gradient(135deg,#14b86a,#ff8a2b)",
+  "pill": "linear-gradient(180deg,#ffffff,#e2ece6)"
+ },
+ "tag": "Chatnelo · BrosWars Studio",
+ "music": {"src": "../assets/music/drive.mp3", "ss": 40},
+ "scenes": [
+  {"type": "hook", "dur": 1.6, "kicker": "🚌 Shopping on the bus", "text": "She has *3 stops* to decide.", "size": 128, "y": 600, "anim": "slam"},
+  {"type": "chat", "dur": 4.6, "head": "Your store · on mobile", "boxY": 420,
+   "msgs": [
+    {"me": true, "t": "is this jacket waterproof? ☔"},
+    {"t": "Yes – here it is in your size 👇 tap the card to add it."},
+    {"me": true, "t": "perfect, ordering now 🙌"}
+   ]},
+  {"type": "hook", "dur": 1.7, "kicker": "No e-mail. No waiting.", "text": "Answered *before her stop.*", "size": 120, "y": 640, "anim": "slam"},
+  {"type": "phone", "src": "../assets/clips/ch_widget.mp4", "phoneW": 760, "ratio": 1.4667, "phoneY": 470, "size": 92, "y": 270, "dur": 3.3, "ss": 6, "kicker": "Chatnelo · live on a real store", "text": "Fast. *On any phone.*"},
+  {"type": "list", "dur": 3.2, "text": "Answers that *close the sale.*", "size": 96, "y": 300, "listY": 680,
+   "items": [
+    {"i": "📦", "t": "Real products, stock & prices"},
+    {"i": "🚚", "t": "Your real shipping rules"},
+    {"i": "🃏", "t": "Clickable product cards"},
+    {"i": "🌙", "t": "24/7, in her language"}
+   ]},
+  {"type": "cta", "icon": "../assets/img/chatnelo-icon.png", "dur": 3.3, "head": "Find us on the *Shopify App Store*", "size": 96, "pill": "Search: Chatnelo", "foot": "3 days free · live demo on chatnelo.com", "cardY": 500}
+ ]
+}
