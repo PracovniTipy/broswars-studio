@@ -1,0 +1,34 @@
+{
+ "theme": {
+  "bg": "#04090b",
+  "grad": "radial-gradient(90% 60% at 15% 12%,#14c8b4aa,transparent 60%),radial-gradient(85% 55% at 85% 88%,#ff6b5c99,transparent 60%),#04090b",
+  "fg": "#ffffff",
+  "mut": "#a9bfc0",
+  "accent": "#5ff0dc",
+  "accent2": "linear-gradient(180deg,#e6fffb,#5ff0dc)",
+  "bubble": "linear-gradient(135deg,#0fae9c,#ff6b5c)",
+  "pill": "linear-gradient(180deg,#ffffff,#dfeceb)"
+ },
+ "tag": "Chatnelo · BrosWars Studio",
+ "music": {"src": "../assets/music/drive.mp3", "ss": 66},
+ "scenes": [
+  {"type": "hook", "dur": 1.6, "kicker": "👕 Size M… or L?", "text": "“Will it *fit me?*”", "size": 136, "y": 610, "anim": "slam"},
+  {"type": "hook", "dur": 1.7, "kicker": "Not sure = not buying", "text": "Doubt *empties carts.*", "size": 128, "y": 640, "anim": "slam"},
+  {"type": "chat", "dur": 4.6, "head": "Your store · fitting room 💬", "boxY": 420,
+   "msgs": [
+    {"me": true, "t": "I'm usually an M – does this hoodie run small?"},
+    {"t": "Going by the product details, it's a relaxed fit 👌"},
+    {"me": true, "t": "ok, is M in stock?"},
+    {"t": "Yes 👇 tap the card to add M to your cart."}
+   ]},
+  {"type": "phone", "src": "../assets/clips/ch_widget.mp4", "phoneW": 760, "ratio": 1.4667, "phoneY": 470, "size": 92, "y": 270, "dur": 3.3, "ss": 10, "kicker": "Chatnelo · live on a real store", "text": "Doubt? *Answered.*"},
+  {"type": "list", "dur": 3.2, "text": "Your 24/7 *fitting-room helper*", "size": 92, "y": 300, "listY": 680,
+   "items": [
+    {"i": "📏", "t": "Answers from your product details"},
+    {"i": "📦", "t": "Real stock, prices & shipping"},
+    {"i": "🌍", "t": "In your shopper's language"},
+    {"i": "🃏", "t": "Clickable product cards"}
+   ]},
+  {"type": "cta", "icon": "../assets/img/chatnelo-icon.png", "dur": 3.3, "head": "Find us on the *Shopify App Store*", "size": 96, "pill": "Search: Chatnelo", "foot": "3 days free · live demo on chatnelo.com", "cardY": 500}
+ ]
+}
