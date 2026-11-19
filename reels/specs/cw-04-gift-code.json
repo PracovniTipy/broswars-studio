@@ -1,0 +1,107 @@
+{
+ "theme": {
+  "bg": "#070d1c",
+  "grad": "radial-gradient(120% 70% at 50% 30%,#16305e 0%,#0a1428 55%,#05080f 100%)",
+  "fg": "#ffffff",
+  "mut": "#c3cde0",
+  "accent": "#ffc23d",
+  "accent2": "linear-gradient(180deg,#fff3b0,#ffc23d 55%,#e08a12)",
+  "pill": "linear-gradient(180deg,#ffe07a,#f2a91c)"
+ },
+ "music": {
+  "src": "../assets/music/battle.mp3",
+  "ss": 45
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "bg": "../assets/img/cw-feature.png",
+   "dur": 2.4,
+   "kicker": "Castle WARS · gift",
+   "text": "We hid *3,000* *gold* in this reel 🎁",
+   "size": 124,
+   "y": 1080,
+   "center": true,
+   "anim": "slam"
+  },
+  {
+   "type": "clip",
+   "src": "../assets/clips/r2_sk.mp4",
+   "ss": 0.4,
+   "dur": 2.3,
+   "kicker": "Keep watching…",
+   "text": "Build your *castle.*",
+   "size": 112,
+   "y": 260,
+   "bandY": 600,
+   "anim": "rise",
+   "bandH": 920,
+   "zoom": 1.3
+  },
+  {
+   "type": "clip",
+   "src": "../assets/clips/r4_meteor.mp4",
+   "ss": 2.0,
+   "dur": 2.3,
+   "kicker": "26 special attacks",
+   "text": "Smash theirs with a *meteor.*",
+   "size": 112,
+   "y": 260,
+   "bandY": 600,
+   "anim": "rise",
+   "bandH": 920,
+   "zoom": 1.3
+  },
+  {
+   "type": "clip",
+   "src": "../assets/clips/r3_vs.mp4",
+   "ss": 0.6,
+   "dur": 2.3,
+   "kicker": "1v1 · 2v2 online",
+   "text": "Beat your *friends* – or play offline",
+   "size": 104,
+   "y": 260,
+   "bandY": 600,
+   "anim": "rise",
+   "bandH": 920,
+   "zoom": 1.3
+  },
+  {
+   "type": "list",
+   "dur": 3.6,
+   "kicker": "Your gift code",
+   "text": "*HRAD3000*",
+   "size": 170,
+   "y": 330,
+   "listY": 720,
+   "items": [
+    {
+     "i": "🪙",
+     "t": "3,000 gold"
+    },
+    {
+     "i": "💎",
+     "t": "300 gems"
+    },
+    {
+     "i": "🛒",
+     "t": "Shop → Codes"
+    },
+    {
+     "i": "👤",
+     "t": "Once per player"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.2,
+   "head": "Play *FREE* now",
+   "size": 120,
+   "pill": "itch.io · Microsoft Store",
+   "foot": "Code also in the comments ⬇️",
+   "cardY": 480,
+   "art": "../assets/img/cw-feature.png"
+  }
+ ]
+}
