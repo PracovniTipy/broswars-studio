@@ -539,14 +539,16 @@
   {
    "id": "nm-06-wifi-guests",
    "brand": "nacti",
-   "status": "ready",
+   "status": "posted",
    "targets": [
     "ig:broswars_studio",
     "tiktok:broswars_studio"
    ],
    "caption": "“What's the Wi-Fi password?” – again? 📶\n\nType your network name and password into Načti.me, print an A6 card or a sticker and put it on the table. Guests point the phone camera at it and connect with one tap.\n\nFree, no sign-up, works forever. Great for cafés, Airbnbs and offices.\n👉 nacti.me\n\n#wifi #qrcode #cafe #airbnbhost #smallbusiness #freetools #qrcodegenerator #nactime ",
    "url": "https://broswarsstudio.chatnelo.com/r/nm-06-wifi-guests.mp4",
-   "posted": {}
+   "posted": {
+    "tiktok:broswars_studio": "2026-11-21"
+   }
   }
  ]
 }
