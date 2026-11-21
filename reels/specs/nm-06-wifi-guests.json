@@ -1,0 +1,87 @@
+{
+ "theme": {
+  "bg": "#0b0912",
+  "grad": "radial-gradient(90% 60% at 80% 20%,#ff4fa355,transparent 60%),radial-gradient(90% 60% at 10% 85%,#7b4dff55,transparent 60%),#0b0912",
+  "fg": "#ffffff",
+  "mut": "#b3a9c4",
+  "accent": "#ff5fae",
+  "accent2": "linear-gradient(180deg,#ffd0e8,#ff5fae 60%,#b34dff)",
+  "pill": "linear-gradient(180deg,#ffffff,#ffd7ec)"
+ },
+ "tag": "Načti.me · BrosWars Studio",
+ "music": {
+  "src": "../assets/music/pulse.mp3",
+  "ss": 85
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 2.4,
+   "kicker": "Café · Airbnb · office",
+   "text": "“What's the *Wi-Fi* *password?*”",
+   "size": 120,
+   "y": 560,
+   "anim": "slam"
+  },
+  {
+   "type": "phone",
+   "dur": 3.8,
+   "src": "../assets/clips/nm_app.mp4",
+   "ss": 7.0,
+   "phoneW": 560,
+   "phoneY": 560,
+   "kicker": "Step 1",
+   "text": "Network + *password.*",
+   "size": 110,
+   "y": 300
+  },
+  {
+   "type": "phone",
+   "dur": 3.6,
+   "src": "../assets/clips/nm_app.mp4",
+   "ss": 16.2,
+   "phoneW": 560,
+   "phoneY": 560,
+   "kicker": "Step 2",
+   "text": "Print a *table card.*",
+   "size": 110,
+   "y": 300
+  },
+  {
+   "type": "list",
+   "dur": 3.6,
+   "text": "Guests *scan.* Done.",
+   "size": 120,
+   "y": 320,
+   "listY": 680,
+   "items": [
+    {
+     "i": "📷",
+     "t": "Phone camera, no app"
+    },
+    {
+     "i": "🔓",
+     "t": "No sign-up"
+    },
+    {
+     "i": "♾️",
+     "t": "Never expires"
+    },
+    {
+     "i": "☕",
+     "t": "Cafés, Airbnbs, offices"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "icon": "../../img/nacti-icon.png",
+   "dur": 3.2,
+   "head": "Stop *spelling* passwords",
+   "size": 110,
+   "pill": "nacti.me",
+   "foot": "Free · no account · works forever",
+   "cardY": 520
+  }
+ ]
+}
