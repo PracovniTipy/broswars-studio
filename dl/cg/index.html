@@ -244,14 +244,14 @@ const P={kind:'web',sdk:null,
  happy(){try{if(this.kind==='cg')this.sdk.game.happytime()}catch(e){}},
  ad(done){let fin=false;const end=()=>{if(fin)return;fin=true;Snd.unpause();done()};
   try{
-   if(this.kind==='cg'){this.sdk.ad.requestAd('midgame',{adStarted:()=>Snd.pause(),adFinished:end,adError:end});return}
+   if(this.kind==='cg'){let st=false;this.sdk.ad.requestAd('midgame',{adStarted:()=>{st=true;Snd.pause()},adFinished:end,adError:end});setTimeout(()=>{if(!st)end()},8000);return}
    if(this.kind==='pg'&&this.sdk.advertisement){const a=this.sdk.advertisement;const h=s=>{if(s==='opened')Snd.pause();if(s==='closed'||s==='failed'){try{a.off(this.sdk.EVENT_NAME.INTERSTITIAL_STATE_CHANGED,h)}catch(e){}end()}};
     a.on(this.sdk.EVENT_NAME.INTERSTITIAL_STATE_CHANGED,h);a.showInterstitial();setTimeout(end,30000);return}
   }catch(e){}
   end()},
  rewarded(onReward,onDone){let fin=false,got=false;const end=()=>{if(fin)return;fin=true;Snd.unpause();if(got)onReward();else toast(L2.adNo);onDone&&onDone(got)};
   try{
-   if(this.kind==='cg'){this.sdk.ad.requestAd('rewarded',{adStarted:()=>Snd.pause(),adFinished:()=>{got=true;end()},adError:()=>end()});return}
+   if(this.kind==='cg'){let st=false;this.sdk.ad.requestAd('rewarded',{adStarted:()=>{st=true;Snd.pause()},adFinished:()=>{got=true;end()},adError:()=>end()});setTimeout(()=>{if(!st)end()},10000);return}
    if(this.kind==='pg'&&this.sdk.advertisement){const a=this.sdk.advertisement,EV=this.sdk.EVENT_NAME.REWARDED_STATE_CHANGED;const h=s=>{if(s==='opened')Snd.pause();if(s==='rewarded')got=true;if(s==='closed'||s==='failed'){try{a.off(EV,h)}catch(e){}end()}};a.on(EV,h);a.showRewarded();setTimeout(end,60000);return}
   }catch(e){}
   // samostatný web (náhled): reklama tu není – odměna se dá rovnou a hráč vidí poznámku
