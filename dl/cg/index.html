@@ -249,7 +249,7 @@ const P={kind:'web',sdk:null,
     a.on(this.sdk.EVENT_NAME.INTERSTITIAL_STATE_CHANGED,h);a.showInterstitial();setTimeout(end,30000);return}
   }catch(e){}
   end()},
- rewarded(onReward,onDone){let fin=false,got=false;const end=()=>{if(fin)return;fin=true;Snd.unpause();if(got)onReward();onDone&&onDone(got)};
+ rewarded(onReward,onDone){let fin=false,got=false;const end=()=>{if(fin)return;fin=true;Snd.unpause();if(got)onReward();else toast(L2.adNo);onDone&&onDone(got)};
   try{
    if(this.kind==='cg'){this.sdk.ad.requestAd('rewarded',{adStarted:()=>Snd.pause(),adFinished:()=>{got=true;end()},adError:()=>end()});return}
    if(this.kind==='pg'&&this.sdk.advertisement){const a=this.sdk.advertisement,EV=this.sdk.EVENT_NAME.REWARDED_STATE_CHANGED;const h=s=>{if(s==='opened')Snd.pause();if(s==='rewarded')got=true;if(s==='closed'||s==='failed'){try{a.off(EV,h)}catch(e){}end()}};a.on(EV,h);a.showRewarded();setTimeout(end,60000);return}
@@ -1350,7 +1350,7 @@ function claimDaily(double){if(!dailyReady())return;const idx=dailyIdx(),R=DAILY
  const give=(m)=>{if(R.g){prog.coins+=R.g*m;toast('+'+R.g*m)}if(R.b){for(const k in R.b){prog.inv[k]=(prog.inv[k]||0)+R.b[k]}toast('🎁 +'+Object.keys(R.b).map(k=>L2[k]).join(', '))}
   if(R.item){const it=epicPick();if(it){ownList(it[0]).push(it[1]);setEq(it[0],it[1]);toast('✨ '+L2.newItem+': '+(itemName(it[0],it[1])||L2.r2));for(let k=0;k<3;k++)setTimeout(()=>Snd.play('firework'),200+k*250)}else{prog.coins+=800;toast('+800')}}};
  prog.daily.streak=cont?prog.daily.streak+1:1;prog.daily.last=dayKey();
- if(double&&R.g){P.rewarded(()=>{give(2);saveProg()},()=>{});}else give(1);
+ if(double&&R.g){P.rewarded(()=>{give(2);saveProg()},(got)=>{if(!got){give(1);saveProg()}});}else give(1);
  Snd.play('fanfare');saveProg()}
 // denní úkoly
 const QT={floors:[40,70,110],perfect:[10,20,35],wins:[2,4,6],combo:[5,8,12],endless:[15,25,40]};
@@ -1407,13 +1407,13 @@ function drawTutorial(u){if(prog.tut||state!==ST.PLAY||mode!=='campaign')return;
 
 // ================= BATTLE PASS =================
 const T5={
- en:{bp:'BATTLE PASS',bpName:'Season 1 · Sky Tower',bpFree:'FREE',bpPrem:'GOLD TRACK',bpTier:'Level',bpHint:'Earn XP for floors, perfect drops, levels and tasks',bpAd:'Watch an ad to claim',bpMax:'Season complete!'},
- cs:{bp:'BATTLE PASS',bpName:'Sezóna 1 · Nebeská věž',bpFree:'ZDARMA',bpPrem:'ZLATÁ CESTA',bpTier:'Úroveň',bpHint:'XP získáš za patra, perfektní položení, kola a úkoly',bpAd:'Vyzvedneš po zhlédnutí reklamy',bpMax:'Sezóna dokončena!'},
- de:{bp:'BATTLE PASS',bpName:'Saison 1 · Himmelsturm',bpFree:'GRATIS',bpPrem:'GOLDPFAD',bpTier:'Stufe',bpHint:'XP für Stockwerke, perfekte Drops, Level und Aufgaben',bpAd:'Werbung ansehen zum Abholen',bpMax:'Saison abgeschlossen!'},
- es:{bp:'BATTLE PASS',bpName:'Temporada 1 · Torre del cielo',bpFree:'GRATIS',bpPrem:'CAMINO DORADO',bpTier:'Nivel',bpHint:'Gana XP con pisos, caídas perfectas, niveles y tareas',bpAd:'Mira un anuncio para recoger',bpMax:'¡Temporada completada!'},
- fr:{bp:'BATTLE PASS',bpName:'Saison 1 · Tour céleste',bpFree:'GRATUIT',bpPrem:'VOIE DORÉE',bpTier:'Palier',bpHint:'Gagne de l’XP avec les étages, poses parfaites, niveaux et tâches',bpAd:'Regarde une pub pour récupérer',bpMax:'Saison terminée !'},
- it:{bp:'BATTLE PASS',bpName:'Stagione 1 · Torre del cielo',bpFree:'GRATIS',bpPrem:'PERCORSO D’ORO',bpTier:'Livello',bpHint:'Guadagna XP con piani, cadute perfette, livelli e missioni',bpAd:'Guarda una pubblicità per ritirare',bpMax:'Stagione completata!'},
- pl:{bp:'BATTLE PASS',bpName:'Sezon 1 · Niebiańska wieża',bpFree:'ZA DARMO',bpPrem:'ZŁOTA ŚCIEŻKA',bpTier:'Poziom',bpHint:'Zdobywaj XP za piętra, idealne zrzuty, poziomy i zadania',bpAd:'Obejrzyj reklamę, by odebrać',bpMax:'Sezon ukończony!'}};
+ en:{adNo:'No ad available right now, try again later',bp:'BATTLE PASS',bpName:'Season 1 · Sky Tower',bpFree:'FREE',bpPrem:'GOLD TRACK',bpTier:'Level',bpHint:'Earn XP for floors, perfect drops, levels and tasks',bpAd:'Watch an ad to claim',bpMax:'Season complete!'},
+ cs:{adNo:'Reklama teď není k dispozici, zkus to za chvíli',bp:'BATTLE PASS',bpName:'Sezóna 1 · Nebeská věž',bpFree:'ZDARMA',bpPrem:'ZLATÁ CESTA',bpTier:'Úroveň',bpHint:'XP získáš za patra, perfektní položení, kola a úkoly',bpAd:'Vyzvedneš po zhlédnutí reklamy',bpMax:'Sezóna dokončena!'},
+ de:{adNo:'Gerade keine Werbung verfügbar, versuche es später',bp:'BATTLE PASS',bpName:'Saison 1 · Himmelsturm',bpFree:'GRATIS',bpPrem:'GOLDPFAD',bpTier:'Stufe',bpHint:'XP für Stockwerke, perfekte Drops, Level und Aufgaben',bpAd:'Werbung ansehen zum Abholen',bpMax:'Saison abgeschlossen!'},
+ es:{adNo:'No hay anuncios ahora, inténtalo más tarde',bp:'BATTLE PASS',bpName:'Temporada 1 · Torre del cielo',bpFree:'GRATIS',bpPrem:'CAMINO DORADO',bpTier:'Nivel',bpHint:'Gana XP con pisos, caídas perfectas, niveles y tareas',bpAd:'Mira un anuncio para recoger',bpMax:'¡Temporada completada!'},
+ fr:{adNo:'Aucune pub disponible, réessaie plus tard',bp:'BATTLE PASS',bpName:'Saison 1 · Tour céleste',bpFree:'GRATUIT',bpPrem:'VOIE DORÉE',bpTier:'Palier',bpHint:'Gagne de l’XP avec les étages, poses parfaites, niveaux et tâches',bpAd:'Regarde une pub pour récupérer',bpMax:'Saison terminée !'},
+ it:{adNo:'Nessuna pubblicità ora, riprova più tardi',bp:'BATTLE PASS',bpName:'Stagione 1 · Torre del cielo',bpFree:'GRATIS',bpPrem:'PERCORSO D’ORO',bpTier:'Livello',bpHint:'Guadagna XP con piani, cadute perfette, livelli e missioni',bpAd:'Guarda una pubblicità per ritirare',bpMax:'Stagione completata!'},
+ pl:{adNo:'Brak reklamy, spróbuj później',bp:'BATTLE PASS',bpName:'Sezon 1 · Niebiańska wieża',bpFree:'ZA DARMO',bpPrem:'ZŁOTA ŚCIEŻKA',bpTier:'Poziom',bpHint:'Zdobywaj XP za piętra, idealne zrzuty, poziomy i zadania',bpAd:'Obejrzyj reklamę, by odebrać',bpMax:'Sezon ukończony!'}};
 for(const k in T5)Object.assign(T2[k],T5[k]);
 const BP_N=30,BP_XP=100;
 // odměny: {g:zlato} | {b:{booster:n}} | {it:[kind,i]}
