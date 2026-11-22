@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CASTLE DIMENSION</title>
@@ -907,7 +908,7 @@ button:hover:not(:disabled){filter:brightness(1.12) saturate(1.08)}
 </div>
 <div id="modal"></div><div id="toasts"></div>
 <script>(function(){window.I18N_DICT={};var l;try{l=(JSON.parse(localStorage.getItem("castleDimension_settings")||"{}")).lang}catch(e){} if(!l){var n=(navigator.language||"cs").slice(0,2).toLowerCase(); l=["cs","en","de","es","fr","it","pl"].indexOf(n)>=0?n:(n==="sk"?"cs":"en");} if(l!=="cs") document.write('<script src="assets/i18n/'+l+'.js"><\/script>');})();</script>
-<script>const BUILD_V="1795307183";
+<script>const BUILD_V="1795307823";
 const CRAZY=false;
 // ===== CASTLE DIMENSION — DATA (vše data-driven, snadno rozšiřitelné) =====
 const DMG = { phys:'Fyzické', fire:'Oheň', ice:'Led', poison:'Jed', dark:'Temnota', magic:'Magie' };
@@ -1244,7 +1245,7 @@ const RES_ICON={gold:'gold',crystal:'crystal',wood:'wood',stone:'stone',iron:'ir
 // věž → budova (magické věže stojí u malé věžičky)
 const TOWER_BLD={healer:'gold',mage:'blue',ice:'ice',fire:'red',poison:'gold',dark:'dark',arcane:'blue',astro:'blue',druid:'gold',bell:'stone',hunter:'dark',rune:'stone',alch:'stone'};
 
-const GIFT_CODES=(typeof CRAZY!=='undefined'&&CRAZY)?{}:{'PETR100K':{gold:100000,diamond:10000},'PETRMILION':{gold:1000000,diamond:1000000},'PETR10M':{gold:10000000,diamond:1000000}};
+const GIFT_CODES=(typeof CRAZY!=='undefined'&&CRAZY)?{}:{};
 // skiny věží (kosmetika + bonus k poškození)
 const TSK_THEMES=[
  {n:'Dřevěná',d:'Poctivé trámy a prkna. První skutečná stavba – každý druh bojovníků má svůj vlastní tvar.'},
@@ -4421,7 +4422,7 @@ const CG={ sdk:null, on:false, playing:false, lastAd:0, muted:false, played:fals
  happy(){ if(this.on) try{ this.sdk.game.happytime(); }catch(e){} },
  // vstup rovnou do hry: nový hráč → hned první mise, vracející se → mapa
  enter(){ this.loaded(); if(readSlot(0)&&loadSlot(0)){ SETTINGS.lastSlot=0; ensureDaily(); UI.go('worldmap'); return; }
-  S=newState('Velitel','normal'); SETTINGS.lastSlot=0; saveSettings(); ensureDaily(); saveGame(true); UI.prev=[]; Game.startMission(missionCfg(0,'mission',0)); },
+  S=newState('Velitel','normal'); SETTINGS.lastSlot=0; saveSettings(); ensureDaily(); saveGame(true); UI.prev=[]; Loader.run(()=>IntroBattle.start(),'Šikujeme vojsko'); },
  install(){ if(!IS_CG) return; const go=UI.go.bind(UI); UI.go=(n,...a)=>{ if(this.played&&!this.playing) this.midgame(()=>go(n,...a)); else go(n,...a); }; }
 };
 
