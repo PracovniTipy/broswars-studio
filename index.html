@@ -8,16 +8,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#04060c">
 <meta property="og:title" content="BrosWars Studio">
-<meta property="og:description" content="A Czech studio forging games and AI tools: Castle WARS, Chatnelo, live wallpapers and a free CV builder.">
+<meta property="og:description" content="A Czech studio forging games and AI tools: Castle WARS, Castle Dimension, Castle Stack, Chatnelo, live wallpapers and a free CV builder.">
 <meta property="og:image" content="https://broswarsstudio.chatnelo.com/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="img/emblem.png">
 <link rel="canonical" href="https://broswarsstudio.chatnelo.com/">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "BrosWars Studio", "url": "https://broswarsstudio.chatnelo.com/", "logo": "https://broswarsstudio.chatnelo.com/img/emblem.png", "email": "broswars@chatnelo.com", "sameAs": ["https://www.instagram.com/broswars_studio/"], "makesOffer": [{"@type": "Offer", "itemOffered": {"@type": "VideoGame", "name": "Castle WARS", "url": "https://battlecastle.itch.io/castle-wars"}}, {"@type": "Offer", "itemOffered": {"@type": "SoftwareApplication", "name": "Chatnelo", "url": "https://apps.shopify.com/chatnelo"}}, {"@type": "Offer", "itemOffered": {"@type": "SoftwareApplication", "name": "Načti.me", "url": "https://nacti.me/"}}, {"@type": "Offer", "price": "3", "priceCurrency": "USD", "url": "https://wallpapers.chatnelo.com/", "itemOffered": {"@type": "Product", "name": "Wallpaper Pack – Static", "description": "10 phone wallpapers (1536 × 2688) per pack; themes: Mythical Creatures, Warriors, Zodiac.", "url": "https://wallpapers.chatnelo.com/"}}, {"@type": "Offer", "price": "5", "priceCurrency": "USD", "url": "https://wallpapers.chatnelo.com/", "itemOffered": {"@type": "Product", "name": "Wallpaper Pack – Live", "description": "The same 10 wallpapers plus 5 parallax depth layers each (live wallpaper); themes: Mythical Creatures, Warriors, Zodiac.", "url": "https://wallpapers.chatnelo.com/"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "BrosWars Studio", "url": "https://broswarsstudio.chatnelo.com/", "logo": "https://broswarsstudio.chatnelo.com/img/emblem.png", "email": "broswars@chatnelo.com", "sameAs": ["https://www.instagram.com/broswars_studio/"], "makesOffer": [{"@type": "Offer", "itemOffered": {"@type": "VideoGame", "name": "Castle WARS", "url": "https://battlecastle.itch.io/castle-wars"}}, {"@type": "Offer", "itemOffered": {"@type": "VideoGame", "name": "Castle Dimension", "url": "https://broswarsstudio.chatnelo.com/castle-dimension/"}}, {"@type": "Offer", "itemOffered": {"@type": "VideoGame", "name": "Castle Stack", "url": "https://broswarsstudio.chatnelo.com/castle-stack/"}}, {"@type": "Offer", "itemOffered": {"@type": "SoftwareApplication", "name": "Chatnelo", "url": "https://apps.shopify.com/chatnelo"}}, {"@type": "Offer", "itemOffered": {"@type": "SoftwareApplication", "name": "Načti.me", "url": "https://nacti.me/"}}, {"@type": "Offer", "price": "3", "priceCurrency": "USD", "url": "https://wallpapers.chatnelo.com/", "itemOffered": {"@type": "Product", "name": "Wallpaper Pack – Static", "description": "10 phone wallpapers (1536 × 2688) per pack; themes: Mythical Creatures, Warriors, Zodiac.", "url": "https://wallpapers.chatnelo.com/"}}, {"@type": "Offer", "price": "5", "priceCurrency": "USD", "url": "https://wallpapers.chatnelo.com/", "itemOffered": {"@type": "Product", "name": "Wallpaper Pack – Live", "description": "The same 10 wallpapers plus 5 parallax depth layers each (live wallpaper); themes: Mythical Creatures, Warriors, Zodiac.", "url": "https://wallpapers.chatnelo.com/"}}]}</script>
 <title>BrosWars Studio</title>
 <script src="/js/bw.js" defer></script>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="BrosWars Studio – a Czech studio forging games and AI tools: Castle WARS, Chatnelo, live wallpapers and a free CV builder.">
+<meta name="description" content="BrosWars Studio – a Czech studio forging games and AI tools: Castle WARS, Castle Dimension, Castle Stack, Chatnelo, live wallpapers and a free CV builder.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,500;0,600;0,700;0,800;1,500;1,700&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -120,6 +120,8 @@ header.solid{background:rgba(4,6,12,.94)}
 .unit .cap b{font:700 1.35rem/1.05 var(--f-display)}
 .unit .cap .mono{color:var(--chrome);font-size:.62rem}
 .u-cw .art{background-image:url(img/cw-poster.webp)}
+.u-cd .art{background-image:url(img/cd-card.webp)}
+.u-cs .art{background-image:url(img/cs-card.webp)}
 .u-ch .art{background:radial-gradient(120% 70% at 50% 18%,#3b47c9 0%,#141a4d 45%,#060920 100%)}
 .u-ch .ic{position:absolute;left:50%;top:30%;width:46%;transform:translate(-50%,-50%);border-radius:22%;box-shadow:0 0 60px rgba(138,147,255,.55)}
 .u-ch .bub{position:absolute;left:12%;right:12%;top:54%;display:grid;gap:6px}
@@ -392,15 +394,17 @@ footer{position:relative;z-index:2;background:var(--void);border-top:1px solid v
     <div class="ars-pin gut">
       <div class="ars-head">
         <h2><span data-i18n="arsA">The</span> <em data-i18n="arsB">arsenal.</em></h2>
-        <p data-i18n="arsP">Five projects, each one built in-house, from the first pixel to the last line of code.</p>
+        <p data-i18n="arsP">Seven projects, each one built in-house, from the first pixel to the last line of code.</p>
       </div>
       <div class="stage">
-        <div class="ringz"><div class="ring" id="ring" style="--n:5">
+        <div class="ringz"><div class="ring" id="ring" style="--n:7">
           <a class="unit u-cw" style="--i:0" href="https://battlecastle.itch.io/castle-wars" target="_blank" rel="noopener"><div class="art"></div><div class="cap"><span class="mono" data-i18n="kGame">Strategy game</span><b>Castle WARS</b></div></a>
-          <a class="unit u-ch" style="--i:1" href="#chatnelo"><div class="art"></div><img class="ic" src="img/chatnelo-icon.webp" alt="" loading="lazy" decoding="async"><div class="bub"><i></i><i></i><i></i></div><div class="cap"><span class="mono" data-i18n="kAi">AI for online stores</span><b>Chatnelo</b></div></a>
-          <a class="unit u-nm" style="--i:2" href="#nacti"><div class="art"></div><img class="ic" src="img/nacti-icon.png" alt="" loading="lazy" decoding="async"><div class="cap"><span class="mono" data-i18n="kQr">QR codes in seconds</span><b>Načti.me</b></div></a>
-          <a class="unit u-cv" style="--i:3" href="#cv"><div class="art"></div><div class="sheet"><i class="h"></i><i class="s"></i><i></i><i></i><i style="width:80%"></i><i class="s"></i><i></i><i style="width:64%"></i></div><div class="cap"><span class="mono" data-i18n="kFree">Free tool</span><b data-i18n="tCv">CV Builder</b></div></a>
-          <a class="unit u-dc" style="--i:4" href="#donchaos"><div class="art"></div><div class="fr"></div><div class="cap"><span class="mono" data-i18n="kDc">Static / Live · 3 themes</span><b data-i18n="kDcB">Wallpapers</b></div></a>
+          <a class="unit u-cd" style="--i:1" href="castle-dimension/" target="_blank" rel="noopener"><div class="art"></div><div class="cap"><span class="mono" data-i18n="kGame">Strategy game</span><b>Castle Dimension</b></div></a>
+          <a class="unit u-cs" style="--i:2" href="castle-stack/" target="_blank" rel="noopener"><div class="art"></div><div class="cap"><span class="mono" data-i18n="kArc">Arcade game</span><b>Castle Stack</b></div></a>
+          <a class="unit u-ch" style="--i:3" href="#chatnelo"><div class="art"></div><img class="ic" src="img/chatnelo-icon.webp" alt="" loading="lazy" decoding="async"><div class="bub"><i></i><i></i><i></i></div><div class="cap"><span class="mono" data-i18n="kAi">AI for online stores</span><b>Chatnelo</b></div></a>
+          <a class="unit u-nm" style="--i:4" href="#nacti"><div class="art"></div><img class="ic" src="img/nacti-icon.png" alt="" loading="lazy" decoding="async"><div class="cap"><span class="mono" data-i18n="kQr">QR codes in seconds</span><b>Načti.me</b></div></a>
+          <a class="unit u-cv" style="--i:5" href="#cv"><div class="art"></div><div class="sheet"><i class="h"></i><i class="s"></i><i></i><i></i><i style="width:80%"></i><i class="s"></i><i></i><i style="width:64%"></i></div><div class="cap"><span class="mono" data-i18n="kFree">Free tool</span><b data-i18n="tCv">CV Builder</b></div></a>
+          <a class="unit u-dc" style="--i:6" href="#donchaos"><div class="art"></div><div class="fr"></div><div class="cap"><span class="mono" data-i18n="kDc">Static / Live · 3 themes</span><b data-i18n="kDcB">Wallpapers</b></div></a>
         </div></div>
         <div class="floor"></div>
       </div>
@@ -577,8 +581,8 @@ var RM = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").mat
 var CS={
   navAsk:"Napiš nám",r0:"Studio",r1:"Arzenál",r4:"Životopis",r5:"Napiš nám",
   hudA:"Hry · AI nástroje",h1a:"Hraj naplno.",h1b:"Tvoř chytře.",hudB:"České studio her a AI nástrojů",hudC:"Hry · AI · Nástroje",cue:"Scrolluj dovnitř",
-  arsA:"Náš",arsB:"arzenál.",arsP:"Pět projektů a každý děláme sami, od prvního pixelu po poslední řádek kódu.",
-  kGame:"Strategická hra",kAi:"AI pro e-shopy",kFree:"Nástroj zdarma",tCv:"Životopis",kQr:"QR kódy za pár vteřin",arsF:"Scrollem otáčíš kruhem",
+  arsA:"Náš",arsB:"arzenál.",arsP:"Sedm projektů a každý děláme sami, od prvního pixelu po poslední řádek kódu.",
+  kGame:"Strategická hra",kArc:"Arkádová hra",kAi:"AI pro e-shopy",kFree:"Nástroj zdarma",tCv:"Životopis",kQr:"QR kódy za pár vteřin",arsF:"Scrollem otáčíš kruhem",
   cwTag:"Kapitola 01 · Castle WARS",cwH:"Postav<em>.</em> Ubraň<em>.</em> Dobij<em>.</em>",
   cwP:"Strategie hrad proti hradu. Postav armádu, udrž hradby, sešli blesky a prolom nepřátelskou bránu. Rytíři, Vikingové a Samurajové, každý národ s vlastními jednotkami.",
   cwBtn:"Hrát zdarma na itch.io",f1:"národy",f2v:"Zdarma",f2:"ke hraní",f3v:"Prohlížeč",f3:"bez instalace",
@@ -759,12 +763,12 @@ if(window.gsap && window.ScrollTrigger && !RM){
     .to("#flash",{opacity:0,duration:.0001},1);
 
   /* 02 arsenal: turn the ring */
-  var names=["01 / Castle WARS","02 / Chatnelo","03 / Načti.me","04 / CV Builder","05 / Wallpapers"],last=names.length-1;
+  var names=["01 / Castle WARS","02 / Castle Dimension","03 / Castle Stack","04 / Chatnelo","05 / Načti.me","06 / CV Builder","07 / Wallpapers"],last=names.length-1;
   var nowEl=document.getElementById("now");
   /* the ring turns one full step per project: -(n-1)/n of a revolution */
   gsap.fromTo("#ring",{rotateY:0,rotateX:-6},{rotateY:-360*last/names.length,rotateX:-6,ease:"none",
     scrollTrigger:{trigger:".arsenal",start:"top top",end:"+=260%",anticipatePin:1,pin:".ars-pin",scrub:.6,
-      onUpdate:function(s){var k=Math.min(last,Math.round(s.progress*last));var nm=(k===last&&lang==="cs")?"05 / Tapety":names[k];if(nowEl.textContent!==nm)nowEl.textContent=nm;}}});
+      onUpdate:function(s){var k=Math.min(last,Math.round(s.progress*last));var nm=(k===last&&lang==="cs")?"07 / Tapety":names[k];if(nowEl.textContent!==nm)nowEl.textContent=nm;}}});
   gsap.from(".ars-head h2",{yPercent:40,opacity:0,scrollTrigger:{trigger:".arsenal",start:"top 80%",end:"top 20%",scrub:true}});
 
   /* 04 Chatnelo: the conversation types itself */
