@@ -1,0 +1,107 @@
+{
+ "theme": {
+  "bg": "#070d1c",
+  "grad": "radial-gradient(120% 70% at 50% 30%,#16305e 0%,#0a1428 55%,#05080f 100%)",
+  "fg": "#ffffff",
+  "mut": "#c3cde0",
+  "accent": "#ffc23d",
+  "accent2": "linear-gradient(180deg,#fff3b0,#ffc23d 55%,#e08a12)",
+  "pill": "linear-gradient(180deg,#ffe07a,#f2a91c)"
+ },
+ "music": {
+  "src": "../assets/music/drive.mp3",
+  "ss": 20
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "bg": "../assets/img/cw-feature.png",
+   "dur": 2.3,
+   "kicker": "Castle WARS · quick poll",
+   "text": "You get *ONE* attack. Choose wisely.",
+   "size": 122,
+   "y": 1080,
+   "center": true,
+   "anim": "slam"
+  },
+  {
+   "type": "clip",
+   "src": "../assets/clips/r4_meteor.mp4",
+   "ss": 2.0,
+   "dur": 2.5,
+   "kicker": "Option 1",
+   "text": "*Giant* *Meteor* ☄️",
+   "size": 100,
+   "y": 260,
+   "bandY": 600,
+   "anim": "rise",
+   "bandH": 920,
+   "zoom": 1.3
+  },
+  {
+   "type": "clip",
+   "src": "../assets/clips/r5_drak.mp4",
+   "ss": 2.6,
+   "dur": 2.5,
+   "kicker": "Option 2",
+   "text": "*Dragon's* *Breath* 🔥",
+   "size": 100,
+   "y": 260,
+   "bandY": 600,
+   "anim": "rise",
+   "bandH": 920,
+   "zoom": 1.3
+  },
+  {
+   "type": "clip",
+   "src": "../assets/clips/r6_vir.mp4",
+   "ss": 1.8,
+   "dur": 2.5,
+   "kicker": "Option 3",
+   "text": "*Storm* of the *Gods* ⚡",
+   "size": 100,
+   "y": 260,
+   "bandY": 600,
+   "anim": "rise",
+   "bandH": 920,
+   "zoom": 1.3
+  },
+  {
+   "type": "list",
+   "dur": 3.0,
+   "kicker": "Can't decide?",
+   "text": "Take them *all.*",
+   "size": 140,
+   "y": 330,
+   "listY": 720,
+   "items": [
+    {
+     "i": "✨",
+     "t": "26 special attacks"
+    },
+    {
+     "i": "🏰",
+     "t": "3 nations"
+    },
+    {
+     "i": "🌐",
+     "t": "1v1 & 2v2 online"
+    },
+    {
+     "i": "📴",
+     "t": "Plays offline"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.2,
+   "head": "Comment *1*, *2* or *3*",
+   "size": 112,
+   "pill": "Free · itch.io & Microsoft Store",
+   "foot": "👇 Gift code in the comments 🎁",
+   "cardY": 480,
+   "art": "../assets/img/cw-feature.png"
+  }
+ ]
+}
