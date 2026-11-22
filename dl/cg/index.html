@@ -4566,7 +4566,7 @@ function init(){
  (Assets.allP||Promise.resolve()).then(()=>setTimeout(()=>{ try{ CQW.bakeIdle(); }catch(e){} },1500));
  try{ Emo.init(); }catch(e){ console.error(e); }
  try{ installLoader(); }catch(e){ console.error(e); }
- try{ CG.install(); }catch(e){}
+ try{ CG.install(); }catch(e){} setInterval(()=>{ try{ CG.tick(); }catch(e){} },1000);
 }
 window.addEventListener('load',init);
 </script>
