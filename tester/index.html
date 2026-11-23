@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Castle WARS – staň se testerem</title>
+<meta name="description" content="Zahraj si Castle WARS na Androidu dřív než ostatní. Stačí 3 kroky a 2 minuty.">
+<meta property="og:title" content="Castle WARS – staň se testerem 🏰">
+<meta property="og:description" content="Zahraj si Castle WARS na Androidu dřív než ostatní. 3 kroky, 2 minuty, zdarma.">
+<meta property="og:image" content="https://broswarsstudio.chatnelo.com/tester/og.jpg">
+<meta property="og:url" content="https://broswarsstudio.chatnelo.com/tester/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../img/emblem.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:wght@600;700;800&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#04060c;--bg2:#0a0f1c;--card:#0f1628;--fg:#eef5ff;--muted:#8b97ad;--line:rgba(207,216,230,.14);--gold:#f2c35b;--volt:#3ea2ff;--ok:#5bd38a;
+--fd:"Saira","Bahnschrift",system-ui,sans-serif;--fb:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--fb);font-size:17px;line-height:1.55}
+.hero{position:relative;min-height:46vh;display:flex;align-items:flex-end;background:url(og.jpg) center/cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,6,12,.1) 0%,rgba(4,6,12,.55) 55%,var(--bg) 100%)}
+.wrap{position:relative;z-index:1;width:100%;max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.hero .wrap{padding-block:0 28px}
+.tag{display:inline-block;font:600 .78rem/1 var(--fd);letter-spacing:.12em;text-transform:uppercase;color:var(--bg);background:var(--gold);padding:7px 10px;border-radius:6px}
+h1{font:800 clamp(2rem,1.3rem + 3.4vw,3.2rem)/1.05 var(--fd);margin:14px 0 10px;text-wrap:balance}
+.lead{color:#cfd8e6;max-width:56ch;margin:0}
+main .wrap{padding-block:12px 56px}
+.lang{display:flex;gap:8px;margin:0 0 22px}
+.lang button{font:600 .85rem var(--fb);color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer}
+.lang button[aria-pressed=true]{color:var(--bg);background:var(--fg);border-color:var(--fg)}
+ol{list-style:none;padding:0;margin:0;display:grid;gap:14px;counter-reset:s}
+li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 18px 18px 66px;position:relative}
+li::before{content:counter(s);position:absolute;left:18px;top:18px;width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--bg);font:800 1.1rem/34px var(--fd);text-align:center}
+li h2{font:700 1.2rem/1.25 var(--fd);margin:4px 0 6px}
+li p{margin:0 0 12px;color:#c3ccdb}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 18px;border-radius:12px;background:var(--volt);color:#fff;font:700 1rem var(--fb);text-decoration:none}
+.btn:active{transform:translateY(1px)}
+.note{margin:26px 0 0;padding:16px 18px;border-left:3px solid var(--ok);background:rgba(91,211,138,.08);border-radius:0 12px 12px 0;color:#d6f5e2}
+.note b{color:#fff}
+.share{margin-top:36px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;border-top:1px solid var(--line);padding-top:26px}
+.share img{width:120px;height:120px;background:#fff;border-radius:10px;padding:6px}
+.share p{margin:0 0 10px;color:var(--muted)}
+.copy{font:600 .95rem var(--fb);color:var(--fg);background:none;border:1px solid var(--line);border-radius:10px;padding:10px 14px;cursor:pointer}
+footer{color:var(--muted);font-size:.85rem;text-align:center;padding:0 16px 32px}
+footer a{color:var(--muted)}
+[hidden]{display:none!important}
+@media (max-width:460px){.share{grid-template-columns:1fr}li{padding-left:18px;padding-top:62px}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+  <span class="tag" data-cs>Test na Google Play</span><span class="tag" data-en hidden>Google Play test</span>
+  <h1 data-cs>Hraj Castle WARS dřív než ostatní</h1>
+  <h1 data-en hidden>Play Castle WARS before everyone else</h1>
+  <p class="lead" data-cs>Hra je zatím v uzavřeném testu. Abychom ji mohli vydat pro všechny, Google chce, aby ji aspoň 12 lidí 14 dní testovalo. Pomůžeš nám? Zabere to 2 minuty a je to zdarma.</p>
+  <p class="lead" data-en hidden>The game is in a closed test. Google needs at least 12 people to test it for 14 days before it can launch for everyone. Can you help? It takes 2 minutes and it's free.</p>
+</div></header>
+<main><div class="wrap">
+  <div class="lang" role="group" aria-label="Jazyk / Language">
+    <button type="button" data-l="cs" aria-pressed="true">Čeština</button>
+    <button type="button" data-l="en" aria-pressed="false">English</button>
+  </div>
+  <ol>
+    <li>
+      <h2 data-cs>Přidej se do skupiny testerů</h2><h2 data-en hidden>Join the tester group</h2>
+      <p data-cs>Otevři odkaz a klikni na <b>Připojit se ke skupině</b>. Použij stejný účet Google, jaký máš v telefonu.</p>
+      <p data-en hidden>Open the link and tap <b>Join group</b>. Use the same Google account as on your phone.</p>
+      <a class="btn" href="https://groups.google.com/g/castlewars-testers" target="_blank" rel="noopener"><span data-cs>Připojit se ke skupině</span><span data-en hidden>Join the group</span> →</a>
+    </li>
+    <li>
+      <h2 data-cs>Potvrď, že chceš testovat</h2><h2 data-en hidden>Become a tester</h2>
+      <p data-cs>Na stránce Google Play klikni na <b>Stát se testerem</b>.</p>
+      <p data-en hidden>On the Google Play page, tap <b>Become a tester</b>.</p>
+      <a class="btn" href="https://play.google.com/apps/testing/cz.broswars.castlewars" target="_blank" rel="noopener"><span data-cs>Stát se testerem</span><span data-en hidden>Become a tester</span> →</a>
+    </li>
+    <li>
+      <h2 data-cs>Nainstaluj hru a zahraj si</h2><h2 data-en hidden>Install and play</h2>
+      <p data-cs>Stáhni Castle WARS z Google Play. Pokud se ti hra hned nezobrazí, počkej pár minut.</p>
+      <p data-en hidden>Download Castle WARS from Google Play. If it doesn't show up right away, wait a few minutes.</p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=cz.broswars.castlewars" target="_blank" rel="noopener"><span data-cs>Otevřít Google Play</span><span data-en hidden>Open Google Play</span> →</a>
+    </li>
+  </ol>
+  <p class="note" data-cs><b>Jediná prosba:</b> nech hru v telefonu aspoň 14 dní. Nemusíš hrát každý den, stačí ji neodinstalovat. Díky moc! 🏰</p>
+  <p class="note" data-en hidden><b>One small request:</b> keep the game installed for at least 14 days. You don't have to play every day, just don't uninstall it. Thank you! 🏰</p>
+  <div class="share">
+    <img src="qr.svg" alt="QR kód na tuto stránku" width="120" height="120">
+    <div>
+      <p data-cs>Pošli to kamarádům, kteří mají Android. Každý tester pomůže.</p>
+      <p data-en hidden>Share it with friends who have Android. Every tester helps.</p>
+      <button class="copy" type="button" id="copy"><span data-cs>Kopírovat odkaz</span><span data-en hidden>Copy link</span></button>
+    </div>
+  </div>
+</div></main>
+<footer>Castle WARS · <a href="../">BrosWars Studio</a></footer>
+<script>
+(function(){
+  var btns=document.querySelectorAll('[data-l]');
+  function set(l){
+    document.documentElement.lang=l;
+    document.querySelectorAll('[data-cs]').forEach(function(e){e.hidden=l!=='cs'});
+    document.querySelectorAll('[data-en]').forEach(function(e){e.hidden=l!=='en'});
+    btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.l===l)});
+    try{localStorage.setItem('cwl',l)}catch(e){}
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.l)})});
+  var l=null;try{l=localStorage.getItem('cwl')}catch(e){}
+  if(!l)l=/^(cs|sk)/i.test(navigator.language||'')?'cs':'en';
+  set(l);
+  document.getElementById('copy').addEventListener('click',function(){
+    var u='https://broswarsstudio.chatnelo.com/tester/',b=this,t=b.innerHTML;
+    var done=function(){b.textContent='✓';setTimeout(function(){b.innerHTML=t},1500)};
+    if(navigator.clipboard)navigator.clipboard.writeText(u).then(done,function(){prompt('',u)});else prompt('',u);
+  });
+})();
+</script>
+</body>
+</html>
