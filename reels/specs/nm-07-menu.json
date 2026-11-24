@@ -1,0 +1,83 @@
+{
+ "theme": {
+  "bg": "#0b0912",
+  "grad": "radial-gradient(90% 60% at 80% 20%,#ff4fa355,transparent 60%),radial-gradient(90% 60% at 10% 85%,#7b4dff55,transparent 60%),#0b0912",
+  "fg": "#ffffff",
+  "mut": "#b3a9c4",
+  "accent": "#ff5fae",
+  "accent2": "linear-gradient(180deg,#ffd0e8,#ff5fae 60%,#b34dff)",
+  "pill": "linear-gradient(180deg,#ffffff,#ffd7ec)"
+ },
+ "tag": "Načti.me · BrosWars Studio",
+ "music": {
+  "src": "../assets/music/drive.mp3",
+  "ss": 40
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 2.4,
+   "kicker": "Cafés · bars · food trucks",
+   "text": "Still reprinting *menus* every week?",
+   "size": 120,
+   "y": 560,
+   "anim": "slam"
+  },
+  {
+   "type": "phone",
+   "dur": 3.8,
+   "src": "../assets/clips/nm_app.mp4",
+   "ss": 2.6,
+   "phoneW": 560,
+   "phoneY": 560,
+   "kicker": "Step 1",
+   "text": "Paste your *menu* *link.*",
+   "size": 110,
+   "y": 300
+  },
+  {
+   "type": "list",
+   "dur": 3.4,
+   "text": "Ready to *print.*",
+   "size": 120,
+   "y": 320,
+   "listY": 680,
+   "items": [
+    {
+     "i": "🏷️",
+     "t": "Sticker 50 × 50 mm"
+    },
+    {
+     "i": "🪧",
+     "t": "A6 table card"
+    },
+    {
+     "i": "🖼️",
+     "t": "PNG + SVG download"
+    },
+    {
+     "i": "🔓",
+     "t": "No sign-up"
+    }
+   ]
+  },
+  {
+   "type": "hook",
+   "dur": 2.8,
+   "kicker": "New prices? New dishes?",
+   "text": "Update the page. *Same* *QR.*",
+   "size": 120,
+   "y": 620
+  },
+  {
+   "type": "cta",
+   "icon": "../../img/nacti-icon.png",
+   "dur": 3.2,
+   "head": "Your menu in *one* *scan*",
+   "size": 110,
+   "pill": "nacti.me",
+   "foot": "Free · no sign-up · works forever",
+   "cardY": 520
+  }
+ ]
+}
