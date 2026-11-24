@@ -76,15 +76,15 @@ function animWords(el,lt,start,stagger,style){const ws=[...el.querySelectorAll('
 window.render=async function(t){
   document.getElementById('bar').style.width=(t/TOTAL*1080)+'px';
   let fl=0;
-  for(let i=0;i<SPEC.scenes.length;i++){const s=SPEC.scenes[i];const lt=t-s.t0;const on=lt>=0&&lt<s.dur;s.el.style.visibility=on?'visible':'hidden';if(!on)continue;
+  for(let i=0;i<SPEC.scenes.length;i++){const s=SPEC.scenes[i];const lt0=t-s.t0;const on=lt0>=0&&lt0<s.dur;const lt=i===0?lt0+(SPEC.introSkip??1.6):lt0;s.el.style.visibility=on?'visible':'hidden';if(!on)continue;
     // vstup: zoom punch
     const pin=E(lt/0.35),pout=clamp((s.dur-lt)/0.25,0,1);
     s.el.style.transform=`scale(${1.08-0.08*pin})`;s.el.style.opacity=i===0?1:Math.min(1,pin*1.5);
-    if(lt<0.12&&i>0)fl=Math.max(fl,(0.12-lt)/0.12*0.3);
+    if(lt0<0.12&&i>0)fl=Math.max(fl,(0.12-lt)/0.12*0.3);
     const bg=s.el.querySelector('.bg');if(bg)bg.style.transform=`scale(${1.05+lt/s.dur*0.12}) translate(${(s.panX||0)*lt/s.dur}px,${(s.panY||-20)*lt/s.dur}px)`;
     const st=s.el.querySelector('.stars');if(st)st.style.transform=`translateY(${-lt*14}px) scale(${1+lt*0.01})`;
-    if(s.type==='clip'){const v=s.el.querySelector('.vid'),bd=s.el.querySelector('.band');const H=s.bandH||700;bd.style.top=(s.bandY||600)+'px';bd.style.height=H+'px';v.style.cssText=`left:0;top:0;width:1080px;height:${H}px;object-position:${(s.focus||.5)*100}% 50%;transform:scale(${(s.zoom||1.22)+lt*0.025})`; await seekVideos(s,lt)}
-    if(s.type==='phone'){const ph=s.el.querySelector('.phone');const p=EB(clamp(lt/0.55,0,1));ph.style.opacity=clamp(p*1.5,0,1);ph.style.transform=`translateY(${(1-p)*220}px) rotate(${(1-p)*-4}deg) scale(${(s.zoom||1)*(0.92+0.08*p)+lt*0.006})`;ph.style.transformOrigin='50% 0';await seekVideos(s,lt)}
+    if(s.type==='clip'){const v=s.el.querySelector('.vid'),bd=s.el.querySelector('.band');const H=s.bandH||700;bd.style.top=(s.bandY||600)+'px';bd.style.height=H+'px';v.style.cssText=`left:0;top:0;width:1080px;height:${H}px;object-position:${(s.focus||.5)*100}% 50%;transform:scale(${(s.zoom||1.22)+lt*0.025})`; await seekVideos(s,lt0)}
+    if(s.type==='phone'){const ph=s.el.querySelector('.phone');const p=EB(clamp(lt/0.55,0,1));ph.style.opacity=clamp(p*1.5,0,1);ph.style.transform=`translateY(${(1-p)*220}px) rotate(${(1-p)*-4}deg) scale(${(s.zoom||1)*(0.92+0.08*p)+lt*0.006})`;ph.style.transformOrigin='50% 0';await seekVideos(s,lt0)}
     const wd=s.el.querySelector('.words');if(wd)animWords(wd,lt,s.textAt||0.15,s.stagger||0.09,s.anim||'slam');
     const k=s.el.querySelector('.kicker');if(k){const p=E((lt-0.05)/0.4);k.style.opacity=p;k.style.letterSpacing=(0.6-0.28*p)+'em'}
     const sb=s.el.querySelector('.sub');if(sb){const p=E((lt-(s.subAt||0.9))/0.5);sb.style.opacity=p;sb.style.transform=`translateY(${(1-p)*40}px)`}
