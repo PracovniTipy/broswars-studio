@@ -9,7 +9,9 @@
     "chatnelo",
     "pt",
     "nacti",
-    "studio"
+    "studio",
+    "dimension",
+    "stack"
   ],
   "items": [
     {
@@ -578,6 +580,30 @@
       "posted": {
         "tiktok:broswars_studio": "2026-11-24"
       }
+    },
+    {
+      "id": "cd-01-150v150",
+      "brand": "dimension",
+      "status": "ready",
+      "targets": [
+        "ig:broswars_studio",
+        "tiktok:broswars_studio"
+      ],
+      "caption": "150 soldiers vs 150 monsters. Wait for it… ⚔️\n\nCastle Dimension – 3 modes in one game: conquest army battles, tower defense and the hero arena. Free on CrazyGames and itch.io.\n\nWhich mode would you play first? 👇\n\n#castledimension #strategygame #towerdefense #freegame #gaming #fantasy",
+      "url": "https://broswarsstudio.chatnelo.com/r/cd-01-150v150.mp4",
+      "posted": {}
+    },
+    {
+      "id": "cs-01-how-high",
+      "brand": "stack",
+      "status": "ready",
+      "targets": [
+        "ig:broswars_studio",
+        "tiktok:broswars_studio"
+      ],
+      "caption": "How high can you build? 🏰\n\nCastle Stack – one tap, perfect drops, big combos. 400 levels, 20 worlds, endless mode and 20 builder outfits. Free on CrazyGames and itch.io.\n\nDrop your best height in the comments 👇\n\n#castlestack #stackgame #arcade #casualgame #freegame #gaming",
+      "url": "https://broswarsstudio.chatnelo.com/r/cs-01-how-high.mp4",
+      "posted": {}
     }
   ]
 }

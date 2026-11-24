@@ -1,0 +1,93 @@
+{
+ "theme": {
+  "bg": "#070d1c",
+  "grad": "radial-gradient(120% 70% at 50% 30%,#ff9a6a 0%,#b0487a 50%,#2a1238 100%)",
+  "fg": "#ffffff",
+  "mut": "#c3cde0",
+  "accent": "#ffd34a",
+  "accent2": "linear-gradient(180deg,#fff3b0,#ffc23d 55%,#e08a12)",
+  "pill": "linear-gradient(180deg,#ffe07a,#f2a91c)"
+ },
+ "music": {
+  "src": "../assets/music/pulse.mp3",
+  "ss": 8
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "bg": "../assets/img/cs-feature.jpg",
+   "dur": 2.2,
+   "kicker": "Castle Stack",
+   "text": "How *high* can you build? 🏰",
+   "size": 120,
+   "y": 1180,
+   "center": true,
+   "anim": "slam"
+  },
+  {
+   "type": "clip",
+   "src": "../assets/clips/cs_tower.mp4",
+   "ss": 0.5,
+   "dur": 3.0,
+   "kicker": "One tap",
+   "text": "Drop at the *perfect* moment",
+   "size": 90,
+   "y": 230,
+   "bandY": 480,
+   "bandH": 1300,
+   "zoom": 1.0,
+   "anim": "rise"
+  },
+  {
+   "type": "clip",
+   "src": "../assets/clips/cs_tower.mp4",
+   "ss": 6.0,
+   "dur": 3.0,
+   "kicker": "Combo",
+   "text": "*Perfect* drops = *combos* ✨",
+   "size": 90,
+   "y": 230,
+   "bandY": 480,
+   "bandH": 1300,
+   "zoom": 1.0,
+   "anim": "rise"
+  },
+  {
+   "type": "list",
+   "dur": 3.2,
+   "kicker": "Inside",
+   "text": "Build the *tallest* castle",
+   "size": 110,
+   "y": 330,
+   "listY": 720,
+   "items": [
+    {
+     "i": "🏰",
+     "t": "400 levels"
+    },
+    {
+     "i": "🌍",
+     "t": "20 worlds"
+    },
+    {
+     "i": "👷",
+     "t": "20 builder outfits"
+    },
+    {
+     "i": "♾️",
+     "t": "Endless mode"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.0,
+   "head": "Play *FREE* now",
+   "size": 120,
+   "pill": "CrazyGames · itch.io",
+   "foot": "One tap. Endless fun.",
+   "cardY": 420,
+   "art": "../assets/img/cs-wide.jpg"
+  }
+ ]
+}
