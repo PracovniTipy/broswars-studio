@@ -248,6 +248,8 @@ input[type=range]{width:100%;accent-color:#ffd34d}
 #achT .bdg{flex:none;filter:drop-shadow(0 0 10px rgba(255,211,77,.6));animation:bdgPop .6s cubic-bezier(.2,1.6,.4,1)}@keyframes bdgPop{from{transform:scale(.3) rotate(-30deg)}}
 #achT small{display:block;font-size:10.5px;letter-spacing:1.5px;color:#ffd34d}#achT b{display:block;font-family:'Lilita One';font-size:19px}#achT span{display:block;font-size:11.5px;opacity:.8}#achT em{font-style:normal;color:#ffd34d;font-weight:900;margin-left:auto}
 @media (orientation:portrait){.achb small{display:none}}
+@media (orientation:portrait){.tc-rec{font-size:11px}.tc-rec span,.tc-rec b{white-space:nowrap}.ms-title{font-size:22px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:52vw}}
+@media (min-width:900px){#achT{left:auto;right:16px;transform:none;top:auto;bottom:-140px;transition:bottom .45s cubic-bezier(.2,1.4,.4,1)}#achT.on{top:auto;bottom:16px}}
 
 /* ===== VÝBĚR REŽIMU v2 – fotky ze hry ===== */
 .mcard{position:relative;overflow:hidden;background:#0a0d1c!important;border:2px solid rgba(255,255,255,.14)!important;box-shadow:0 18px 50px rgba(0,0,0,.55)!important;justify-content:flex-end;min-height:min(62vh,460px)}
@@ -434,6 +436,7 @@ input[type=range]{width:100%;accent-color:#ffd34d}
     S.init = function () {
       return window.bridge.initialize().then(function () {
         B = window.bridge;
+        while (q.length) { try { B.platform.sendMessage(q.shift()); } catch (e) {} }
         B.advertisement.on(B.EVENT_NAME.INTERSTITIAL_STATE_CHANGED, function (st) {
           if (!cur) return;
           if (st === 'opened') { try { cur.adStarted && cur.adStarted(); } catch (e) {} }
@@ -443,9 +446,12 @@ input[type=range]{width:100%;accent-color:#ffd34d}
         if (B.EVENT_NAME.PAUSE_STATE_CHANGED) B.game.on(B.EVENT_NAME.PAUSE_STATE_CHANGED, function () {});
       });
     };
-    S.game.loadingStop = function () { try { B && B.platform.sendMessage('game_ready'); } catch (e) {} };
-    S.game.gameplayStart = function () { try { B && B.platform.sendMessage('gameplay_started'); } catch (e) {} };
-    S.game.gameplayStop = function () { try { B && B.platform.sendMessage('gameplay_stopped'); } catch (e) {} };
+    var q = [], ready = false;
+    var msg = function (m) { if (B) { try { B.platform.sendMessage(m); } catch (e) {} } else q.push(m); };
+    S.game.loadingStop = function () { if (!ready) { ready = true; msg('game_ready'); } };
+    S.game.gameplayStart = function () { msg('gameplay_started'); };
+    S.game.gameplayStop = function () { msg('gameplay_stopped'); };
+    window.addEventListener('load', function () { setTimeout(function () { S.game.loadingStop(); }, 3000); });
     S.ad.requestAd = function (t, cb) {
       if (!B || !B.advertisement.isInterstitialSupported) { cb && cb.adError && cb.adError(); return; }
       cur = { adStarted: cb && cb.adStarted, done: once(cb) };
@@ -483,5 +489,6 @@ input[type=range]{width:100%;accent-color:#ffd34d}
 })();
 </script>
 <script src="game.js"></script>
+<script src="wheel.js"></script>
 </body>
 </html>
