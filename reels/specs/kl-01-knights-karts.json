@@ -10,11 +10,11 @@
  },
  "music": {"src": "../assets/music/drive.mp3", "ss": 10},
  "scenes": [
-  {"type": "hook", "bg": "../assets/img/kl-feature.jpg", "dur": 2.2, "kicker": "New game", "text": "Knights in *karts* 🏰", "size": 112, "y": 1150, "center": true, "anim": "slam"},
+  {"type": "hook", "bg": "../assets/img/kl-feature.jpg", "dur": 2.2, "kicker": "New game", "text": "Knights in *karts*", "size": 112, "y": 1150, "center": true, "anim": "slam"},
   {"type": "clip", "src": "../assets/clips/kl_battle.mp4", "ss": 0.3, "dur": 2.8, "kicker": "Battle", "text": "Grab a *weapon* ⚔️", "size": 96, "y": 260, "bandY": 600, "bandH": 920, "zoom": 1.25, "anim": "rise"},
   {"type": "clip", "src": "../assets/clips/kl_battle.mp4", "ss": 5.0, "dur": 2.8, "kicker": "Battle", "text": "*12* players, *3* minutes 🔥", "size": 96, "y": 260, "bandY": 600, "bandH": 920, "zoom": 1.25, "anim": "rise"},
-  {"type": "clip", "src": "../assets/clips/kl_race.mp4", "ss": 1.0, "dur": 2.8, "kicker": "Race", "text": "*30* tracks, *10* worlds 🏁", "size": 96, "y": 260, "bandY": 600, "bandH": 920, "zoom": 1.25, "anim": "rise"},
-  {"type": "clip", "src": "../assets/clips/kl_race.mp4", "ss": 5.5, "dur": 2.6, "kicker": "Race", "text": "Drift & *turbo* 💨", "size": 96, "y": 260, "bandY": 600, "bandH": 920, "zoom": 1.25, "anim": "rise"},
+  {"type": "clip", "src": "../assets/clips/kl_race.mp4", "ss": 0.1, "dur": 2.4, "kicker": "Race", "text": "*30* tracks, *10* worlds 🏁", "size": 96, "y": 260, "bandY": 600, "bandH": 920, "zoom": 1.25, "anim": "rise"},
+  {"type": "clip", "src": "../assets/clips/kl_race.mp4", "ss": 2.6, "dur": 2.8, "kicker": "Race", "text": "Drift & *turbo* 💨", "size": 96, "y": 260, "bandY": 600, "bandH": 920, "zoom": 1.25, "anim": "rise"},
   {"type": "cta", "dur": 3.0, "head": "Play *Kartlot* free", "size": 110, "pill": "Free · itch.io · Web", "foot": "Battle or race? 👇", "cardY": 420, "art": "../assets/img/kl-feature.jpg"}
  ]
 }
