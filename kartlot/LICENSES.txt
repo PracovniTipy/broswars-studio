@@ -1,0 +1,43 @@
+KARTLOT – third-party licenses
+===================================
+
+3D MODELS – Kenney (www.kenney.nl) – CC0 1.0 Universal (public domain)
+  Castle Kit, Car Kit, Toy Car Kit, Mini Arena, Fantasy Town Kit, Nature Kit,
+  Retro Fantasy Kit, Tower Defense Kit. https://creativecommons.org/publicdomain/zero/1.0/
+
+SOUND EFFECTS – Kenney (www.kenney.nl) – CC0 1.0 Universal
+  RPG Audio, Sci-fi Sounds, Interface Sounds, Music Jingles, Voiceover Pack: Fighter.
+
+MUSIC – all CC0 1.0 Universal (public domain), from OpenGameArt.org
+  "A Knight's Challenge" – Umplix
+  "Bravery Run" – MintoDog
+  "Bravery Knight" – MintoDog
+  "Happy and Sad Tuba Fanfare" – Trex0n
+
+FONTS – SIL Open Font License 1.1
+  Lilita One – Copyright (c) 2011 Juan Montoreano
+  Nunito – Copyright 2014 The Nunito Project Authors
+  https://openfontlicense.org
+
+ENGINE – three.js – MIT License
+The MIT License
+
+Copyright © 2010-2026 three.js authors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
