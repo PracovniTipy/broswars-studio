@@ -11,7 +11,8 @@
   "nacti",
   "studio",
   "dimension",
-  "stack"
+  "stack",
+  "kartlot"
  ],
  "items": [
   {
@@ -625,6 +626,17 @@
    "posted": {
     "ig:broswars_studio": "2026-11-26"
    }
+  },
+  {
+   "id": "kl-01-knights-karts",
+   "brand": "kartlot",
+   "status": "ready",
+   "targets": [
+    "ig:broswars_studio",
+    "tiktok:broswars_studio"
+   ],
+   "caption": "Knights in karts! 🏰🏎️\n\nKartlot – grab weapons in 3-minute battle matches or drift through 30 race tracks in 10 worlds. Spin the free Lucky Wheel every 4 hours. Free in your browser on itch.io (battlecastle.itch.io/kartlot) and broswarsstudio.chatnelo.com/kartlot. Link in bio.\n\nBattle or race? Comment below 👇\n\n#kartlot #kartgame #racinggame #freegame #gaming #medieval #knights #browsergame",
+   "url": "https://broswarsstudio.chatnelo.com/r/kl-01-knights-karts.mp4"
   }
  ]
 }
