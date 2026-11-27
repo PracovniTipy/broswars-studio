@@ -1,0 +1,80 @@
+{
+ "theme": {
+  "bg": "#070d1c",
+  "grad": "radial-gradient(120% 70% at 50% 30%,#7a6cff 0%,#4a2a8a 50%,#160c2e 100%)",
+  "fg": "#ffffff",
+  "mut": "#c3cde0",
+  "accent": "#ffd34a",
+  "accent2": "linear-gradient(180deg,#fff3b0,#ffc23d 55%,#e08a12)",
+  "pill": "linear-gradient(180deg,#ffe07a,#f2a91c)"
+ },
+ "music": {
+  "src": "../assets/music/drive.mp3",
+  "ss": 12
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "bg": "../assets/img/cs-feature.jpg",
+   "dur": 2.0,
+   "kicker": "Castle Stack",
+   "text": "Wait for the *last* block… 👀",
+   "size": 110,
+   "y": 1150,
+   "center": true,
+   "anim": "slam"
+  },
+  {
+   "type": "clip",
+   "src": "../assets/clips/cs_tower.mp4",
+   "ss": 1.5,
+   "dur": 3.0,
+   "kicker": "Tap",
+   "text": "Tap… *tap*… *tap*… 🏰",
+   "size": 90,
+   "y": 230,
+   "bandY": 480,
+   "bandH": 1300,
+   "zoom": 1.0,
+   "anim": "rise"
+  },
+  {
+   "type": "clip",
+   "src": "../assets/clips/cs_tower.mp4",
+   "ss": 7.0,
+   "dur": 3.0,
+   "kicker": "Focus",
+   "text": "Line it up *perfectly* 🎯",
+   "size": 90,
+   "y": 230,
+   "bandY": 480,
+   "bandH": 1300,
+   "zoom": 1.0,
+   "anim": "rise"
+  },
+  {
+   "type": "clip",
+   "src": "../assets/clips/cs_tower.mp4",
+   "ss": 12.0,
+   "dur": 3.2,
+   "kicker": "21 / 22",
+   "text": "The *last* block… ⭐⭐⭐",
+   "size": 90,
+   "y": 230,
+   "bandY": 480,
+   "bandH": 1300,
+   "zoom": 1.0,
+   "anim": "rise"
+  },
+  {
+   "type": "cta",
+   "dur": 3.0,
+   "head": "Your *turn* 👆",
+   "size": 120,
+   "pill": "Free · CrazyGames · itch.io",
+   "foot": "What level are you on? 👇",
+   "cardY": 420,
+   "art": "../assets/img/cs-wide.jpg"
+  }
+ ]
+}
