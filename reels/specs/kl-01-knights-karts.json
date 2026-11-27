@@ -8,7 +8,7 @@
   "accent2": "linear-gradient(180deg,#fff3b0,#ffc23d 55%,#e08a12)",
   "pill": "linear-gradient(180deg,#ffe07a,#f2a91c)"
  },
- "music": {"src": "../assets/music/drive.mp3", "ss": 10},
+ "music": {"src": "../assets/music/knights_challenge.mp3", "ss": 0},
  "scenes": [
   {"type": "hook", "bg": "../assets/img/kl-feature.jpg", "dur": 2.2, "kicker": "New game", "text": "Knights in *karts*", "size": 112, "y": 1150, "center": true, "anim": "slam"},
   {"type": "clip", "src": "../assets/clips/kl_battle.mp4", "ss": 0.3, "dur": 2.8, "kicker": "Battle", "text": "Grab a *weapon* ⚔️", "size": 96, "y": 260, "bandY": 600, "bandH": 920, "zoom": 1.25, "anim": "rise"},
