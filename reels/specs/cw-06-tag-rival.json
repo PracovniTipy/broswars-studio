@@ -1,0 +1,107 @@
+{
+ "theme": {
+  "bg": "#070d1c",
+  "grad": "radial-gradient(120% 70% at 50% 30%,#16305e 0%,#0a1428 55%,#05080f 100%)",
+  "fg": "#ffffff",
+  "mut": "#c3cde0",
+  "accent": "#ffc23d",
+  "accent2": "linear-gradient(180deg,#fff3b0,#ffc23d 55%,#e08a12)",
+  "pill": "linear-gradient(180deg,#ffe07a,#f2a91c)"
+ },
+ "music": {
+  "src": "../assets/music/knights_challenge.mp3",
+  "ss": 8
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "bg": "../assets/img/cw-feature.png",
+   "dur": 2.2,
+   "kicker": "Castle WARS · 1v1 challenge",
+   "text": "Tag the friend you'd *DESTROY* 👇",
+   "size": 120,
+   "y": 1080,
+   "center": true,
+   "anim": "slam"
+  },
+  {
+   "type": "clip",
+   "src": "../assets/clips/r3_vs.mp4",
+   "ss": 3.0,
+   "dur": 2.6,
+   "kicker": "Step 1",
+   "text": "Send your *army* ⚔️",
+   "size": 100,
+   "y": 260,
+   "bandY": 600,
+   "anim": "rise",
+   "bandH": 920,
+   "zoom": 1.3
+  },
+  {
+   "type": "clip",
+   "src": "../assets/clips/r4_meteor.mp4",
+   "ss": 0.5,
+   "dur": 2.6,
+   "kicker": "Step 2",
+   "text": "Drop a *Giant* *Meteor* ☄️",
+   "size": 100,
+   "y": 260,
+   "bandY": 600,
+   "anim": "rise",
+   "bandH": 920,
+   "zoom": 1.3
+  },
+  {
+   "type": "clip",
+   "src": "../assets/clips/r6_vir.mp4",
+   "ss": 3.0,
+   "dur": 2.6,
+   "kicker": "Step 3",
+   "text": "Still standing? *Storm* them ⚡",
+   "size": 100,
+   "y": 260,
+   "bandY": 600,
+   "anim": "rise",
+   "bandH": 920,
+   "zoom": 1.3
+  },
+  {
+   "type": "list",
+   "dur": 3.0,
+   "kicker": "Rather team up?",
+   "text": "Go *2v2.*",
+   "size": 140,
+   "y": 330,
+   "listY": 720,
+   "items": [
+    {
+     "i": "⚔️",
+     "t": "1v1 & 2v2 online"
+    },
+    {
+     "i": "✨",
+     "t": "26 special attacks"
+    },
+    {
+     "i": "🏰",
+     "t": "3 nations"
+    },
+    {
+     "i": "📴",
+     "t": "Plays offline"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.2,
+   "head": "Tag your *rival* 👇",
+   "size": 112,
+   "pill": "Free · itch.io & Microsoft Store",
+   "foot": "🎁 Gift code in the comments",
+   "cardY": 480,
+   "art": "../assets/img/cw-feature.png"
+  }
+ ]
+}
