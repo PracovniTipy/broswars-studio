@@ -19,11 +19,12 @@
     '.sbtn.whl{background:linear-gradient(180deg,#ff6fb5,#c2307a);position:relative}' +
     '.sbtn.whl.ready::after{content:"";position:absolute;top:6px;right:8px;width:11px;height:11px;border-radius:50%;background:#ffe14d;box-shadow:0 0 0 2px #fff,0 0 12px #ffe14d;animation:whlP 1s infinite}' +
     '@keyframes whlP{50%{transform:scale(1.35)}}' +
-    '#wheelM .wbox{position:relative;width:min(78vw,320px);aspect-ratio:1;margin:4px auto 2px;max-width:100%}' +
+    '#wheelM .wbox{position:relative;width:min(78vw,52vh,320px);aspect-ratio:1;margin:4px auto 2px;max-width:100%}' +
     '#wheelM svg{width:100%;height:100%;display:block;transition:transform 4.2s cubic-bezier(.12,.8,.18,1);filter:drop-shadow(0 8px 18px rgba(0,0,0,.5))}' +
     '#wheelM .ptr{position:absolute;left:50%;top:-6px;transform:translateX(-50%);width:0;height:0;border-left:16px solid transparent;border-right:16px solid transparent;border-top:30px solid #ffd34d;filter:drop-shadow(0 3px 2px rgba(0,0,0,.6));z-index:2}' +
     '#wheelM .hub{position:absolute;left:50%;top:50%;width:18%;height:18%;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(#fff6c0,#e8a800);border:3px solid #8a6200;display:flex;align-items:center;justify-content:center;font-size:min(6vw,24px)}' +
     '#wheelM .wt{font-size:15px;opacity:.85;min-height:20px}' +
+    '@media (max-height:500px){#wheelM .card{padding:10px;gap:4px}#wheelM #whT{font-size:22px!important;line-height:1.1}}' +
     '#wheelM .row{display:flex;gap:10px;justify-content:center}';
   document.head.appendChild(css);
 
@@ -102,7 +103,8 @@
     $('#whlTxt').textContent = c ? 'KOLO' : 'SPIN';
     $('#whlCnt').textContent = l > 0 ? fmt(l) : (c ? 'ZDARMA!' : 'FREE!');
     btn.classList.toggle('ready', l <= 0);
-    if ($('#wheelM') && $('#wheelM').classList.contains('on')) render(true);
+    var wm = $('#wheelM');
+    if (wm && wm.classList.contains('on')) { var mn = $('#menu'); if (mn && !mn.classList.contains('on') && !spinning) wm.classList.remove('on'); else render(true); }
   }
   setInterval(tick, 1000);
 })();

@@ -433,10 +433,22 @@ input[type=range]{width:100%;accent-color:#ffd34d}
 
   if (P === 'playgama') {
     var B = null, cur = null;
+    var stT = null;
+    S.data = { getItem: ls.getItem, setItem: function (k, v) {
+      ls.setItem(k, v);
+      if (B && B.storage) { clearTimeout(stT); stT = setTimeout(function () { try { var r = B.storage.set(k, v); if (r && r.catch) r.catch(function () {}); } catch (e) {} }, 800); }
+    } };
     S.init = function () {
       return window.bridge.initialize().then(function () {
         B = window.bridge;
         while (q.length) { try { B.platform.sendMessage(q.shift()); } catch (e) {} }
+        /* rewarded */
+        B.advertisement.on(B.EVENT_NAME.REWARDED_STATE_CHANGED, function (st) {
+          if (!rw) return;
+          if (st === 'opened') { try { rw.adStarted && rw.adStarted(); } catch (e) {} }
+          else if (st === 'rewarded') rw.ok = true;
+          else if (st === 'closed' || st === 'failed') { var c = rw; rw = null; setTimeout(function () { try { if (c.ok) c.adFinished && c.adFinished(); else c.adError && c.adError(); } catch (e) {} }, 200); }
+        });
         B.advertisement.on(B.EVENT_NAME.INTERSTITIAL_STATE_CHANGED, function (st) {
           if (!cur) return;
           if (st === 'opened') { try { cur.adStarted && cur.adStarted(); } catch (e) {} }
@@ -444,8 +456,13 @@ input[type=range]{width:100%;accent-color:#ffd34d}
         });
         /* pauza / ztlumení z platformy */
         if (B.EVENT_NAME.PAUSE_STATE_CHANGED) B.game.on(B.EVENT_NAME.PAUSE_STATE_CHANGED, function () {});
+        /* postup přes Playgama Bridge storage (podmínka katalogu) */
+        if (B.storage) return Promise.resolve(B.storage.get('ck_save')).then(function (v) {
+          if (v) { try { ls.setItem('ck_save', typeof v === 'string' ? v : JSON.stringify(v)); } catch (e) {} }
+        }).catch(function () {});
       });
     };
+    var rw = null;
     var q = [], ready = false;
     var msg = function (m) { if (B) { try { B.platform.sendMessage(m); } catch (e) {} } else q.push(m); };
     S.game.loadingStop = function () { if (!ready) { ready = true; msg('game_ready'); } };
@@ -453,6 +470,12 @@ input[type=range]{width:100%;accent-color:#ffd34d}
     S.game.gameplayStop = function () { msg('gameplay_stopped'); };
     window.addEventListener('load', function () { setTimeout(function () { S.game.loadingStop(); }, 3000); });
     S.ad.requestAd = function (t, cb) {
+      if (t === 'rewarded') {
+        if (!B || !B.advertisement.isRewardedSupported || rw) { cb && cb.adError && cb.adError(); return; }
+        rw = { adStarted: cb && cb.adStarted, adFinished: cb && cb.adFinished, adError: cb && cb.adError, ok: false };
+        try { B.advertisement.showRewarded('bonus'); } catch (e) { var c = rw; rw = null; c.adError && c.adError(); }
+        return;
+      }
       if (!B || !B.advertisement.isInterstitialSupported) { cb && cb.adError && cb.adError(); return; }
       cur = { adStarted: cb && cb.adStarted, done: once(cb) };
       try { B.advertisement.showInterstitial('midgame'); } catch (e) { var f = cur.done; cur = null; f(); }
@@ -466,6 +489,10 @@ input[type=range]{width:100%;accent-color:#ffd34d}
     S.game.gameplayStart = function () { try { G().lifecycle.gameStart(); } catch (e) {} };
     S.ad.requestAd = function (t, cb) {
       if (!ready || !G() || !G().ads) { cb && cb.adError && cb.adError(); return; }
+      if (t === 'rewarded') {
+        try { cb && cb.adStarted && cb.adStarted(); G().ads.rewarded().then(function (r) { if (r && r.success) { cb && cb.adFinished && cb.adFinished(); } else { cb && cb.adError && cb.adError(); } }, function () { cb && cb.adError && cb.adError(); }); } catch (e) { cb && cb.adError && cb.adError(); }
+        return;
+      }
       var done = once(cb);
       try { cb && cb.adStarted && cb.adStarted(); G().ads.interstitial().then(done, done); } catch (e) { done(); }
     };
@@ -480,6 +507,10 @@ input[type=range]{width:100%;accent-color:#ffd34d}
     s.src = 'https://html5.api.gamedistribution.com/main.min.js'; document.head.appendChild(s);
     S.ad.requestAd = function (t, cb) {
       if (!window.gdsdk || typeof gdsdk.showAd !== 'function') { cb && cb.adError && cb.adError(); return; }
+      if (t === 'rewarded') {
+        try { cb && cb.adStarted && cb.adStarted(); var rr = gdsdk.showAd('rewarded'); if (rr && rr.then) rr.then(function () { cb && cb.adFinished && cb.adFinished(); }, function () { cb && cb.adError && cb.adError(); }); else cb && cb.adError && cb.adError(); } catch (e) { cb && cb.adError && cb.adError(); }
+        return;
+      }
       var done = once(cb); gdDone = done;
       try { cb && cb.adStarted && cb.adStarted(); var r = gdsdk.showAd(); if (r && r.then) r.then(done, done); } catch (e) { done(); }
     };
@@ -490,5 +521,6 @@ input[type=range]{width:100%;accent-color:#ffd34d}
 </script>
 <script src="game.js"></script>
 <script src="wheel.js"></script>
+<script src="bonus.js"></script>
 </body>
 </html>
