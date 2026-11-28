@@ -19,7 +19,7 @@
       var rb = $('#resReward b'), d = rb ? parseInt((rb.textContent.match(/\d+/) || [0])[0], 10) : 0;
       if (!(got > 0)) d = 0; d = Math.min(d, got);
       var old = $('#bonus2x'); if (old) old.remove();
-      if (d <= 0) return;
+      if (d <= 0 || window.__noRw) return;
       var cs = K().cs(), b = document.createElement('button');
       b.className = 'btn'; b.id = 'bonus2x';
       b.textContent = '📺 ' + (cs ? '2× (+' : '2× (+') + d + ')';
@@ -30,7 +30,7 @@
         var done = function (g) {
           busy = false; try { K().mute(false); } catch (e) {}
           if (g) { var Z2 = K().Z(); Z2.coins += d; K().save(); try { K().refresh(); K().snd('buy'); K().fx('+' + d + ' 🪙', '#ffd34d'); } catch (e) {} b.remove(); }
-          else { b.textContent = cs ? 'Reklama teď není k dispozici' : 'No ad available right now'; setTimeout(function () { b.remove(); }, 1800); }
+          else { window.__noRw = true; b.textContent = cs ? 'Reklama teď není k dispozici' : 'No ad available right now'; setTimeout(function () { b.remove(); }, 1800); }
         };
         try {
           window.CrazyGames.SDK.ad.requestAd('rewarded', {
