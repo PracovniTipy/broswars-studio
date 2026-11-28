@@ -1,0 +1,107 @@
+{
+ "theme": {
+  "bg": "#070d1c",
+  "grad": "radial-gradient(120% 70% at 50% 30%,#3a1660 0%,#160a30 55%,#07040f 100%)",
+  "fg": "#ffffff",
+  "mut": "#c3cde0",
+  "accent": "#ffc23d",
+  "accent2": "linear-gradient(180deg,#fff3b0,#ffc23d 55%,#e08a12)",
+  "pill": "linear-gradient(180deg,#ffe07a,#f2a91c)"
+ },
+ "music": {
+  "src": "../assets/music/knights_challenge.mp3",
+  "ss": 30
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "bg": "../assets/img/cd-feature.jpg",
+   "dur": 2.2,
+   "kicker": "Castle Dimension · quick poll",
+   "text": "What kind of *commander* are you?",
+   "size": 116,
+   "y": 1120,
+   "center": true,
+   "anim": "slam"
+  },
+  {
+   "type": "clip",
+   "src": "../assets/clips/cd_conq.mp4",
+   "ss": 1.0,
+   "dur": 2.6,
+   "kicker": "1 · Conquest",
+   "text": "The *Warlord* ⚔️",
+   "size": 100,
+   "y": 260,
+   "bandY": 600,
+   "bandH": 920,
+   "zoom": 1.25,
+   "anim": "rise"
+  },
+  {
+   "type": "clip",
+   "src": "../assets/clips/cd_td.mp4",
+   "ss": 2.0,
+   "dur": 2.6,
+   "kicker": "2 · Tower defense",
+   "text": "The *Defender* 🏰",
+   "size": 100,
+   "y": 260,
+   "bandY": 600,
+   "bandH": 920,
+   "zoom": 1.25,
+   "anim": "rise"
+  },
+  {
+   "type": "clip",
+   "src": "../assets/clips/cd_arena.mp4",
+   "ss": 1.0,
+   "dur": 2.6,
+   "kicker": "3 · Arena",
+   "text": "The *Hero* 🛡️",
+   "size": 100,
+   "y": 260,
+   "bandY": 600,
+   "bandH": 920,
+   "zoom": 1.25,
+   "anim": "rise"
+  },
+  {
+   "type": "list",
+   "dur": 3.0,
+   "kicker": "Can't pick one?",
+   "text": "Play *all* three.",
+   "size": 130,
+   "y": 330,
+   "listY": 720,
+   "items": [
+    {
+     "i": "⚔️",
+     "t": "Armies up to 150 vs 150"
+    },
+    {
+     "i": "🏰",
+     "t": "24 towers, meteors, bosses"
+    },
+    {
+     "i": "🛡️",
+     "t": "Heroes in 10 arenas"
+    },
+    {
+     "i": "🌌",
+     "t": "10 dimensions"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.0,
+   "head": "Comment *1*, *2* or *3*",
+   "size": 112,
+   "pill": "Free · CrazyGames · itch.io",
+   "foot": "Castle Dimension 👇",
+   "cardY": 420,
+   "art": "../assets/img/cd-wide.jpg"
+  }
+ ]
+}
